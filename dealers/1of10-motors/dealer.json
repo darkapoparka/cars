@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "1of10 Motors",
     "publicOrigin": "https://1of10-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "cde33c37848b76a978f1df4f3067bca2f6c7457443abc96da08f50caec720ed0",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "f496dec3e93fa4ee877382fea5a0b7fe6a80efdb10c2505eb67b819c5ccebc8d"
+    }
   }
 }

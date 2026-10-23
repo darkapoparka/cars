@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Wadeea Motors",
     "publicOrigin": "https://wadeea-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "dc9dc0d85d3678c1cecb1fb5c11512d0d29613bb17c026f90c7276df33ba71a2"
+    }
   }
 }

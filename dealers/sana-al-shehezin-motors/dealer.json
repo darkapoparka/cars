@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Sana Al Shehezin Motors",
     "publicOrigin": "https://sana-al-shehezin-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "bd9f16319d4f5f038f56ffc6cc8cb772381d90557f153ad86e683e68193f2124",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9cc0c9fa55affdeb8dcfab6a521ed15237fd895a68672d24f8fb7f701569e6f5"
+    }
   }
 }

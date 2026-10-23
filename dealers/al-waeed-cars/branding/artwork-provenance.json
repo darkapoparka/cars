@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-al-ain-al-waeed-cars",
+  "slug": "al-waeed-cars",
+  "artworkDirectory": "al-waeed-cars",
+  "name": "Al Waeed Cars",
+  "renderedName": "Al Waeed Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://ae.opensooq.com/en/shops/shop-58587927",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://ae.opensooq.com/en/search/288387742",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "6d3d1032a808c93f6a053ea57526f2b2e2953cf16fd05916f4a462b5ccd5e3d8",
+      "width": 1024,
+      "height": 285,
+      "transparentFraction": 0.8109786184210527,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "c783a6078c704be00bde817a89f7c524998aadcfab07656edc3841e894765041",
+        "width": 2161,
+        "height": 728
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-87f28063-3117-4b9c-83fc-aa5669cf7c44",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Waeed Cars. Required exact text, uppercase: AL WAEED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials W may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 40,
+          "top": 71,
+          "width": 2081,
+          "height": 580
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "6aebabf553336657e240ee658fccfb5971de0e1c200b024bfea885089daf6e2d",
+      "width": 1024,
+      "height": 286,
+      "transparentFraction": 0.7726555670891608,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "a8ba7765636ed46ce23cd891d56b9b7fefee8eb4566065a0b1260816b0b42fd6",
+        "width": 2161,
+        "height": 728
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-fb3b43d7-d013-42f4-b16a-478550f99f4d",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL WAEED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-87f28063-3117-4b9c-83fc-aa5669cf7c44.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 40,
+          "top": 67,
+          "width": 2093,
+          "height": 585
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-05.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

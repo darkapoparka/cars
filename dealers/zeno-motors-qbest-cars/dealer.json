@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Zeno Motors (QBEST CARS)",
     "publicOrigin": "https://zeno-motors-qbest-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "b3cc1e56264855117d89c164defdfbb89799d7f87d7d23f656e65f5290eca12a",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "b11c5c640761510fef8638462eeaf13447af3be462df7e40fe987feca17f4fd2"
+    }
   }
 }

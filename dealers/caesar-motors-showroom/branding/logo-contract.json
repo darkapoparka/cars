@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "caesar-motors-showroom",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "e7be090c9dfa17bc413781e313c8cea4c895635dc4ee37ce80918a8f30575c7b",
+      "sourceSha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "516624ebf3347b6d3d9e1fd29cfca6ed6cd69c342949174eb2f2de357799b554",
+      "sourceSha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "516624ebf3347b6d3d9e1fd29cfca6ed6cd69c342949174eb2f2de357799b554",
+      "sourceSha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-17277f6b-3061-4501-a6bc-bf9ba3f7af04",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "3b610d915dcc55a3b1cdc9d9addb47f445d449b3be05045724e81c2ba8d81b42",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-17277f6b-3061-4501-a6bc-bf9ba3f7af04",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 300
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e326c68cbc8b14aeecb5f06052b5b01889e59fb96772e1d4aee288e8905e9b9a"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-17277f6b-3061-4501-a6bc-bf9ba3f7af04",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/caesar-motors-showroom/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-47be6e02-76a6-4fa9-a0b7-0d594578a1b4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/caesar-motors-showroom/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-47be6e02-76a6-4fa9-a0b7-0d594578a1b4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/caesar-motors-showroom/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+      "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 300
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+      "sha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 301
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+      "sha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 301
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "e99df9f60a69aff0309f7b58115956324d9d90dad41a72fe4f1094d6ad927074",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-17277f6b-3061-4501-a6bc-bf9ba3f7af04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 300
+          }
+        }
+      },
+      "sourceReference": "dealers/caesar-motors-showroom/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0ef40b3489f783e151a744dd09c2ceef286e759b2574cb8e18a8f09c090e01fd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-47be6e02-76a6-4fa9-a0b7-0d594578a1b4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 301
+          }
+        }
+      },
+      "sourceReference": "dealers/caesar-motors-showroom/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "3b610d915dcc55a3b1cdc9d9addb47f445d449b3be05045724e81c2ba8d81b42",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-17277f6b-3061-4501-a6bc-bf9ba3f7af04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 300
+          }
+        }
+      },
+      "sourceReference": "dealers/caesar-motors-showroom/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e326c68cbc8b14aeecb5f06052b5b01889e59fb96772e1d4aee288e8905e9b9a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-17277f6b-3061-4501-a6bc-bf9ba3f7af04",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e7138f65078ef23181b0589cfccd24680fb0180fa6978829a64dcf951f995990",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 255,
+            "height": 300
+          }
+        }
+      },
+      "sourceReference": "dealers/caesar-motors-showroom/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "fcffe0cd49e30645e7b1730ecbc450117b4838d3e5ca08d6cdfe8e07b7a6dff2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-47be6e02-76a6-4fa9-a0b7-0d594578a1b4",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "69192a387e929ca9b297a441aa5159799e60e5444d9d9c270a6e3af3a0380158",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 255,
+          "height": 301
+        }
+      }
+    }
+  }
+}

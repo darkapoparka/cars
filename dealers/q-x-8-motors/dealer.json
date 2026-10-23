@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Q X 8 Motors",
     "publicOrigin": "https://q-x-8-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "c48480bfe0d3272d2a88aa2df6980fc910cf7d6ab58ca49cb11a1da20630364f"
+    }
   }
 }

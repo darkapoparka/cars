@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-shaheen-motors-showroom",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "b3530cbece7d998ce79dac9bca49f2e27f954360ae8265516c15ec0c2580792e",
+      "sourceSha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "a86fbd934f224b49eb5c0df018fa2b2f7b21d4815da00ed8033c2c6f89158677",
+      "sourceSha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "a86fbd934f224b49eb5c0df018fa2b2f7b21d4815da00ed8033c2c6f89158677",
+      "sourceSha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a78628ef-14a4-48c7-9514-9d0b74a12249",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "b7f82b454d4ffb2fcdccad2c8e1aff8148cb0400023cc7db36e90ff822681c4b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a78628ef-14a4-48c7-9514-9d0b74a12249",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 343
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "0ae3f44bf596faff1b46f017e39b11d9bd54ef260882963d063d99d76c3d83d2"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a78628ef-14a4-48c7-9514-9d0b74a12249",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-shaheen-motors-showroom/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0400a72f-38eb-438e-bd29-29b584eca2de",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-shaheen-motors-showroom/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0400a72f-38eb-438e-bd29-29b584eca2de",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-shaheen-motors-showroom/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+      "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 343
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+      "sha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 343
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+      "sha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 343
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "7b4d1c4d1352ace93594557c20e0272ae59c032c41d07fbc4dc4513f64419da3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a78628ef-14a4-48c7-9514-9d0b74a12249",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 343
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shaheen-motors-showroom/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "25216e0e45dbcb09fa816484e2ecb97bacdc078d78d568e2a68b77221ae8d285",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0400a72f-38eb-438e-bd29-29b584eca2de",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 343
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shaheen-motors-showroom/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "b7f82b454d4ffb2fcdccad2c8e1aff8148cb0400023cc7db36e90ff822681c4b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a78628ef-14a4-48c7-9514-9d0b74a12249",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 343
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shaheen-motors-showroom/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "0ae3f44bf596faff1b46f017e39b11d9bd54ef260882963d063d99d76c3d83d2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a78628ef-14a4-48c7-9514-9d0b74a12249",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ff9ca01f757b24eb61bab8892a829a03c50483495eddf90198354f6754a81aef",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 343
+          }
+        }
+      },
+      "sourceReference": "dealers/al-shaheen-motors-showroom/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "096fab68526bc3b12ba1abebaad7ca07b16985d9f9aaaf2de07e8dfe62c6364b",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-0400a72f-38eb-438e-bd29-29b584eca2de",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "6b6781c87cedece2107e958612b363891e6c81baf0a3f3f9cb38dd7723c9ac0f",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 343
+        }
+      }
+    }
+  }
+}

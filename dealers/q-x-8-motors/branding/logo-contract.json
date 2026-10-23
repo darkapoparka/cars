@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "q-x-8-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "cfa14a5937f6fdba6fca8e96712cdd365ad6a151eef1bb009f6135924e1d18d4",
+      "sourceSha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "c6d6d9bdb82c41ad10c94e960ef03e011ee211b11da576e08ceb48d20eac2b71",
+      "sourceSha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "c6d6d9bdb82c41ad10c94e960ef03e011ee211b11da576e08ceb48d20eac2b71",
+      "sourceSha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f70ba5f7-d89b-41b2-b09f-44b1a9467466",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c48480bfe0d3272d2a88aa2df6980fc910cf7d6ab58ca49cb11a1da20630364f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f70ba5f7-d89b-41b2-b09f-44b1a9467466",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 220
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "c8a741d38d2cd25809c7de2ffd1359041bc108def6aefd086abcba98163960d4"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f70ba5f7-d89b-41b2-b09f-44b1a9467466",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/q-x-8-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9256ce16-ba37-4d2c-9c51-41a61ca810cf",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/q-x-8-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9256ce16-ba37-4d2c-9c51-41a61ca810cf",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/q-x-8-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+      "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 220
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+      "sha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 220
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+      "sha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 220
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6d8b21cd0d7383830b5eccedc8bb4aa92afb8dddd3d07fea61f3eb11d265db79",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f70ba5f7-d89b-41b2-b09f-44b1a9467466",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 220
+          }
+        }
+      },
+      "sourceReference": "dealers/q-x-8-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "50b02d3c98c56605ebaf582d62f23c3be82618703fd18b2ed00397f103e5fd2a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9256ce16-ba37-4d2c-9c51-41a61ca810cf",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 220
+          }
+        }
+      },
+      "sourceReference": "dealers/q-x-8-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c48480bfe0d3272d2a88aa2df6980fc910cf7d6ab58ca49cb11a1da20630364f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f70ba5f7-d89b-41b2-b09f-44b1a9467466",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 220
+          }
+        }
+      },
+      "sourceReference": "dealers/q-x-8-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "c8a741d38d2cd25809c7de2ffd1359041bc108def6aefd086abcba98163960d4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f70ba5f7-d89b-41b2-b09f-44b1a9467466",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "24a14728e7ad153a3d53f5501987b913221442cf107fcadf6d74d2b1cccbedf1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 225,
+            "height": 220
+          }
+        }
+      },
+      "sourceReference": "dealers/q-x-8-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b23cfc7c34e4cbd8c79d54292dcb7179447913bde5c94f1f8fca71614fa8953f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9256ce16-ba37-4d2c-9c51-41a61ca810cf",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "bf22e22fae59a810a09e839f83d1d2d5ea4deb332236ca449f28819d7a6911ba",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 225,
+          "height": 220
+        }
+      }
+    }
+  }
+}

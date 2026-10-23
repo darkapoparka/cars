@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wadeea-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "dfd4f298d03dadabe95892986236a2bac58409de28dd62b459c84c0266d5b727",
+      "sourceSha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4d35dd4f03ee236e96076a71add236e2e240bdfbd2fbeba1967f5e416074b386",
+      "sourceSha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4d35dd4f03ee236e96076a71add236e2e240bdfbd2fbeba1967f5e416074b386",
+      "sourceSha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b59988c3-a7e9-4ebf-938a-e582329418d0",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "dc9dc0d85d3678c1cecb1fb5c11512d0d29613bb17c026f90c7276df33ba71a2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-b59988c3-a7e9-4ebf-938a-e582329418d0",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 200
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "7ce35d2abb742dd74a791d0feb2580c58b6316bfe84560774b11f93308573cdf"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b59988c3-a7e9-4ebf-938a-e582329418d0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/wadeea-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-11d0e02f-746c-436d-be21-b5b0aac3aeed",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/wadeea-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-11d0e02f-746c-436d-be21-b5b0aac3aeed",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/wadeea-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+      "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 200
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+      "sha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 199
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+      "sha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 199
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6583124d23f771a1121308a0c4b862bee8cb33b9fd2cd3953555a329ee94e398",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b59988c3-a7e9-4ebf-938a-e582329418d0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 200
+          }
+        }
+      },
+      "sourceReference": "dealers/wadeea-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "89c848007d36d8be58c5ec0a6ab5f1020016f5d34d8afb82c2fc15f3715bd929",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-11d0e02f-746c-436d-be21-b5b0aac3aeed",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 199
+          }
+        }
+      },
+      "sourceReference": "dealers/wadeea-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "dc9dc0d85d3678c1cecb1fb5c11512d0d29613bb17c026f90c7276df33ba71a2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b59988c3-a7e9-4ebf-938a-e582329418d0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 200
+          }
+        }
+      },
+      "sourceReference": "dealers/wadeea-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "7ce35d2abb742dd74a791d0feb2580c58b6316bfe84560774b11f93308573cdf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b59988c3-a7e9-4ebf-938a-e582329418d0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "dab115428e0daeb7e09c95eb5be458c02c403320d26685417187a44cbe4b2d70",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 200
+          }
+        }
+      },
+      "sourceReference": "dealers/wadeea-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "783002c2d01307713915eebd640e7db949218ca35d60ff9843fb1a18ea968428",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-11d0e02f-746c-436d-be21-b5b0aac3aeed",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d3761ab1b4d97815578eec81ee5fef4561abf608948d23f45115b4d8ec255f67",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 199
+        }
+      }
+    }
+  }
+}
