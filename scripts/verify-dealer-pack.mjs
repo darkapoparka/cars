@@ -25,7 +25,7 @@ const business=facts=>facts?.business??facts??{};
 const includesName=(text,name)=>clean(name).length>=3&&(' '+clean(text)+' ').includes(' '+clean(name)+' ');
 const includesNameOutsideOwnName=(text,name,ownNames)=>{
   let value=' '+clean(text)+' ';
-  for(const own of [...new Set(ownNames.map(clean).filter(Boolean))].sort((a,b)=>b.length-a.length))value=value.replaceAll(' '+own+' ',' ');
+  for(const own of [...new Set(ownNames.map(clean).filter(Boolean))].sort((a,b)=>b.length-a.length))while(value.includes(' '+own+' '))value=value.replaceAll(' '+own+' ',' ');
   return clean(name).length>=3&&value.includes(' '+clean(name)+' ');
 };
 const visibleText=value=>String(value??'').replace(/\s+/g,' ').trim();
