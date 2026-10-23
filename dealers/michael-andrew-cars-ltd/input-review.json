@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "michael-andrew-cars-ltd",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T00:50:27.930Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "michael-andrew-cars-ltd",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [
+      {
+        "field": "business.email",
+        "valueSha256": "de89ce44e8b2c571e93e4356ec4cd26b01066460e6c8669b2cb8678cc25b3135",
+        "code": "PERSONAL_CONTACT_REVIEW_REQUIRED",
+        "reason": "Mailbox resembles an individual or an unbranded personal-provider address; confirm its published business role or omit it.",
+        "resolvedByPublicBusinessEvidence": true
+      }
+    ],
+    "blocking": []
+  },
+  "batch": {
+    "number": 1,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "gb-huddersfield-michael-andrew-cars",
+    "position": 50
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "a0ef44dc6db6c5db6a2f7c27f0f3f44be4871face2b410502681484bbb12d8ec"
+    },
+    {
+      "path": "branding/artwork-provenance.json",
+      "sha256": "c37ffcfbf9ce35f5f57abb469caaa8e3cf17383b108a94f4255a01428d20dd89"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "485c4b8bf924a367a2ae090e3386a7b804dde9855ce5049c75ee5a84d9a990a4"
+    },
+    {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "ef4d7631b6114286e101535dfbf6dfaa710dd3a6ff37a5a609a9a5182689b68a"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "269c63015ce6b16cab2ade31e87f672b4c70eddaf6eb1413c232682984bc30c5"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "4717f9e73f6a9d97cf8cafa95a9cd950751f8c53b9ad5758f633f157b03c5596"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "f7606c795222e208686f8c19b12a90bbd0aa4affe578253c66e475ebfcd014ee"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "ce4e2760da2612aef0a11fa843c2fcbde1a297381d84a65be42d3b5a6b5198ad"
+    },
+    {
+      "path": "branding/native-generated-on-dark.png",
+      "sha256": "f80b02aa5c859cae1b81e3e6fd692cd037cb39741d4b48f6a7c309446622f5e0"
+    },
+    {
+      "path": "branding/native-generated-on-light.png",
+      "sha256": "a22470937dfb27c778f7d127179803cde2755ec44c403be13c5dea829ba6946e"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "7c13227ae736566900d3712ec03f515c08e3dd7dac1cd201350e41018cadb94f"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "07d49b9a1e2eeb77c83e1c31a7367e24d8421e41be5aedc011723ec1fe077bcc"
+    },
+    {
+      "path": "contact-review.json",
+      "sha256": "e9da94d661bbe6b7083b8a8484800d8805a7138a55573a47fbc2e73b771e522c"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "2f1712cf4594b98403679d9068436b37f8fbde83255deca74cb28751abb550c3"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "fc8e689dc7e14396ba6e528d49ff2ea7dc1c2cc912f8897a0cfeddc48b809987"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "4af8b54c27aa487a6e17f0f8477f1c3e52e38407c694d71f71ebd81cbd858a92"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "08918dea19a7858eb179d52b54808b71da84e038c06cdf50931f41567a6dfa21"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "18bafac01864871036cc1118a255aea1f865f44c99a27b17c5e22a4ea892fd2c"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "9362d21b2d7f322d470e022ff340e75a2a597e0500448263df01b8c658344714"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "8ebd30f0c34a97c923c644e8f3df3cf723a5f758a6ccb552ab4358b1a9ec2b67"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "c6930f27cec7737aa14417fae466cc082f24ecb42d77e1ba539794ca0bf71f89"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Michael Andrew Cars Ltd",
     "publicOrigin": "https://michael-andrew-cars-ltd.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "4717f9e73f6a9d97cf8cafa95a9cd950751f8c53b9ad5758f633f157b03c5596",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "38d2560f16f215e6a66d4d440ae35aa605270f816808878b4856e238271b66c2"
+    }
   }
 }
