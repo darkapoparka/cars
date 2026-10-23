@@ -50,27 +50,22 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "9abe76d21919f68db848e88987564fdfe135c5584bcb73f54ae0211ce788c95f",
+    "sha256": "00ba1ee87afe31500b02c5189cd3dae61e3df9c12b0e80fd9c893a5741c46f9a",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
       "modelVersion": null,
       "derivedFrom": {
-        "path": "branding/generated-on-light.png",
-        "sha256": "258d6c7852d4ffd39468efb337666ec545a66e054544b98f03ea56ae8162d48c",
-        "operation": "crop-left-symbol",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 280,
-          "height": 221
-        }
+        "path": "branding/reviewed-mark-light.png",
+        "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1",
+        "operation": "darken-reviewed-gold-ink-for-white-compact-and-favicon",
+        "colorTransform": "gold RGB scale 0.52/0.43/0.45"
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "97b2b73bb43e68977cfff999329d987335e111f52a60a44809792e097280d883"
+    "sha256": "65a4044c2466f942738958e154f50be53ee8e17524349c6b36dfb44ef82d9d2b"
   },
   "surfaces": {
     "onLight": {
@@ -148,21 +143,16 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "9fa0770a7e87ba35a68cfa862c06968c3992cc496fa384efd51cd0840fe58a96",
+      "sha256": "fec22bbd2635e79d62974a53a2e030fc072dee6cdd6823687cbf9bbccf73b46b",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "258d6c7852d4ffd39468efb337666ec545a66e054544b98f03ea56ae8162d48c",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 280,
-            "height": 221
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-and-favicon",
+          "colorTransform": "gold RGB scale 0.52/0.43/0.45"
         }
       },
       "sourceReference": "dealers/al-anwar-al-khamsa-used-cars/branding/generated-mark-light.png"
@@ -190,42 +180,32 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "9abe76d21919f68db848e88987564fdfe135c5584bcb73f54ae0211ce788c95f",
+      "sha256": "00ba1ee87afe31500b02c5189cd3dae61e3df9c12b0e80fd9c893a5741c46f9a",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "258d6c7852d4ffd39468efb337666ec545a66e054544b98f03ea56ae8162d48c",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 280,
-            "height": 221
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-and-favicon",
+          "colorTransform": "gold RGB scale 0.52/0.43/0.45"
         }
       },
       "sourceReference": "dealers/al-anwar-al-khamsa-used-cars/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "97b2b73bb43e68977cfff999329d987335e111f52a60a44809792e097280d883",
+      "sha256": "65a4044c2466f942738958e154f50be53ee8e17524349c6b36dfb44ef82d9d2b",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "258d6c7852d4ffd39468efb337666ec545a66e054544b98f03ea56ae8162d48c",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 280,
-            "height": 221
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-and-favicon",
+          "colorTransform": "gold RGB scale 0.52/0.43/0.45"
         }
       },
       "sourceReference": "dealers/al-anwar-al-khamsa-used-cars/branding/generated-mark-light.png"

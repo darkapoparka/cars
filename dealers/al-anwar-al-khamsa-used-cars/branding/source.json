@@ -29,21 +29,16 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1",
+      "sha256": "5f7add47a7c1a79e02f3af0654fa14d4e5c3b4a662df68fd25e5fe457cfed499",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-e0d355a2-a39c-4d73-8f0c-fa777ab7c547",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-light.png",
-          "sha256": "258d6c7852d4ffd39468efb337666ec545a66e054544b98f03ea56ae8162d48c",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 280,
-            "height": 221
-          }
+          "path": "branding/reviewed-mark-light.png",
+          "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1",
+          "operation": "darken-reviewed-gold-ink-for-white-compact-and-favicon",
+          "colorTransform": "gold RGB scale 0.52/0.43/0.45"
         }
       }
     },
@@ -125,7 +120,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Original reviewed compact retained byte for byte. Selected gold on white darkened from exact pixels for native compact/favicon contrast; full horizontal artwork unchanged."
     }
   },
   "sourceBlockers": [],
@@ -142,6 +137,10 @@
         "path": "branding/native-generated-on-dark.png",
         "sha256": "74987ce06d63fa6a91eb3b21b536736833f89f559e064dd74328a2b0c228c38c"
       }
-    ]
+    ],
+    "reviewedCompact": {
+      "path": "branding/reviewed-mark-light.png",
+      "sha256": "2d648734b61e94d2f813390b6fee43605e94678e399979e563594b05c7fc60b1"
+    }
   }
 }
