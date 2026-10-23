@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-jars-aldhahabi-used-cars-trading",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -10,7 +10,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "9874fdaf00e9fc3642fc86970fbd141aa7e62babd46fd6b5f161961e80490c05",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+          "operation": "crop-reviewed-right-car-badge",
+          "crop": {
+            "left": 690,
+            "top": 20,
+            "width": 225,
+            "height": 230
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "292123881fb6c2d04bd67e966fca41b69210cf56645507b5b06368357feca71a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-0a1d281e-8265-4244-ac47-cf0be4d314b8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+          "operation": "crop-reviewed-right-car-badge",
+          "crop": {
+            "left": 690,
+            "top": 20,
+            "width": 225,
+            "height": 230
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0a1d281e-8265-4244-ac47-cf0be4d314b8",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0bee2f362b153ae9d00fb3fc257755077b63c617b6436964a887fefb2b1c09e5",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-0a1d281e-8265-4244-ac47-cf0be4d314b8",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Right car badge cropped from the reviewed horizontal artwork pair; native 32/64px QA remains independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "82dd7dc9946d9a6852cffc6d7f1ba012eb8e87fc7d378db2ebbf43cb167c411d",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "cdfdea30b0902450046e8628f9e97bdb39b4ed305790f320ad7b71ed17fe65ba"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "2b91d664e7b9e59635f82e10b024944ccd592eeed392fcf4c98e275ac08f54f3"
+      }
+    ]
+  }
 }

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-muwafaq-motors-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "893b324772d4e6c9a30e3d33ac7a2dcad8e0956cd3e629aa3573e2b9eb09a282",
+      "sourceSha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "dfa8f905873bffdca4e4cda5a5df0025a514b832329f8220e9040797f9f5726b",
+      "sourceSha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "dfa8f905873bffdca4e4cda5a5df0025a514b832329f8220e9040797f9f5726b",
+      "sourceSha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "8ad16b1779ff7cd02a36cf1d3531e60e8627d25be7c614bdd7a8d8dadaeb13c1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 284
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "6e0bf0b59410e1dc44db8ff7543b5328242043ec60a6cdd79f4a820434d19a50"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d3c50a78-6823-484c-9978-5869f216b2ab",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d3c50a78-6823-484c-9978-5869f216b2ab",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+      "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 284
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+      "sha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 286
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+      "sha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 286
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "56ff9aa49aeb037673fadb0a49fa1dabfbdeb6b8a3a661353f9ea9de8be5b281",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 284
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "7dff21e3827f005700c03a6b411f72b9cb9258c2a3cf92bcde3c3fac447a8d9a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-d3c50a78-6823-484c-9978-5869f216b2ab",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 286
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "8ad16b1779ff7cd02a36cf1d3531e60e8627d25be7c614bdd7a8d8dadaeb13c1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 284
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "6e0bf0b59410e1dc44db8ff7543b5328242043ec60a6cdd79f4a820434d19a50",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 260,
+            "height": 284
+          }
+        }
+      },
+      "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "11676a4bbdfd4a2993e8d19cb8a5993d3bfc47331716cb70567cc8f2acc5f77f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-d3c50a78-6823-484c-9978-5869f216b2ab",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8f4e96be4135f3f39407c4cf9bc466e4951faab77e2006eb8cd10828f260d1ab",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 260,
+          "height": 286
+        }
+      }
+    }
+  }
+}
