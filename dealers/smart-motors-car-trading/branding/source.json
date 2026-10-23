@@ -29,7 +29,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "8db6d407e309cc3d12e14cf2098c219043557576d97598c9229e3b752160a455",
+      "sha256": "94d79051f01bd38d1ff43724c09caf145d8f959f56ea09f1604b73e418339aec",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-123f504d-9bcb-4537-bf53-5da866c71a30",
@@ -37,19 +37,25 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "cf9168d56d0e8fbf76cd3d7ab80e4430cbcdc4876cd45a4bc9d03f17e228040a",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-with-transparent-padding",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 307,
-            "height": 320
+            "left": 332,
+            "top": 65,
+            "width": 116,
+            "height": 95
+          },
+          "padding": {
+            "top": 15,
+            "bottom": 15,
+            "left": 15,
+            "right": 15
           }
         }
       }
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "a2ceb9d7107dec409e0b385e4640ae8c177c1573b5d20e2585f8d16482ed872f",
+      "sha256": "37c18c9d6161be9c8e3506c5dd362b48d82e3dd0bafb1069c0150a8a0c2332dd",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-f27c6794-5e10-47d8-929a-90638d10426e",
@@ -57,12 +63,18 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "536bb916bbfecdbb2695697f52a09c264afb960df1b64909075b54d4da56b603",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-with-transparent-padding",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 307,
-            "height": 320
+            "left": 332,
+            "top": 65,
+            "width": 116,
+            "height": 95
+          },
+          "padding": {
+            "top": 15,
+            "bottom": 15,
+            "left": 15,
+            "right": 15
           }
         }
       }
@@ -125,7 +137,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "S initial cropped and transparently padded from reviewed horizontal artwork for favicon contrast, pending independent native QA."
     }
   },
   "sourceBlockers": [],
