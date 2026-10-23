@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-abu-dhabi-al-qeyada-motors",
+  "slug": "al-qeyada-motors",
+  "artworkDirectory": "al-qeyada-motors",
+  "name": "Al Qeyada Motors",
+  "renderedName": "Al Qeyada Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-qeyada-motors",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/5159-haval-jolion-15-amt-143-hp-pro",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+      "width": 1024,
+      "height": 243,
+      "transparentFraction": 0.7026829346707819,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "71685ba2a8f5f26d3cc55f2eb4ad0f258f91c79d366cfbe3569f0189a464a0ff",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+        "prompt": "Correct the light-background color treatment of the supplied logo while preserving its recognizable emblem, typeface, exact geometry, word spacing and layout. Exact required wording: AL QEYADA MOTORS. EVERY letter must be opaque deep charcoal black, including every secondary word, colored AL prefix, descriptor and legal suffix. Do not leave any gold, blue, red or white LETTERS. A small red/gold/blue accent is permitted only INSIDE the emblem, never in any wordmark lettering. Genuine transparent alpha, no background, no glow, shadow, gradient, texture, checkerboard, frame, mockup, watermark, extra concepts or altered spelling. One crisp horizontal production logo only.",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/al-qeyada-motors/logo-on-light.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-light.png",
+          "sha256": "276fe439e3af92dbdd0fd24c8e07b0df53f5376e0fd532d5df94bcb2f2641600",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1124beb7-f92b-4000-ab46-53ad07f2e9e0.png",
+            "sha256": "182999e1b3a922d965dcfb1e7e3e724d4e11f9e79dfa8504a0a43da91b075d38"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 101,
+          "width": 2170,
+          "height": 516
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+      "width": 1024,
+      "height": 245,
+      "transparentFraction": 0.6084024234693878,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "d2a9884b5c9788ad45689647618f5fff6cbdf20e2f4f3680bfa3ec05dd19a996",
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL QEYADA MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 96,
+          "width": 2151,
+          "height": 514
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-02.png",
+    "correctionEvidence": "final-corrections-review.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Around The World Automobile Showroom LLC",
     "publicOrigin": "https://around-the-world-automobile-showroom-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "7a7a3d9b26b211c00101a68f868b59d0695dd03fd8ab0061e8176a50ffc1b92c",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "01e9f17f4bd5f1353af794e2666dca89685b36d38968870c4828c19461ad6401"
+    }
   }
 }

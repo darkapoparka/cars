@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-qeyada-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "0dcbf160bff3be5ccf153a7d7d11f82d2333119097b1ed107fc086fcebc3a5a9",
+      "sourceSha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "39786f603898bcab4c57acfc4b9c421a9681b7b39e42d66859788364c011571f",
+      "sourceSha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "39786f603898bcab4c57acfc4b9c421a9681b7b39e42d66859788364c011571f",
+      "sourceSha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ca44ec97fc3d56abc7e85b35a7c018ca35a08a04aa5afc773fae7fa87620597c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 315,
+          "height": 243
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "f4f7c15981fd6a22e4a706535796bf6a93249f265a72c818b70d250d516a783c"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-qeyada-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-qeyada-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-qeyada-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+      "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 243
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+      "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 245
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+      "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 245
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "fd8a7385ee43c3869f9a13bad03d139af779fe77b17454f44952cb1dfae75b04",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 243
+          }
+        }
+      },
+      "sourceReference": "dealers/al-qeyada-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "f52c94a2f5712cdc29a7e48def04330e296944f63ef97eadab6b285ee2af9c23",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 245
+          }
+        }
+      },
+      "sourceReference": "dealers/al-qeyada-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ca44ec97fc3d56abc7e85b35a7c018ca35a08a04aa5afc773fae7fa87620597c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 243
+          }
+        }
+      },
+      "sourceReference": "dealers/al-qeyada-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "f4f7c15981fd6a22e4a706535796bf6a93249f265a72c818b70d250d516a783c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8034a04b-a8e2-41f4-ba7c-4d037608bdab",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 315,
+            "height": 243
+          }
+        }
+      },
+      "sourceReference": "dealers/al-qeyada-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "c2d1b5851b645deae93893787bf391291ab2148b01aaf9533efefd698b8e0a04",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ef48911e-cf5c-4119-8a4f-8f29762722a4",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "02eed70da869d6d348d3006427e97103e4ee6b5fe36d05fe608627f881c7a329",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 315,
+          "height": 245
+        }
+      }
+    }
+  }
+}

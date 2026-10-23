@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Qeyada Motors",
     "publicOrigin": "https://al-qeyada-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "79828ef7e1fc9de1d739da0c561e0a7cb1cf7a77559da38c5e1f190b31806e07",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "ca44ec97fc3d56abc7e85b35a7c018ca35a08a04aa5afc773fae7fa87620597c"
+    }
   }
 }
