@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "titanes-auto-sales-rentals-titan-4778885363",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T01:22:01.472Z",
+  "reviewedAt": "2026-10-23T01:54:23.836Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -42,6 +42,10 @@
       "sha256": "01005811520142b95ba10560f6324ffa59fb3e8f9cbb74a90962d30c221254f6"
     },
     {
+      "path": "branding/artwork-original-on-light.png",
+      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae"
+    },
+    {
       "path": "branding/artwork-provenance.json",
       "sha256": "f4818f0d430dfe617d749ca49722bdf310b81df5fb1e33cdfae4372a593f132e"
     },
@@ -51,7 +55,7 @@
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "bb8bd783c1e949389e20d77505d1f184661c0afa46aca140c88d7658e4fa3e5c"
+      "sha256": "3dd86392e7eba52afc8796bfdd0ed80bfcfca30c25d2d66c51b3ec72b781c8eb"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -59,15 +63,15 @@
     },
     {
       "path": "branding/generated-on-light.png",
-      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae"
+      "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721"
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "8ec8cd34a37be2da99770ddf7347ac620aa7e36fa52e230e3582b095fef8870b"
+      "sha256": "b60f1a599e90a94aee85cc2f3564103ee51340cb6f93931540568b5aaab8c344"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "e9c94668e3a7d8adefbff189296eb32af6066576d7bf2deccb4cd3bfe2b39ef7"
+      "sha256": "be8ddeda6515aa8254d5fbf890b95979bc7e84d512a46921ae5073e0624d5f21"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -79,7 +83,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "ef5b7245527ffa40fe61515aea9e64d0ad692d28648646246b7b104b2b6bd4b2"
+      "sha256": "756f2b7c37b30862b6e8addbc0bab375413a37d3139d34ce581ff4206f52af71"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "85e9283e245e5a82e7997ffa1e0432f82f6ece28839fea86451688a75f162e18"
+      "sha256": "85ace536bfc25c2f488d18ccb95cd516cc56bac790bba9555f457377a8a691f5"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "b8c1eb73c68d1ff763589ba58d97438e6f82e5f1dc432fd86faeff9969dd294a"
+      "sha256": "f380e47af03d2c0c04f59d2e04fd95e604f5de23193223ed84d5b3b59bcb5cde"
     },
     {
       "path": "identity-review.json",
-      "sha256": "ef9b1caecb879712d6b959c499f0662bdc0d908d8af3cd7e75744fc88f8d4ba6"
+      "sha256": "44430a0c44d6bfecbb9479e34ecc1b7da66852834038d56454c37fb96f180f98"
     },
     {
       "path": "locale.json",
@@ -119,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "a8be82f1bbedaf57109cdfc01d8592405205482daef2ce8550946ac0e4446673"
+      "sha256": "dce97df66511929b0c9e9209451f9bba71851e8e5813337869387cacf8d50075"
     },
     {
       "path": "source-evidence.json",

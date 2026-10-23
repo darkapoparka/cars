@@ -9,8 +9,8 @@
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "f0babd608d76311eb7a60d631a24e1e9489aa2c0fc91a648d9a2515683ef9535",
-      "sourceSha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae"
+      "sha256": "b04f9eb35dbbf714ee4acafd7d8083ba1bf6a099f19a6fcdfcf1123a357bca20",
+      "sourceSha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
@@ -41,28 +41,33 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+    "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
-      "modelVersion": null
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/artwork-original-on-light.png",
+        "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+        "operation": "light-surface-contrast-raster-adjustment"
+      }
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "a4817886cb732139b86a7eb0905c7396eb2c0ba3f0f95985eb5d8226e7f2b30f",
+    "sha256": "5decbb53ba3889e706fe3bcf49712a3d0fb8791c7b496d3dbebdbf6e60231433",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
       "modelVersion": null,
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
-        "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
-        "operation": "crop-left-symbol",
+        "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
+        "operation": "crop-front-car-compact-symbol",
         "crop": {
-          "left": 0,
+          "left": 50,
           "top": 0,
-          "width": 400,
+          "width": 320,
           "height": 227
         }
       }
@@ -70,16 +75,21 @@
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "ae7da6f7148e1b035b996c14017ce36c927bdf807bc64c46697d32f4b84f79b9"
+    "sha256": "638466a2be2d3720f937385483fa890fe57f1e5cd8323de43bac494f4d29f58a"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
-        "modelVersion": null
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/artwork-original-on-light.png",
+          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+          "operation": "light-surface-contrast-raster-adjustment"
+        }
       },
       "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-on-light.png"
     },
@@ -107,8 +117,8 @@
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
-      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "sourceSha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
+      "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
       "crop": {
         "left": 0,
         "top": 0,
@@ -148,19 +158,19 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "800cf2a2af081f35985735965fd71233c9abc0f893eb2dc8c611a9711b4edb3e",
+      "sha256": "6b6a43b4bc1ebce1a89a092a976c7e54ca7f55e226533ab9475a424e1fabd3f7",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
-          "operation": "crop-left-symbol",
+          "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
+          "operation": "crop-front-car-compact-symbol",
           "crop": {
-            "left": 0,
+            "left": 50,
             "top": 0,
-            "width": 400,
+            "width": 320,
             "height": 227
           }
         }
@@ -190,19 +200,19 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "a4817886cb732139b86a7eb0905c7396eb2c0ba3f0f95985eb5d8226e7f2b30f",
+      "sha256": "5decbb53ba3889e706fe3bcf49712a3d0fb8791c7b496d3dbebdbf6e60231433",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
-          "operation": "crop-left-symbol",
+          "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
+          "operation": "crop-front-car-compact-symbol",
           "crop": {
-            "left": 0,
+            "left": 50,
             "top": 0,
-            "width": 400,
+            "width": 320,
             "height": 227
           }
         }
@@ -211,19 +221,19 @@
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "ae7da6f7148e1b035b996c14017ce36c927bdf807bc64c46697d32f4b84f79b9",
+      "sha256": "638466a2be2d3720f937385483fa890fe57f1e5cd8323de43bac494f4d29f58a",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
-          "operation": "crop-left-symbol",
+          "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
+          "operation": "crop-front-car-compact-symbol",
           "crop": {
-            "left": 0,
+            "left": 50,
             "top": 0,
-            "width": 400,
+            "width": 320,
             "height": 227
           }
         }

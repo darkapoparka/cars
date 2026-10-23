@@ -29,7 +29,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "554b1d4e0b559861c19ff1088844ad193895ddb1ca626bd191ab55a64d998c49",
+      "sha256": "a1d75146aa94ee6d59e6f99b170129aef9871688901b831b323bfa2fbb0835d6",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-190b2b73-0588-4755-a8e5-f0a3049697dd",
@@ -37,19 +37,19 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "1b5d3de9deb7e84db739f516c950284ee4277f2056b99057917923c60fbc2cc3",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 365,
-            "height": 216
+            "left": 370,
+            "top": 30,
+            "width": 132,
+            "height": 130
           }
         }
       }
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "85fe7e7cc7968e220db684028d66aea33bba3981b77f197f883a671dfb6ffc21",
+      "sha256": "4434179dd9babc5a9bda8527f63fd2a225351d68575fbb49db88fa25e65282ac",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-8bd49d21-ee6d-4e7f-b392-7d59ed4616a6",
@@ -57,12 +57,12 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "dab5e18506b7fc210782e77793bd941503cf6a4c5cfc26e7b39799a25a61125e",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 365,
-            "height": 217
+            "left": 370,
+            "top": 30,
+            "width": 132,
+            "height": 130
           }
         }
       }
@@ -125,7 +125,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Standalone A initial cropped from the same reviewed horizontal artwork to preserve favicon legibility at 32px; native QA must independently pass."
     }
   },
   "sourceBlockers": [],

@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "al-lulu-cars-showroom",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T01:27:40.719Z",
+  "reviewedAt": "2026-10-23T01:51:32.592Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -47,11 +47,11 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "85fe7e7cc7968e220db684028d66aea33bba3981b77f197f883a671dfb6ffc21"
+      "sha256": "4434179dd9babc5a9bda8527f63fd2a225351d68575fbb49db88fa25e65282ac"
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "554b1d4e0b559861c19ff1088844ad193895ddb1ca626bd191ab55a64d998c49"
+      "sha256": "a1d75146aa94ee6d59e6f99b170129aef9871688901b831b323bfa2fbb0835d6"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "286c8295078c0e694d28df89ee80c66310ecd546ad186c4a832e1a1c27e21415"
+      "sha256": "f495276f52ebd83decb88c8a3f255143ba6599716d7c195c184a1371afd3e4da"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "6bfe197b21de1889b9914e011daf042dda322f6a8742694cbf0ba423bd492d5d"
+      "sha256": "95cf2bdfc4dc54931c96e71fa50aac46dc8d879e1b72605290dcb45035ed0796"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -79,7 +79,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "3ec573ec48809746a5fbc532f2cd8bfcce34fa84f9ac479c3c55a0abb79f2736"
+      "sha256": "97f3a61b8bc1dd09ee70f7b6b167a945786145dc07e872e9d7264f8321872232"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "4bb9c87e97d22ad0ee853b69075c7046ad08eb8fd77aea3d8dbfa440afb5a41d"
+      "sha256": "bfcacf6456299019ee81d3260a35aba34516d8c30090152816f0cd140cefc780"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "b70d49e6e3621f4fb8cdeda1982c993d73e9f19bdbd282dd3f9e566884e56771"
+      "sha256": "6afe4a00b4c1158285c24135195374542f10f293fb4d5c36f1fa5d14aefeff1f"
     },
     {
       "path": "identity-review.json",
-      "sha256": "d5e1b0d2db6300dca6ea084779f47a4d15c52e8456b13e4e0465639b0538ebb8"
+      "sha256": "7408c46f060250b3e0a2fb87a4376ae773e057de0e76f2459d065135276790e5"
     },
     {
       "path": "locale.json",
@@ -119,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "ddbf74f5ee00ad4502c11b752477a0222386ffe3b09b9306a4d93189cec7a742"
+      "sha256": "429db1594f5b8379410090006c11990559bf036219005f0aca1312022356a33a"
     },
     {
       "path": "source-evidence.json",

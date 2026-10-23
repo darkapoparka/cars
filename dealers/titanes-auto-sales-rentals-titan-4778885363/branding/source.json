@@ -36,28 +36,33 @@
     "reviewedAt": "2026-10-22T23:42:46.338Z",
     "master": {
       "path": "branding/generated-on-light.png",
-      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
-        "modelVersion": null
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/artwork-original-on-light.png",
+          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+          "operation": "light-surface-contrast-raster-adjustment"
+        }
       }
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "bb8bd783c1e949389e20d77505d1f184661c0afa46aca140c88d7658e4fa3e5c",
+      "sha256": "3dd86392e7eba52afc8796bfdd0ed80bfcfca30c25d2d66c51b3ec72b781c8eb",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
-          "operation": "crop-left-symbol",
+          "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
+          "operation": "crop-front-car-compact-symbol",
           "crop": {
-            "left": 0,
+            "left": 50,
             "top": 0,
-            "width": 400,
+            "width": 320,
             "height": 227
           }
         }
@@ -86,11 +91,16 @@
     "surfaces": {
       "onLight": {
         "path": "branding/generated-on-light.png",
-        "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+        "sha256": "c47f7dca0377c4a859053fd4f3b32fa7b2c8d27211c08d4a647ee436f5a97721",
         "generation": {
           "tool": "image_gen.imagegen",
           "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
-          "modelVersion": null
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/artwork-original-on-light.png",
+            "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+            "operation": "light-surface-contrast-raster-adjustment"
+          }
         }
       },
       "onDark": {
@@ -126,7 +136,7 @@
         220,
         240
       ],
-      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+      "notes": "Original reviewed PNG retained byte for byte. Derived light export darkens low-contrast red and white pixels; native surface QA must independently pass."
     },
     "compactMarkReview": {
       "reviewed": true,
@@ -141,7 +151,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Car front cropped from contrast-adjusted light export for 32px favicon; native QA must independently pass."
     }
   },
   "sourceBlockers": [],
@@ -158,6 +168,10 @@
         "path": "branding/native-generated-on-dark.png",
         "sha256": "b1d44fd8e8d2640fae3a5b88d568e4c1ef85e49ff81375cd67f8781e54d36d74"
       }
-    ]
+    ],
+    "originalReviewedOnLight": {
+      "path": "branding/artwork-original-on-light.png",
+      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae"
+    }
   }
 }
