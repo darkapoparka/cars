@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-khat-al-khaleej-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-khat-al-khaleej-used-cars",
+  "name": "Khat Al Khaleej Used Cars",
+  "renderedName": "Khat Al Khaleej Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/khatalkhaleej/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/7575-hyundai-tucson-20-at-193-hp-other",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "289395f9b3b7d3ad2da594a47198c8786f5127c47f14303db19e33a487751a75",
+      "width": 1024,
+      "height": 208,
+      "transparentFraction": 0.6795560396634616,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "8b2e19704f9b2dda9ab01b3fd650d375170a7ddd513d4105a3caca7d79b6fc38",
+        "width": 1998,
+        "height": 787
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-cb381af1-c572-42ed-95df-f1445476993b",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Khat Al Khaleej Used Cars. Required exact text, uppercase: KHAT AL KHALEEJ USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials KK may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 189,
+          "width": 1998,
+          "height": 405
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "1e5766b9bf57b150cf51d7bb0c0268ec04f80fd069e90e2d2689d88c184db486",
+      "width": 1024,
+      "height": 210,
+      "transparentFraction": 0.5720145089285714,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "ca13b9430a976699feb03966770b80f2f845e124358d3384d2761522bb8b71a8",
+        "width": 1997,
+        "height": 787
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-c114c6d2-18a0-45fa-ab24-dbe9faed0de1",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: KHAT AL KHALEEJ USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-cb381af1-c572-42ed-95df-f1445476993b.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 187,
+          "width": 1997,
+          "height": 410
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

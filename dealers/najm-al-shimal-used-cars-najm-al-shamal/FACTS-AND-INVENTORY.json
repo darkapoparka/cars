@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-al-shimal-used-cars-najm-al-shamal",
+  "businessFacts": "business-facts.json",
+  "stock": "stock.json",
+  "inventoryKind": "illustrative-not-dealer-stock",
+  "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+  "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+  "sources": [
+    {
+      "url": "https://auto.ae/najmalshamal/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8518-nissan-sentra-20-cvt-149-hp-s",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

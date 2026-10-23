@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T04:06:58.278Z",
+  "dealer": "najm-al-shimal-used-cars-najm-al-shamal",
+  "dealerId": "ae-sharjah-najm-al-shimal-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://auto.ae/najmalshamal/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/8518-nissan-sentra-20-cvt-149-hp-s",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

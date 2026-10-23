@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "slug": "hayan-al-khudari-used-cars",
+  "dealerId": "ae-sharjah-hayan-al-khudari-used-cars",
+  "business": {
+    "name": "Hayan Al Khudari Used Cars",
+    "city": "Sharjah",
+    "region": "Sharjah",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971509530033",
+    "phoneDisplay": "+971509530033",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://auto.ae/hayanalkhudari/",
+    "hours": "",
+    "sourceUrl": "https://auto.ae/hayanalkhudari/",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://auto.ae/hayanalkhudari/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/730-jeep-wrangler-36-at-awd-285-hp-unlimited-sahara",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

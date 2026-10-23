@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wahat-al-umra-used-cars",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "92496fd381433a5b366f1ed6111b9bb14517b5a8fe42399e8342c13b598073bb",
+      "sourceSha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "df5607100692bc5c83290a04f1026b87430871f839fc0e7297f536b1d7503a41",
+      "sourceSha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "df5607100692bc5c83290a04f1026b87430871f839fc0e7297f536b1d7503a41",
+      "sourceSha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "9f7a9ad576436bb5651f59adf350104fc8b9ab402ad2371709df9ba06950ee0e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 189
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "99e03b33ad5328cf6477b0ce57b1e860fe28d758eeb56f708094184fa6a1ae7b"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/wahat-al-umra-used-cars/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/wahat-al-umra-used-cars/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/wahat-al-umra-used-cars/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+      "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 189
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+      "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 186
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+      "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 186
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "71bf78efc981df8804ddcf30e17dfcb11d710fad2dfef47c85ae6c4e503d12b7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 189
+          }
+        }
+      },
+      "sourceReference": "dealers/wahat-al-umra-used-cars/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "77307c219805d7043f4aaa763bc62bc63b3eb9afccfd4419051a783320584c79",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 186
+          }
+        }
+      },
+      "sourceReference": "dealers/wahat-al-umra-used-cars/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "9f7a9ad576436bb5651f59adf350104fc8b9ab402ad2371709df9ba06950ee0e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 189
+          }
+        }
+      },
+      "sourceReference": "dealers/wahat-al-umra-used-cars/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "99e03b33ad5328cf6477b0ce57b1e860fe28d758eeb56f708094184fa6a1ae7b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 189
+          }
+        }
+      },
+      "sourceReference": "dealers/wahat-al-umra-used-cars/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "d182cdf167f2baccf9f661a9822717a6b416900141256de21db1cc728e98b00a",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 186
+        }
+      }
+    }
+  }
+}

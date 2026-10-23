@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "najm-al-shimal-used-cars-najm-al-shamal",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d74bdb8692add0cf2d9383e4733f53b5a830731680b9d1a56b9fdfd9051603f1",
+      "sourceSha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "434eb799bbb6c30d890422eddc7f226f58426485e9aa0471825554f0e3ac9923",
+      "sourceSha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "434eb799bbb6c30d890422eddc7f226f58426485e9aa0471825554f0e3ac9923",
+      "sourceSha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ede9d193d74781bd67e334e7fd12cf8fea554b822668ba61f42e8fd7cfc9ab8c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 305,
+          "height": 215
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "37a8a323ad6364275e4c0f52000512df4b57e0c1eda882ef53d66f04157308a9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/najm-al-shimal-used-cars-najm-al-shamal/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2c6746f8-7d30-4a31-9121-faa0fa6ab865",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/najm-al-shimal-used-cars-najm-al-shamal/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2c6746f8-7d30-4a31-9121-faa0fa6ab865",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/najm-al-shimal-used-cars-najm-al-shamal/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+      "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 215
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+      "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 219
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+      "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 219
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3c9b3854b7eb6b77e10bbd4aa9f6370c9156e4699919207807b97449e9de4cd3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/najm-al-shimal-used-cars-najm-al-shamal/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "b66eaeb121666c397d69ba49652c21648b2ce15ebb9c6d7e9b9d2b494e209995",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2c6746f8-7d30-4a31-9121-faa0fa6ab865",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 219
+          }
+        }
+      },
+      "sourceReference": "dealers/najm-al-shimal-used-cars-najm-al-shamal/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ede9d193d74781bd67e334e7fd12cf8fea554b822668ba61f42e8fd7cfc9ab8c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/najm-al-shimal-used-cars-najm-al-shamal/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "37a8a323ad6364275e4c0f52000512df4b57e0c1eda882ef53d66f04157308a9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-20ca0c35-4efc-4052-bbe2-7b8bf9482128",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "7af192af9c5a3e3ed68dd371fd9e30fdf26d073e6ec78eabd5c81cbd4b71f7f2",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 215
+          }
+        }
+      },
+      "sourceReference": "dealers/najm-al-shimal-used-cars-najm-al-shamal/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "8bba131693f7962f624cd8b1ff91c0ee086d7d616eeda7027836e2699f680a85",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2c6746f8-7d30-4a31-9121-faa0fa6ab865",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e79122566d8e57134a511b566b93515947ba0ca3c4445c32bd4a22a104d3ab2c",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 305,
+          "height": 219
+        }
+      }
+    }
+  }
+}

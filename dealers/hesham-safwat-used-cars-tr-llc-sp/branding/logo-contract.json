@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "hesham-safwat-used-cars-tr-llc-sp",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "4bc9303def2aa64e9eb4ecc019cf5f410f6ced3011bb550de0be7a0d47679ff3",
+      "sourceSha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "083151457fb3347f299c61265324ef0393bc9f7f7082a6b74462c658b2feae86",
+      "sourceSha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "083151457fb3347f299c61265324ef0393bc9f7f7082a6b74462c658b2feae86",
+      "sourceSha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c510e32c74e103fb76656d0f9962757672abb4c86c315f4a169eb04c89824443",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 305,
+          "height": 217
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "66ef1523aa7f03cfdb65fd13f3515a684a6468f5355d279a1d3400303a50bc05"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hesham-safwat-used-cars-tr-llc-sp/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c9e8547-0d22-4eab-9a95-6ea91966a024",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hesham-safwat-used-cars-tr-llc-sp/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c9e8547-0d22-4eab-9a95-6ea91966a024",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/hesham-safwat-used-cars-tr-llc-sp/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+      "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 217
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+      "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 214
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+      "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 214
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6782b8efc7b547cfdbe3c7d02abec78ed88563b63af9f1d5ee03b8804ea09d08",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 217
+          }
+        }
+      },
+      "sourceReference": "dealers/hesham-safwat-used-cars-tr-llc-sp/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "498a4f8d7332a08c8ac34f8027098dd693aa6ca79b077a648f64b8cbfcf6ae08",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9c9e8547-0d22-4eab-9a95-6ea91966a024",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 214
+          }
+        }
+      },
+      "sourceReference": "dealers/hesham-safwat-used-cars-tr-llc-sp/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c510e32c74e103fb76656d0f9962757672abb4c86c315f4a169eb04c89824443",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 217
+          }
+        }
+      },
+      "sourceReference": "dealers/hesham-safwat-used-cars-tr-llc-sp/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "66ef1523aa7f03cfdb65fd13f3515a684a6468f5355d279a1d3400303a50bc05",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ee60d08c-c80b-4528-bcd4-ef2653a8576c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "3396039fcab21907152e5ddf91f508191fd07b4be16a94cc63f7f46a6547c80e",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 305,
+            "height": 217
+          }
+        }
+      },
+      "sourceReference": "dealers/hesham-safwat-used-cars-tr-llc-sp/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "d44997d8dc56af97985cdf7d912a89f1a14053d4eb4f14121b5a8398a3b66e60",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9c9e8547-0d22-4eab-9a95-6ea91966a024",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e009d14a5f80ae4f76bafc4b584887db981fe6c6db61977aa80c86bde496dac1",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 305,
+          "height": 214
+        }
+      }
+    }
+  }
+}

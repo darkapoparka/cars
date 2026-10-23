@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "impala-used-cars-al-ghazal",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/impala-used-cars-al-ghazal-9065",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "de04a636d7b601b3e3dd0ded648ef5cb7e2319fc30e2fede73356b1d5b537909",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 307,
+            "height": 247
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "aec86591f55edaf91dbfbe6467456d5a60a9f7f3c31b9046eadeba404cd1a4a3",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 307,
+            "height": 245
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "dbc3683351550c97122dd1d36755c15f44bc25b619da80beb9f4984b216ebf7d",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "121711ad55c21cdb3524ad0aa7920a8d6eb2feea4fbc15d360d86d666901bfe8"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "376b29b23e457a05330934de81bfc57ad7d81c4ff9d2ea3d3f9278dfea237ce8"
+      }
+    ]
+  }
+}

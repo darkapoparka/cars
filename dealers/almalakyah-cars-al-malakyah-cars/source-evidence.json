@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dealer": "almalakyah-cars-al-malakyah-cars",
+  "source": {
+    "path": "leads/expansion-2026-10-18/uae.json",
+    "sha256": "ec9ec136346022088cef30299f54f70a678db042f70175c4d7f0e3b41c45c18a"
+  },
+  "publicSources": [
+    {
+      "url": "https://auto.ae/almalakyahcars/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/lexus-nx-2019-for-sale-in-sharjah-73148",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ],
+  "liveFetchPerformed": false
+}

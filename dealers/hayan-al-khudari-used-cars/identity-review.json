@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-identity-review",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T04:06:20.031Z",
+  "dealer": "hayan-al-khudari-used-cars",
+  "dealerId": "ae-sharjah-hayan-al-khudari-used-cars",
+  "repository": "darkapoparka/cars",
+  "existingIdentityFound": false,
+  "sourceOwnership": "cars-canonical",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "method": "Automated exact registry/pack identity, canonical hosting and batch comparison; retained public source fields were structurally checked, not human-approved.",
+  "sources": [
+    {
+      "url": "https://auto.ae/hayanalkhudari/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/730-jeep-wrangler-36-at-awd-285-hp-unlimited-sahara",
+      "observedAt": "2026-10-18"
+    }
+  ]
+}

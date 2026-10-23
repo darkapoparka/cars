@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "taj-al-impratoor-used-cars-tr-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "8483ffb37b84ba6dfd9f9db31088c9ebfbb0d61b04101f40a3eb0f71f435044f",
+      "sourceSha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "b714ea27e6fced1235542dac2337df2a7887099e53ac8ac5572f8ea1dfe27b99",
+      "sourceSha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "b714ea27e6fced1235542dac2337df2a7887099e53ac8ac5572f8ea1dfe27b99",
+      "sourceSha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8e709e8c-8822-4446-9179-75b743ff264b",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "4904d527c469a859edb4f0473bf0ec69436442c5f6a8e23b4c6c9fedfa6774a7",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-8e709e8c-8822-4446-9179-75b743ff264b",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 274
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "df31ed03eb654f8ad91cac789175ce6f4c6aa6d07f8502164b5311e5efcad515"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8e709e8c-8822-4446-9179-75b743ff264b",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/taj-al-impratoor-used-cars-tr-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4600287c-baec-47c8-a230-636a59107e74",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/taj-al-impratoor-used-cars-tr-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4600287c-baec-47c8-a230-636a59107e74",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/taj-al-impratoor-used-cars-tr-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+      "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 274
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+      "sha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 278
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+      "sha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 278
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "c85824cca37895507cfdd1ccc26bb2b314ec5d3d7f9fb3b52f1db8f489607963",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8e709e8c-8822-4446-9179-75b743ff264b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 274
+          }
+        }
+      },
+      "sourceReference": "dealers/taj-al-impratoor-used-cars-tr-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3ccfa8f0de2ca7dd75f56147fe3533a2f4bcc85aae89c3c80908da43b1a0bda2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4600287c-baec-47c8-a230-636a59107e74",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 278
+          }
+        }
+      },
+      "sourceReference": "dealers/taj-al-impratoor-used-cars-tr-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "4904d527c469a859edb4f0473bf0ec69436442c5f6a8e23b4c6c9fedfa6774a7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8e709e8c-8822-4446-9179-75b743ff264b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 274
+          }
+        }
+      },
+      "sourceReference": "dealers/taj-al-impratoor-used-cars-tr-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "df31ed03eb654f8ad91cac789175ce6f4c6aa6d07f8502164b5311e5efcad515",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-8e709e8c-8822-4446-9179-75b743ff264b",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 235,
+            "height": 274
+          }
+        }
+      },
+      "sourceReference": "dealers/taj-al-impratoor-used-cars-tr-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "70716f6fea2e224369de636e2898ac00bb39a4c47448df2246d30ce84cbceaf5",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4600287c-baec-47c8-a230-636a59107e74",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 235,
+          "height": 278
+        }
+      }
+    }
+  }
+}

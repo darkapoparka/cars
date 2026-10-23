@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-taj-al-impratoor-used-cars-tr-llc",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-taj-al-impratoor-used-cars-tr-llc",
+  "name": "Taj Al Impratoor Used Cars TR LLC",
+  "renderedName": "Taj Al Impratoor Used Cars TR LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/tajalimpratoor/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://sharrai.ae/car/mercedes-benz-g-class-2023/87350161",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "596aaebf8564af4b6a7602bd89ca4ac87ebff18d9e479db81d8391c81339be92",
+      "width": 1024,
+      "height": 274,
+      "transparentFraction": 0.7484816947992701,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "3e5cb9c1933eacaef7f775fffe42c2d3895b352a50f4233f50e5a0063c6a60ba",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-8e709e8c-8822-4446-9179-75b743ff264b",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Taj Al Impratoor Used Cars TR LLC. Required exact text, uppercase: TAJ AL IMPRATOOR USED CARS TR LLC. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials TI may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 17,
+          "top": 80,
+          "width": 2136,
+          "height": 572
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "8205024c8a4288eb6b4a87adc014e11f3cf345a460e3d7c4418827fab53625ac",
+      "width": 1024,
+      "height": 278,
+      "transparentFraction": 0.6664793165467626,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "859e1af33a8048d80103bd82816377fb30238531aaa60dca0d17fc5b0bf47181",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4600287c-baec-47c8-a230-636a59107e74",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: TAJ AL IMPRATOOR USED CARS TR LLC. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-8e709e8c-8822-4446-9179-75b743ff264b.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 22,
+          "top": 77,
+          "width": 2128,
+          "height": 578
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-12.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "dealer": "wahat-al-umra-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://auto.ae/wahatalumracars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/jeep-wrangler-2015-for-sale-in-sharjah-37103",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "774b2be745207092f6464cfbda3cd90815ff2bdc128a8ad1ea1287747f97a0ee",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 189
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "b586d91fe419758546113fcd1d416cb9331d5f726817d6b3b71f138fe932f522",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 186
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "9c1ed934198eda2fe7522062c7c9f58979228192bb86cb5a3066b872cd9bf8ed",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "d9bd7e130c7c8e631ac5c236694ef2b21df27a76a5649851e938318e265b9f9b"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "d8ce53c98cb52d47e195c67f17709434d1ca7b94c3d0d8121e3dc0b7e99d63d9"
+      }
+    ]
+  }
+}

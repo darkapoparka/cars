@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-impala-used-cars-al-ghazal",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-impala-used-cars-al-ghazal",
+  "name": "Impala Used Cars Al Ghazal",
+  "renderedName": "Impala Used Cars Al Ghazal",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://uae.yallamotor.com/auto-companies/impala-used-cars-al-ghazal-9065",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+      "width": 1024,
+      "height": 247,
+      "transparentFraction": 0.6753582047064778,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "121711ad55c21cdb3524ad0aa7920a8d6eb2feea4fbc15d360d86d666901bfe8",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Impala Used Cars Al Ghazal. Required exact text, uppercase: IMPALA USED CARS AL GHAZAL. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials IG may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 70,
+          "top": 116,
+          "width": 2042,
+          "height": 492
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+      "width": 1024,
+      "height": 245,
+      "transparentFraction": 0.5740792410714286,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "376b29b23e457a05330934de81bfc57ad7d81c4ff9d2ea3d3f9278dfea237ce8",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: IMPALA USED CARS AL GHAZAL. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 50,
+          "top": 114,
+          "width": 2072,
+          "height": 495
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-11.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

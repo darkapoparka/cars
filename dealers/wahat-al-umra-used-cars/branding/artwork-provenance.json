@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-wahat-al-umra-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-wahat-al-umra-used-cars",
+  "name": "Wahat Al Umra Used Cars",
+  "renderedName": "Wahat Al Umra Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/wahatalumracars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.arabwheels.ae/used-cars/jeep-wrangler-2015-for-sale-in-sharjah-37103",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "46e6d596c496999825c652cdd0b9467944d75c6dad880910eb2f6e08982251a9",
+      "width": 1024,
+      "height": 189,
+      "transparentFraction": 0.6913287450396826,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "d9bd7e130c7c8e631ac5c236694ef2b21df27a76a5649851e938318e265b9f9b",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-94daa24b-a497-4737-ad58-e5e83e18e2fc",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Wahat Al Umra Used Cars. Required exact text, uppercase: WAHAT AL UMRA USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a clever rounded negative-space monogram, with an open confident silhouette. Initials WU may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 168,
+          "width": 2172,
+          "height": 401
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "8308cd210301eb02db40a4fda034b7b075a7ce6d8dce2665619d864619e2face",
+      "width": 1024,
+      "height": 186,
+      "transparentFraction": 0.6111181115591398,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "d8ce53c98cb52d47e195c67f17709434d1ca7b94c3d0d8121e3dc0b7e99d63d9",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-cc9c1ba4-1e1f-4510-b611-cd73e84c46cc",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: WAHAT AL UMRA USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-94daa24b-a497-4737-ad58-e5e83e18e2fc.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 157,
+          "width": 2163,
+          "height": 393
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-12.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

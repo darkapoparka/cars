@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "impala-used-cars-al-ghazal",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "d9971d9e92c8a74e71fe7c5e10a88bfa7e04568565bb353c74cd966bc6d0fabf",
+      "sourceSha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e9ac53491e300f8f8529367cd6d7621889e603a85713f6f35868212162e17fd2",
+      "sourceSha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e9ac53491e300f8f8529367cd6d7621889e603a85713f6f35868212162e17fd2",
+      "sourceSha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "152bf102485abeb56bb36deab7e4ca41a4f9abd5269c6d78266c3ee5c07136fa",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 307,
+          "height": 247
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "83ccd9bcf28cd50ca417875119fa0c39058bf0ab8952e5ad42cc0fe96dfee780"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/impala-used-cars-al-ghazal/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/impala-used-cars-al-ghazal/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/impala-used-cars-al-ghazal/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+      "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 247
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+      "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 245
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+      "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 245
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "385753e312566e67cc8a111a1a60eba53dc9bab67e2ecb86ae2ea82093c73869",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 307,
+            "height": 247
+          }
+        }
+      },
+      "sourceReference": "dealers/impala-used-cars-al-ghazal/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "5d3eef87e8fa658ec21488238a6d4718c034c163b822d93ea5391e2db3d72a50",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 307,
+            "height": 245
+          }
+        }
+      },
+      "sourceReference": "dealers/impala-used-cars-al-ghazal/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "152bf102485abeb56bb36deab7e4ca41a4f9abd5269c6d78266c3ee5c07136fa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 307,
+            "height": 247
+          }
+        }
+      },
+      "sourceReference": "dealers/impala-used-cars-al-ghazal/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "83ccd9bcf28cd50ca417875119fa0c39058bf0ab8952e5ad42cc0fe96dfee780",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4cb0f842-418d-4930-a4a0-a00ee9ae1a14",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "22e01134f713011708d53dcea1d02fee5de7a69b4f00f8fba5ed7234db7a2133",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 307,
+            "height": 247
+          }
+        }
+      },
+      "sourceReference": "dealers/impala-used-cars-al-ghazal/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "b938320faa25fc3bb0af1604efbd1d0e20fc4aafe7c73f206f43ebafed07b534",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-3eb9f610-2580-49e9-8ecd-5f55922eea1d",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "0a39015ff98a3d86ee874fa895e4400f48af90031ff04a217b84635dfee14208",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 307,
+          "height": 245
+        }
+      }
+    }
+  }
+}
