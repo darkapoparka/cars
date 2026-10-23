@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-logo-proposal-staged",
+  "dealer": "speed-line-used-cars",
+  "dealerId": "ae-sharjah-speed-line-used-cars",
+  "name": "Speed Line Used Cars",
+  "sourceManifest": {
+    "path": "leads/branding/pending-20261023/manifest.json",
+    "sha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "localOriginalsRetained": true
+  },
+  "identity": {
+    "kind": "independent-website-logo-proposal",
+    "dealerApproved": false,
+    "ownerApproved": false,
+    "adoptionClaimed": false
+  },
+  "status": "awaiting-independent-dealer-pack-visual-review",
+  "releaseReady": false,
+  "artworkReadyForIntegration": true,
+  "variants": {
+    "on-light": {
+      "path": "branding/pending-logo-on-light.png",
+      "sha256": "9bbc019fba78ba1e0b11100fd50b367c3738dc4ba39e64a35eaf2b08ef4a06e0",
+      "width": 1024,
+      "height": 227,
+      "alpha": "measured-transparent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-9318efbb-e592-4dee-834a-1ddcacfed8de"
+      }
+    },
+    "on-dark": {
+      "path": "branding/pending-logo-on-dark.png",
+      "sha256": "fc6b1dd5c651388ffdac0c961a1f8553b2ffaa88f8c107869242ec531c5ee7f2",
+      "width": 1024,
+      "height": 226,
+      "alpha": "measured-transparent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-71e25a3e-6ac4-402b-81ed-fdc28a58c85a"
+      }
+    }
+  },
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/speed-line-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13054-jetour-x50-15-amt-147-hp-premium",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/speedline/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "horizontalWordmarksReviewed": true,
+    "compactMarkPending": true,
+    "sixDesigns": "not-yet-integrated-or-rendered"
+  },
+  "holds": [
+    "Exact dealer source identity and public facts must pass maintained input review",
+    "Create and independently review actual symbol-only compact/favicon variants at 32/48/64px",
+    "Generate and sign source-bound 18-view native six-design visual receipt before release"
+  ]
+}

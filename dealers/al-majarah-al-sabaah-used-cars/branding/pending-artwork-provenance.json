@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-new-dealer-logo-proposal-staged",
+  "dealer": "al-majarah-al-sabaah-used-cars",
+  "dealerId": "ae-umm-al-quwain-al-majarah-al-sabaah-used-cars",
+  "name": "Al Majarah Al Sabaah Used Cars Trading",
+  "sourceManifest": {
+    "path": "leads/branding/pending-20261023/manifest.json",
+    "sha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "localOriginalsRetained": true
+  },
+  "identity": {
+    "kind": "independent-website-logo-proposal",
+    "dealerApproved": false,
+    "ownerApproved": false,
+    "adoptionClaimed": false
+  },
+  "status": "awaiting-independent-dealer-pack-visual-review",
+  "releaseReady": false,
+  "artworkReadyForIntegration": true,
+  "variants": {
+    "on-light": {
+      "path": "branding/pending-logo-on-light.png",
+      "sha256": "bc18d3b85ccd7e796904c3adea844423aafc76165bbd43cadc7d01a5be16e1f0",
+      "width": 1024,
+      "height": 224,
+      "alpha": "measured-transparent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-65551b2c-a583-4017-b7d9-f49c4f44f15c"
+      }
+    },
+    "on-dark": {
+      "path": "branding/pending-logo-on-dark.png",
+      "sha256": "e9f66ed9167235553f5324e170209d00beb7b0f8ac0bbaa9e0584f4afb5c07d2",
+      "width": 1024,
+      "height": 227,
+      "alpha": "measured-transparent",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-86fa6a68-843b-4e30-9535-31109e6eb675"
+      }
+    }
+  },
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://uaq.dubizzle.com/motors/used-cars/bmw/4-series/2026/04/05/bmw-4-series-420i-m-sport-2025-korean-spec-15-148---0d2dbd78db82471bb429b53b867ebe9c/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://auto.ae/ar/almajarahalsabaahusedcars/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://2gis.ae/dubai/firm/70000001097458178",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "horizontalWordmarksReviewed": true,
+    "compactMarkPending": true,
+    "sixDesigns": "not-yet-integrated-or-rendered"
+  },
+  "holds": [
+    "Exact dealer source identity and public facts must pass maintained input review",
+    "Create and independently review actual symbol-only compact/favicon variants at 32/48/64px",
+    "Generate and sign source-bound 18-view native six-design visual receipt before release"
+  ]
+}
