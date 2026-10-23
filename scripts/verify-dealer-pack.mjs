@@ -13,6 +13,7 @@ import {previewJourney,previewDetail} from './verify-dealer-preview.mjs';
 import {dismissAppWelcome} from './verify-priselci-public-browser.mjs';
 import {dealerPackFabPolicy,fleetDesignFabHashes} from './lib/dealer-pack-switcher-logo.mjs';
 import {refreshNormalizeInternals} from './lib/client-refresh-normalize.mjs';
+import {assessLogoQualityDecision} from './lib/dealer-pack-logo-quality.mjs';
 
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
 const hex64=value=>/^[a-f0-9]{64}$/.test(value??'');
@@ -309,7 +310,7 @@ const luminance=color=>color.map(value=>value/255).map(value=>value<=.04045?valu
 const contrast=(a,b)=>{const x=luminance(a),y=luminance(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05);};
 
 /** Pixel checks detect empty, opaque, padded and weak assets. They do not OCR spelling. */
-export async function inspectLogoPixels(bytes,{sharp,backgrounds,role='onLight',minimumNativeSize=64,smallSizes:requestedSizes=[32,64]}={}) {
+export async function inspectLogoPixels(bytes,{sharp,backgrounds,role='onLight',minimumNativeSize=64,smallSizes:requestedSizes=[32,48,64]}={}) {
   const metadata=await sharp(bytes,{limitInputPixels:25*1024**2}).metadata();
   assert(['png','webp'].includes(metadata.format)&&metadata.hasAlpha&&(!metadata.pages||metadata.pages===1),'Logo must be a single transparent PNG/WebP raster');
   const {data,info}=await sharp(bytes).ensureAlpha().raw().toBuffer({resolveWithObject:true});
@@ -326,6 +327,10 @@ export async function inspectLogoPixels(bytes,{sharp,backgrounds,role='onLight',
   const cropPass=squareRole?Math.max(xFit,yFit)>=.70&&Math.min(xFit,yFit)>=.35&&Math.abs(left-(info.width-1-right))/info.width<=.08&&Math.abs(top-(info.height-1-bottom))/info.height<=.08
     :xFit>=.70&&yFit>=.60&&Math.max(left,info.width-1-right)/info.width<=.20&&Math.max(top,info.height-1-bottom)/info.height<=.20;
   if(!cropPass)findings.push('excessive-transparent-padding');
+  // A horizontal wordmark squeezed into a square is not an independent compact icon.
+  if(squareRole&&visible&&bounds.width/bounds.height>1.70||squareRole&&visible&&bounds.height/bounds.width>1.70)findings.push('compact-mark-wordmark-aspect');
+  const visibleOccupancy=visible/(info.width*info.height);
+  if(squareRole&&visibleOccupancy<.065)findings.push('compact-mark-low-visible-occupancy');
   if(Math.min(info.height,info.width)<minimumNativeSize)findings.push('insufficient-native-resolution');
   if(['mark','markOnDark','favicon'].includes(role)&&Math.abs(info.width/info.height-1)>.1)findings.push('square-mark-shape');
   assert(Array.isArray(backgrounds)&&backgrounds.length&&backgrounds.length<=20,'Recorded surface backgrounds are required: '+role);
@@ -339,11 +344,15 @@ export async function inspectLogoPixels(bytes,{sharp,backgrounds,role='onLight',
   for(const size of requestedSizes){
     const resized=await sharp(bytes).resize({height:size,withoutEnlargement:true}).ensureAlpha().raw().toBuffer({resolveWithObject:true});let ink=0,strong=0;
     for(let i=3;i<resized.data.length;i+=resized.info.channels){if(resized.data[i]>32)ink++;if(resized.data[i]>=192)strong++;}
-    const value={height:size,width:resized.info.width,visiblePixels:ink,strongPixels:strong,status:ink>=20&&strong>=10?'passed':'failed'};
+    const compactPixels=squareRole?size*size:resized.info.width*resized.info.height;
+    const minInk=Math.max(20,Math.ceil(compactPixels*(squareRole?.065:.035)));
+    const minStrong=Math.max(10,Math.ceil(compactPixels*(squareRole?.026:.015)));
+    const value={height:size,width:resized.info.width,visiblePixels:ink,strongPixels:strong,
+      minimumVisiblePixels:minInk,minimumStrongPixels:minStrong,status:ink>=minInk&&strong>=minStrong?'passed':'failed'};
     if(value.status==='failed')findings.push('small-size-'+size);smallSizes.push(value);
   }
-  return {status:findings.length?'failed':'passed',role,width:info.width,height:info.height,transparentFraction:transparent/(info.width*info.height),visibleBounds:bounds,cropMode:squareRole?'square-contained-mark':'tight-natural-aspect',surfaces,smallSizes,findings,
-    spellingVerified:false,note:'32/64 px alpha retention and contrast are technical checks; screenshots and an actual visual spelling review remain separate evidence.'};
+  return {status:findings.length?'failed':'passed',role,width:info.width,height:info.height,transparentFraction:transparent/(info.width*info.height),visibleBounds:bounds,cropMode:squareRole?'square-contained-mark':'tight-natural-aspect',visibleOccupancy,surfaces,smallSizes,findings,
+    spellingVerified:false,note:'32/48/64 px alpha, mark geometry, occupancy and contrast are technical checks; exact-name spelling and professional art direction require the separate visual review receipt.'};
 }
 
 /** Favicon PNG entries are inspected at their actual sizes; no ICO decoder or upscale. */
@@ -358,7 +367,7 @@ export function readFaviconPngs(bytes){
     const png=bytes.subarray(offset,offset+length);assert(png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])),'Favicon entry is not PNG');
     entries.push({size:width,bytes:png});end=offset+length;
   }
-  assert(end===bytes.length&&[32,64].every(size=>entries.some(row=>row.size===size)),'Favicon needs actual 32 and 64 pixel entries');
+  assert(end===bytes.length&&[32,48,64].every(size=>entries.some(row=>row.size===size)),'Favicon needs actual 32, 48 and 64 pixel entries');
   return entries;
 }
 
@@ -377,7 +386,7 @@ export async function verifyPackLogoAssets({pack,sharp,bundleRoot}) {
     let result;
     if(role==='favicon'){
       const entries=readFaviconPngs(bytes),native=[];
-      for(const {size,bytes:png} of entries){const metadata=await sharp(png).metadata();assert(metadata.width===size&&metadata.height===size,'Favicon dimensions differ from directory');if([32,64].includes(size))native.push(await inspectLogoPixels(png,{sharp,backgrounds,role,minimumNativeSize:size,smallSizes:[size]}));}
+      for(const {size,bytes:png} of entries){const metadata=await sharp(png).metadata();assert(metadata.width===size&&metadata.height===size,'Favicon dimensions differ from directory');if([32,48,64].includes(size))native.push(await inspectLogoPixels(png,{sharp,backgrounds,role,minimumNativeSize:size,smallSizes:[size]}));}
       result={role,status:native.every(row=>row.status==='passed')?'passed':'failed',findings:[...new Set(native.flatMap(row=>row.findings))],sizes:entries.map(row=>row.size),nativeChecks:native,spellingVerified:false};
     }else result=await inspectLogoPixels(bytes,{sharp,backgrounds,role});
     if(asset.publicPath){
@@ -402,7 +411,19 @@ export async function verifyPackLogoAssets({pack,sharp,bundleRoot}) {
     }else if(role!=='master')result.findings.push('missing-public-logo-path');
     result.status=result.findings.length?'failed':'passed';results.push({...result,sourcePath,sourceSha256,publicPath:asset.publicPath??null,sha256:asset.sha256});
   }
-  return {status:results.every(row=>row.status==='passed')?'passed':'failed',identityStatus:contract.identityStatus??contract.status??contract.approvalStatus??null,creationMethod:contract.creationMethod??null,
+  const qualityDecision=assessLogoQualityDecision({pack,contract});
+  if(qualityDecision.status==='passed'){
+    try{
+      const sheetBytes=pack.files instanceof Map?pack.files.get(qualityDecision.contactSheetPath):
+        fs.readFileSync(inside(pack.directory,qualityDecision.contactSheetPath,{mustExist:true}));
+      const decoder=sharp(sheetBytes,{limitInputPixels:32*1024**2}),sheet=await decoder.metadata();
+      assert(sheet.format==='png'&&sheet.width>=640&&sheet.height>=480&&sheet.width<=6000&&sheet.height<=4000,'Invalid bounded visual contact sheet');
+      await decoder.stats(); // Decode actual PNG pixels; an IHDR-only fake cannot satisfy review.
+    }catch(error){qualityDecision.findings.push('logo-review-contact-sheet-not-decodable');qualityDecision.status='failed';qualityDecision.visualReviewPerformed=false;}
+  }
+  return {status:results.every(row=>row.status==='passed')&&qualityDecision.status==='passed'?'passed':'failed',
+    technicalStatus:results.every(row=>row.status==='passed')?'passed':'failed',qualityDecision,
+    identityStatus:contract.identityStatus??contract.status??contract.approvalStatus??null,creationMethod:contract.creationMethod??null,
     generationReferences:Object.fromEntries(Object.entries(contract.surfaces??{}).map(([role,row])=>[role,row.generation?.generationId??row.generation?.id??null])),visualReview:contract.visualReview??{status:'not-recorded'},roles:results};
 }
 
@@ -728,6 +749,10 @@ export async function verifyDealerPack({root=ROOT,slug,bundleRoot,plan,previewUr
     report.designIdentities=pack.manifest.variants.map(variant=>assessDealerPackDesignIdentity({routes:report.routes,variant,facts:pack.facts}));
     check('design-identities',report.designIdentities.every(row=>row.status==='passed')?'passed':'failed',{designs:report.designIdentities.length,failed:report.designIdentities.filter(row=>row.status!=='passed').map(row=>({key:row.key,findings:row.findings}))});
     check('screenshots',report.proof.screenshots.length===18?'passed':'failed',{count:report.proof.screenshots.length,widths:[320,390,1280],role:'Evidence for visual review; not a visual acceptance claim.'});
+    // The positive review must pin EVERY screenshot captured by this run.
+    // Pre-flight source checks cannot infer visual quality from a prior logo hash.
+    report.logoVisualReview=assessLogoQualityDecision({pack,screenshots:report.proof.screenshots});
+    check('logo-visual-review',report.logoVisualReview.status,report.logoVisualReview);
     const after=inspectDealerPackBundle({bundleRoot,slug,packDigest:report.packDigest,releaseDigest:report.releaseDigest,plan});
     check('bundle-unchanged',after.receipt.outputDigest===report.outputDigest&&after.receipt.packCompositionDigest===report.packCompositionDigest?'passed':'failed',{outputDigest:after.receipt.outputDigest,packCompositionDigest:after.receipt.packCompositionDigest});
     report.success=report.checks.every(row=>row.status==='passed');

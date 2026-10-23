@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-fleet-logo-quality-ledger",
+  "snapshotDate": "2026-10-22",
+  "sourceCommit": "d73eb4de293d11433011dc3e3f9e7c7d164f07ac",
+  "sourceCampaignGeneration": 117,
+  "queueGeneration": 3130,
+  "providerScriptInventory": {
+    "total": 304,
+    "cars": 303,
+    "protected": 100,
+    "expanded": 203,
+    "unrelated": [
+      "treido-foods-jobs"
+    ]
+  },
+  "scope": {
+    "approvedCarsTarget": 499,
+    "protectedOriginal": 100,
+    "approvedExpansion": 399,
+    "excludedHeldTarget": "gb-sheffield-night-bat-motors",
+    "noWorkerDeletesOrUpdates": true
+  },
+  "auditMethod": "Exact GitHub source metadata, original hashes and current Cloudflare script/queue reconciliation. New visual/screenshot review has NOT been performed across 499 sites; legacy hosted QA is technical.",
+  "totals": {
+    "rows": 499,
+    "baseline": 100,
+    "expansion": 399,
+    "deployed": 303,
+    "hostedAcceptedHistoric": 301,
+    "pending": 196,
+    "pendingUnreviewedDrafts": 132,
+    "pendingMissingPack": 61,
+    "pendingCompactQa": 3,
+    "liveWithGeneratedProvenance": 189,
+    "newLogosGeneratedAndIntegratedThisAudit": 0,
+    "renderedVisualsReviewedThisAudit": 0,
+    "fullNameMapped": 499
+  }
+}
