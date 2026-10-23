@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "8ad16b1779ff7cd02a36cf1d3531e60e8627d25be7c614bdd7a8d8dadaeb13c1",
+    "sha256": "2ddbc522a2f310ceee1a871ad6486659aa80976fc716da30027486cf2bbf82bd",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
@@ -58,19 +58,14 @@
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
         "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
-        "operation": "crop-left-symbol",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 260,
-          "height": 284
-        }
+        "operation": "darken-reviewed-red-for-white-compact-favicon",
+        "outputColor": "#7e000a"
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "6e0bf0b59410e1dc44db8ff7543b5328242043ec60a6cdd79f4a820434d19a50"
+    "sha256": "f09942dcd3196d6b65a16fc827d5eb461e1de88f62c8b843b98c17e5b5070ff2"
   },
   "surfaces": {
     "onLight": {
@@ -148,7 +143,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "56ff9aa49aeb037673fadb0a49fa1dabfbdeb6b8a3a661353f9ea9de8be5b281",
+      "sha256": "b6aebe93089bc0ed07febebc861a235b83e9ef549e8c3bdf315dd37bf02243c2",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
@@ -156,13 +151,8 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 260,
-            "height": 284
-          }
+          "operation": "darken-reviewed-red-for-white-compact-favicon",
+          "outputColor": "#7e000a"
         }
       },
       "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-mark-light.png"
@@ -190,7 +180,7 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "8ad16b1779ff7cd02a36cf1d3531e60e8627d25be7c614bdd7a8d8dadaeb13c1",
+      "sha256": "2ddbc522a2f310ceee1a871ad6486659aa80976fc716da30027486cf2bbf82bd",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
@@ -198,20 +188,15 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 260,
-            "height": 284
-          }
+          "operation": "darken-reviewed-red-for-white-compact-favicon",
+          "outputColor": "#7e000a"
         }
       },
       "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "6e0bf0b59410e1dc44db8ff7543b5328242043ec60a6cdd79f4a820434d19a50",
+      "sha256": "f09942dcd3196d6b65a16fc827d5eb461e1de88f62c8b843b98c17e5b5070ff2",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-f8c03e05-92c6-48be-adec-20088b318828",
@@ -219,13 +204,8 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "8ac01a7f014acbd62e45c421c010b2a1521a1166be47be3b6ebeeae3b731aa27",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 260,
-            "height": 284
-          }
+          "operation": "darken-reviewed-red-for-white-compact-favicon",
+          "outputColor": "#7e000a"
         }
       },
       "sourceReference": "dealers/al-muwafaq-motors-llc/branding/generated-mark-light.png"

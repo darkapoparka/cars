@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "400787e78d4af7c0652a3fe069177279cb3ae3069f6ed107dd992d4d3d999452",
+    "sha256": "952df25e99ed851c442bee08b62014e9c68c43669d87ba7ed1493e9581296f9e",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
@@ -58,19 +58,14 @@
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
         "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
-        "operation": "crop-reviewed-right-car-badge",
-        "crop": {
-          "left": 690,
-          "top": 20,
-          "width": 225,
-          "height": 230
-        }
+        "operation": "darken-reviewed-gold-for-white-compact",
+        "outputColor": "#643707"
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "58e367ad177f5051a15c7d3676947fbe71c37c89f0f790c8cfd61526f4becd10"
+    "sha256": "2f4368c4afd0b7ad2a060c231d9717cd94d3464fd39d77a19585903fe4cba3eb"
   },
   "surfaces": {
     "onLight": {
@@ -148,7 +143,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "3bb08de5002191ea8cdf047a1e2de66039083fc18947117835a3ab691bbcbfc2",
+      "sha256": "2e9c0c96594a3c63f783552fc1e729df39f465ce78998a62420331752b3b3626",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
@@ -156,13 +151,8 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
-          "operation": "crop-reviewed-right-car-badge",
-          "crop": {
-            "left": 690,
-            "top": 20,
-            "width": 225,
-            "height": 230
-          }
+          "operation": "darken-reviewed-gold-for-white-compact",
+          "outputColor": "#643707"
         }
       },
       "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-mark-light.png"
@@ -190,7 +180,7 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "400787e78d4af7c0652a3fe069177279cb3ae3069f6ed107dd992d4d3d999452",
+      "sha256": "952df25e99ed851c442bee08b62014e9c68c43669d87ba7ed1493e9581296f9e",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
@@ -198,20 +188,15 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
-          "operation": "crop-reviewed-right-car-badge",
-          "crop": {
-            "left": 690,
-            "top": 20,
-            "width": 225,
-            "height": 230
-          }
+          "operation": "darken-reviewed-gold-for-white-compact",
+          "outputColor": "#643707"
         }
       },
       "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "58e367ad177f5051a15c7d3676947fbe71c37c89f0f790c8cfd61526f4becd10",
+      "sha256": "2f4368c4afd0b7ad2a060c231d9717cd94d3464fd39d77a19585903fe4cba3eb",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-fae1679c-956a-4d43-a0d1-36ce594f69bd",
@@ -219,13 +204,8 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "23078f7605e918bf911d69d05b0346a29dcba7dc1209f00384e247fcaf18e833",
-          "operation": "crop-reviewed-right-car-badge",
-          "crop": {
-            "left": 690,
-            "top": 20,
-            "width": 225,
-            "height": 230
-          }
+          "operation": "darken-reviewed-gold-for-white-compact",
+          "outputColor": "#643707"
         }
       },
       "sourceReference": "dealers/al-jars-aldhahabi-used-cars-trading/branding/generated-mark-light.png"

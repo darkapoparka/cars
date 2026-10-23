@@ -15,14 +15,14 @@
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
       "publicPath": "/dealer-brand/logo-on-dark.webp",
-      "sha256": "84b259c429cbbc0f3df378c0121a01e1dba4b0e7b4cf6e932c267ce50d215d9c",
-      "sourceSha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7"
+      "sha256": "b04650c7515b86d5346f0824af6724de6df97a45c14921c47cd6a03988b42a08",
+      "sourceSha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559"
     },
     "onAccent": {
       "sourcePath": "branding/logo-on-accent.png",
       "publicPath": "/dealer-brand/logo-on-accent.webp",
-      "sha256": "84b259c429cbbc0f3df378c0121a01e1dba4b0e7b4cf6e932c267ce50d215d9c",
-      "sourceSha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7"
+      "sha256": "b04650c7515b86d5346f0824af6724de6df97a45c14921c47cd6a03988b42a08",
+      "sourceSha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559"
     }
   },
   "surfaceBackgrounds": {
@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "deb105c749a08755830a7aba6901995f0a1591f66ec9b746567d8fa255d91bf8",
+    "sha256": "92fc6c7666e8b069488b09abb276fcde4f9f093b839120cf14b861de8e71fd09",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
@@ -58,25 +58,17 @@
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
         "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
-        "operation": "isolate-reviewed-symbol-connected-components",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 380,
-          "height": 317
-        },
-        "selection": {
-          "alphaThreshold": 96,
-          "minXBefore": 360,
-          "minPixels": 20,
-          "antialiasNeighborPixels": 1
+        "operation": "darken-reviewed-gold-and-light-details-for-white-compact",
+        "outputColors": {
+          "gold": "#643908",
+          "light": "#2b3650"
         }
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "f6f2a2541a97a15c76faeda5cbbc85e1a8ed759fa48286e033467771df5da380"
+    "sha256": "f53f29979d5533ee2e8393605c8a6b2dc1e33f00b3ed2e15f754c78d01f04fa4"
   },
   "surfaces": {
     "onLight": {
@@ -91,21 +83,39 @@
     },
     "onDark": {
       "path": "branding/logo-on-dark.png",
-      "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+      "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
-        "modelVersion": null
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-on-dark.png",
+          "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+          "operation": "lift-dark-navy-ink-for-dark-and-red-surface-contrast",
+          "selection": {
+            "luminanceBelow": 125
+          },
+          "outputColor": "#e8efff"
+        }
       },
       "sourceReference": "dealers/saeed-motors/branding/generated-on-dark.png"
     },
     "onAccent": {
       "path": "branding/logo-on-accent.png",
-      "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+      "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
-        "modelVersion": null
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-on-dark.png",
+          "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+          "operation": "lift-dark-navy-ink-for-dark-and-red-surface-contrast",
+          "selection": {
+            "luminanceBelow": 125
+          },
+          "outputColor": "#e8efff"
+        }
       },
       "sourceReference": "dealers/saeed-motors/branding/generated-on-dark.png"
     }
@@ -126,8 +136,8 @@
     },
     "onDark": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
-      "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+      "sourceSha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
+      "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
       "crop": {
         "left": 0,
         "top": 0,
@@ -139,8 +149,8 @@
     },
     "onAccent": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
-      "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
+      "sourceSha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
+      "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
       "crop": {
         "left": 0,
         "top": 0,
@@ -154,7 +164,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "cb31ea1da15a2dcfae019896b3fdb6cd9e5cd6e33564b7b6f7c0942f85246109",
+      "sha256": "b444070d4709565fd6059f96212be22285b38a335cf0ffa01fb1e5b63d91c0fb",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
@@ -162,18 +172,10 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
-          "operation": "isolate-reviewed-symbol-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 380,
-            "height": 317
-          },
-          "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 360,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1
+          "operation": "darken-reviewed-gold-and-light-details-for-white-compact",
+          "outputColors": {
+            "gold": "#643908",
+            "light": "#2b3650"
           }
         }
       },
@@ -181,34 +183,26 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "e0912710be33223038a462fe0453ab88ef4f154d603a9292c86603178b8f7bc0",
+      "sha256": "0e74c6eebab3a9cd843f43d152e1b2e0db4d067795f73f32692863fde818b5ab",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
-          "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
-          "operation": "isolate-reviewed-symbol-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 380,
-            "height": 319
-          },
+          "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
+          "operation": "lift-reviewed-compact-navy-for-dark-contrast",
           "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 360,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1
-          }
+            "luminanceBelow": 125
+          },
+          "outputColor": "#e8efff"
         }
       },
       "sourceReference": "dealers/saeed-motors/branding/generated-mark-dark.png"
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "deb105c749a08755830a7aba6901995f0a1591f66ec9b746567d8fa255d91bf8",
+      "sha256": "92fc6c7666e8b069488b09abb276fcde4f9f093b839120cf14b861de8e71fd09",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
@@ -216,18 +210,10 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
-          "operation": "isolate-reviewed-symbol-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 380,
-            "height": 317
-          },
-          "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 360,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1
+          "operation": "darken-reviewed-gold-and-light-details-for-white-compact",
+          "outputColors": {
+            "gold": "#643908",
+            "light": "#2b3650"
           }
         }
       },
@@ -235,7 +221,7 @@
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "f6f2a2541a97a15c76faeda5cbbc85e1a8ed759fa48286e033467771df5da380",
+      "sha256": "f53f29979d5533ee2e8393605c8a6b2dc1e33f00b3ed2e15f754c78d01f04fa4",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-b4ae948b-2496-441a-b709-f74f6fbe6389",
@@ -243,18 +229,10 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "43e04bfe20cae4abc15ef7ac704ec092774ea01d48a7f5d2f689c074e47966b4",
-          "operation": "isolate-reviewed-symbol-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 380,
-            "height": 317
-          },
-          "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 360,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1
+          "operation": "darken-reviewed-gold-and-light-details-for-white-compact",
+          "outputColors": {
+            "gold": "#643908",
+            "light": "#2b3650"
           }
         }
       },
@@ -272,27 +250,19 @@
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "00684f06ca58be8f20e78da619b098bebc3ba4c0f3772e785563519dddbe5e41",
+    "sha256": "6bcba99100dbda8d78607c1a36467828568e593ea19bd70fcc52df420f568d03",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-029ef030-5143-4c22-b1e2-d734524fbd76",
       "modelVersion": null,
       "derivedFrom": {
         "path": "branding/generated-on-dark.png",
-        "sha256": "5378a7f358d460bff8d3b7c49e1ec04a14c0879c28384c99c78afbba5c854fa7",
-        "operation": "isolate-reviewed-symbol-connected-components",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 380,
-          "height": 319
-        },
+        "sha256": "677a0342f4fb72400a49d7dc08e4d172fafb78390822bfa270990303f3771559",
+        "operation": "lift-reviewed-compact-navy-for-dark-contrast",
         "selection": {
-          "alphaThreshold": 96,
-          "minXBefore": 360,
-          "minPixels": 20,
-          "antialiasNeighborPixels": 1
-        }
+          "luminanceBelow": 125
+        },
+        "outputColor": "#e8efff"
       }
     }
   }
