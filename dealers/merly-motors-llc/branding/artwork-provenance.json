@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-ga-cartersville-merly-motors",
+  "slug": "merly-motors-llc",
+  "name": "Merly Motors LLC",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.merlymotors.com/inventory",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.merlymotors.com/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "6671f3b221f76fdc7c78f1b9dcf3a7bbdc43636f8f01aaa1ac8ac9552a2952b1",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "51f6e1fe939a875ea7df084ba6c7bada1d572bd48aced8bdd4b8e330636ac9f3",
+        "width": 2164,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-5e44d398-9fc3-49f7-870e-1340b47fd553",
+        "prompt": "Use case: logo-brand. Create one professional original independent website-proposal logo. Exact text: \"MERLY MOTORS LLC\". an original elegant M symbol built from two simple folded ribbons with a clear central valley; broad strokes and open space, restrained boutique-dealer confidence. Horizontal logo for LIGHT website surfaces, with clear dark/charcoal foreground lettering, legible name hierarchy, large useful symbol if present, generous counters and crisp edges. Genuine alpha transparency. A polished final logo, not a poster or mockup. No extra text, fake checkerboard, background rectangle, watermark, shadows, fake chrome, gradients or texture. No tiny slogan, no misspelled words. Prefer a balanced landscape lockup that remains readable at 240px wide, framed close to the artwork with a small transparent margin. One logo only. This output is a proposed website asset, not a claim of dealer adoption.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 87,
+          "width": 2160,
+          "height": 532
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "ed2326fa09eaaff38081e2864f3560e8cb1780afedbcbfbc6a19c526aaba3bf9",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "4afc01b20788d0e0f475d569443a3c10fec7fc1624db319ef0df32269301c0e3",
+        "width": 2163,
+        "height": 727
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-5c249bcf-7a3f-47ea-97fa-54490aebfe66",
+        "prompt": "Create the matching light-ink variant for DARK website surfaces of the supplied Merly Motors LLC logo. Preserve exact wording, spelling, symbol, composition, typography, spacing and proportions. Change dark name/foreground elements to clean solid white; preserve recognizable genuine source accents where they remain clear against #111113 and deep red. Transparent alpha background; no background block, mockup, texture, distressed edges, new decorations or extra text. This must remain the same logo, simply its readable on-dark counterpart. Exact text: MERLY MOTORS LLC. Whole design with enough clear transparent margin.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-5e44d398-9fc3-49f7-870e-1340b47fd553.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 84,
+          "width": 2145,
+          "height": 528
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

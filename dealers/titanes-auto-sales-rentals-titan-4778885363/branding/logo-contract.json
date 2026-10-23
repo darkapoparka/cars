@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "titanes-auto-sales-rentals-titan-4778885363",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f0babd608d76311eb7a60d631a24e1e9489aa2c0fc91a648d9a2515683ef9535",
+      "sourceSha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "dff5c30e57d2a9a080353fca4c9acc331a92e3e9774045664ea79aa1ee93d21e",
+      "sourceSha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "dff5c30e57d2a9a080353fca4c9acc331a92e3e9774045664ea79aa1ee93d21e",
+      "sourceSha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "a4817886cb732139b86a7eb0905c7396eb2c0ba3f0f95985eb5d8226e7f2b30f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 400,
+          "height": 227
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "ae7da6f7148e1b035b996c14017ce36c927bdf807bc64c46697d32f4b84f79b9"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4bb12d0-0a5d-44bd-bad0-8adf599e76fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4bb12d0-0a5d-44bd-bad0-8adf599e76fc",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 227
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+      "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 228
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+      "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 228
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "800cf2a2af081f35985735965fd71233c9abc0f893eb2dc8c611a9711b4edb3e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 227
+          }
+        }
+      },
+      "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "814bb35dc5cdd3ff9b1f32c73e9c7d04e138e3cd71625684c31e9ebc15adfad4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a4bb12d0-0a5d-44bd-bad0-8adf599e76fc",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 228
+          }
+        }
+      },
+      "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "a4817886cb732139b86a7eb0905c7396eb2c0ba3f0f95985eb5d8226e7f2b30f",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 227
+          }
+        }
+      },
+      "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "ae7da6f7148e1b035b996c14017ce36c927bdf807bc64c46697d32f4b84f79b9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 400,
+            "height": 227
+          }
+        }
+      },
+      "sourceReference": "dealers/titanes-auto-sales-rentals-titan-4778885363/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "9e07a37cc9dfa60beb14aeaf235e0b7045aec274c616dfbcbc2447bbdae6c354",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-a4bb12d0-0a5d-44bd-bad0-8adf599e76fc",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 400,
+          "height": 228
+        }
+      }
+    }
+  }
+}

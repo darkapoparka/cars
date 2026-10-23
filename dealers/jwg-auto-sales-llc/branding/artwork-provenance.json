@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-co-fort-collins-jwg-auto-sales",
+  "slug": "jwg-auto-sales-llc",
+  "name": "JWG Auto Sales LLC",
+  "kind": "published-reference-logo-refinement-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.jwgautosales.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.jwgautosales.com/category/all-products",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.jwgautosales.com/product-page/2020-nissan-sentra-s",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "cd45fc2abe3d166990591cdef165a0f235607751e96ddb2da04aa2ed271023af",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "bd5d8688053c4bfdea20964cf34d067d11c72db6ff651398e50d082eddb57b78",
+        "width": 2056,
+        "height": 765
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-16061cfa-9552-4446-a3e9-97bc052e6c7c",
+        "prompt": "Use case: identity-preserve logo refinement. The provided image is the published reference for this dealership. Exact text: \"JWG AUTO SALES LLC\". Preserve the supplied published mountain and twin pickup-truck motif as the dealer's recognizable reference; simplify small excessive line detail while keeping the overall identity, red arch and mountain/truck arrangement. Make the emblem compact to the left and add the exact dealership name on its right in strong readable lettering. Keep red as a restrained accent and use dark ink for the primary name. No surrounding black canvas. This is a proposed refined export of the reference, not an unrelated monogram.. Horizontal logo for LIGHT website surfaces, with clear dark/charcoal foreground lettering, legible name hierarchy, large useful symbol if present, generous counters and crisp edges. Genuine alpha transparency. A polished final logo, not a poster or mockup. No extra text, fake checkerboard, background rectangle, watermark, shadows, fake chrome, gradients or texture. No tiny slogan, no misspelled words. Prefer a balanced landscape lockup that remains readable at 240px wide, framed close to the artwork with a small transparent margin. One logo only. This output is a proposed website asset, not a claim of dealer adoption.",
+        "reference": "C:/Users/radev/AppData/Local/Temp/cars-astra-public-brand-evidence-20261021/jwg-original.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 9,
+          "top": 92,
+          "width": 2039,
+          "height": 581
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "cea739aeb4489ff89d71d39974681a7a807d2a78e937635e2c5ec7743a808402",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "575bdb0e4108a1a19d1ee96a666f42b87769571479adc6f44866021f869d7851",
+        "width": 2056,
+        "height": 765
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-27e78f8a-4b2f-41b8-af8d-6baaa526727e",
+        "prompt": "Create the matching light-ink variant for DARK website surfaces of the supplied JWG Auto Sales LLC logo. Preserve exact wording, spelling, symbol, composition, typography, spacing and proportions. Change dark name/foreground elements to clean solid white; preserve recognizable genuine source accents where they remain clear against #111113 and deep red. Transparent alpha background; no background block, mockup, texture, distressed edges, new decorations or extra text. This must remain the same logo, simply its readable on-dark counterpart. Exact text: JWG AUTO SALES LLC. Whole design with enough clear transparent margin.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-16061cfa-9552-4446-a3e9-97bc052e6c7c.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 17,
+          "top": 90,
+          "width": 2039,
+          "height": 578
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "originalReference": {
+    "path": "_references/jwg-auto-sales-llc.png",
+    "sha256": "45764851554eb6f754985cd0d1d653c55da862ba2cd9d3621486f8a9f458177b",
+    "sourcePage": "https://www.jwgautosales.com/",
+    "observedAt": "2026-10-23",
+    "adaptation": "Published brand reference refined for an English website; original retained unchanged; adoption not claimed"
+  },
+  "artworkReadyForIntegration": true
+}

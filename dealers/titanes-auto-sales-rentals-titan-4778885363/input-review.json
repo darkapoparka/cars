@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cars-dealer-pack-input-review",
+  "dealer": "titanes-auto-sales-rentals-titan-4778885363",
+  "reviewed": true,
+  "reviewedAt": "2026-10-23T01:22:01.472Z",
+  "review": {
+    "kind": "automated",
+    "humanReview": false,
+    "dealerApproval": false
+  },
+  "checks": [
+    "canonical-hosting-and-preserved-fleet-collisions",
+    "assigned-expansion-lead",
+    "public-fact-schema-and-price-omission",
+    "personal-contact-screen",
+    "retained-stock-media",
+    "companion-copy-source-binding",
+    "immutable-template-release-and-native-QA-parent",
+    "reviewed-artwork-provenance-and-regenerated-logo-hashes"
+  ],
+  "sourceArtworkReview": "Retained artwork review is separate provenance; this command does not perform visual, Arabic-expert or dealer approval.",
+  "copyReview": "Automated structure, stock hash, source text and complete EN/BG rows; no new human translation approval is inferred.",
+  "contacts": {
+    "schemaVersion": 1,
+    "kind": "cars-automated-public-contact-screen",
+    "dealer": "titanes-auto-sales-rentals-titan-4778885363",
+    "method": "heuristic; no claim that unflagged values cannot be personal",
+    "flags": [],
+    "blocking": []
+  },
+  "batch": {
+    "number": 2,
+    "assignmentId": "cars-expansion-2026-10-19",
+    "leadId": "us-fl-winter-haven-titanes-autos-solutions",
+    "position": 109
+  },
+  "releaseId": "cars-six-2b310cbaa31f68e04a40ef46148f124ec9b7b9beedf75cf999c8ef4022b37bb0",
+  "inputs": [
+    {
+      "path": "FACTS-AND-INVENTORY.json",
+      "sha256": "01005811520142b95ba10560f6324ffa59fb3e8f9cbb74a90962d30c221254f6"
+    },
+    {
+      "path": "branding/artwork-provenance.json",
+      "sha256": "f4818f0d430dfe617d749ca49722bdf310b81df5fb1e33cdfae4372a593f132e"
+    },
+    {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "79ba2987c17b87fd1e2d30f9953130a98621f16b6c3543ee48f750dc436d1a98"
+    },
+    {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "bb8bd783c1e949389e20d77505d1f184661c0afa46aca140c88d7658e4fa3e5c"
+    },
+    {
+      "path": "branding/generated-on-dark.png",
+      "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9"
+    },
+    {
+      "path": "branding/generated-on-light.png",
+      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae"
+    },
+    {
+      "path": "branding/logo-contract.json",
+      "sha256": "8ec8cd34a37be2da99770ddf7347ac620aa7e36fa52e230e3582b095fef8870b"
+    },
+    {
+      "path": "branding/logo-recipe.json",
+      "sha256": "e9c94668e3a7d8adefbff189296eb32af6066576d7bf2deccb4cd3bfe2b39ef7"
+    },
+    {
+      "path": "branding/native-generated-on-dark.png",
+      "sha256": "b1d44fd8e8d2640fae3a5b88d568e4c1ef85e49ff81375cd67f8781e54d36d74"
+    },
+    {
+      "path": "branding/native-generated-on-light.png",
+      "sha256": "b90d447d6b39e6bd04277b949e7c117c7d083bcda690aec5d276fd3dc62aae53"
+    },
+    {
+      "path": "branding/source.json",
+      "sha256": "ef5b7245527ffa40fe61515aea9e64d0ad692d28648646246b7b104b2b6bd4b2"
+    },
+    {
+      "path": "business-facts.json",
+      "sha256": "2b404295b65748f2ce04c370ca1c5a3a6010d98e13d6462e317fcb4b7392df88"
+    },
+    {
+      "path": "copy-review.json",
+      "sha256": "85e9283e245e5a82e7997ffa1e0432f82f6ece28839fea86451688a75f162e18"
+    },
+    {
+      "path": "dealer-stock/template-demo-1.webp",
+      "sha256": "945e6864218ab3bd5fbd415336b212ecfde645685033f8506836f906885d447c"
+    },
+    {
+      "path": "dealer-stock/template-demo-2.webp",
+      "sha256": "17689ab880bf47de81ef467c34d639223f39f0c1ebe68c90d0aaf70e3dcc6333"
+    },
+    {
+      "path": "dealer-stock/template-demo-3.webp",
+      "sha256": "d644dec8e1ef280a702dccac267a2367f0ab823e40373e1299b156e7723b3b1f"
+    },
+    {
+      "path": "dealer.json",
+      "sha256": "b8c1eb73c68d1ff763589ba58d97438e6f82e5f1dc432fd86faeff9969dd294a"
+    },
+    {
+      "path": "identity-review.json",
+      "sha256": "ef9b1caecb879712d6b959c499f0662bdc0d908d8af3cd7e75744fc88f8d4ba6"
+    },
+    {
+      "path": "locale.json",
+      "sha256": "3a7a6052af212cf43edd73ccaef1a7df45af185f46d12f7ac449e12aeb069191"
+    },
+    {
+      "path": "missing-facts.json",
+      "sha256": "ce1b97e42528ec9a37edd8d71eec967df17ac6653b947a25de38515bb531721a"
+    },
+    {
+      "path": "qualification.json",
+      "sha256": "a8be82f1bbedaf57109cdfc01d8592405205482daef2ce8550946ac0e4446673"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "9c0bba01c4b80f0da4ae0c5ecb655f38036fc147d1138aa6669855885d8c41d5"
+    },
+    {
+      "path": "stock.json",
+      "sha256": "832f42b50d7cadc22226e0537db18f7f0cdb84a6b52c7682999026e4966cef67"
+    }
+  ],
+  "nativeApproval": false,
+  "hostedApproval": false,
+  "providerWrites": 0
+}

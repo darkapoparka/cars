@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Titanes Auto Sales & Rentals / Titanes Autos Solutions LLC",
     "publicOrigin": "https://titanes-auto-sales-rentals-titan-4778885363.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a4817886cb732139b86a7eb0905c7396eb2c0ba3f0f95985eb5d8226e7f2b30f"
+    }
   }
 }

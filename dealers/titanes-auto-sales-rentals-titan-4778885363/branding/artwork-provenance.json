@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-fl-winter-haven-titanes-autos-solutions",
+  "slug": "titanes-auto-sales-rentals-titan-4778885363",
+  "name": "Titanes Auto Sales & Rentals / Titanes Autos Solutions LLC",
+  "kind": "published-reference-logo-refinement-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.titanesautosolutions.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/category/all-products",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/product-page/mitsubishi-outlander-sport-es",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/product-page/buick-encore-2020",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.titanesautosolutions.com/product-page/infiniti-fx37-2013",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/GetDocument?aggregateId=flal-l20000163423-1c1c00d5-067e-4b50-be7f-ec0a44f8c982&formatType=PDF&transactionId=l20000163423-2c6126d1-8502-44b7-8019-3fc6f67140fc",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "2c2a77e813ace5e9185017e1a17bfe1d528e5f2cdb8d16ac091312fcdc15d2ae",
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "b90d447d6b39e6bd04277b949e7c117c7d083bcda690aec5d276fd3dc62aae53",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123",
+        "prompt": "Use case: identity-preserve logo refinement. The provided image is the published reference for this dealership. Exact text: \"TITANES AUTO SALES & RENTALS\". Retain the recognizable supplied red winged front-facing sports-car symbol and refine its clean geometry. Keep the symbol compact at left of the exact full name in confident contemporary sans typography. Remove the black rectangular canvas; preserve red/white identity and introduce dark text for the light-surface treatment. Do not copy a car manufacturer's emblem.. Horizontal logo for LIGHT website surfaces, with clear dark/charcoal foreground lettering, legible name hierarchy, large useful symbol if present, generous counters and crisp edges. Genuine alpha transparency. A polished final logo, not a poster or mockup. No extra text, fake checkerboard, background rectangle, watermark, shadows, fake chrome, gradients or texture. No tiny slogan, no misspelled words. Prefer a balanced landscape lockup that remains readable at 240px wide, framed close to the artwork with a small transparent margin. One logo only. This output is a proposed website asset, not a claim of dealer adoption.",
+        "reference": "C:/Users/radev/AppData/Local/Temp/cars-astra-public-brand-evidence-20261021/us14-visual-candidates/titanes-site-image-2.jpg"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 120,
+          "width": 2172,
+          "height": 481
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "215e01c52be1e70d33a4721c523f1569efa645cec2686646f6b56697d6ec53d9",
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "b1d44fd8e8d2640fae3a5b88d568e4c1ef85e49ff81375cd67f8781e54d36d74",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a4bb12d0-0a5d-44bd-bad0-8adf599e76fc",
+        "prompt": "Create the matching light-ink variant for DARK website surfaces of the supplied Titanes Auto Sales & Rentals logo. Preserve exact wording, spelling, symbol, composition, typography, spacing and proportions. Change dark name/foreground elements to clean solid white; preserve recognizable genuine source accents where they remain clear against #111113 and deep red. Transparent alpha background; no background block, mockup, texture, distressed edges, new decorations or extra text. This must remain the same logo, simply its readable on-dark counterpart. Exact text: TITANES AUTO SALES & RENTALS. Whole design with enough clear transparent margin.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1d0f1e0a-7738-4277-a6d4-2966ef8da123.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 118,
+          "width": 2172,
+          "height": 483
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "originalReference": {
+    "path": "_references/titanes-auto-sales-rentals-titan-4778885363.jpg",
+    "sha256": "23655668106a618d46eea13d3f0048b30eaa149257c6c8752d8bd295f1728fc1",
+    "sourcePage": "https://www.titanesautosolutions.com/",
+    "observedAt": "2026-10-23",
+    "adaptation": "Published brand reference refined for an English website; original retained unchanged; adoption not claimed"
+  },
+  "artworkReadyForIntegration": true
+}

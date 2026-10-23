@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "JWG Auto Sales LLC",
     "publicOrigin": "https://jwg-auto-sales-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "cd45fc2abe3d166990591cdef165a0f235607751e96ddb2da04aa2ed271023af",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "7e601d6f26461ce0daf523b65e517fd6005ae1905029d8de5fb7c5ef38502e88"
+    }
   }
 }
