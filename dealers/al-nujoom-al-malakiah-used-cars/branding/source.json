@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nujoom-al-malakiah-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-nujoom-al-malakiah-used-cars-729",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "45d82234ee7925cf4ad977ca06b8a9dd4c9cffc5cd1fe2b071711a24a2c70aa2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+          "operation": "crop-reviewed-left-NM-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 292,
+            "height": 296
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "10196e477c8b307f39a6b0c64e4740465bae717423c9731d50a199e6dd6ee181",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7adf104d-247d-40bf-bffd-673183b62a73",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+          "operation": "crop-reviewed-left-NM-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 292,
+            "height": 296
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "538b1a6ab2b86bc72f8c6497a1c3ed98bc997dfc181b8acdd9ddbef024c8d389",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-402c7f92-1eba-4457-bb8a-9aea3d8c28a6",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7adf104d-247d-40bf-bffd-673183b62a73",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "1c135a6db6d76feda9593e172b74923a13ae5cb29c749b71725de1a9e8e0eafe",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7adf104d-247d-40bf-bffd-673183b62a73",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Compact symbol isolated from exact reviewed light/dark PNGs; native 32/64px and favicon QA remain independent."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "d11be6ae58de837d5b560f3167e00c975938a10f0949a8f39f03a406c581c83d",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "51056dc032ce0a7f40b6ff241ca4aab17426b0d453569ba99559a7dc1e631f32"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "2878bf3941a55a3570f609b9eb747e006c25f82f587b78157b1ee70c02c4949b"
+      }
+    ]
+  }
+}

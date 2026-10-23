@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-ostoura-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-al-ostoura-used-cars",
+  "name": "Al Ostoura Used Cars",
+  "renderedName": "Al Ostoura Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/alostoura/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/13154-toyota-land-cruiser-35-at-4wd-415-hp-gxr",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "07846e15a68d83deca87c849f7a6ced7045490bbfbb1949c270b34d9debbf808",
+      "width": 1024,
+      "height": 245,
+      "transparentFraction": 0.703694993622449,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "e94629ba22a0eac8b77d19fa56d995f9a09c9234e11b8b6a04ab468b0b228ff4",
+        "width": 2138,
+        "height": 736
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-e24bb4cf-103b-4c20-ad1f-e4b6d4d8c632",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Ostoura Used Cars. Required exact text, uppercase: AL OSTOURA USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials O may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 33,
+          "top": 118,
+          "width": 2082,
+          "height": 498
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "ec1666ac7f84d6f7313f246c8b83683a66ae1c02eb13ac37d9082d312117b946",
+      "width": 1024,
+      "height": 247,
+      "transparentFraction": 0.6027723304655871,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "b5194dd6d4930e3dbb0ececc66f4823be74fdc66acb3fed22378113fb303a764",
+        "width": 2138,
+        "height": 736
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-36f29cbe-57a9-463e-a5df-acf581ae56cf",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL OSTOURA USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-e24bb4cf-103b-4c20-ad1f-e4b6d4d8c632.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 108,
+          "width": 2129,
+          "height": 514
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-09.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
