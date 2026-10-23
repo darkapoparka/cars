@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-bouroj-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "ddc8038f3c4f74d293882d9bcca4285a50a64aa0b57147076833b788d491e2be",
+      "sourceSha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "ff372cb7ea6a2a4a0d744f754200484f96229f5829ab361842dfedbb13968795",
+      "sourceSha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "ff372cb7ea6a2a4a0d744f754200484f96229f5829ab361842dfedbb13968795",
+      "sourceSha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-acc940d2-01bf-45b0-911f-739dddb4daec",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "ace779530b5338b59caff652d821e5932d18b97e6cdd5078217471bde37120a2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-acc940d2-01bf-45b0-911f-739dddb4daec",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 250,
+          "height": 307
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "fefb17717a5924410c3746d33f9320769b7ad99c72cfaa2d778f3ce7481dad68"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-acc940d2-01bf-45b0-911f-739dddb4daec",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-bouroj-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9b2a4699-8ed4-44c8-af3c-840ebe2b3634",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-bouroj-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9b2a4699-8ed4-44c8-af3c-840ebe2b3634",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-bouroj-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+      "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 307
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+      "sha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 303
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+      "sha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 303
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "d1b7ef4aaba9c42aac3dfa0e7b5e3d7ba9d412bc3bd837bd80580919ece58de1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-acc940d2-01bf-45b0-911f-739dddb4daec",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 307
+          }
+        }
+      },
+      "sourceReference": "dealers/al-bouroj-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "cc87f5ed8e6007e2057a221c89dc295b88f3e62cca7928bed68fb78f3ff2a692",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-9b2a4699-8ed4-44c8-af3c-840ebe2b3634",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 303
+          }
+        }
+      },
+      "sourceReference": "dealers/al-bouroj-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "ace779530b5338b59caff652d821e5932d18b97e6cdd5078217471bde37120a2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-acc940d2-01bf-45b0-911f-739dddb4daec",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 307
+          }
+        }
+      },
+      "sourceReference": "dealers/al-bouroj-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "fefb17717a5924410c3746d33f9320769b7ad99c72cfaa2d778f3ce7481dad68",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-acc940d2-01bf-45b0-911f-739dddb4daec",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 307
+          }
+        }
+      },
+      "sourceReference": "dealers/al-bouroj-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "66db510b5ef6a6dbdccc446f1416003816b724fcca223672ec6a9052b957e616",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-9b2a4699-8ed4-44c8-af3c-840ebe2b3634",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 250,
+          "height": 303
+        }
+      }
+    }
+  }
+}

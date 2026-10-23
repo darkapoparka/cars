@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-ayman-khamis-motors-automobiles-trading-fze",
+  "slug": "ayman-khamis-motors-automobiles-trading-fze",
+  "artworkDirectory": "ayman-khamis-motors-automobiles-trading-fze",
+  "name": "Ayman Khamis Motors Automobiles Trading FZE",
+  "renderedName": "Ayman Khamis Motors Automobiles Trading FZE",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-ayman-khamis-motors-automobiles-trading-fze-3165",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "5c93d302f9f4f3761fa52b504cfe551b1484af2e69be935435b9baa46f055b39",
+      "width": 1024,
+      "height": 191,
+      "transparentFraction": 0.7132945435209425,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "c3c4e3e14de72e1c05693a9ef5d456ed37588487a2fe4a29d2569c4d6055250f",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Ayman Khamis Motors Automobiles Trading FZE. Required exact text, uppercase: AYMAN KHAMIS MOTORS AUTOMOBILES TRADING FZE. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials AK may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 9,
+          "top": 147,
+          "width": 2163,
+          "height": 403
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "e164180b6350237b66f0c32157de581374c2d8834d98930ae56102cd818c2a81",
+      "width": 1024,
+      "height": 192,
+      "transparentFraction": 0.6102803548177084,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "4be2ebf88f691d4f9c0f15b8ac08e1c5d8682d9d2de785bdd2fe74a3fe501cfb",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-a1e1c249-dc07-4562-92e2-78ea4e4f74f8",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AYMAN KHAMIS MOTORS AUTOMOBILES TRADING FZE. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-1a6d3679-18b4-4e82-98c6-a49ee9bb3634.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 144,
+          "width": 2172,
+          "height": 407
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

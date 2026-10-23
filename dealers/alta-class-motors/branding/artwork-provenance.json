@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-alta-class-motors",
+  "slug": "alta-class-motors",
+  "artworkDirectory": "alta-class-motors",
+  "name": "Alta Class Motors",
+  "renderedName": "Alta Class Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://auto.ae/altaclass/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.drivearabia.com/ar/cars-for-sale/uae/mercedes-benz/a-class/mercedesbenz-a200-2025-under-warranty-from-gargash-ee4700c09d904bad980ab7692f54f5ef/",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "6a8b1d1e805f685977bb85bfc50d2868ede71edfa2738cada7539a3c60ea59ab",
+      "width": 1024,
+      "height": 197,
+      "transparentFraction": 0.7264980567893401,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "9b92495e61cbb38e5e6de569d88c561256519da8d75f7d7b3ad444602b66128d",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-f51ea6f2-9d2b-4289-a115-050294f7387b",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Alta Class Motors. Required exact text, uppercase: ALTA CLASS MOTORS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials AC may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 18,
+          "top": 166,
+          "width": 2118,
+          "height": 407
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "c598db3840498cd50ce90d07be920aa24b4d4c981b4423844d8f52ffde5c764a",
+      "width": 1024,
+      "height": 198,
+      "transparentFraction": 0.6530391808712122,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "b73b4b2b979abdd3acdf864eecdf7f60be79fe50717c552864ab5b72b741bf77",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-bfd3a46d-e06e-4c8b-af07-df4407a36df2",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: ALTA CLASS MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-f51ea6f2-9d2b-4289-a115-050294f7387b.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 18,
+          "top": 165,
+          "width": 2119,
+          "height": 409
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-06.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

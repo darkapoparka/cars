@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Bouroj Motors",
     "publicOrigin": "https://al-bouroj-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "ace779530b5338b59caff652d821e5932d18b97e6cdd5078217471bde37120a2"
+    }
   }
 }

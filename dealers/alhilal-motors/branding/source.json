@@ -33,7 +33,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "3ebc2b25b3f7d6e3e01b91bcd913c3f04ed21e9b298113e22589790fd7a1ebad",
+      "sha256": "d848d2c32d935604b0fec998316f55c86f4eba02d53e479a516b1b8174433be1",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-9e6c1210-deb3-4b79-b333-ae19c15f54b1",
@@ -41,19 +41,19 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "6100652438c001797b53676af2d1886efc215d5f51641760fcc38f87e40b0b77",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 310,
-            "height": 322
+            "left": 315,
+            "top": 100,
+            "width": 118,
+            "height": 135
           }
         }
       }
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "1517ca0c0378629c5f653f94ac0c193110a5a978f09baa58ae6376ea2109254d",
+      "sha256": "300c1215e813063f6b48cdbc50dbb01c176f855908d42b7726fb1a512c26d674",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-b374bd30-665e-4acb-b59a-cd31898b2c80",
@@ -61,12 +61,12 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "b99b4d37d4cbff60edeb0c5e753807610b9cd6c972b19fcb1a6cc69b187eb7d8",
-          "operation": "crop-left-symbol",
+          "operation": "crop-wordmark-initial-compact-symbol",
           "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 310,
-            "height": 319
+            "left": 315,
+            "top": 100,
+            "width": 118,
+            "height": 135
           }
         }
       }
@@ -129,7 +129,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Dark A initial cropped from reviewed horizontal artwork for 32px legibility after native white-surface favicon contrast failure; native QA must independently pass."
     }
   },
   "sourceBlockers": [],

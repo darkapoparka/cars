@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "dream-motors-used-car-trading-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "f76371bb873c7a9c32bc2cbba227535631f0aec00de883dbc62af6ccf379f06f",
+      "sourceSha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "46f1df6c855a8a6280ed80a81c9fa11bcfb1e0a61253820e4550e46f442fc071",
+      "sourceSha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "46f1df6c855a8a6280ed80a81c9fa11bcfb1e0a61253820e4550e46f442fc071",
+      "sourceSha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e51e705f-bf24-4a90-87fa-d686abce488a",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "c534baec687cb60167d911baceabd40d0f5ca2be30692a0101003a2ac9495173",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e51e705f-bf24-4a90-87fa-d686abce488a",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 275,
+          "height": 245
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "a4d1d64473d046ac4268c56af79a065ea77726b739b7935132ed8b8c3a338a65"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e51e705f-bf24-4a90-87fa-d686abce488a",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dream-motors-used-car-trading-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e4e3a412-2ec5-4a34-8694-645d9bb13be1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dream-motors-used-car-trading-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e4e3a412-2ec5-4a34-8694-645d9bb13be1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/dream-motors-used-car-trading-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+      "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 245
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+      "sha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 244
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+      "sha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 244
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "89c96a81e323dbf24fddca288ab2f06c066beb7da888aedb371797ba75c25779",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e51e705f-bf24-4a90-87fa-d686abce488a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 245
+          }
+        }
+      },
+      "sourceReference": "dealers/dream-motors-used-car-trading-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0c5e9936daf97a123260a8c0d290ba1dd952fa0e4e1b9bffc0faf102aa78c0ae",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e4e3a412-2ec5-4a34-8694-645d9bb13be1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 244
+          }
+        }
+      },
+      "sourceReference": "dealers/dream-motors-used-car-trading-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "c534baec687cb60167d911baceabd40d0f5ca2be30692a0101003a2ac9495173",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e51e705f-bf24-4a90-87fa-d686abce488a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 245
+          }
+        }
+      },
+      "sourceReference": "dealers/dream-motors-used-car-trading-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "a4d1d64473d046ac4268c56af79a065ea77726b739b7935132ed8b8c3a338a65",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-e51e705f-bf24-4a90-87fa-d686abce488a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 275,
+            "height": 245
+          }
+        }
+      },
+      "sourceReference": "dealers/dream-motors-used-car-trading-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "dccf7ea0b8fec3bab3e1cc35722d70c9c694c8bf52b28c17c6d686a2bc109791",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-e4e3a412-2ec5-4a34-8694-645d9bb13be1",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d6b14ae74b5c5b44b5da0258a99bb67ff72f131a1c2e3e239be181d5278ae8eb",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 275,
+          "height": 244
+        }
+      }
+    }
+  }
+}

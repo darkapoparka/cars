@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Dream Motors Used Car Trading LLC",
     "publicOrigin": "https://dream-motors-used-car-trading-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "b288af85ba5785e58d7769e9d844ee0d08cc3cc7afed2a87870cba03d1b42c64",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "c534baec687cb60167d911baceabd40d0f5ca2be30692a0101003a2ac9495173"
+    }
   }
 }

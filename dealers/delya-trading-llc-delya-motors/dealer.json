@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Delya Trading LLC (Delya Motors)",
     "publicOrigin": "https://delya-trading-llc-delya-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "696cc05c3d47c69506086cc38fd849c538da0939b0138935dea3fa749cf75bf1"
+    }
   }
 }

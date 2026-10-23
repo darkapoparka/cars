@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Chiron Used Cars Trading",
     "publicOrigin": "https://chiron-used-cars-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "78661702cd5ca0825cb495f5b2ab1ede2e18be6982c181889ba05f86199b15f8",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "acbeb57369ffefcbd062a9f18fc886fa90e08c1ce6da434e3c378a587211bd4e"
+    }
   }
 }

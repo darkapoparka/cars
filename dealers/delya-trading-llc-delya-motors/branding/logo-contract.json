@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "delya-trading-llc-delya-motors",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "c6f79cefae975949526cc9309a147b326ef4a11921b7ff3537415852f96a07a3",
+      "sourceSha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "bec6df9be51f1475179dfea19abec2abc8dd6e7c3bc476239be78734175a0848",
+      "sourceSha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "bec6df9be51f1475179dfea19abec2abc8dd6e7c3bc476239be78734175a0848",
+      "sourceSha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "696cc05c3d47c69506086cc38fd849c538da0939b0138935dea3fa749cf75bf1",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 266
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "e1606441d40faa96bd9da5cff7e3b57a24e282a29361c33b66ca303d619a21cf"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/delya-trading-llc-delya-motors/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-37aff774-684a-4f1d-93c1-3c8b7c27acba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/delya-trading-llc-delya-motors/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-37aff774-684a-4f1d-93c1-3c8b7c27acba",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/delya-trading-llc-delya-motors/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+      "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 266
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+      "sha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 271
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+      "sha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 271
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "3220c1ba3905b812c258f5aad247295ce8e21528b449554ff374c49b4aa9618b",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 266
+          }
+        }
+      },
+      "sourceReference": "dealers/delya-trading-llc-delya-motors/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "4c5d942676220169a0c8caadc8cdbfe6596fffec7e44e0796e999df0b739b2f0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-37aff774-684a-4f1d-93c1-3c8b7c27acba",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 271
+          }
+        }
+      },
+      "sourceReference": "dealers/delya-trading-llc-delya-motors/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "696cc05c3d47c69506086cc38fd849c538da0939b0138935dea3fa749cf75bf1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 266
+          }
+        }
+      },
+      "sourceReference": "dealers/delya-trading-llc-delya-motors/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "e1606441d40faa96bd9da5cff7e3b57a24e282a29361c33b66ca303d619a21cf",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bee8222f-1d3f-4923-9e17-1fe59cb822e9",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "177daf209e07cdb4cb5ba610bc90712ded8c7aea1b8166e0ce76af2a1e07e3a0",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 325,
+            "height": 266
+          }
+        }
+      },
+      "sourceReference": "dealers/delya-trading-llc-delya-motors/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a883f95abf6a65adc4893e0634dc1cbfdc825fac0becae74ce1d2977fc6fe509",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-37aff774-684a-4f1d-93c1-3c8b7c27acba",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "74ea95cc7759d0a132b110cc7645c7d1db75d03a42a7a850c03c01f5483e48a9",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 325,
+          "height": 271
+        }
+      }
+    }
+  }
+}

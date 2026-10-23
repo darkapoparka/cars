@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-dubai-al-bouroj-motors",
+  "slug": "al-bouroj-motors",
+  "artworkDirectory": "al-bouroj-motors",
+  "name": "Al Bouroj Motors",
+  "renderedName": "Al Bouroj Motors",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/dubai-al-bouroj-motors-2793",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "2f47fdbc721d4b8f99d89a491f5a9ebac78649f40187d46009a2143a4e02dc61",
+      "width": 1024,
+      "height": 307,
+      "transparentFraction": 0.7237727758550488,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "a61ad9f792becc221c358cbf7361b1a3d4bed650885548536d8f99cfec1aa3c1",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-acc940d2-01bf-45b0-911f-739dddb4daec",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Bouroj Motors. Required exact text, uppercase: AL BOUROJ MOTORS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials B may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 84,
+          "top": 44,
+          "width": 2025,
+          "height": 607
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "e5552a95f158a744ebc0c8ea4d8067d11a210090d68199eff60aad6254d47cbd",
+      "width": 1024,
+      "height": 303,
+      "transparentFraction": 0.6399127217409241,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "8a96e01602ef3b9ab28fd72f61a1d9aa2d3ea46b1e0480f85f0c2c979cd82d57",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-9b2a4699-8ed4-44c8-af3c-840ebe2b3634",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL BOUROJ MOTORS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-acc940d2-01bf-45b0-911f-739dddb4daec.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 59,
+          "top": 40,
+          "width": 2070,
+          "height": 613
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-05.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

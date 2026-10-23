@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "alhilal-motors",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T01:49:51.124Z",
+  "reviewedAt": "2026-10-23T02:15:23.593Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -47,11 +47,11 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "1517ca0c0378629c5f653f94ac0c193110a5a978f09baa58ae6376ea2109254d"
+      "sha256": "300c1215e813063f6b48cdbc50dbb01c176f855908d42b7726fb1a512c26d674"
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "3ebc2b25b3f7d6e3e01b91bcd913c3f04ed21e9b298113e22589790fd7a1ebad"
+      "sha256": "d848d2c32d935604b0fec998316f55c86f4eba02d53e479a516b1b8174433be1"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "9ed94abdfbc61fe9c7e3b327f3004d1d76a8331cc3a75f235b4c197dceeb5604"
+      "sha256": "900d12cea06be42a79e22d1fea075d31fb26f8c7d4d829b4bec12115ecdcb72d"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "3336d137f3ad5a3f7847c42e91aca033352dbe86e3d40dfca6cc35bfdd7941dc"
+      "sha256": "0c3ce9810e62ddef17f38377999af8f39d6b1c5dfa1e59c3e30ed2695d6ee383"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -79,7 +79,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "86214579be9936b8ebc8e8a86c44118e04a70b7b2b4f95771d42c662ec752166"
+      "sha256": "5ca57681b96bdd5418cc3e82e68b1a26ad56e75e7ce182545b505f7ffc749797"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "73799eb79d53a54b71da5f29c84c39f311ffd3d43096f301b5838ca3e999fe5b"
+      "sha256": "0ca864f3c004f6b18a9147b03876588e80684f3ea173a932759d7b4628200b1b"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "c03cf16b8dab85bb122096cffa478cd067b447bde616d3f67aa85794d5dc1541"
+      "sha256": "e4d568f32c86aefa8499a119f80e0f425db3e4deb1d4688fb7e98c38b196e024"
     },
     {
       "path": "identity-review.json",
-      "sha256": "ccc0735bd2299b4aebc5ebc1c7c175226a6826e896d2e359c4db5bb7457076c8"
+      "sha256": "2aa037a8fdae492f6afee4b791d8ec6bda60ccad3e31dd479c63d4db494a932a"
     },
     {
       "path": "locale.json",
@@ -119,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "d2edf61fb527fa0665b58e3378b8c66b55e14e19c930be492a3890e74df25b7b"
+      "sha256": "933e94a58ac41b0a61e40369565564df7e052bb33e0dd4b914cd73a9e0297fb5"
     },
     {
       "path": "source-evidence.json",

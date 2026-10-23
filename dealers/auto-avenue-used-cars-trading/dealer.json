@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Auto Avenue Used Cars Trading",
     "publicOrigin": "https://auto-avenue-used-cars-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "bb89ff821fd6ffd632895be5262231012a087e6dfbdb9f36fb392a564bc0b422",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "dd17bed6dfbcdc4c527475edbc1180c17bb81fe4ca05ab0878c86ed757974cbc"
+    }
   }
 }
