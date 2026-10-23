@@ -33,7 +33,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "1651c775fd7f7201d5c8eb08565fb55665403141243d6455da7219bb17e5bbe1",
+      "sha256": "c975180e8a8d5fdb993b5040d998aed11b157ca4babeeb7de82a7351c5a9dce7",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-16061cfa-9552-4446-a3e9-97bc052e6c7c",
@@ -41,19 +41,25 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "cd45fc2abe3d166990591cdef165a0f235607751e96ddb2da04aa2ed271023af",
-          "operation": "crop-left-symbol",
+          "operation": "crop-J-letter-and-mask-adjacent-W",
           "crop": {
-            "left": 0,
+            "left": 520,
+            "top": 45,
+            "width": 130,
+            "height": 115
+          },
+          "mask": {
+            "left": 124,
             "top": 0,
-            "width": 508,
-            "height": 292
+            "width": 6,
+            "height": 50
           }
         }
       }
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "75ba5252716156542bcbc225853ecef6e0e71947aebba6ba6b5ec22dffddf74e",
+      "sha256": "076b99132492c6a26adce0084ffa0a5388da49d0686bf44a84b7cee773495033",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-27e78f8a-4b2f-41b8-af8d-6baaa526727e",
@@ -61,12 +67,18 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "cea739aeb4489ff89d71d39974681a7a807d2a78e937635e2c5ec7743a808402",
-          "operation": "crop-left-symbol",
+          "operation": "crop-J-letter-and-mask-adjacent-W",
           "crop": {
-            "left": 0,
+            "left": 520,
+            "top": 45,
+            "width": 130,
+            "height": 115
+          },
+          "mask": {
+            "left": 124,
             "top": 0,
-            "width": 508,
-            "height": 290
+            "width": 6,
+            "height": 50
           }
         }
       }
@@ -129,7 +141,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Single J initial extracted from the reviewed JWG wordmark with adjacent W wedge cleared; horizontal identity art and native originals remain intact. Native compact QA must validate contrast and favicon."
     }
   },
   "sourceBlockers": [],

@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "7e601d6f26461ce0daf523b65e517fd6005ae1905029d8de5fb7c5ef38502e88",
+    "sha256": "53d21ac82d76dccfe2d8c05d58d25bafdf70d32d3714b3278aadb9cc5f982ce3",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-16061cfa-9552-4446-a3e9-97bc052e6c7c",
@@ -58,19 +58,25 @@
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
         "sha256": "cd45fc2abe3d166990591cdef165a0f235607751e96ddb2da04aa2ed271023af",
-        "operation": "crop-left-symbol",
+        "operation": "crop-J-letter-and-mask-adjacent-W",
         "crop": {
-          "left": 0,
+          "left": 520,
+          "top": 45,
+          "width": 130,
+          "height": 115
+        },
+        "mask": {
+          "left": 124,
           "top": 0,
-          "width": 508,
-          "height": 292
+          "width": 6,
+          "height": 50
         }
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "9cd40027069fde91682cfa3a7bad8c79cf7ce3e2dbd67fa79ea278f69e826a39"
+    "sha256": "9b7eeb1472148e4ac78695c859f6ab39be1b80d1609401c44f94580f98400d50"
   },
   "surfaces": {
     "onLight": {
@@ -148,7 +154,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "ee3bc1e1ccb8a2af4e09f87cdf3f07472510d6a76f4ea43e1b81e044a076b9d6",
+      "sha256": "67ef98b32f9667136dda35510c2ecc9a4b8d1cafb4bf7b18822017d66c649f8c",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-16061cfa-9552-4446-a3e9-97bc052e6c7c",
@@ -156,12 +162,18 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "cd45fc2abe3d166990591cdef165a0f235607751e96ddb2da04aa2ed271023af",
-          "operation": "crop-left-symbol",
+          "operation": "crop-J-letter-and-mask-adjacent-W",
           "crop": {
-            "left": 0,
+            "left": 520,
+            "top": 45,
+            "width": 130,
+            "height": 115
+          },
+          "mask": {
+            "left": 124,
             "top": 0,
-            "width": 508,
-            "height": 292
+            "width": 6,
+            "height": 50
           }
         }
       },
@@ -169,7 +181,7 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "f229a70e47ec831e4f612a7990d66cb3faac475e23d867c464f5f1d41c3d5033",
+      "sha256": "a44852d5fe4443bde2e61834f16a5be544a76ae6bcf9a003b1d302276eb4d39b",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-27e78f8a-4b2f-41b8-af8d-6baaa526727e",
@@ -177,12 +189,18 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "cea739aeb4489ff89d71d39974681a7a807d2a78e937635e2c5ec7743a808402",
-          "operation": "crop-left-symbol",
+          "operation": "crop-J-letter-and-mask-adjacent-W",
           "crop": {
-            "left": 0,
+            "left": 520,
+            "top": 45,
+            "width": 130,
+            "height": 115
+          },
+          "mask": {
+            "left": 124,
             "top": 0,
-            "width": 508,
-            "height": 290
+            "width": 6,
+            "height": 50
           }
         }
       },
@@ -190,7 +208,7 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "7e601d6f26461ce0daf523b65e517fd6005ae1905029d8de5fb7c5ef38502e88",
+      "sha256": "53d21ac82d76dccfe2d8c05d58d25bafdf70d32d3714b3278aadb9cc5f982ce3",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-16061cfa-9552-4446-a3e9-97bc052e6c7c",
@@ -198,12 +216,18 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "cd45fc2abe3d166990591cdef165a0f235607751e96ddb2da04aa2ed271023af",
-          "operation": "crop-left-symbol",
+          "operation": "crop-J-letter-and-mask-adjacent-W",
           "crop": {
-            "left": 0,
+            "left": 520,
+            "top": 45,
+            "width": 130,
+            "height": 115
+          },
+          "mask": {
+            "left": 124,
             "top": 0,
-            "width": 508,
-            "height": 292
+            "width": 6,
+            "height": 50
           }
         }
       },
@@ -211,7 +235,7 @@
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "9cd40027069fde91682cfa3a7bad8c79cf7ce3e2dbd67fa79ea278f69e826a39",
+      "sha256": "9b7eeb1472148e4ac78695c859f6ab39be1b80d1609401c44f94580f98400d50",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-16061cfa-9552-4446-a3e9-97bc052e6c7c",
@@ -219,12 +243,18 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "cd45fc2abe3d166990591cdef165a0f235607751e96ddb2da04aa2ed271023af",
-          "operation": "crop-left-symbol",
+          "operation": "crop-J-letter-and-mask-adjacent-W",
           "crop": {
-            "left": 0,
+            "left": 520,
+            "top": 45,
+            "width": 130,
+            "height": 115
+          },
+          "mask": {
+            "left": 124,
             "top": 0,
-            "width": 508,
-            "height": 292
+            "width": 6,
+            "height": 50
           }
         }
       },
@@ -242,7 +272,7 @@
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "4086092d613eda228765ccdc44be73c219f6a2f73834217109c65d1fe6974066",
+    "sha256": "c46f74464df4b602e89f5bc6434a7c2e88ddb87086ca10a7fdf978d07d9dfe5e",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-27e78f8a-4b2f-41b8-af8d-6baaa526727e",
@@ -250,12 +280,18 @@
       "derivedFrom": {
         "path": "branding/generated-on-dark.png",
         "sha256": "cea739aeb4489ff89d71d39974681a7a807d2a78e937635e2c5ec7743a808402",
-        "operation": "crop-left-symbol",
+        "operation": "crop-J-letter-and-mask-adjacent-W",
         "crop": {
-          "left": 0,
+          "left": 520,
+          "top": 45,
+          "width": 130,
+          "height": 115
+        },
+        "mask": {
+          "left": 124,
           "top": 0,
-          "width": 508,
-          "height": 290
+          "width": 6,
+          "height": 50
         }
       }
     }

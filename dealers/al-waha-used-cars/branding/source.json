@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "al-waha-used-cars",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -14,7 +14,134 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "356518d02c1e228db4f7a4a62fc14d55cd6192e36b8a7c995a7d5686940122e5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 232
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "593ba5a78713f40813bee5fd4624be3a345a8b7ac9347dc061c31172dbb330fc",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 234
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "9f0da7583aed7b66446171c797230f4bbe8784764d436b47fbc1a5005683f628",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-7033552b-9370-4970-8600-705fe382a03f",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "3ec183ab47867a46d8a39a7b7228944729d89d72e443e77c4e326b80e9f9d12f",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a7a37e00-ed92-49c4-a3cf-efb7806b834a",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "d4f643008d4d2d21437a60d1c20208e7ef68ccaec1397d111397ac854eb1ff39",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "f4b10ffc5785d46144f9844e6313c485f5011bdd2a321d62a13877e7cea4b4a2"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "2714137a59c4b9e119cfb375c76f6bb1b94ec531cf70a373eaa300370f416ba7"
+      }
+    ]
+  }
 }

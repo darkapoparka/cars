@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "jwg-auto-sales-llc",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T01:21:55.876Z",
+  "reviewedAt": "2026-10-23T01:41:59.570Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -47,11 +47,11 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "75ba5252716156542bcbc225853ecef6e0e71947aebba6ba6b5ec22dffddf74e"
+      "sha256": "076b99132492c6a26adce0084ffa0a5388da49d0686bf44a84b7cee773495033"
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "1651c775fd7f7201d5c8eb08565fb55665403141243d6455da7219bb17e5bbe1"
+      "sha256": "c975180e8a8d5fdb993b5040d998aed11b157ca4babeeb7de82a7351c5a9dce7"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "d41f953122938cb640c8fb88dccb7356ad5ca550ae89a82b666597b8016c3561"
+      "sha256": "e2949f014ea18532eda70be81412bb04b6d5c6a38fae0438cf9f6728a1c69920"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "775de22a7e072abd99a489e342b1e8e3b0394bdf6f416023a369d12256946a7d"
+      "sha256": "6b7a0863e63bd0bf09d412a7f0ea92ca3e38af55d45df6bf8fc67b8fefb22ff7"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -79,7 +79,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "1f042201ce074371cd91e7bf1d4d9094e2f38a40b964593248a609e69a686c6c"
+      "sha256": "85a09c7cf7b79ac22a530aa4abaaaa793b7a523936d33625de4ecfa39816289f"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "40937d29bcd8fec1eebd08a5d59cbdd8acb9fd57af2c1fcfcb1fdc31e55aa68d"
+      "sha256": "09e321c0f70055792eb63e4879a9524a015f8af158c156820d54fd9dfe7042f9"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "23ec022cd3742c41ea11a87b52773558c3c935a7a7cb88589217dc0b91ec0df1"
+      "sha256": "2721f910a42c5fdc3905114fc2f71ee247ad91dce6d5b088eb09aacce35bea3d"
     },
     {
       "path": "identity-review.json",
-      "sha256": "c5fb7e4394bcbc3151776e0c10ab543372db0ec044af0e5caa271db8809b0db3"
+      "sha256": "76ef377a929a2b7de13f6f33da1d260122bd362a77988dac5885a6c4aef75e46"
     },
     {
       "path": "locale.json",
@@ -119,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "7d15ebda1c12e4bb5db1a58a726a6797c07472aef08f8e255b2a895784cdf7e8"
+      "sha256": "b726a8a3b2e36b1752828dfaf0020670ca2026e76fdd7f8ef441b28ebe85cef0"
     },
     {
       "path": "source-evidence.json",
