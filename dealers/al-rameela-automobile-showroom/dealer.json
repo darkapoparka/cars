@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Rameela Automobile Showroom",
     "publicOrigin": "https://al-rameela-automobile-showroom.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "d33550839065354da32cf72ef86bc0d83971f4002441de4f076422a5946b7bcd",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "9da9721717535dc9e4c6d86eaa9d09b263d17567b1309a67de692e1d28d8a4ae"
+    }
   }
 }

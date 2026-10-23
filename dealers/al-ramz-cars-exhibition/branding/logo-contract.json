@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-ramz-cars-exhibition",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "887ba272926f6b7b5bbcbbd24a67c1975866eeb6e04062a7ce438d6d3d5618c7",
+      "sourceSha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "56cf9b2126413bb1a520ef9208966e0e3bf1289d388fc86ef3387ed1031f6cdb",
+      "sourceSha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "56cf9b2126413bb1a520ef9208966e0e3bf1289d388fc86ef3387ed1031f6cdb",
+      "sourceSha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-30f63bb3-c1fa-45df-a0c8-502b8f3e1aad",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "9542f577e8fbcd22b3cbd26a733cdabad3fbf1bdb306c145f1215d848ea56a75",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-30f63bb3-c1fa-45df-a0c8-502b8f3e1aad",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 330,
+          "height": 218
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "cf9ce4fedbecf16923f76e686a04434d3db5b3bcad40b99be7a0c5366a85f0d6"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-30f63bb3-c1fa-45df-a0c8-502b8f3e1aad",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-ramz-cars-exhibition/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2faa539e-1ac1-4d1e-bf94-7366cd663780",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-ramz-cars-exhibition/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2faa539e-1ac1-4d1e-bf94-7366cd663780",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-ramz-cars-exhibition/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+      "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 218
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+      "sha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 218
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+      "sha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 218
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "4b89853da46cd247d7ab62077ca7c4589e8e5ba9d295a124ca5e886824df6e0a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-30f63bb3-c1fa-45df-a0c8-502b8f3e1aad",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 330,
+            "height": 218
+          }
+        }
+      },
+      "sourceReference": "dealers/al-ramz-cars-exhibition/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "6f1224d0e09187c18c9ff5f2f3fd62a123bf464f475602d70e0bea2bc8f1716a",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2faa539e-1ac1-4d1e-bf94-7366cd663780",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 330,
+            "height": 218
+          }
+        }
+      },
+      "sourceReference": "dealers/al-ramz-cars-exhibition/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "9542f577e8fbcd22b3cbd26a733cdabad3fbf1bdb306c145f1215d848ea56a75",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-30f63bb3-c1fa-45df-a0c8-502b8f3e1aad",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 330,
+            "height": 218
+          }
+        }
+      },
+      "sourceReference": "dealers/al-ramz-cars-exhibition/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "cf9ce4fedbecf16923f76e686a04434d3db5b3bcad40b99be7a0c5366a85f0d6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-30f63bb3-c1fa-45df-a0c8-502b8f3e1aad",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "ce5f70510e1602303a22e54b13ebf18af005ec10ce67dccf6bbca8997d10505d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 330,
+            "height": 218
+          }
+        }
+      },
+      "sourceReference": "dealers/al-ramz-cars-exhibition/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "a57d89b5735ae8ba925a5b8c588a0265d4c4d6f82eb6dcabe1448ce596f5bbdb",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2faa539e-1ac1-4d1e-bf94-7366cd663780",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "436984220b51799bea5e0aa372d15574a5592ee9e474152a545c93f849a96e99",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 330,
+          "height": 218
+        }
+      }
+    }
+  }
+}

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Ihsan Motors",
     "publicOrigin": "https://al-ihsan-motors.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5dcb8766245afee8aeb9017ca2ad4ac638a29feaf0beb86adb209ccd2f72a76a",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "296af0b8cd37359a14bfdc1bd9435a67c22d7dd9221fd63922aad74c52a1a5a1"
+    }
   }
 }

@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Jernas Used Cars Trading FZE",
     "publicOrigin": "https://al-jernas-used-cars-trading-fze.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "24372ea547168a45e1374b5ad2404d36368bcc1e04f64244c72080a360ca4766"
+    }
   }
 }

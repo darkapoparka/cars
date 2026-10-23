@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-jernas-used-cars-trading-fze",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "bf31d55ea18c1dc4c427c7dcb8035eed8af7b3497dbb78d6a06614f521b75076",
+      "sourceSha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "7c7f83f2d2be33c8b79b9fb1f7ed141c7a42d7b6fad29cf3c814533a5a211a57",
+      "sourceSha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "7c7f83f2d2be33c8b79b9fb1f7ed141c7a42d7b6fad29cf3c814533a5a211a57",
+      "sourceSha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-80cc1f66-fea7-456a-8f5c-e105ab6ed047",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "24372ea547168a45e1374b5ad2404d36368bcc1e04f64244c72080a360ca4766",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-80cc1f66-fea7-456a-8f5c-e105ab6ed047",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 340,
+          "height": 236
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "462d01ce3fb17c12364658d859e9233c245187e1a08673427b4ffb1635ad5b97"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80cc1f66-fea7-456a-8f5c-e105ab6ed047",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-jernas-used-cars-trading-fze/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2fc81ccc-30f1-48d3-872e-10be3c353493",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-jernas-used-cars-trading-fze/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2fc81ccc-30f1-48d3-872e-10be3c353493",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/al-jernas-used-cars-trading-fze/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+      "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 236
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+      "sha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 236
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+      "sha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 236
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "64e49b5e6d63b03fa4d0c02f047ac60d67166920b980dea56aa778b8c9670535",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80cc1f66-fea7-456a-8f5c-e105ab6ed047",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 236
+          }
+        }
+      },
+      "sourceReference": "dealers/al-jernas-used-cars-trading-fze/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "0b15c1e153328763ee914fd82597b3a491abe91e94144e316e7f27f35d83b55d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2fc81ccc-30f1-48d3-872e-10be3c353493",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 236
+          }
+        }
+      },
+      "sourceReference": "dealers/al-jernas-used-cars-trading-fze/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "24372ea547168a45e1374b5ad2404d36368bcc1e04f64244c72080a360ca4766",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80cc1f66-fea7-456a-8f5c-e105ab6ed047",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 236
+          }
+        }
+      },
+      "sourceReference": "dealers/al-jernas-used-cars-trading-fze/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "462d01ce3fb17c12364658d859e9233c245187e1a08673427b4ffb1635ad5b97",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-80cc1f66-fea7-456a-8f5c-e105ab6ed047",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "5981f795daaa2ad1476f96a7645f8fa0e2183c3511232b69db85456a0676742d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 340,
+            "height": 236
+          }
+        }
+      },
+      "sourceReference": "dealers/al-jernas-used-cars-trading-fze/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "42a4b516d480c9f4c5f60e1b85437642fa399abfc426fb4eab2096f7eab5f64c",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2fc81ccc-30f1-48d3-872e-10be3c353493",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "dd8e296fa86e6f8b71d7b2e6fbdc734083a6ab7bb1fc9f9063cb92a8ba05d8ca",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 340,
+          "height": 236
+        }
+      }
+    }
+  }
+}
