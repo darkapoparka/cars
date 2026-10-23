@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "slug": "al-majarah-al-sabaah-used-cars",
+  "dealerId": "ae-umm-al-quwain-al-majarah-al-sabaah-used-cars",
+  "business": {
+    "name": "Al Majarah Al Sabaah Used Cars Trading",
+    "city": "Umm al-Quwain",
+    "region": "Umm al-Quwain",
+    "countryCode": "AE",
+    "currency": "AED",
+    "distanceUnit": "km",
+    "locale": "en-AE",
+    "address": "",
+    "phone": "+971504027960",
+    "phoneDisplay": "+971504027960",
+    "email": "",
+    "website": "",
+    "stockUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+    "hours": "",
+    "sourceUrl": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+    "observedAt": "2026-10-18",
+    "inventoryNotice": "Illustrative demo vehicles from the retained Cars template; these are not this dealer’s stock. Availability has not been verified. Listing prices are omitted in this preview.",
+    "previewNotice": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": "/dealer-brand/logo-on-light.png",
+    "logoLight": "/dealer-brand/logo-on-light.png",
+    "logoDark": "/dealer-brand/logo-on-dark.png"
+  },
+  "sources": [
+    {
+      "url": "https://licenseplate.ae/ar/cars/dealer/al-majarah-al-sabaah-used-cars",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://licenseplate.ae/ar/cars/listing/12959-audi-a7-30-l-340-hp-gasoline-robot-four-wheel-drive-4wd-s-line",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://uaq.dubizzle.com/motors/used-cars/bmw/4-series/2026/04/05/bmw-4-series-420i-m-sport-2025-korean-spec-15-148---0d2dbd78db82471bb429b53b867ebe9c/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://auto.ae/ar/almajarahalsabaahusedcars/",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    },
+    {
+      "url": "https://2gis.ae/dubai/firm/70000001097458178",
+      "observedAt": "2026-10-18",
+      "supports": [
+        "retained-public-business-research"
+      ]
+    }
+  ]
+}

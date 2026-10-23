@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-majarah-al-sabaah-used-cars",
+  "missing": [
+    {
+      "field": "business.email",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.website",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "business.hours",
+      "required": false,
+      "reason": "No usable sourced value in the retained public business record."
+    },
+    {
+      "field": "prices",
+      "required": false,
+      "reason": "All listing prices are omitted under the public-repository scope."
+    },
+    {
+      "field": "business.address",
+      "required": false,
+      "reason": "Exact preferred premises require confirmation: source presents Umm al-Quwain and a secondary Sharjah listing; avoid publishing an unresolved address."
+    }
+  ],
+  "blocking": []
+}
