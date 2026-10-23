@@ -50,7 +50,7 @@
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "b8f77cab0dd73e2c24f6711939cd1bbcdf9aaf80a55316a2f1b215c842423efb",
+    "sha256": "1eeabb0b4839d02c6b06957cc3ee6f15bc7f333da732a6c9b2ad033ab18478a7",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
@@ -58,19 +58,14 @@
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
         "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
-        "operation": "crop-left-symbol",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 435,
-          "height": 298
-        }
+        "operation": "darken-reviewed-gold-for-white-compact-favicon",
+        "outputColor": "#643908"
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "de6240f0b5ccd5715c1c21a16bc830cbfa5f662117f000b436fa46bca6bef035"
+    "sha256": "ea7405f4392eda26e374571a48fbf884b7a0bc44fced7c1afa6ef8b5a5e51cf1"
   },
   "surfaces": {
     "onLight": {
@@ -148,7 +143,7 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "6396125f25abc29848af5e9794b0807ab1ad40ac9fad9cfc513a6bafe426f33c",
+      "sha256": "5460af80487e7de3a970a3a4af119543cda2631070e6b21a6aaa4a5789b2208b",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
@@ -156,13 +151,8 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 298
-          }
+          "operation": "darken-reviewed-gold-for-white-compact-favicon",
+          "outputColor": "#643908"
         }
       },
       "sourceReference": "dealers/us-motors/branding/generated-mark-light.png"
@@ -190,7 +180,7 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "b8f77cab0dd73e2c24f6711939cd1bbcdf9aaf80a55316a2f1b215c842423efb",
+      "sha256": "1eeabb0b4839d02c6b06957cc3ee6f15bc7f333da732a6c9b2ad033ab18478a7",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
@@ -198,20 +188,15 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 298
-          }
+          "operation": "darken-reviewed-gold-for-white-compact-favicon",
+          "outputColor": "#643908"
         }
       },
       "sourceReference": "dealers/us-motors/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "de6240f0b5ccd5715c1c21a16bc830cbfa5f662117f000b436fa46bca6bef035",
+      "sha256": "ea7405f4392eda26e374571a48fbf884b7a0bc44fced7c1afa6ef8b5a5e51cf1",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
@@ -219,13 +204,8 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 298
-          }
+          "operation": "darken-reviewed-gold-for-white-compact-favicon",
+          "outputColor": "#643908"
         }
       },
       "sourceReference": "dealers/us-motors/branding/generated-mark-light.png"

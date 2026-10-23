@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "vip-class-motors-llc-fz",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T03:33:13.329Z",
+  "reviewedAt": "2026-10-23T04:00:57.204Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -51,7 +51,7 @@
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "7192e0805accd5d0cb1db4858e75ddedf1dcd9dc98115ddd9bf105ab62621172"
+      "sha256": "bf1480e0ea6bb7782cb520fe435f095b53d21dc0666716c13e1cc7f44a0f8f2c"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -59,15 +59,15 @@
     },
     {
       "path": "branding/generated-on-light.png",
-      "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55"
+      "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f"
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "b335cb1e7a3cfce84cc353441307a5c4d5683c06d8ed25ec322f158339f99abe"
+      "sha256": "fe1f4b280cd71648a0f16842ef83389bffe490c73d3a1b4fb1d716a1bb96f92e"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "d95046a2a697f10980658c19dfb2857ad8f42d0f518c2dd5a272be368cd4f10f"
+      "sha256": "4b6df4b3b12adc495e6c04940d279fe90262506d5b10f931c946691885eca428"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -78,8 +78,12 @@
       "sha256": "5789af2870818ae7ca728aebac4659ea9552391f3dedfe8f411b002e09b4a86a"
     },
     {
+      "path": "branding/reviewed-on-light.png",
+      "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55"
+    },
+    {
       "path": "branding/source.json",
-      "sha256": "c70ea1d5713462ba21e598c08bcbc4d96870c514a37485b6f94f941fab51c2fa"
+      "sha256": "547327167c3aee7a1faf766f1bd45b4116ee81f42bd83841f63efd61220941d7"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "ed590761f0a0e27672bbe17d06266d09dd13c61fa80da0f8e1cf2ab72ea5993e"
+      "sha256": "556e687a115973a9398015c946a49c0179b363a5b308f897a61ef60c0f9b70b4"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +107,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "56dc58c20005cac12f4ce1d8053c9ba4802eb5df5bc53c7d9715bf39d5c3da53"
+      "sha256": "48e59b8ea0c1bc1fd56e6b35c711564de4a6a7336844d3c8a8879b1b737b6511"
     },
     {
       "path": "identity-review.json",
-      "sha256": "e5be7ac912f87af83f02c129ba6f9d73fb2c59bb92dd77ea8dcc565f4afa38f1"
+      "sha256": "4fa1b5cc1c90305160c0607c89fa88c336a9e80dd19f638bba45e630566fe863"
     },
     {
       "path": "locale.json",
@@ -119,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "0c725f46cb0a2605aef835753188b245a431d21b7be3bafd13a99b1f261da496"
+      "sha256": "de1bfef9f6dbc27db73b8c27f09bc59861f789030a9c428b8812d39fed809d53"
     },
     {
       "path": "source-evidence.json",

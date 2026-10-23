@@ -34,13 +34,13 @@
     "zlib-ng": "2.3.3",
     "sharp": "0.35.5"
   },
-  "sourceSha256": "45ecd0940b644742a5693ec5c5436565304a17fb5c88a9f3215c843bd81d854a",
-  "contractSha256": "8d2d19da4d9864c5c33909866de7624113e7052e1b382641f8e847b2048b8cee",
+  "sourceSha256": "57700ae58444e02b2990075d3876c1a5b118dac928d4d9405dd4c48182ca8558",
+  "contractSha256": "ffb88561dc9e06dbec89d8c2b5e8a8c651079eae5babe0c0badf1628edaeb581",
   "outputs": [
     {
       "path": "branding/app-icon.png",
-      "bytes": 131666,
-      "sha256": "b8f77cab0dd73e2c24f6711939cd1bbcdf9aaf80a55316a2f1b215c842423efb"
+      "bytes": 98656,
+      "sha256": "1eeabb0b4839d02c6b06957cc3ee6f15bc7f333da732a6c9b2ad033ab18478a7"
     },
     {
       "path": "branding/logo-mark-on-dark.png",
@@ -49,8 +49,8 @@
     },
     {
       "path": "branding/logo-mark.png",
-      "bytes": 131666,
-      "sha256": "b8f77cab0dd73e2c24f6711939cd1bbcdf9aaf80a55316a2f1b215c842423efb"
+      "bytes": 98656,
+      "sha256": "1eeabb0b4839d02c6b06957cc3ee6f15bc7f333da732a6c9b2ad033ab18478a7"
     },
     {
       "path": "branding/logo-master.png",
@@ -74,13 +74,13 @@
     },
     {
       "path": "dealer-brand/app-icon.png",
-      "bytes": 131666,
-      "sha256": "b8f77cab0dd73e2c24f6711939cd1bbcdf9aaf80a55316a2f1b215c842423efb"
+      "bytes": 98656,
+      "sha256": "1eeabb0b4839d02c6b06957cc3ee6f15bc7f333da732a6c9b2ad033ab18478a7"
     },
     {
       "path": "dealer-brand/favicon.ico",
-      "bytes": 9785,
-      "sha256": "de6240f0b5ccd5715c1c21a16bc830cbfa5f662117f000b436fa46bca6bef035"
+      "bytes": 8642,
+      "sha256": "ea7405f4392eda26e374571a48fbf884b7a0bc44fced7c1afa6ef8b5a5e51cf1"
     },
     {
       "path": "dealer-brand/logo-on-accent.png",
@@ -119,8 +119,8 @@
     },
     {
       "path": "dealer-brand/mark-on-light.webp",
-      "bytes": 90354,
-      "sha256": "6396125f25abc29848af5e9794b0807ab1ad40ac9fad9cfc513a6bafe426f33c"
+      "bytes": 71118,
+      "sha256": "5460af80487e7de3a970a3a4af119543cda2631070e6b21a6aaa4a5789b2208b"
     }
   ]
 }

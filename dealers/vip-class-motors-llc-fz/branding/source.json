@@ -16,37 +16,31 @@
     "reviewedAt": "2026-10-22T23:42:46.338Z",
     "master": {
       "path": "branding/generated-on-light.png",
-      "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+      "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
-        "modelVersion": null
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-on-light.png",
+          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+          "operation": "darken-reviewed-gold-ink-for-white-surface-contrast",
+          "outputColor": "#603404"
+        }
       }
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "7192e0805accd5d0cb1db4858e75ddedf1dcd9dc98115ddd9bf105ab62621172",
+      "sha256": "bf1480e0ea6bb7782cb520fe435f095b53d21dc0666716c13e1cc7f44a0f8f2c",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
-          "operation": "isolate-reviewed-left-emblem-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 315
-          },
-          "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 300,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1,
-            "components": 6
-          }
+          "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+          "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+          "outputColor": "#603404"
         }
       }
     },
@@ -80,11 +74,17 @@
     "surfaces": {
       "onLight": {
         "path": "branding/generated-on-light.png",
-        "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+        "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
         "generation": {
           "tool": "image_gen.imagegen",
           "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
-          "modelVersion": null
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/reviewed-on-light.png",
+            "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+            "operation": "darken-reviewed-gold-ink-for-white-surface-contrast",
+            "outputColor": "#603404"
+          }
         }
       },
       "onDark": {
@@ -135,7 +135,7 @@
         48,
         64
       ],
-      "notes": "Left emblem components selected from reviewed horizontal PNG pair, adjacent lettering excluded; native compact/favicon QA independent."
+      "notes": "Reviewed original PNG and native master retained. Selected light-surface gold darkened from exact source pixels; native favicon and browser QA independent."
     }
   },
   "sourceBlockers": [],
@@ -151,6 +151,13 @@
       {
         "path": "branding/native-generated-on-dark.png",
         "sha256": "5a348c65a1811e5ec07f0357b002771111613262a04dc9dd213dcdf1ed22ed4b"
+      }
+    ],
+    "reviewedExports": [
+      {
+        "path": "branding/reviewed-on-light.png",
+        "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+        "manifestRole": "on-light"
       }
     ]
   }

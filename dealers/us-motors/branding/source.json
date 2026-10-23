@@ -25,7 +25,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "4b5c6a3653608e0f4350898d1ae9ce070babbd36206820a04c2ff40d70d319ce",
+      "sha256": "b3f69b4be5bea2a3ef7fd78607504bd1812231e506d5fefd22f38e5c2fd15fa6",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-7ef8c296-e37b-49a6-8ec4-631737f81a37",
@@ -33,13 +33,8 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "20bc63809bbcd638900a23349ba411ffa2e1b38c70c092c58dc871df3f937918",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 298
-          }
+          "operation": "darken-reviewed-gold-for-white-compact-favicon",
+          "outputColor": "#643908"
         }
       }
     },
@@ -121,7 +116,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Original horizontal artwork unchanged; compact amber contrast corrected from its pixels. Native favicon and browser QA independent."
     }
   },
   "sourceBlockers": [],

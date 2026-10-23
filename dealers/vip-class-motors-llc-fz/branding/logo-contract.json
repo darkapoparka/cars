@@ -9,8 +9,8 @@
     "onLight": {
       "sourcePath": "branding/logo-on-light.png",
       "publicPath": "/dealer-brand/logo-on-light.webp",
-      "sha256": "d5985d05991e0736f8e27ec0676072e395b0bbe3c7af0c27e1359409582f847a",
-      "sourceSha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55"
+      "sha256": "9965bc797569667fbacaed4df75da97137679783f006b8f337ed37d1829cf639",
+      "sourceSha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f"
     },
     "onDark": {
       "sourcePath": "branding/logo-on-dark.png",
@@ -41,52 +41,52 @@
   },
   "master": {
     "path": "branding/logo-master.png",
-    "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+    "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
-      "modelVersion": null
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/reviewed-on-light.png",
+        "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+        "operation": "darken-reviewed-gold-ink-for-white-surface-contrast",
+        "outputColor": "#603404"
+      }
     }
   },
   "mark": {
     "path": "branding/logo-mark.png",
-    "sha256": "4a61ffda7024442eeabd851181b1fda98e134591dd8f85b3e117d97299116166",
+    "sha256": "689d462175513d7059fa57050af85e7da8d8f054b8c467cdca9a69ae7a47ffd4",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
       "modelVersion": null,
       "derivedFrom": {
         "path": "branding/generated-on-light.png",
-        "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
-        "operation": "isolate-reviewed-left-emblem-connected-components",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 435,
-          "height": 315
-        },
-        "selection": {
-          "alphaThreshold": 96,
-          "minXBefore": 300,
-          "minPixels": 20,
-          "antialiasNeighborPixels": 1,
-          "components": 6
-        }
+        "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+        "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+        "outputColor": "#603404"
       }
     }
   },
   "favicon": {
     "path": "dealer-brand/favicon.ico",
-    "sha256": "f96f83eed23ffe120ff7b4d0d5be9314c814299b54dfb1d055254220969b7560"
+    "sha256": "dd1e8736ca5476a83aaf5d321c194d19060cf5a7e053f9e678d5a60fec33d9e4"
   },
   "surfaces": {
     "onLight": {
       "path": "branding/logo-on-light.png",
-      "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+      "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
-        "modelVersion": null
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/reviewed-on-light.png",
+          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+          "operation": "darken-reviewed-gold-ink-for-white-surface-contrast",
+          "outputColor": "#603404"
+        }
       },
       "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-on-light.png"
     },
@@ -114,8 +114,8 @@
   "transforms": {
     "onLight": {
       "operation": "crop-transparent-padding-and-resize",
-      "sourceSha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
-      "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
+      "sourceSha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+      "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
       "crop": {
         "left": 0,
         "top": 0,
@@ -155,28 +155,16 @@
   "supplemental": {
     "mark-on-light.webp": {
       "path": "dealer-brand/mark-on-light.webp",
-      "sha256": "8b51ad26a9070e8e347628a111b71bd7b41637d1c3a60bf23d9b79ff65901d7a",
+      "sha256": "b1e2b9d3ba4afbc36821b4a527deee978224087ffa7007dc72505bed3e260dfb",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
-          "operation": "isolate-reviewed-left-emblem-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 315
-          },
-          "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 300,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1,
-            "components": 6
-          }
+          "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+          "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+          "outputColor": "#603404"
         }
       },
       "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-mark-light.png"
@@ -211,56 +199,32 @@
     },
     "app-icon.png": {
       "path": "dealer-brand/app-icon.png",
-      "sha256": "4a61ffda7024442eeabd851181b1fda98e134591dd8f85b3e117d97299116166",
+      "sha256": "689d462175513d7059fa57050af85e7da8d8f054b8c467cdca9a69ae7a47ffd4",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
-          "operation": "isolate-reviewed-left-emblem-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 315
-          },
-          "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 300,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1,
-            "components": 6
-          }
+          "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+          "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+          "outputColor": "#603404"
         }
       },
       "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-mark-light.png"
     },
     "favicon.ico": {
       "path": "dealer-brand/favicon.ico",
-      "sha256": "f96f83eed23ffe120ff7b4d0d5be9314c814299b54dfb1d055254220969b7560",
+      "sha256": "dd1e8736ca5476a83aaf5d321c194d19060cf5a7e053f9e678d5a60fec33d9e4",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-bce946ed-8aaf-4ff8-bb7e-c80ef9c6ab57",
         "modelVersion": null,
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
-          "sha256": "dc242fc0eaf95b9b31bc7bdfc9cfc3c0b7b1ef10fef201b4d20e0a522fb95d55",
-          "operation": "isolate-reviewed-left-emblem-connected-components",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 435,
-            "height": 315
-          },
-          "selection": {
-            "alphaThreshold": 96,
-            "minXBefore": 300,
-            "minPixels": 20,
-            "antialiasNeighborPixels": 1,
-            "components": 6
-          }
+          "sha256": "56bd65ccdb3090e67bfcc8118fb64d56541f4cf6a511ea5ae67a89b5dad34f9f",
+          "operation": "crop-left-reviewed-VIP-symbol-and-darken-gold-for-white-compact",
+          "outputColor": "#603404"
         }
       },
       "sourceReference": "dealers/vip-class-motors-llc-fz/branding/generated-mark-light.png"
