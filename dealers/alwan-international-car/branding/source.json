@@ -33,7 +33,7 @@
     },
     "mark": {
       "path": "branding/generated-mark-light.png",
-      "sha256": "1a6e6f3d328ef1d2e3de01ddb1273bd0c73aeb7325684965a5d72e19aed7ac1b",
+      "sha256": "fcec9201972f37cf44f56edb89aa0ea53fdd995f92fabc0f0e6a6ba7ce43d9fd",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-143e322e-5be0-4dd4-aa6a-6b11c5a72c9f",
@@ -41,11 +41,11 @@
         "derivedFrom": {
           "path": "branding/generated-on-light.png",
           "sha256": "57e17d48a45e51ff3eb097c976c4a69107aecd43eb6db8e145fe84732c174526",
-          "operation": "crop-left-symbol",
+          "operation": "isolate-reviewed-gold-symbol-and-darken-for-white-compact",
           "crop": {
             "left": 0,
             "top": 0,
-            "width": 350,
+            "width": 335,
             "height": 243
           }
         }
@@ -53,7 +53,7 @@
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "63d50a9197ff8842fa600b3362362313bb0f978c770872798d91833ac75ddfc6",
+      "sha256": "74c519c399c90706d009d1950749f133c1204543a2833f1fefe1c4c148bb8be0",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-90eac06c-8f90-4bbc-b669-ffac2a915150",
@@ -61,11 +61,11 @@
         "derivedFrom": {
           "path": "branding/generated-on-dark.png",
           "sha256": "9a8379b078b867b23343eb9fdaed5906e76f79dd179e41aea645db42b7d84327",
-          "operation": "crop-left-symbol",
+          "operation": "isolate-reviewed-gold-symbol-for-dark-compact",
           "crop": {
             "left": 0,
             "top": 0,
-            "width": 350,
+            "width": 335,
             "height": 240
           }
         }
@@ -129,7 +129,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Alwan gold A isolated from the reviewed horizontal artwork; compact-only light export darkens gold for white favicon contrast. Native QA independently determines acceptance."
     }
   },
   "sourceBlockers": [],

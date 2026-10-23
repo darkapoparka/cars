@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "alwan-international-car",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T01:59:06.829Z",
+  "reviewedAt": "2026-10-23T02:32:15.223Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -47,11 +47,11 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "63d50a9197ff8842fa600b3362362313bb0f978c770872798d91833ac75ddfc6"
+      "sha256": "74c519c399c90706d009d1950749f133c1204543a2833f1fefe1c4c148bb8be0"
     },
     {
       "path": "branding/generated-mark-light.png",
-      "sha256": "1a6e6f3d328ef1d2e3de01ddb1273bd0c73aeb7325684965a5d72e19aed7ac1b"
+      "sha256": "fcec9201972f37cf44f56edb89aa0ea53fdd995f92fabc0f0e6a6ba7ce43d9fd"
     },
     {
       "path": "branding/generated-on-dark.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "d5ad108fa6e379020f8318caf6eacd5acfdeaafefceff6397ef962cadc315183"
+      "sha256": "3a3f56fc58dc0e613e01cab6fef671e329ccde9a80cf75d295a69bda583cd206"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "371ecf2303c493e126c7ef6fa08606801d68f17f9e2ff5de68271c7cac1bb9af"
+      "sha256": "7df6d3694d5b0e07b3dd16a0157111a0fb406aaacc57e2930066a167e09a286e"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -79,7 +79,7 @@
     },
     {
       "path": "branding/source.json",
-      "sha256": "3abe4e4821395f171e05321fd1351fc2354f65f18ca8703eb6c131f1800b3a9e"
+      "sha256": "67649829a8ba4e7d2056fcd9a5d77dd560465f313dc7f86ee7390f43bd57efbe"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +87,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "4cac0177f71acfcbb1813b3032e9f995fde58d34816eb452bb8dc2cb104177b7"
+      "sha256": "74ccd53c94ce7fc72b177f1e20a696d2c428ca5627fd73834d0af3651b71c742"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -103,11 +103,11 @@
     },
     {
       "path": "dealer.json",
-      "sha256": "7ad87cc9fba9879230dd762d12d746d09d08918b104b33eed55b067b00ddea85"
+      "sha256": "1e4441fbf7d9d88ac2b4fd5704a158e318339f63e5d25af5611155a897469e8d"
     },
     {
       "path": "identity-review.json",
-      "sha256": "91979b31b3e4d3d475cec855ff43d25ecb586a487873cc3882d0334340a61d41"
+      "sha256": "d82d34321be6cbe457185c58aeb1fef3d9c09b12bd55aff50357c5d18854fad3"
     },
     {
       "path": "locale.json",
@@ -119,7 +119,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "d3e2096792828c71b3c2de8e0fc6378cbbfac8c99180a6e01d13ffee016bb3dc"
+      "sha256": "e37c37b55fe9c54b71625ddbf0929d33545e7a290fde3bc50bc9a31c46563067"
     },
     {
       "path": "source-evidence.json",
