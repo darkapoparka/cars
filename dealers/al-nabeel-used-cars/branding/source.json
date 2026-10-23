@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-nabeel-used-cars",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nabeel-used-cars-exhb",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6788-toyota-hiace-27-mt-151-hp-gls",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "8d48118680189110008ff6b13afc0d3a4b95c716391db83403c6414d51d243a6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea65e113-bc3c-4b8e-8002-12bad1bb0c6d",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "ab87a9508f6ec4cd2332eb98e9e25a2ef9e51f4cf87ccff7576b7dd94021dc3c",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-ea65e113-bc3c-4b8e-8002-12bad1bb0c6d",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "8d48118680189110008ff6b13afc0d3a4b95c716391db83403c6414d51d243a6",
+          "operation": "isolate-reviewed-orbit-N-symbol-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 355,
+            "height": 242
+          },
+          "selection": {
+            "alphaThreshold": 128,
+            "minXBefore": 300,
+            "minPixels": 40,
+            "antialiasNeighborPixels": 1,
+            "components": 6
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "4185612922a857b8e309d9784ad96a58f5c5a53991a6f871cf2fb0d52eeaa8fe",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-bf2b5299-9e28-4879-b829-87216b29dce8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "d18f1ef833d9781425740979c24512c8676d96f73d905aad13dc81a61de59922",
+          "operation": "isolate-reviewed-orbit-N-symbol-components",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 355,
+            "height": 242
+          },
+          "selection": {
+            "alphaThreshold": 128,
+            "minXBefore": 300,
+            "minPixels": 40,
+            "antialiasNeighborPixels": 1,
+            "components": 6
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "8d48118680189110008ff6b13afc0d3a4b95c716391db83403c6414d51d243a6",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-ea65e113-bc3c-4b8e-8002-12bad1bb0c6d",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d18f1ef833d9781425740979c24512c8676d96f73d905aad13dc81a61de59922",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf2b5299-9e28-4879-b829-87216b29dce8",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "d18f1ef833d9781425740979c24512c8676d96f73d905aad13dc81a61de59922",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-bf2b5299-9e28-4879-b829-87216b29dce8",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Orbit N isolated from exact reviewed PNGs without neighboring wordmark A; native compact and favicon QA qualify independently."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "6967bf611a328531d30a3db4ae829168f974bdd775e057ad4e7736e0e71f7222",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "d8ee11518aece164f480182f2cf29bc1b62058870fdc60607f1b4efc3a98ceb6"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "77e903f51ae2f558772a3326bc1fd3ce6e2c36bd57d946500f4b5ccc1908af72"
+      }
+    ]
+  }
+}

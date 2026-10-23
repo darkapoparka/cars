@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-laqtah-sharjah",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-al-laqtah-sharjah",
+  "name": "Al Laqtah Sharjah",
+  "renderedName": "Al Laqtah Sharjah",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-laqtah-sharjah-2119",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+      "width": 1024,
+      "height": 281,
+      "transparentFraction": 0.7064230705071174,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "080dd1deeef0479666b426082e50f9ff875155399a1e23d4534deb5851ff79d8",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Laqtah Sharjah. Required exact text, uppercase: AL LAQTAH SHARJAH. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a restrained architectural emblem with two or three interlocking geometric forms. Initials LS may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 158,
+          "top": 97,
+          "width": 1858,
+          "height": 509
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+      "width": 1024,
+      "height": 282,
+      "transparentFraction": 0.6019261136968085,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "660629cf84e81d1d9a218e3d497895ae14e19b7e14018f50a06714271d9e0876",
+        "width": 2172,
+        "height": 724
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL LAQTAH SHARJAH. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 150,
+          "top": 93,
+          "width": 1872,
+          "height": 515
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-09.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

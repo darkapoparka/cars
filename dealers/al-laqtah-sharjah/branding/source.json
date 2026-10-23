@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "dealer": "al-laqtah-sharjah",
+  "status": "reviewed-imagegen-proposal",
+  "realLogoFirst": true,
+  "publicSources": [
+    {
+      "url": "https://www.dubicars.com/dealers/sharjah-al-laqtah-sharjah-2119",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "originals": [],
+  "creationMethod": "imagegen-proposal",
+  "dealerApproved": false,
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "a501c031b42e353eb525c88b7732b3a7536f2e0d12ad9f6cc3f33112f585e8c8",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 281
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "ad681a0fff1cf065163fbb3a57a84f02715c26150dc6ba0b576eaae6590e29d7",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 270,
+            "height": 282
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "d3d16802b581d18693ecbf7c510ee3f3ae7f2b249ab21d461310a7eb4240ca29",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-4aa5d9eb-ef24-4d2f-89b2-c663b6500404",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "024fd949de6fd8f7af682d6b1911ed6c0166d974e82387ba8203f426db62efca",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-6f97395d-3903-40cb-a67c-85340e90f314",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "b8e0ced8bfbe6d9c1b3751a7d9bb541226474df95a281ab379e540eeef4ffe5f",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "080dd1deeef0479666b426082e50f9ff875155399a1e23d4534deb5851ff79d8"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "660629cf84e81d1d9a218e3d497895ae14e19b7e14018f50a06714271d9e0876"
+      }
+    ]
+  }
+}

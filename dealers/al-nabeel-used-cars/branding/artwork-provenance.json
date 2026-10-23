@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-nabeel-used-cars",
+  "slug": null,
+  "artworkDirectory": "ae-sharjah-al-nabeel-used-cars",
+  "name": "Al Nabeel Used Cars",
+  "renderedName": "Al Nabeel Used Cars",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://licenseplate.ae/cars/dealer/al-nabeel-used-cars-exhb",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://licenseplate.ae/cars/listing/6788-toyota-hiace-27-mt-151-hp-gls",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "8d48118680189110008ff6b13afc0d3a4b95c716391db83403c6414d51d243a6",
+      "width": 1024,
+      "height": 242,
+      "transparentFraction": 0.704779506714876,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "d8ee11518aece164f480182f2cf29bc1b62058870fdc60607f1b4efc3a98ceb6",
+        "width": 2007,
+        "height": 783
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-ea65e113-bc3c-4b8e-8002-12bad1bb0c6d",
+        "prompt": "Create one professional horizontal automotive dealership logo proposal for Al Nabeel Used Cars. Required exact text, uppercase: AL NABEEL USED CARS. Every word must be present and spelled precisely; use sensible primary name and smaller descriptor hierarchy without tiny lettering. Produce a polished original identity with a minimal memorable geometric symbol related to the distinctive name. Initials N may inform the emblem. Emblem left, full clear name to the right, compact and balanced for a website header. Avoid overused shield and generic car silhouettes; no manufacturer badges. Clean modern lettering with careful kerning and strong legibility. All text is deep charcoal black, appropriate on a white/light header. One restrained red or gold accent may appear inside the emblem only; no pale text. Flat crisp edges, a small number of solid shapes, no chrome, no lighting, no shadow, no texture, no gradient. Genuine transparent alpha background, isolated logo with no background box, no grid, no checkerboard painted into pixels. No slogan, contact info, website, watermark, mockup, photograph, extra concept, or duplicate logo. Deliver exactly one horizontal full logo. This is an independent website identity proposal, not a claim of adopted branding.",
+        "reference": null
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 9,
+          "top": 149,
+          "width": 1991,
+          "height": 470
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "d18f1ef833d9781425740979c24512c8676d96f73d905aad13dc81a61de59922",
+      "width": 1024,
+      "height": 245,
+      "transparentFraction": 0.5988400829081633,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "77e903f51ae2f558772a3326bc1fd3ce6e2c36bd57d946500f4b5ccc1908af72",
+        "width": 2007,
+        "height": 783
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-bf2b5299-9e28-4879-b829-87216b29dce8",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL NABEEL USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-ea65e113-bc3c-4b8e-8002-12bad1bb0c6d.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 7,
+          "top": 143,
+          "width": 1980,
+          "height": 473
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-09.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
