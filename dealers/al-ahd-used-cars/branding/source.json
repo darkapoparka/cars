@@ -45,21 +45,16 @@
     },
     "markOnDark": {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "12aa8cb30a2458ebce372cafc7b8d181fe13012264fee85faba31bcd7de2842b",
+      "sha256": "d8e92e46f8875f3b93500fa896c31fd53163c103b76009d3bb73b50565bfa888",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-be65d0b6-f571-44f4-9752-b5644647e72d",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-dark.png",
-          "sha256": "258268b2766b5f0b698ae5c37f922c37f8ff35dc6a200e0e75e05a036e14f7ec",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 390,
-            "height": 333
-          }
+          "path": "branding/reviewed-mark-dark.png",
+          "sha256": "12aa8cb30a2458ebce372cafc7b8d181fe13012264fee85faba31bcd7de2842b",
+          "operation": "lift-near-black-neutral-compact-detail-for-dark-surface",
+          "colorTransform": "neutral RGB <85 to 150+0.15*original; preserve red and white pixels"
         }
       }
     },
@@ -121,7 +116,7 @@
         48,
         64
       ],
-      "notes": "Left symbol cropped from reviewed horizontal variants; native rendering must independently qualify."
+      "notes": "Original reviewed dark compact retained byte for byte. Neutral near-black outline and wheel detail lifted to gray from exact pixels for dark-surface contrast; red car and white shield preserved."
     }
   },
   "sourceBlockers": [],
@@ -138,6 +133,10 @@
         "path": "branding/native-generated-on-dark.png",
         "sha256": "8b092268ef27b9d613173e7579bfc2fc3d589bd78f3de5aa9a8b2ba564cf3479"
       }
-    ]
+    ],
+    "reviewedCompactDark": {
+      "path": "branding/reviewed-mark-dark.png",
+      "sha256": "12aa8cb30a2458ebce372cafc7b8d181fe13012264fee85faba31bcd7de2842b"
+    }
   }
 }

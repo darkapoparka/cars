@@ -3,7 +3,7 @@
   "kind": "cars-dealer-pack-input-review",
   "dealer": "al-ahd-used-cars",
   "reviewed": true,
-  "reviewedAt": "2026-10-23T04:45:08.730Z",
+  "reviewedAt": "2026-10-23T05:12:15.370Z",
   "review": {
     "kind": "automated",
     "humanReview": false,
@@ -47,7 +47,7 @@
     },
     {
       "path": "branding/generated-mark-dark.png",
-      "sha256": "12aa8cb30a2458ebce372cafc7b8d181fe13012264fee85faba31bcd7de2842b"
+      "sha256": "d8e92e46f8875f3b93500fa896c31fd53163c103b76009d3bb73b50565bfa888"
     },
     {
       "path": "branding/generated-mark-light.png",
@@ -63,11 +63,11 @@
     },
     {
       "path": "branding/logo-contract.json",
-      "sha256": "eed952b0b227872f41056ed453dd3ece5bd8f20c3405ae9c8f2b88120cfe22a4"
+      "sha256": "b17f03792c438e7336602d59c96b935cb4dc8e945ffed324342869bb4db80274"
     },
     {
       "path": "branding/logo-recipe.json",
-      "sha256": "22e7a6a8d95783182bc0299dfd2a6ef7a2015b51f6fdfd9f88e265a2a81a7a02"
+      "sha256": "450a263fb35fa7a55e1d2c57deb8ff9363ad158e563ee2e2f33131121beb21b6"
     },
     {
       "path": "branding/native-generated-on-dark.png",
@@ -78,8 +78,12 @@
       "sha256": "61fce8d0b67584506286381d39d5b55e9aae83344518b8cc8ff3db8a39a1d100"
     },
     {
+      "path": "branding/reviewed-mark-dark.png",
+      "sha256": "12aa8cb30a2458ebce372cafc7b8d181fe13012264fee85faba31bcd7de2842b"
+    },
+    {
       "path": "branding/source.json",
-      "sha256": "94336da74b61a9dd7ab6c4bc0cc4b21b7f3c7944b3a260cd0c633ab015f2cfc9"
+      "sha256": "f56903ddb6106f281c5ea7c2d1b7b54d204c914cf8513f02f1efa7ca50862b84"
     },
     {
       "path": "business-facts.json",
@@ -87,7 +91,7 @@
     },
     {
       "path": "copy-review.json",
-      "sha256": "e91c050661ea5a7fc7542ef10692d3ab6ca4aab2c0a984232aa021cba16f01b5"
+      "sha256": "f86fcbb075debfa02ed99d55393ade370978d04ec69faf7714e822023a8776db"
     },
     {
       "path": "dealer-stock/template-demo-1.webp",
@@ -107,7 +111,7 @@
     },
     {
       "path": "identity-review.json",
-      "sha256": "0c30d5e48053cfd0cf3e49681afff149c043071cebc72b5e6cc16b9c51aa03ae"
+      "sha256": "0dce2b77eefc3d3330909fe4144b487ac68d6fb4b70c180ac43b7b2f28e87282"
     },
     {
       "path": "locale.json",
@@ -119,7 +123,7 @@
     },
     {
       "path": "qualification.json",
-      "sha256": "751336daa95184b9250f7a9c0d11c1826a7e3aa38afd5faab8d891ebc7eb17f7"
+      "sha256": "7872412a14c7765a0d4217b167898849eaf05eee1d21a7d3adda09d2e7055677"
     },
     {
       "path": "source-evidence.json",

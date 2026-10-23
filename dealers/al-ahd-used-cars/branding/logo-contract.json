@@ -169,21 +169,16 @@
     },
     "mark-on-dark.webp": {
       "path": "dealer-brand/mark-on-dark.webp",
-      "sha256": "fbc30444d02fea9c3d9f6f98099be477549aafe5f110956fac0d47ad0ed624d6",
+      "sha256": "17374ea33022fba0783922b4a0479ec7becef8f013c43026168f91b9754f5061",
       "generation": {
         "tool": "image_gen.imagegen",
         "generationId": "exec-be65d0b6-f571-44f4-9752-b5644647e72d",
         "modelVersion": null,
         "derivedFrom": {
-          "path": "branding/generated-on-dark.png",
-          "sha256": "258268b2766b5f0b698ae5c37f922c37f8ff35dc6a200e0e75e05a036e14f7ec",
-          "operation": "crop-left-symbol",
-          "crop": {
-            "left": 0,
-            "top": 0,
-            "width": 390,
-            "height": 333
-          }
+          "path": "branding/reviewed-mark-dark.png",
+          "sha256": "12aa8cb30a2458ebce372cafc7b8d181fe13012264fee85faba31bcd7de2842b",
+          "operation": "lift-near-black-neutral-compact-detail-for-dark-surface",
+          "colorTransform": "neutral RGB <85 to 150+0.15*original; preserve red and white pixels"
         }
       },
       "sourceReference": "dealers/al-ahd-used-cars/branding/generated-mark-dark.png"
@@ -242,21 +237,16 @@
   },
   "markOnDark": {
     "path": "branding/logo-mark-on-dark.png",
-    "sha256": "f522bab6e0f02c2045863f7307b2e58ba45cc877f57d360353b330a07f716bcd",
+    "sha256": "37a45b8e14b1de7ec823b78c4ffcaf82ef5e886ba17d4eb85ef8bc3d5a511146",
     "generation": {
       "tool": "image_gen.imagegen",
       "generationId": "exec-be65d0b6-f571-44f4-9752-b5644647e72d",
       "modelVersion": null,
       "derivedFrom": {
-        "path": "branding/generated-on-dark.png",
-        "sha256": "258268b2766b5f0b698ae5c37f922c37f8ff35dc6a200e0e75e05a036e14f7ec",
-        "operation": "crop-left-symbol",
-        "crop": {
-          "left": 0,
-          "top": 0,
-          "width": 390,
-          "height": 333
-        }
+        "path": "branding/reviewed-mark-dark.png",
+        "sha256": "12aa8cb30a2458ebce372cafc7b8d181fe13012264fee85faba31bcd7de2842b",
+        "operation": "lift-near-black-neutral-compact-detail-for-dark-surface",
+        "colorTransform": "neutral RGB <85 to 150+0.15*original; preserve red and white pixels"
       }
     }
   }
