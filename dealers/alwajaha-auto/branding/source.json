@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "alwajaha-auto",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -18,7 +18,174 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-23T04:11:58.162Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "4b538fb3fabcdf7635f4c838d29ef82c43f401084eefd2465c3deab919b21a70",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b9de40a9-cc60-477e-86a8-80b4d39df40c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/native-generated-on-light.png",
+          "sha256": "630d76f8edb0701da99777aaee99cc8ac2ed005e5933ed751756b1247cd5d96b",
+          "operation": "reviewed-flat-canvas-alpha-extraction-and-trim",
+          "background": "#ffffff",
+          "threshold": 5,
+          "outputWidth": 1024
+        }
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "c22253b6e35667013f88e12a3afe2f70c93ca1ee901014917a349a11214805f5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b9de40a9-cc60-477e-86a8-80b4d39df40c",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4b538fb3fabcdf7635f4c838d29ef82c43f401084eefd2465c3deab919b21a70",
+          "operation": "crop-left-symbol-and-exclude-adjacent-wordmark-pixels",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 196
+          },
+          "alphaExclusion": {
+            "xFrom": 234,
+            "yBefore": 160
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "d865f74b48675103ab2ea3389c9da274c6b9aaff61210dea8f0740cbd0a50d98",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-b56af99d-f130-424d-a6a9-7e533b574906",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "9f14d00b621bff73ae95d86b5ceb983a4cbd3f06726eb222b517fa7adb51db05",
+          "operation": "crop-left-symbol-and-exclude-adjacent-wordmark-pixels",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 250,
+            "height": 198
+          },
+          "alphaExclusion": {
+            "xFrom": 234,
+            "yBefore": 160
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "4b538fb3fabcdf7635f4c838d29ef82c43f401084eefd2465c3deab919b21a70",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b9de40a9-cc60-477e-86a8-80b4d39df40c",
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/generated-on-light.png",
+            "sha256": "4b538fb3fabcdf7635f4c838d29ef82c43f401084eefd2465c3deab919b21a70",
+            "operation": "reviewed-flat-canvas-alpha-extraction-and-trim",
+            "background": "#ffffff",
+            "threshold": 5,
+            "outputWidth": 1024
+          }
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9f14d00b621bff73ae95d86b5ceb983a4cbd3f06726eb222b517fa7adb51db05",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b56af99d-f130-424d-a6a9-7e533b574906",
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "9f14d00b621bff73ae95d86b5ceb983a4cbd3f06726eb222b517fa7adb51db05",
+            "operation": "reviewed-flat-canvas-alpha-extraction-and-trim",
+            "background": "#000000",
+            "threshold": 5,
+            "outputWidth": 1024
+          }
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9f14d00b621bff73ae95d86b5ceb983a4cbd3f06726eb222b517fa7adb51db05",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-b56af99d-f130-424d-a6a9-7e533b574906",
+          "modelVersion": null,
+          "derivedFrom": {
+            "path": "branding/generated-on-dark.png",
+            "sha256": "9f14d00b621bff73ae95d86b5ceb983a4cbd3f06726eb222b517fa7adb51db05",
+            "operation": "reviewed-flat-canvas-alpha-extraction-and-trim",
+            "background": "#000000",
+            "threshold": 5,
+            "outputWidth": 1024
+          }
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Corrected matching Image Gen pair, flat-canvas alpha extraction reviewed on consumer backgrounds."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-23T04:11:58.162Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "Left symbol isolated from exact pair; visually inspected at actual compact sizes."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "3acad80b589789c00e47a078f1e70ff6be59cb42160ab234f60ba8cc98891bb1",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "630d76f8edb0701da99777aaee99cc8ac2ed005e5933ed751756b1247cd5d96b"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "2a33b758328140ef28ad6f004774a9de1bba6c9ba964b3977774cd2637ccf9ef"
+      }
+    ]
+  }
 }

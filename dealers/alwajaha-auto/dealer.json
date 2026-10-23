@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Alwajaha Auto",
     "publicOrigin": "https://alwajaha-auto.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "4b538fb3fabcdf7635f4c838d29ef82c43f401084eefd2465c3deab919b21a70",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "957aa5f628a81e1f594c5ddfd1e3f26f0ebc6032fd92a2777f0be866becd6202"
+    }
   }
 }
