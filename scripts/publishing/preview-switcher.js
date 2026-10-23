@@ -31,6 +31,14 @@
           dialog[data-locale-dialog]>div{max-height:none!important}
           dialog[data-locale-dialog]>div>div[aria-hidden=true]{display:none!important}
           dialog[data-locale-dialog] #cars-locale-description,dialog[data-locale-dialog] .cars-locale-suggestion,dialog[data-locale-dialog] [data-locale-fields]>p:first-child{margin:0 0 12px!important;padding:0!important;border:0!important;background:transparent!important;color:#65666d!important;font-size:13px!important;line-height:19px!important;text-align:center}
+          /* Import exposes its locale fields directly in <dialog>, unlike the
+             padded Auto Best and Modern containers. Preserve a consistent inset
+             without changing native controls, their selection state or arrows. */
+          dialog[data-locale-dialog] > .cars-locale-eyebrow{box-sizing:border-box!important;margin:0!important;padding:26px 44px 10px!important;text-align:center!important}
+          dialog[data-locale-dialog] > #cars-locale-title{box-sizing:border-box!important;margin:0!important;padding:0 40px 12px!important;color:inherit!important;font-size:22px!important;line-height:28px!important;font-weight:600!important;text-align:center!important;overflow-wrap:anywhere!important}
+          dialog[data-locale-dialog] > :is(#cars-locale-description,.cars-locale-suggestion){box-sizing:border-box!important;margin:0!important;padding:0 24px 12px!important;color:#65666d!important;font-size:13px!important;line-height:19px!important;text-align:center!important}
+          dialog[data-locale-dialog] > form{box-sizing:border-box!important;padding:0 24px 24px!important}
+          @media(max-width:360px){dialog[data-locale-dialog] > :is(#cars-locale-description,.cars-locale-suggestion){padding-inline:16px!important}dialog[data-locale-dialog] > form{padding-inline:16px!important}}
           dialog[data-locale-dialog] form{gap:6px!important}
           dialog[data-locale-dialog] form>label,dialog[data-locale-dialog] label[for=locale-country]{margin:8px 0 4px!important;color:#44454d!important;font-size:13px!important;line-height:18px!important;font-weight:500!important}
           dialog[data-locale-dialog] select{box-sizing:border-box;width:100%!important;min-width:0;min-height:44px!important;height:44px!important;padding:10px 14px!important;border:1px solid #e7e7eb!important;border-radius:14px!important;background:#f6f6f8!important;color:#1d1e22!important;font:inherit!important;font-size:14px!important;line-height:20px!important}
