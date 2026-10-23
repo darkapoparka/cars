@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dealer": "saylor-s-auto-sales-llc",
-  "status": "research-required",
+  "status": "reviewed-imagegen-proposal",
   "realLogoFirst": true,
   "publicSources": [
     {
@@ -30,7 +30,146 @@
     }
   ],
   "originals": [],
-  "creationMethod": null,
+  "creationMethod": "imagegen-proposal",
   "dealerApproved": false,
-  "generatedInputs": null
+  "generatedInputs": {
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "master": {
+      "path": "branding/generated-on-light.png",
+      "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+        "modelVersion": null
+      }
+    },
+    "mark": {
+      "path": "branding/generated-mark-light.png",
+      "sha256": "6a4ec5e82e7b1138690d488b1b02363d44861dbdb91d6ef5dbe81cfa07d9c90e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 360,
+            "height": 277
+          },
+          "mask": {
+            "left": 310,
+            "top": 65,
+            "width": 50,
+            "height": 212
+          }
+        }
+      }
+    },
+    "markOnDark": {
+      "path": "branding/generated-mark-dark.png",
+      "sha256": "f1a78f8b11995e9270b6acbd8601b7fe47eab483698f3e270ca1fe47c40befc6",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+          "operation": "crop-left-symbol-and-mask-adjacent-wordmark",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 360,
+            "height": 280
+          },
+          "mask": {
+            "left": 310,
+            "top": 65,
+            "width": 50,
+            "height": 215
+          }
+        }
+      }
+    },
+    "surfaces": {
+      "onLight": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "4d7b43845bebcbdf47a7f50bdad41f0753a2f318e2ab3a179e28850c96b6be0e",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-a69d9251-39f1-4f54-9ac6-b967da955aba",
+          "modelVersion": null
+        }
+      },
+      "onDark": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+          "modelVersion": null
+        }
+      },
+      "onAccent": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e7901f28b03430c7d980751d5efec7fa70c3af05608916a0a55bbdde8de9a1de",
+        "generation": {
+          "tool": "image_gen.imagegen",
+          "generationId": "exec-1036c11c-febe-4a33-a958-831bd6e149ec",
+          "modelVersion": null
+        }
+      }
+    },
+    "surfaceReview": {
+      "reviewed": true,
+      "reviewKind": "agent-visual-review",
+      "humanReview": false,
+      "dealerApproval": false,
+      "backgrounds": {
+        "onLight": "#ffffff",
+        "onDark": "#111113",
+        "onAccent": "#c40101"
+      },
+      "wordmarkWidths": [
+        220,
+        240
+      ],
+      "notes": "Exact reviewed Image Gen pair; native masters and generation provenance retained. Compact rasters cropped from the actual left symbol."
+    },
+    "compactMarkReview": {
+      "reviewed": true,
+      "reviewedAt": "2026-10-22T23:42:46.338Z",
+      "backgrounds": [
+        "#ffffff",
+        "#111113",
+        "#c40101"
+      ],
+      "widths": [
+        32,
+        48,
+        64
+      ],
+      "notes": "S artwork cropped with adjacent wordmark pixels cleared at the right edge; exact raster derivation and 32/48/64px rendering require independent qualification."
+    }
+  },
+  "sourceBlockers": [],
+  "artworkProvenance": {
+    "path": "branding/artwork-provenance.json",
+    "sha256": "c15b593d123395c7c0ef863abc2ef078005b2c6d219716a7ed970d8d28cffd7c",
+    "manifestSha256": "d25e9cee768a885052ac0a8df220d843c9b9c6f6f120d722705bead1cc99e694",
+    "nativeMasters": [
+      {
+        "path": "branding/native-generated-on-light.png",
+        "sha256": "53b73d0071e4cee6f559d8d5603aa2c212b9d8562bf35250107fd961ae533da2"
+      },
+      {
+        "path": "branding/native-generated-on-dark.png",
+        "sha256": "be146a518f4fd730c4385f418288112d2f1a1130bf41f0f420936637f4e6924f"
+      }
+    ]
+  }
 }

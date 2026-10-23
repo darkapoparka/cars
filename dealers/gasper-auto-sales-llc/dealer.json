@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Gasper Auto Sales LLC",
     "publicOrigin": "https://gasper-auto-sales-llc.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "3be9136194bf9e08750ebea78f47b117bc4e3cec478bfc33b2eb654151a19ab4",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "4d694983485d385477e1649e57b6fc4c56aa9d7a756606c7083bfc9376e5a65e"
+    }
   }
 }

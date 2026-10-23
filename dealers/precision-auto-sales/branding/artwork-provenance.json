@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "us-nm-albuquerque-precision-auto-sales",
+  "slug": "precision-auto-sales",
+  "artworkDirectory": "precision-auto-sales",
+  "name": "Precision Auto Sales",
+  "renderedName": "Precision Auto Sales",
+  "kind": "independent-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.precisionautonm.com/",
+      "observedAt": "2026-10-18"
+    },
+    {
+      "url": "https://www.precisionautonm.com/category/all-products",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+      "width": 1024,
+      "height": 201,
+      "transparentFraction": 0.6270065687189055,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "b5381c29822371f1a59b4fbd189cd1bfa266913be3d23c15764a036530dc8fe8",
+        "width": 2170,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0",
+        "prompt": "Correct the light-background color treatment of the supplied logo while preserving its recognizable emblem, typeface, exact geometry, word spacing and layout. Exact required wording: PRECISION AUTO SALES. EVERY letter must be opaque deep charcoal black, including every secondary word, colored AL prefix, descriptor and legal suffix. Do not leave any gold, blue, red or white LETTERS. A small red/gold/blue accent is permitted only INSIDE the emblem, never in any wordmark lettering. Genuine transparent alpha, no background, no glow, shadow, gradient, texture, checkerboard, frame, mockup, watermark, extra concepts or altered spelling. One crisp horizontal production logo only.",
+        "reference": "L:/CODEX/cars/leads/branding/pending-20261023/precision-auto-sales/logo-on-light.png",
+        "referenceSnapshot": {
+          "path": "correction-input-on-light.png",
+          "sha256": "63f92ea4d90c426d80b7c0d8f11654ad595664ff573d290b766487b5927e7769",
+          "sameBytesAsToolInput": true,
+          "nativeOriginal": {
+            "path": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-069de2ac-6651-46ad-8b22-9cfa4f8c11e7.png",
+            "sha256": "42bd5d74e3a80c395af2e15d5af0abc3f6b67fc2536ffad624690882670665a4"
+          },
+          "note": "Exact input snapshot retained after correction. Re-export from unchanged native original matches recorded pre-correction PNG SHA256."
+        },
+        "referencePathMeaning": "Original tool input working filename, later overwritten by corrected export. referenceSnapshot retains the exact input bytes."
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 150,
+          "width": 2170,
+          "height": 425
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+      "width": 1024,
+      "height": 202,
+      "transparentFraction": 0.49632580445544555,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "c1d09a70e47ad3e0b2eb721686592ac6fe017806df24975ca70d4431238887e9",
+        "width": 2169,
+        "height": 725
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-f03467df-a2b2-44be-8d80-1b9ba95a54b4",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: PRECISION AUTO SALES. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 0,
+          "top": 148,
+          "width": 2164,
+          "height": 427
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-01.png",
+    "correctionEvidence": "final-corrections-review.png"
+  },
+  "releaseReady": false,
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}

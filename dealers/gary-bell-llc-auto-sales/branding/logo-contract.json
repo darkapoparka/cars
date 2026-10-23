@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "gary-bell-llc-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "c2cd22c8c1e1d92e060cd974baa2b69eca3e7d70bb211ce6de3c52455b759d17",
+      "sourceSha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "399e753b0322de0a8bdb02d892b20e1f1cbc0088f47e7684a26f65859c9d9725",
+      "sourceSha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "399e753b0322de0a8bdb02d892b20e1f1cbc0088f47e7684a26f65859c9d9725",
+      "sourceSha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-81c171ac-3056-4ec0-835d-b8ff883be0f8",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "a8796ada5ff435c9242197170bb36e91b8e05d3194cdeebbe95aee0998e904d0",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-81c171ac-3056-4ec0-835d-b8ff883be0f8",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 265,
+          "height": 228
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "39c878bb0bf30f06914d5e2d97b789328170b01e9082fe9a2220d133c1d25913"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-81c171ac-3056-4ec0-835d-b8ff883be0f8",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/gary-bell-llc-auto-sales/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-aa20a216-b930-4ba2-8db5-757f7eb79c40",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/gary-bell-llc-auto-sales/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-aa20a216-b930-4ba2-8db5-757f7eb79c40",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/gary-bell-llc-auto-sales/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+      "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 228
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+      "sha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 230
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+      "sha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 230
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "4bac0173faab059202d63fdda9f378e07b2b87a270dddf40942808f4cd0d1056",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-81c171ac-3056-4ec0-835d-b8ff883be0f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 265,
+            "height": 228
+          }
+        }
+      },
+      "sourceReference": "dealers/gary-bell-llc-auto-sales/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "12420f2f81f96f5d6db6a4055d574e2238af12adef6d5961ed2296ec0abb2dc5",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-aa20a216-b930-4ba2-8db5-757f7eb79c40",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 265,
+            "height": 230
+          }
+        }
+      },
+      "sourceReference": "dealers/gary-bell-llc-auto-sales/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "a8796ada5ff435c9242197170bb36e91b8e05d3194cdeebbe95aee0998e904d0",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-81c171ac-3056-4ec0-835d-b8ff883be0f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 265,
+            "height": 228
+          }
+        }
+      },
+      "sourceReference": "dealers/gary-bell-llc-auto-sales/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "39c878bb0bf30f06914d5e2d97b789328170b01e9082fe9a2220d133c1d25913",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-81c171ac-3056-4ec0-835d-b8ff883be0f8",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 265,
+            "height": 228
+          }
+        }
+      },
+      "sourceReference": "dealers/gary-bell-llc-auto-sales/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "20925bb6b205ca560d980f7966522820639a09ffe2bd840d9f613e3a85ed3c44",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-aa20a216-b930-4ba2-8db5-757f7eb79c40",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "9b9d0f2da18c7b45fd3eebcdf87feee765a4e24438f5f665b04b8ba6ec1477ef",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 265,
+          "height": 230
+        }
+      }
+    }
+  }
+}

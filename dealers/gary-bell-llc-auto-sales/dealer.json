@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Gary Bell LLC Auto Sales",
     "publicOrigin": "https://gary-bell-llc-auto-sales.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "c23efefc507572c2db8ecee9357832d772f5101509f76e6cb70abb8ea2a9cb19",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "a8796ada5ff435c9242197170bb36e91b8e05d3194cdeebbe95aee0998e904d0"
+    }
   }
 }

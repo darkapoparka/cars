@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "precision-auto-sales",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "3268bca40f09a1366e0c20ae1259d2bcb2f44b3def300dd693ba68ed9afed3eb",
+      "sourceSha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "e8c7b0949f418fb37a85ec080e02dd51956f1e059425f85656a5ebf310a6baf1",
+      "sourceSha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "e8c7b0949f418fb37a85ec080e02dd51956f1e059425f85656a5ebf310a6baf1",
+      "sourceSha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "267d5b6940f956007fd9e5c1fe279bc9e0c41c7435ec33e94e4771f849912b43",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 280,
+          "height": 201
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "9e782c0748bf2c638d017ec21a7ab5f9dcce155293489c89633a50e2b95382b4"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/precision-auto-sales/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f03467df-a2b2-44be-8d80-1b9ba95a54b4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/precision-auto-sales/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f03467df-a2b2-44be-8d80-1b9ba95a54b4",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/precision-auto-sales/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+      "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 201
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+      "sha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 202
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+      "sha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 202
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "6c72f931c9465b39076426d6108f4cd483ae42dcc6e8eb83d2f552b959bef310",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 201
+          }
+        }
+      },
+      "sourceReference": "dealers/precision-auto-sales/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "3d5ef9646d36c7e5159d1c3b3a036c7417a3b139bce54d008513171f12b92c44",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-f03467df-a2b2-44be-8d80-1b9ba95a54b4",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 202
+          }
+        }
+      },
+      "sourceReference": "dealers/precision-auto-sales/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "267d5b6940f956007fd9e5c1fe279bc9e0c41c7435ec33e94e4771f849912b43",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 201
+          }
+        }
+      },
+      "sourceReference": "dealers/precision-auto-sales/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "9e782c0748bf2c638d017ec21a7ab5f9dcce155293489c89633a50e2b95382b4",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-db11bb95-6fde-43a9-b626-a6ce21fdafb0",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "e954153257af0a9b84839d02a5d958c42dc48ad0a476786e47c8b25265d51b76",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 280,
+            "height": 201
+          }
+        }
+      },
+      "sourceReference": "dealers/precision-auto-sales/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "07994d403acb883060e70191c4481c09470af5d0625389e0009a6599d41f2273",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-f03467df-a2b2-44be-8d80-1b9ba95a54b4",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "17b5ff202b238887d1a7de235d94c01ca8f6d2e4d3605b025aa15242f0e8ea58",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 280,
+          "height": 202
+        }
+      }
+    }
+  }
+}

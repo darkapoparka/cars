@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "dealer": "322-budget-auto-sales-llc",
+  "reviewed": true,
+  "reviewedAt": "2026-10-22T23:42:46.338Z",
+  "status": "independent-proposal-not-dealer-approved",
+  "creationMethod": "imagegen-proposal",
+  "assets": {
+    "onLight": {
+      "sourcePath": "branding/logo-on-light.png",
+      "publicPath": "/dealer-brand/logo-on-light.webp",
+      "sha256": "bcbe7d82638cc391830133426b71636f74c9fa8082a47a34d9212cd95cbc7bf0",
+      "sourceSha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa"
+    },
+    "onDark": {
+      "sourcePath": "branding/logo-on-dark.png",
+      "publicPath": "/dealer-brand/logo-on-dark.webp",
+      "sha256": "4d26ea8cb886a66745df9d6041384abc5880ce71266c9c55cd07232a7648d32f",
+      "sourceSha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d"
+    },
+    "onAccent": {
+      "sourcePath": "branding/logo-on-accent.png",
+      "publicPath": "/dealer-brand/logo-on-accent.webp",
+      "sha256": "4d26ea8cb886a66745df9d6041384abc5880ce71266c9c55cd07232a7648d32f",
+      "sourceSha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d"
+    }
+  },
+  "surfaceBackgrounds": {
+    "onLight": [
+      "#ffffff"
+    ],
+    "onDark": [
+      "#111113",
+      "#101820"
+    ],
+    "onAccent": [
+      "#09090b",
+      "#17191c",
+      "#c40101"
+    ]
+  },
+  "master": {
+    "path": "branding/logo-master.png",
+    "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
+      "modelVersion": null
+    }
+  },
+  "mark": {
+    "path": "branding/logo-mark.png",
+    "sha256": "f9317402148d897a52c6544833c3239c2769d27299dbfbfa2c293996877990b2",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-light.png",
+        "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 430,
+          "height": 182
+        }
+      }
+    }
+  },
+  "favicon": {
+    "path": "dealer-brand/favicon.ico",
+    "sha256": "627c6c9ce4b04f70f949bdf9993d9359a086f0f702bea75d28d1eca594945b95"
+  },
+  "surfaces": {
+    "onLight": {
+      "path": "branding/logo-on-light.png",
+      "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/322-budget-auto-sales-llc/branding/generated-on-light.png"
+    },
+    "onDark": {
+      "path": "branding/logo-on-dark.png",
+      "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-989b403b-65e7-4871-b903-a98b34b25df6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/322-budget-auto-sales-llc/branding/generated-on-dark.png"
+    },
+    "onAccent": {
+      "path": "branding/logo-on-accent.png",
+      "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-989b403b-65e7-4871-b903-a98b34b25df6",
+        "modelVersion": null
+      },
+      "sourceReference": "dealers/322-budget-auto-sales-llc/branding/generated-on-dark.png"
+    }
+  },
+  "transforms": {
+    "onLight": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+      "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 182
+      },
+      "sourcePath": "branding/generated-on-light.png",
+      "outputPath": "branding/logo-on-light.png"
+    },
+    "onDark": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+      "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 183
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-dark.png"
+    },
+    "onAccent": {
+      "operation": "crop-transparent-padding-and-resize",
+      "sourceSha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+      "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1024,
+        "height": 183
+      },
+      "sourcePath": "branding/generated-on-dark.png",
+      "outputPath": "branding/logo-on-accent.png"
+    }
+  },
+  "supplemental": {
+    "mark-on-light.webp": {
+      "path": "dealer-brand/mark-on-light.webp",
+      "sha256": "411912baacdc29f1eab8f31d7acecdab0dbd56a74f8a47eabe93d78e35656d4e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 430,
+            "height": 182
+          }
+        }
+      },
+      "sourceReference": "dealers/322-budget-auto-sales-llc/branding/generated-mark-light.png"
+    },
+    "mark-on-dark.webp": {
+      "path": "dealer-brand/mark-on-dark.webp",
+      "sha256": "71ac68822023698fc8d860d74ae1ac36979458ea0f475f9b68ec62c7d6c35d9e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-989b403b-65e7-4871-b903-a98b34b25df6",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-dark.png",
+          "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 430,
+            "height": 183
+          }
+        }
+      },
+      "sourceReference": "dealers/322-budget-auto-sales-llc/branding/generated-mark-dark.png"
+    },
+    "app-icon.png": {
+      "path": "dealer-brand/app-icon.png",
+      "sha256": "f9317402148d897a52c6544833c3239c2769d27299dbfbfa2c293996877990b2",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 430,
+            "height": 182
+          }
+        }
+      },
+      "sourceReference": "dealers/322-budget-auto-sales-llc/branding/generated-mark-light.png"
+    },
+    "favicon.ico": {
+      "path": "dealer-brand/favicon.ico",
+      "sha256": "627c6c9ce4b04f70f949bdf9993d9359a086f0f702bea75d28d1eca594945b95",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "generationId": "exec-2f0cf711-0eec-42e6-87ef-79a0831b05c1",
+        "modelVersion": null,
+        "derivedFrom": {
+          "path": "branding/generated-on-light.png",
+          "sha256": "9143a2ca6f23b05f40e1c392342e7912de15cd1c4cd194ec5e31265da7bf64fa",
+          "operation": "crop-left-symbol",
+          "crop": {
+            "left": 0,
+            "top": 0,
+            "width": 430,
+            "height": 182
+          }
+        }
+      },
+      "sourceReference": "dealers/322-budget-auto-sales-llc/branding/generated-mark-light.png"
+    }
+  },
+  "markOnDarkReady": true,
+  "originalArtworkPreserved": true,
+  "visualReview": {
+    "reviewed": true,
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "source": "branding/source.json",
+    "spelling": "agent-visual-review",
+    "dealerApproval": false
+  },
+  "markOnDark": {
+    "path": "branding/logo-mark-on-dark.png",
+    "sha256": "840923ad149c998d767384359c9bea381c8323e234a20ed6e102d403153ace4f",
+    "generation": {
+      "tool": "image_gen.imagegen",
+      "generationId": "exec-989b403b-65e7-4871-b903-a98b34b25df6",
+      "modelVersion": null,
+      "derivedFrom": {
+        "path": "branding/generated-on-dark.png",
+        "sha256": "e50203e45309e37b597e889f7788de78bb9ea8b15a38053648bdc082b0407b9d",
+        "operation": "crop-left-symbol",
+        "crop": {
+          "left": 0,
+          "top": 0,
+          "width": 430,
+          "height": 183
+        }
+      }
+    }
+  }
+}
