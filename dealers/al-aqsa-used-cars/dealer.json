@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Al Aqsa Used Cars",
     "publicOrigin": "https://al-aqsa-used-cars.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "9d9f37d752391592e7436fcfe1a092e8870d3e4304d2b3adf194e273243e5ad3",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "3d14e261098454ab0d5c539659453ab2fba0a74ddc004c25e24ea3f32ca52bd0"
+    }
   }
 }

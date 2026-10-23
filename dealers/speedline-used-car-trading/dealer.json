@@ -154,6 +154,12 @@
   "shareIdentity": {
     "name": "Speedline Used Car Trading",
     "publicOrigin": "https://speedline-used-car-trading.webpreviews.site",
-    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles."
+    "description": "Independent website and logo proposal; not dealer approved. Forms do not send messages and do not reserve vehicles.",
+    "logo": {
+      "sourcePath": "branding/logo-on-light.png",
+      "sha256": "8f280ded115166f9de820d42568ebb32c0b53bb706e0d698527a2889ed12e111",
+      "faviconSourcePath": "branding/app-icon.png",
+      "faviconSha256": "74e434509d206cd149989f394a47581165cc9467eac38a46bb34bdfc11bb577e"
+    }
   }
 }

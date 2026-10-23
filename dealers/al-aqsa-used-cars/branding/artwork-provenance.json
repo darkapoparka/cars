@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "dealerId": "ae-sharjah-al-aqsa-used-cars",
+  "slug": "al-aqsa-used-cars",
+  "artworkDirectory": "al-aqsa-used-cars",
+  "name": "Al Aqsa Used Cars",
+  "renderedName": "Al Aqsa Used Cars",
+  "kind": "reference-guided-website-logo-proposal",
+  "dealerApproved": false,
+  "ownerApproved": false,
+  "sourceEvidence": [
+    {
+      "url": "https://www.oneclickdrive.com/company/sharjah/al-aqsa-used-cars",
+      "observedAt": "2026-10-18"
+    }
+  ],
+  "retainedOriginalsUnchanged": true,
+  "variants": {
+    "on-light": {
+      "path": "logo-on-light.png",
+      "sha256": "9d9f37d752391592e7436fcfe1a092e8870d3e4304d2b3adf194e273243e5ad3",
+      "width": 1024,
+      "height": 316,
+      "transparentFraction": 0.6037844887262658,
+      "master": {
+        "path": "generated-on-light.png",
+        "sha256": "4209afa025f889c5b9b745aaa57aa1ae6ac07ac167989beb11ffada423b12628",
+        "width": 1838,
+        "height": 856
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-95b77e7f-a7fe-435f-9073-86839b567d4e",
+        "prompt": "Create one professional transparent horizontal website logo by refining the supplied dealer logo reference. Preserve the source circular car stamp motif, simplifying the central car to flat shapes with no manufacturer badge. Create a horizontal lockup using the circle as a compact emblem and AL AQSA with USED CARS readable at its right. Omit the tiny 404 location code and repeated ring lettering so the header remains clear. Required exact English words, with accurate spelling: AL AQSA USED CARS. Maintain the reference's recognizable identity and proportion while making it legible and polished at a 220px wide website header. Use a sensible primary name and descriptor hierarchy. All text deep charcoal black for white/light backgrounds; retain restrained reference accent colors in the emblem only. Genuine transparent alpha, isolated logo, tightly balanced wide composition. Flat crisp shapes, no chrome, bevel, shadow, glow, texture, gradients, background rectangle or checkerboard, photo, mockup, contact details, website, slogan, watermark, multiple concepts or duplicate. Deliver exactly one logo. This is a reference-guided artwork proposal, not proof of business adoption.",
+        "reference": "C:/Users/radev/AppData/Local/Temp/cars-astra-public-brand-evidence-20261021/al-aqsa-used-cars-oneclick-original-0.jpg"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 103,
+          "top": 170,
+          "width": 1655,
+          "height": 510
+        }
+      }
+    },
+    "on-dark": {
+      "path": "logo-on-dark.png",
+      "sha256": "479345677367f60aca30e871c27660f89105ad6eb7107b30b8dbda7bdca7ba5f",
+      "width": 1024,
+      "height": 311,
+      "transparentFraction": 0.5147928808279743,
+      "master": {
+        "path": "generated-on-dark.png",
+        "sha256": "2f448525b9e9d08deeda97b43d3d481418c02c0d2b7268cb45313ec704f59862",
+        "width": 1838,
+        "height": 856
+      },
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "outputReference": "exec-4f5dfae8-e6f0-49bb-aca0-539d12307a82",
+        "prompt": "Create the matching light-on-dark production variant of the exact supplied logo. Preserve precisely the same emblem, geometry, spelling, word count, typographic hierarchy, proportions, layout and spacing. Required exact text: AL AQSA USED CARS. Change EVERY letter, including all secondary descriptor words and legal suffixes, to solid white so it is legible over a dark or red website header. Change the charcoal portions of the emblem to white. Retain the small red/gold emblem accent only if it contrasts clearly against a dark header. True transparent alpha background; do not paint a dark rectangle or checkerboard. Flat clean edges, no glows, shadows, bevels, textures, gradients, new artwork, new icon, extra text or mockup. Deliver one horizontal matching logo, fully legible.",
+        "reference": "C:\\Users\\radev\\.codex\\generated_images\\01a16585-2b3f-7ae2-b361-3f3b5f78f20e\\exec-95b77e7f-a7fe-435f-9073-86839b567d4e.png"
+      },
+      "export": {
+        "operation": "crop-transparent-padding-and-resize",
+        "crop": {
+          "left": 96,
+          "top": 168,
+          "width": 1685,
+          "height": 511
+        }
+      }
+    }
+  },
+  "review": {
+    "status": "artwork-visually-reviewed",
+    "alpha": "all exports measured as genuine transparent nonempty PNGs",
+    "spelling": "English wordmark inspected; source-bound display aliases retained",
+    "compact": "Horizontal logos only. Interactive 32/48/64px gallery preview is provided; separate compact/favicon artwork remains part of dealer-pack preparation.",
+    "sixDesigns": "not-yet-integrated-or-rendered",
+    "reviewedAt": "2026-10-22T23:42:46.338Z",
+    "reviewer": "Codex visual inspection",
+    "header": "All 196 paired PNGs inspected at 240x64 on white, #111113 and #c40101",
+    "evidence": "final-review-08.png"
+  },
+  "releaseReady": false,
+  "originalReference": {
+    "path": "_references/al-aqsa-used-cars.jpg",
+    "sha256": "52550e0dff2ca4e855444b1109e9e256efe1275ffd26874679dedeba2fe900a8",
+    "sourceUrl": "https://static.oneclickdrive.com/application/views/img/company/WhatsApp_Image_2025-11-28_at_10.31_.36_.jpeg",
+    "observedAt": "2026-10-23",
+    "adaptation": "English website adaptation; original retained unchanged; adoption not claimed"
+  },
+  "artworkHolds": [],
+  "artworkReadyForIntegration": true
+}
