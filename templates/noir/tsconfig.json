@@ -1,0 +1,14 @@
+{
+  "extends": "$app/tsconfig",
+  "include": ["src", "scripts/*.mjs", "*.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowJs": true,
+    "checkJs": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "types": ["$app/types", "node"]
+  }
+}
