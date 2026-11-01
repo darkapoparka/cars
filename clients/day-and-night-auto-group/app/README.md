@@ -38,3 +38,16 @@ This is a demo/enquiry template, not a checkout, booking, account or lending bac
 The maintained source is this `templates/app` master inside the Cars repository. The separate App repository retains publishing/review history. Reconcile its approved application changes into this subtree while preserving newer local polishing. Existing client releases still follow the Cars release lock and explicit refresh workflow.
 
 See [the current template contract](TEMPLATE.md), [architecture](docs/ARCHITECTURE.md), [Cars PRO reconciliation](docs/pro-integration-2026-10-09/README.md), [original PRO review](docs/PRO-REVIEW.md) and [source provenance](docs/IMPORT.md).
+
+
+## Day & Night first-visit cleanup — 1 November 2026
+
+Owner direction: remove the automatic welcome/language interruption while preserving the accepted Home, cards, compact dock, catalogue toolbar and regular language/menu/filter controls. Plan: remove only the Home welcome import/mount, replace the obsolete welcome test with fresh-entry/menu-language checks, and verify the maintained preview proportionally.
+
+Implemented locally in this client only: Home and its `/2` alias no longer mount `WelcomeBanner`, including on old `?welcome=1` links. The existing component/config are retained as inactive source; normal language controls remain in the phone Menu and desktop header menu. Browser fixtures no longer pre-dismiss welcome, so fresh-entry checks cover real undismissed sessions.
+
+Validation: TypeScript (`--noEmit --incremental false`) and scoped ESLint pass. Eight focused browser checks pass at 390 and 1440px across bg/en and both Home variants, including fresh entry, old welcome links and normal menu language switching. User-opened desktop filters also open and close normally. Independent scoped code/phone visual review found no blocking findings. No production build or full release audit was needed.
+
+Evidence: `H:/CODEX-generated/day-and-night-vercel/pwa-welcome-removal/` retains four matched phone/desktop captures and the compact browser result. The before captures show the actual pre-edit sheet using the existing `?welcome=1` preview flag because the review browser already held dismissal state; no before image was reconstructed. Local preview: http://127.0.0.1:6473/bg.
+
+Publication: public deployment of this cleanup remains pending under the previously recorded Vercel 402 daily deployment limit; no deployment retry or billing change was made. Local Cars HEAD and shared index are preserved; source publication, when recorded in the task receipt, is scoped through GitHub APIs atop current canonical main. This is a local candidate for owner review, not owner acceptance.

@@ -222,15 +222,20 @@ for (const locale of locales) for (const variant of ['', '/2']) {
     await expect(page).toHaveURL(new URL(home, baseURL!).href);
   });
 
-  test(locale + variant + ' welcome language change preserves the journey', async ({page, baseURL}) => {
+  test(locale + variant + ' first visit stays unobstructed and menu language controls work', async ({page, viewport, baseURL}) => {
+    await open(page, locale + variant);
+    await expect(page.getByRole('dialog')).toHaveCount(0);
+    // An old welcome-preview link must not bring the rejected interruption back.
+    await open(page, locale + variant + '?welcome=1');
+    await expect(page.getByRole('dialog')).toHaveCount(0);
     const target = locales.find(value => value !== locale);
-    test.skip(!dealer.welcomeEnabled || !target, 'Requires welcome and two enabled languages.');
-    await page.goto(locale + variant + '?welcome=1');
-    const welcome = page.locator('[data-welcome-sheet]');
-    await expect(welcome).toBeVisible();
-    await welcome.getByRole('link', {name: target === 'bg' ? 'Български' : 'English', exact: true}).click();
-    await expect(page).toHaveURL(new URL(target + variant + '?welcome=1', baseURL!).href);
-    await expect(page.locator('[data-welcome-sheet]')).toBeVisible();
+    if (!target) return;
+    const desktop = viewport && viewport.width >= 1100;
+    if (desktop) await page.getByRole('button', {name: locale === 'bg' ? 'Отворете менюто' : 'Open menu', exact: true}).click();
+    else await page.getByRole('link', {name: locale === 'bg' ? 'Меню' : 'Menu', exact: true}).filter({visible: true}).click();
+    await page.locator('[data-menu-language]:visible').getByRole('link', {name: target === 'bg' ? 'Български' : 'English', exact: true}).click();
+    await expect(page).toHaveURL(new URL(target + variant + (desktop ? '?welcome=1' : '/more'), baseURL!).href);
+    await expect(page.locator('[data-welcome-sheet]')).toHaveCount(0);
   });
 }
 

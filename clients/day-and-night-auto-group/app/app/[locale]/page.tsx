@@ -5,7 +5,6 @@ import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
 import MiniVehicleCard from '@/components/MiniVehicleCard';
 import ShowroomHighlights from '@/components/ShowroomHighlights';
-import WelcomeBanner from '@/components/WelcomeBanner';
 
 import VehicleCard from '@/components/VehicleCard';
 import InventoryClient from '@/components/InventoryClient';
@@ -53,7 +52,6 @@ export default function HomePage() {
     return () => observer.disconnect();
   }, [visibleCount]);
   return <div {...stylex.props(s.screen)}>
-    <WelcomeBanner/>
     <div {...stylex.props(s.phoneTablet)}>
     <div {...stylex.props(s.discovery, alternative && s.alternativeDiscovery)}><ShowroomPromotion /></div>
     {alternative ? <MobileAlternativeHero/> : null}
