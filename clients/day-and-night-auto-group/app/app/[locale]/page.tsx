@@ -3,7 +3,6 @@ import {useCopy} from '@/lib/locale';
 import {useEffect, useRef, useState, useSyncExternalStore} from 'react';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import DiscoveryHeader from '@/components/DiscoveryHeader';
 import MiniVehicleCard from '@/components/MiniVehicleCard';
 import ShowroomHighlights from '@/components/ShowroomHighlights';
 import WelcomeBanner from '@/components/WelcomeBanner';
@@ -56,14 +55,14 @@ export default function HomePage() {
   return <div {...stylex.props(s.screen)}>
     <WelcomeBanner/>
     <div {...stylex.props(s.phoneTablet)}>
-    <div {...stylex.props(s.discovery, alternative && s.alternativeDiscovery)}><DiscoveryHeader active="buy" hideMobileIdentity /><ShowroomPromotion /></div>
+    <div {...stylex.props(s.discovery, alternative && s.alternativeDiscovery)}><ShowroomPromotion /></div>
     {alternative ? <MobileAlternativeHero/> : null}
     <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content)}>
       {alternative ? <MobileAlternativeDiscovery/> : null}
       <div {...stylex.props(s.contents, alternative && s.hideAlternativePhone)}><BrandRow showTitle={false} /></div>
       <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers, alternative && s.hideAlternativeOffers)}><ShowroomHighlights /></section>
       <section aria-label={tx('Available cars')}>
-        <div {...stylex.props(s.feed, s.firstFeed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false} />)}</div>
+        <div {...stylex.props(s.feed, s.firstFeed, alternative && s.alternativeFeed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile mobileTile={!alternative} showDiscount={false} />)}</div>
       </section>
       <div {...stylex.props(s.contents)}>{recent.length ? <section {...stylex.props(s.recent)}>
         <h2 {...stylex.props(s.heading)}>{tx("Recently viewed cars")}</h2>
@@ -81,8 +80,8 @@ export default function HomePage() {
           <div {...stylex.props(s.dealsRail)}>{collectionVehicles.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} featured />)}</div>
         </div>
       </section> : null}</div>
-      {alternative ? <div data-alternative-extra-stock {...stylex.props(s.feed, s.alternativeMoreCars)}>{collectionVehicles.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false}/>)}</div> : null}
-      <section aria-label={tx("More cars")} {...stylex.props(s.feed)}>{moreFeed.slice(0, visibleCount).map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false} />)}</section>
+      {alternative ? <div data-alternative-extra-stock {...stylex.props(s.feed, s.alternativeFeed, s.alternativeMoreCars)}>{collectionVehicles.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile mobileTile={!alternative} showDiscount={false}/>)}</div> : null}
+      <section aria-label={tx("More cars")} {...stylex.props(s.feed, alternative && s.alternativeFeed)}>{moreFeed.slice(0, visibleCount).map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile mobileTile={!alternative} showDiscount={false} />)}</section>
       <div ref={sentinel} aria-hidden="true" {...stylex.props(s.sentinel)} />
       <div {...stylex.props(s.contents)}><Link href="/cars" {...stylex.props(s.browse)}>{tx("View all cars")}</Link></div>
     </main></LandingContentFrame>
@@ -104,7 +103,8 @@ const s = stylex.create({
   recent: {marginTop: 27},
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 12, paddingBottom: 6, scrollbarWidth: 'none'},
   offers: {marginTop: {[media.mobile]: $.mobileBrandGap, default: 24}},
-  feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 14}, marginTop: {[media.mobile]: $.mobileSectionGap, default: 14}},
+  feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'repeat(2,minmax(0,1fr))', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 14}, marginTop: {[media.mobile]: $.mobileSectionGap, default: 14}},
+  alternativeFeed: {gridTemplateColumns: {[media.mobile]: '1fr', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}},
   firstFeed: {marginTop: {[media.mobile]: 4, default: 14}},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8},},
   mobileCollectionBanner: {display: {[media.mobile]: 'block', default: 'none'}, position: 'relative', height: 156, overflow: 'hidden', color: '#fff', borderRadius: 18, backgroundColor: '#242428'},

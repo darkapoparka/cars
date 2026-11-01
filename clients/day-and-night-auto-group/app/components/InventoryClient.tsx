@@ -1,5 +1,7 @@
 'use client';
 import {displayMake} from '@/lib/inventory-labels';
+import RentalSearch from '@/components/RentalSearch';
+import {readCarsPurpose, type CarsPurpose} from '@/lib/rental-enquiry';
 import {useCopy} from '@/lib/locale';
 import {useDeferredValue,useEffect,useLayoutEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import * as stylex from '@stylexjs/stylex';
@@ -31,14 +33,17 @@ import {clearDesktopFilter,desktopFilterCount,desktopFilterTitles} from '@/lib/d
 
 import {inventorySortGroups as sortGroups, sortInventory} from '@/lib/inventory-sort';
 import {toggleFilter as toggle} from '@/lib/inventory-filters';
-type Props={initialEmiMax?:number;initialQuery?:string;initialBrand?:string;initialBody?:string;initialPriceMax?:number;initialFilters?:Filters;initialSort?:string;initialOverlay?:'filters'|'sort'|null;initialOpen?:string|null;variant?:'standard'|'luxe';presentation?:'page'|'home'};
+type Props={initialPurpose?:CarsPurpose;initialEmiMax?:number;initialQuery?:string;initialBrand?:string;initialBody?:string;initialPriceMax?:number;initialFilters?:Filters;initialSort?:string;initialOverlay?:'filters'|'sort'|null;initialOpen?:string|null;variant?:'standard'|'luxe';presentation?:'page'|'home'};
 
-export default function InventoryClient({initialEmiMax,initialQuery='',initialBrand='',initialBody='',initialPriceMax,initialFilters,initialSort='default',initialOverlay=null,initialOpen=null,variant='standard',presentation='page'}:Props){
+export default function InventoryClient({initialPurpose='buy',initialEmiMax,initialQuery='',initialBrand='',initialBody='',initialPriceMax,initialFilters,initialSort='default',initialOverlay=null,initialOpen=null,variant='standard',presentation='page'}:Props){
   const tx = useCopy();
-  const pillTone = useHomeAlternative() ? 'grey' : 'soft';
+  const pillTone = useHomeAlternative() ? 'grey' : 'white';
 
  const luxe=variant==='luxe';
  const home=presentation==='home';
+ const [purpose,setPurpose]=useState<CarsPurpose>(initialPurpose);
+ const buy=home||luxe||purpose==='buy';
+ function selectPurpose(next:CarsPurpose){setOverlay(null);setPurpose(next);replaceCollectionParameter('purpose',next==='rent'?'rent':null);}
  const tabs:readonly Tab[]=home?desktopFilterTabs:standardTabs;
  const [query,setQuery]=useState(initialQuery);
  const [filterRevision,setFilterRevision]=useState(0);
@@ -50,7 +55,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
   return {...defaults,brands:initialBrand?[initialBrand]:[],bodies:initialBody?[initialBody.toUpperCase()]:[],maximum:initialPriceMax!==undefined&&Number.isFinite(initialPriceMax)?Math.max(defaults.minimum,Math.min(defaults.maximum,initialPriceMax)):defaults.maximum};
  });
  const [sort,setSort]=useState(initialSort);
- const [overlay,setOverlay]=useState<'filters'|'sort'|'search'|null>(initialOpen?'filters':initialOverlay);
+ const [overlay,setOverlay]=useState<'filters'|'sort'|'search'|null>(initialPurpose==='rent'&&!home&&!luxe?null:initialOpen?'filters':initialOverlay);
  const [active,setActive]=useState<Tab>(tabs.includes(initialOpen?.toUpperCase() as Tab)?initialOpen!.toUpperCase() as Tab:'BRAND');
  const [keywordPane,setKeywordPane]=useState(false);
  const [brandSearch,setBrandSearch]=useState('');
@@ -63,8 +68,8 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  const previousOverlay=useRef(overlay);
  const sheetSelection=useRef({filters,query,emiMax});
  const resultsRef=useRef<HTMLElement>(null);
- useInventoryHistory({query,filters,sort,emiMax},{setQuery,setFilters,setSort,setEmiMax},home,overlay!==null);
- useEffect(()=>{const pop=()=>setOverlay(null);window.addEventListener('popstate',pop);return()=>window.removeEventListener('popstate',pop);},[]);
+ const replaceCollectionParameter=useInventoryHistory({query,filters,sort,emiMax},{setQuery,setFilters,setSort,setEmiMax},home,overlay!==null);
+ useEffect(()=>{const pop=()=>{setOverlay(null);setPurpose(readCarsPurpose(new URLSearchParams(location.search).get('purpose')));};window.addEventListener('popstate',pop);return()=>window.removeEventListener('popstate',pop);},[]);
  const results=useMemo(()=>{
   const items=vehicles.filter(car=>(!luxe||car.tier==='Luxe'||car.slug==='2024-toyota-fortuner-exr')&&matchesMonthlyPayment(car,emiMax)&&matches(car,filters,deferredQuery));
   return sortInventory(items,sort);
@@ -99,7 +104,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  function showResults(){const results=resultsRef.current;if(!results)return;results.focus({preventScroll:true});window.scrollTo({top:window.scrollY+results.getBoundingClientRect().top-88,behavior:'instant'});}
  function categoryLabel(tab:Tab){if(tab==='TRANSMISSION')return tx('Gearbox');const label=tx(tab);return label==='EMI'?label:label.charAt(0)+label.slice(1).toLowerCase();}
  const modelMakes=home?[...new Set([...filters.brands,...filters.models.map(model=>model.split('::')[0])])]:undefined;
- const modal=useModal(overlay!==null&&overlay!=='search',close,{history:false});
+ const modal=useModal(buy&&overlay!==null&&overlay!=='search',close,{history:false});
  useLayoutEffect(()=>{
    if(!sectionFocusPending.current)return;
    sectionFocusPending.current=false;
@@ -122,7 +127,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
   </label>:<div data-search-field {...stylex.props(searchField.field,s.searchRing,!luxe&&s.compactSearchField)}>
     <button type="button" aria-haspopup="dialog" aria-expanded={overlay==='search'} aria-labelledby="inventory-search-prompt" aria-describedby="inventory-result-count" onClick={()=>open('search')} {...stylex.props(s.searchEntry,!luxe&&s.compactSearchEntry)}>
       <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
-      <span {...stylex.props(searchField.copy)}><span id="inventory-search-prompt" {...stylex.props(s.searchPrompt,!query&&s.searchPlaceholder)}>{query||(luxe?tx('Search make or model'):<><span {...stylex.props(s.phoneSearchPrompt)}>{tx('Search cars')}</span><span {...stylex.props(s.wideSearchPrompt)}>{tx('Search make or model')}</span></>)}</span><span id="inventory-result-count" data-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(searchField.count)}><span aria-hidden="true">({count})</span><span className="visually-hidden">{count} {tx(count===1?'car':'cars')}</span></span></span>
+      <span {...stylex.props(searchField.copy)}><span id="inventory-search-prompt" {...stylex.props(s.searchPrompt,!query&&s.searchPlaceholder)}>{query||(luxe?tx('Search make or model'):<><span {...stylex.props(s.phoneSearchPrompt)}>{tx('Make or model')}</span><span {...stylex.props(s.wideSearchPrompt)}>{tx('Search make or model')}</span></>)}</span><span id="inventory-result-count" data-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(searchField.count)}><span aria-hidden="true">({count})</span><span className="visually-hidden">{count} {tx(count===1?'car':'cars')}</span></span></span>
     </button>
     {query?<button type="button" aria-label={tx('Clear search')} onClick={()=>setQuery('')} {...stylex.props(searchField.clear,!luxe&&s.compactSearchClear)}><X size={18} aria-hidden="true"/></button>:null}
   </div>}{!home&&!luxe?<div {...stylex.props(s.compactActions)}>
@@ -133,8 +138,10 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  return <div data-desktop-buy-inventory={home?'':undefined} {...stylex.props(s.screen)}>
   {home?<DealerHomeBanner desktopSearch={<DesktopInventoryFilters filters={filters} update={setFilters} count={count} countMatches={countMatches} onShowResults={showResults} onAllFilters={()=>open('filters')} quickFilter={quickFilter} setQuickFilter={setQuickFilter} quickFiltersRef={quickFiltersRef}/>}/>:<>
     {luxe?pageHeader:<><div {...stylex.props(s.phoneHeading)}><h1 className="visually-hidden">{tx('Our cars')}</h1></div><div {...stylex.props(s.pageHeader)}>{pageHeader}</div></>}
-    {search}
+    {!luxe?<div data-cars-purpose role="group" aria-label={tx('Buy or rent')} {...stylex.props(s.purposeBar)}>{(['buy','rent'] as const).map(value=><button key={value} type="button" aria-pressed={purpose===value} onClick={()=>selectPurpose(value)} {...stylex.props(s.purposeButton,purpose===value&&s.purposeSelected)}>{tx(value==='buy'?'Buy':'Rent')}{purpose===value?<span aria-hidden="true" {...stylex.props(s.purposeUnderline)}/>:null}</button>)}</div>:null}
+    {buy?search:null}
   </>}
+  {buy?<>
   {!home?<nav ref={mobileFiltersRef} aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar,!luxe&&s.scrollingToolbar,!luxe&&s.compactToolbar)}>
     {filtered?<DesktopAppliedFilters mobile filters={filters} update={setFilters} query={query} setQuery={setQuery} emiMax={emiMax} setEmiMax={setEmiMax}/>:null}
     <div {...stylex.props(s.wideActions,luxe&&s.collectionActions)}>
@@ -151,7 +158,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
       <div {...stylex.props(s.homeSort)}><DesktopSortMenu value={sort} groups={sortGroups} onChange={setSort} onOpen={()=>setQuickFilter(null)}/></div>
     </div></>:null}
     {luxe?<div {...stylex.props(s.luxeBrands)}><BrandRow compact title={tx("Explore by brand")} onSelect={brand=>setFilters({...filters,brands:[brand]})}/></div>:null}
-    {results.length?<div {...stylex.props(s.grid,home&&s.homeGrid)}>{results.map((vehicle,index)=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile mobileFlat={!home&&!luxe} imagePriority={index===0} headingLevel={2}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h2>{tx("No cars match these filters")}</h2><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
+    {results.length?<div {...stylex.props(s.grid,home&&s.homeGrid)}>{results.map((vehicle,index)=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile mobileTile mobileFlat={!home&&!luxe} imagePriority={index===0} headingLevel={2}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h2>{tx("No cars match these filters")}</h2><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
     {dealer.inventoryNotice?<p {...stylex.props(s.inventoryNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
    </section>
   </main></LandingContentFrame>
@@ -172,11 +179,17 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
   </div>):null}
   {overlay==='sort'?<div {...stylex.props(s.sortBackdrop)} onMouseDown={e=>e.target===e.currentTarget&&close()}><div ref={modal} tabIndex={-1} role="dialog" aria-modal="true" aria-label={tx("Sort cars")} {...stylex.props(s.sortSheet)}><i {...stylex.props(s.handle)}/><div {...stylex.props(s.sortHeading)}><h2 {...stylex.props(s.filterTitle)}>{tx("Sort")}</h2><button type="button" aria-label={tx("Close sort")} onClick={close} {...stylex.props(s.close)}><X size={22}/></button></div>{sortGroups.map(group=><section key={group.title||'default'} {...stylex.props(s.sortGroup)}>{group.title?<h3 {...stylex.props(s.sortCaption)}>{tx(group.title)}</h3>:null}{group.items.map(([label,value])=><label key={value} {...stylex.props(s.sortRow)}><input type="radio" name="sort" aria-label={group.title?`${tx(group.title)}: ${tx(label)}`:tx(label)} checked={sort===value} onChange={()=>{setSort(value);close();}}/><span>{tx(label)}</span></label>)}</section>)}</div></div>:null}
   {overlay==='search'?<ShowroomSearchSheet initialQuery={query} onSearch={applySearch} onClose={close} history={false}/>:null}
+  </>:null}
+  {!home&&!luxe?<RentalSearch active={!buy}/>:null}
  </div>;
 }
 
 function titleCase(value:string){return value.toLowerCase().replace(/(^|\s)\S/g,letter=>letter.toUpperCase());}
 const s=stylex.create({
+ purposeBar:{display:'flex',alignItems:'center',gap:24,maxWidth:$.content,marginInline:'auto',paddingInline:{[media.mobile]:20,default:28},paddingTop:{[media.mobile]:'env(safe-area-inset-top)',default:0},backgroundColor:{[media.mobile]:$.rail,default:$.surface}},
+ purposeButton:{position:'relative',minWidth:44,minHeight:44,padding:'0 2px',color:$.muted,fontFamily:$.fontSans,fontSize:15,fontWeight:400,lineHeight:'20px',borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
+ purposeSelected:{color:$.ink,fontWeight:600},
+ purposeUnderline:{position:'absolute',bottom:4,left:0,right:0,height:2,borderRadius:2,backgroundColor:$.ink},
  homeContent:{gridTemplateColumns:'minmax(0,1fr)',paddingTop:16},
  homeGrid:{gridTemplateColumns:'repeat(4,minmax(0,1fr))'},
  homeToolbar:{display:'flex',alignItems:'center',flexWrap:'nowrap',gap:12,minHeight:44,marginBottom:16},
@@ -203,20 +216,20 @@ const s=stylex.create({
  pageHeader:{display:{[media.mobile]:'none',default:'contents'}},
  phoneHeading:{display:{[media.mobile]:'block',default:'none'}},
  topInner:{maxWidth:$.content,marginInline:'auto',paddingTop:4,paddingInline:{[media.mobile]:12,default:28}},
- searchFirst:{display:{[media.mobile]:'flex',default:'block'},alignItems:'center',gap:8,position:{[media.mobile]:'sticky',default:'static'},top:{[media.mobile]:0,default:'auto'},zIndex:{[media.mobile]:65,default:'auto'},paddingTop:{[media.mobile]:'calc(4px + env(safe-area-inset-top))',default:4},paddingBottom:{[media.mobile]:4,default:0},backgroundColor:$.surface},
- compactSearchField:{flexGrow:{[media.mobile]:1,default:0},flexBasis:{[media.mobile]:0,default:'auto'},height:{[media.mobile]:44,default:'auto'},minHeight:44,minWidth:0,backgroundColor:{[media.mobile]:$.surface,default:$.surfaceAlt},boxShadow:{[media.mobile]:'inset 0 0 0 1px #d7d7dc',default:'none'}},
+ searchFirst:{display:{[media.mobile]:'flex',default:'block'},alignItems:'center',gap:8,position:{[media.mobile]:'sticky',default:'static'},top:{[media.mobile]:0,default:'auto'},zIndex:{[media.mobile]:65,default:'auto'},paddingTop:{[media.mobile]:'calc(4px + env(safe-area-inset-top))',default:4},paddingBottom:{[media.mobile]:4,default:0},backgroundColor:{[media.mobile]:$.rail,default:$.surface}},
+ compactSearchField:{flexGrow:{[media.mobile]:1,default:0},flexBasis:{[media.mobile]:0,default:'auto'},height:{[media.mobile]:44,default:'auto'},minHeight:44,minWidth:0,backgroundColor:{[media.mobile]:$.surface,default:$.surfaceAlt},boxShadow:'none'},
  compactSearchEntry:{minHeight:{[media.mobile]:44,default:40}},
  compactSearchClear:{width:{[media.mobile]:44,default:42},height:{[media.mobile]:44,default:42}},
  compactActions:{display:{[media.mobile]:'flex',default:'none'},flexShrink:0,gap:8},
  compactActionControl:{width:44,height:44},
  compactActionSurface:{width:40,height:40,paddingInline:0},
- compactActionOutline:{backgroundColor:{default:$.surface,':hover':$.surfaceAlt},boxShadow:'inset 0 0 0 1px #d7d7dc'},
+ compactActionOutline:{backgroundColor:{default:$.surface,':hover':$.surfaceAlt},boxShadow:'none'},
  phoneSearchPrompt:{display:{[media.mobile]:'inline',default:'none'}},
  wideSearchPrompt:{display:{[media.mobile]:'none',default:'inline'}},
  wideActions:{display:{[media.mobile]:'none',default:'contents'}},
  collectionActions:{display:'contents'},
  scrollingToolbar:{position:{[media.mobile]:'static',default:'sticky'}},
- compactToolbar:{paddingTop:{[media.mobile]:4,default:12}},
+ compactToolbar:{paddingTop:{[media.mobile]:4,default:12},paddingBottom:{[media.mobile]:6,default:12},backgroundColor:{[media.mobile]:$.rail,default:$.surface}},
  compactContent:{paddingTop:{[media.mobile]:6,default:10}},
  searchRing:{outlineOffset:-3},
  searchEntry:{display:'flex',alignItems:'center',flexGrow:1,gap:8,minWidth:0,minHeight:{[media.mobile]:44,default:40},padding:0,color:$.ink,fontFamily:$.fontSans,fontSize:16,fontWeight:400,lineHeight:1.5,textAlign:'left',borderWidth:0,backgroundColor:'transparent',outlineStyle:'none',cursor:'pointer'},
@@ -238,7 +251,7 @@ const s=stylex.create({
  results:{minWidth:0},
  luxeBrands:{marginTop:-2,marginBottom:28},
  inventoryNotice:{marginTop:20,paddingTop:16,color:$.muted,fontSize:{[media.desktop]:$.desktopSupportSize,default:13},lineHeight:'20px',},
- grid:{display:'grid',gridTemplateColumns:{[media.mobile]:'1fr','@media (min-width: 1100px) and (max-width: 1399px)':'repeat(3,minmax(0,1fr))','@media (min-width: 1400px)':'repeat(4,minmax(0,1fr))',default:'repeat(2,minmax(0,1fr))'},gap:{[media.mobile]:$.mobileSectionGap,default:13}},
+ grid:{display:'grid',gridTemplateColumns:{[media.mobile]:'repeat(2,minmax(0,1fr))','@media (min-width: 1100px) and (max-width: 1399px)':'repeat(3,minmax(0,1fr))','@media (min-width: 1400px)':'repeat(4,minmax(0,1fr))',default:'repeat(2,minmax(0,1fr))'},gap:{[media.mobile]:$.mobileSectionGap,default:13}},
  empty:{display:'flex',alignItems:'center',flexDirection:'column',gap:16,padding:'50px 20px',textAlign:'center',color:$.muted},
  reset:{display:'block',width:'100%',minHeight:44,marginTop:20,color:$.violet,fontSize:14,fontWeight:500,borderColor:$.violet,borderWidth:1,borderStyle:'solid',borderRadius:12,backgroundColor:'#fff',cursor:'pointer'},
  // Desktop aligns the pane with Search and reserves a stable footer row for applied filters.

@@ -24,7 +24,7 @@ export default function DealerHomeBanner({desktopSearch, desktopFilters}: {deskt
     {dealer.phoneE164 ? <a href={`tel:${dealer.phoneE164}`} title={dealer.phoneDisplay || dealer.phoneE164} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} {...stylex.props(s.action)}><span data-dealer-contact-pill {...stylex.props(s.contactPill, t.caption)}><Phone size={15} strokeWidth={1.75} aria-hidden="true"/><span>{tx('Call us')}</span></span></a> : null}
   </div>;
   return <>
-    <DealerMobileBanner secondary={contacts}><ShowroomSearchField onDark/></DealerMobileBanner>
+    <DealerMobileBanner compactBrand secondary={contacts}><ShowroomSearchField onDark/></DealerMobileBanner>
     <ShowroomBanner title={showroom.promotion.title} control={<>{desktopSearch ?? <ShowroomSearchField onDark/>}{desktopFilters}</>}/>
     <DealerLocationSheet open={locationOpen} onClose={() => setLocationOpen(false)}/>
   </>;

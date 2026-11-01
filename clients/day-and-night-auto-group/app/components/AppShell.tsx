@@ -8,7 +8,7 @@ import {Heart, Phone} from 'lucide-react';
 import DealerBrand from '@/components/DealerBrand';
 import DesktopHeaderMenu from '@/components/DesktopHeaderMenu';
 import dynamic from 'next/dynamic';
-import {HomeAlternativeProvider, isHomeAlternative, primaryHomePath} from '@/lib/home-alternative';
+import {HomeAlternativeProvider, isHomeAlternative, primaryHomePath, isServicesRoute} from '@/lib/home-alternative';
 import ShowroomIcon from '@/components/ShowroomIcon';
 import {compactDock} from '@/components/dock.stylex';
 import {showroom} from '@/lib/showroom';
@@ -58,9 +58,9 @@ export default function AppShell({children}: {children:ReactNode}){
     {alternative&&pathname==='/'?<MobileAlternativeHeader onDark/>:null}
     <div id="app-content" {...stylex.props(s.main,hideMobileNav&&s.mainWithoutNav)}>{tx(children)}</div>
     </div>
-    {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(compactDock.root,alternative&&s.standardAlternativeDock)}>{showroom.navigation.map(item=>{
-      const active=item.href==='/'?pathname==='/':item.href==='/more'?pathname==='/more'||pathname==='/saved':pathname.startsWith(item.href);
-      return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(compactDock.link,active&&compactDock.active)}><ShowroomIcon dock name={item.icon} active={active}/></Link>;
+    {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(compactDock.root,!alternative&&compactDock.labeledRoot,alternative&&s.standardAlternativeDock)}>{showroom.navigation.map(item=>{
+      const active=item.href==='/'?pathname==='/':item.href==='/services'?isServicesRoute(pathname):item.href==='/more'?['/more','/saved','/shop'].includes(pathname):pathname.startsWith(item.href);
+      return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(compactDock.link,!alternative&&compactDock.labeledLink,active&&compactDock.active)}><ShowroomIcon dock name={item.icon} active={active}/>{!alternative?<span {...stylex.props(compactDock.label)}>{tx(item.label)}</span>:null}</Link>;
     })}</nav>:null}
     {alternative&&!hideMobileNav?<MobileAlternativeDock pathname={pathname}/>:null}
   </div></VehicleDrawerProvider></HomeAlternativeProvider>;

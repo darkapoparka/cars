@@ -61,6 +61,7 @@ export const vehicleSchema = z.strictObject({
   imagePlaceholder: z.boolean().optional(), proposalBenefits: z.array(text).optional(),
   referenceId: text.optional(), tier: z.enum(['Luxe', 'Prime', 'Lite']).optional(),
   optionsType: text.optional(), originalMileage: amount.optional(),
+  engineType: text.optional(), featureLabels: z.array(text).optional(),
   cylinders: z.number().int().nonnegative().optional(), zeroDownPayment: z.boolean().optional(),
 }).superRefine((vehicle, context) => {
   if (!vehicle.priceOnRequest && vehicle.price === 0) context.addIssue({code: 'custom', path: ['price'], message: 'A missing price must be marked priceOnRequest'});

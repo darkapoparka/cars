@@ -34,6 +34,10 @@ describe('public dealer contract', () => {
     it('rejects invalid vehicle data ' + Object.keys(patch).join(','), () => assert.equal(vehicleSchema.safeParse({...vehicles[0], ...patch}).success, false));
   }
   it('accepts explicitly unpublished facts and actual listing dates', () => assert.ok(vehicleSchema.safeParse({...vehicles[0], price: 0, priceOnRequest: true, mileage: 0, mileageOnRequest: true, listedAt: '2026-10-01'}).success));
+  it('accepts published engine and equipment labels while retaining strict field validation', () => {
+    assert.ok(vehicleSchema.safeParse({...vehicles[0], engineType: '', featureLabels: ['Apple CarPlay', '4x4']}).success);
+    assert.equal(vehicleSchema.safeParse({...vehicles[0], featureLabels: [{privateNotes: 'private'}]}).success, false);
+  });
   it('rejects duplicate identities in stock and imports', () => {
     assert.equal(inventorySchema.safeParse([vehicles[0], vehicles[0]]).success, false);
     assert.equal(importInventorySchema.safeParse([{countryCode: 'DE', vehicle: vehicles[0]}, {countryCode: 'US', vehicle: vehicles[0]}]).success, false);

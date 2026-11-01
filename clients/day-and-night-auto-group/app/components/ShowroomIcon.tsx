@@ -1,10 +1,10 @@
-import {CarFront, CreditCard, Heart, House, Mail, MapPin, Menu, Phone, Tag, Wrench} from 'lucide-react';
+import {CarFront, CreditCard, Heart, House, Mail, MapPin, Menu, Phone, ShoppingBag, Tag, Wrench} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {dockIcons, type DockIconName} from '@/components/dock-icons';
 import ShowroomArtwork from '@/components/ShowroomArtwork';
 import {assetPath} from '@/lib/paths';
 
-const icons = {home: House, cars: CarFront, saved: Heart, more: Menu, sell: Tag, finance: CreditCard, service: Wrench, location: MapPin, phone: Phone, email: Mail};
+const icons = {home: House, cars: CarFront, saved: Heart, shop: ShoppingBag, more: Menu, sell: Tag, finance: CreditCard, service: Wrench, location: MapPin, phone: Phone, email: Mail};
 export type ShowroomIconName = keyof typeof icons;
 
 const menuArtwork: Partial<Record<ShowroomIconName, string>> = {

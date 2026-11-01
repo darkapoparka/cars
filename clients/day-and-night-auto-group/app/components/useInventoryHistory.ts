@@ -74,6 +74,15 @@ export function useInventoryHistory(state: State, controls: Controls, home = fal
     window.addEventListener('popstate', pop);
     return () => {cancelAnimationFrame(frame); window.removeEventListener('popstate', pop); ready.current = false;};
   }, []);
+  // Auxiliary modes share the same entry as the live Buy refinements.
+  return (name: string, value: string | null) => {
+    const url = new URL(location.href);
+    for (const flag of ['filters', 'sort', 'open']) url.searchParams.delete(flag);
+    if (value === null) url.searchParams.delete(name); else url.searchParams.set(name, value);
+    const nextEntry = `${url.pathname}${inventorySearch(url.search, state)}`;
+    entry.current = nextEntry;
+    history.replaceState({...applicationHistoryState(history.state), cars24Inventory: {version: 1, entry: nextEntry, ...state}}, '', `${nextEntry}${url.hash}`);
+  };
 }
 
 /** Attach the originating list to the detail's history entry, including on reload. */

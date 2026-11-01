@@ -1,26 +1,24 @@
 import {NextResponse, type NextRequest} from 'next/server';
-import {dealer} from './lib/dealer-config';
-import {resolveLocale} from './lib/locale-policy';
-import {withoutMount} from './lib/paths';
+import {proxy as originalProxy} from './cars-original-proxy';
+import {basePath} from './lib/paths';
 
-/** The URL wins over preferences; disabled cookies can never create redirect loops. */
+export const config = {matcher: ['/((?!_next|.*\\..*).*)']};
+
 export function proxy(request: NextRequest) {
-  if (!['GET', 'HEAD'].includes(request.method)) {
-    return new NextResponse('This preview does not accept submissions.', {status: 405, headers: {Allow: 'GET, HEAD'}});
+  const response = originalProxy(request);
+  const forwarded = new Headers(request.headers);
+  for (const name of (response.headers.get('x-middleware-override-headers') ?? '').split(',').filter(Boolean)) {
+    const value = response.headers.get('x-middleware-request-' + name);
+    if (value === null) forwarded.delete(name); else forwarded.set(name, value);
   }
-  const {locale, redirectPath} = resolveLocale(
-    withoutMount(request.nextUrl.pathname), request.cookies.get('cars-app-locale')?.value, dealer,
-  );
-  if (redirectPath !== null) {
-    const url = request.nextUrl.clone();
-    url.pathname = redirectPath;
-    return NextResponse.redirect(url);
+  const base = basePath || request.nextUrl.basePath;
+  const pathname = request.nextUrl.pathname;
+  forwarded.set('x-cars-public-path', !base || pathname === base || pathname.startsWith(base + '/') ? pathname : base + pathname);
+  const protocol = request.headers.get('x-forwarded-proto') === 'https' ? 'https:' : request.nextUrl.protocol;
+  forwarded.set('x-cars-public-origin', protocol + '//' + (request.headers.get('host') || request.nextUrl.host));
+  const overrides = NextResponse.next({request: {headers: forwarded}});
+  for (const [name, value] of overrides.headers) {
+    if (name === 'x-middleware-override-headers' || name.startsWith('x-middleware-request-')) response.headers.set(name, value);
   }
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set('x-cars-app-locale', locale);
-  const response = NextResponse.next({request: {headers: requestHeaders}});
-  response.cookies.set('cars-app-locale', locale, {path: '/', sameSite: 'lax', secure: request.nextUrl.protocol === 'https:', maxAge: 31536000});
-  response.headers.set('Cache-Control', 'private, no-store');
   return response;
 }
-export const config = {matcher: ['/((?!_next|.*\\..*).*)']};

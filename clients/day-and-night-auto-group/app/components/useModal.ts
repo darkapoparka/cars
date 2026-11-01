@@ -31,11 +31,13 @@ function isolateBackground(panel: HTMLElement, id: string) {
 }
 
 /** A shared, stack-safe modal boundary for keyboard, history and scroll behavior. */
-export function useModal(active: boolean, onClose: () => void, options: {history?: boolean} = {}) {
+export function useModal(active: boolean, onClose: () => void, options: {history?: boolean; onBack?: () => boolean} = {}) {
   const panel = useRef<HTMLDivElement>(null);
   const close = useRef(onClose);
+  const back = useRef(options.onBack);
   const manageHistory = options.history !== false;
   useLayoutEffect(() => {close.current = onClose;}, [onClose]);
+  useLayoutEffect(() => {back.current = options.onBack;}, [options.onBack]);
   useLayoutEffect(() => {
     if (!active) return;
     const id = `cars24-modal-${++sequence}`;
@@ -54,7 +56,11 @@ export function useModal(active: boolean, onClose: () => void, options: {history
     panel.current?.focus({preventScroll: true});
     const isTop = () => openModals.at(-1) === id;
     function popstate() {
-      if (manageHistory && isTop() && history.state?.cars24Modal !== id) close.current();
+      if (manageHistory && isTop() && history.state?.cars24Modal !== id) {
+        if (location.href === initialUrl && back.current?.()) {
+          history.pushState({...history.state, cars24Modal: id}, '');
+        } else close.current();
+      }
     }
     function keydown(event: KeyboardEvent) {
       if (!isTop() || event.defaultPrevented) return;

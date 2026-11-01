@@ -15,7 +15,7 @@ type Props = {
   flagSrc?: string;
   selected?: boolean;
   pressed?: boolean;
-  tone?: 'default' | 'soft' | 'grey';
+  tone?: 'default' | 'soft' | 'grey' | 'white';
   onDark?: boolean;
 } & ({href: string; onClick?: never} | {href?: never; onClick: () => void});
 
@@ -23,7 +23,7 @@ type Props = {
 export default function FilterPill({label, mobileLabel, icon, flagSrc, selected = false, pressed, tone = 'default', onDark = false, href, onClick}: Props) {
   const tx = useCopy();
 
-  const content = <span {...stylex.props(pill.surface, tone !== 'default' && pill.soft, tone === 'grey' && pill.grey, (pressed ?? selected) && pill.selected, onDark && pill.onDark, onDark && (pressed ?? selected) && pill.selectedOnDark)}>
+  const content = <span {...stylex.props(pill.surface, tone !== 'default' && pill.soft, tone === 'grey' && pill.grey, tone === 'white' && pill.white, (pressed ?? selected) && pill.selected, onDark && pill.onDark, onDark && (pressed ?? selected) && pill.selectedOnDark)}>
     {flagSrc ? <img src={assetPath(flagSrc)} width={20} height={15} alt="" aria-hidden="true" draggable={false} {...stylex.props(s.flag)}/> : null}
     {icon === 'filter' ? <SlidersHorizontal size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : icon === 'sort' ? <ArrowUpDown size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : null}
     {mobileLabel ? <><span {...stylex.props(s.wideLabel)}>{tx(label)}</span><span {...stylex.props(s.mobileLabel)}>{tx(mobileLabel)}</span></> : <span>{tx(label)}</span>}

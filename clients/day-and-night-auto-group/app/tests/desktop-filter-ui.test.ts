@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {describe, it} from 'node:test';
 import {clearDesktopMake, desktopBodyTypes, desktopBodyValue, desktopFilterCount, toggleDesktopBody} from '../lib/desktop-filter-ui';
 import {emptyFilters, matchesInventory} from '../lib/inventory-filters';
-import {vehicles} from '../lib/data';
+import {demoVehicles as vehicles} from '../lib/fixtures/demo-vehicles';
 
 describe('desktop make removal', () => {
   it('removes the make and all its model refinements while preserving independent criteria', () => {

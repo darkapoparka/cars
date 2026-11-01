@@ -62,13 +62,14 @@ export const showroom = {
   navigation: [
     {href: '/', label: 'Home', icon: 'home'},
     {href: '/cars', label: 'Cars', icon: 'cars'},
-    {href: '/service', label: 'Services', icon: 'service'},
+    {href: '/services', label: 'Services', icon: 'service'},
     {href: '/more', label: 'Menu', icon: 'more'},
   ],
   menu: [
     {label: 'Cars', items: [
       {href: '/cars', label: 'View cars', icon: 'cars', primary: true},
       {href: '/saved', label: 'Saved cars', icon: 'saved'},
+      {href: '/shop', label: 'Shop', icon: 'shop'},
     ]},
     {label: 'Services', items: [
       {href: '/sell', label: 'Sell or part-exchange', icon: 'sell'},

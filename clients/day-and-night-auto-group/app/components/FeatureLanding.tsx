@@ -4,7 +4,6 @@ import {ClipboardCheck, Heart, Search} from 'lucide-react';
 import {useRouter} from '@/lib/navigation';
 import {useCopy} from '@/lib/locale';
 import * as stylex from '@stylexjs/stylex';
-import DiscoveryHeader from '@/components/DiscoveryHeader';
 import PageHeader from '@/components/PageHeader';
 import IconButton from '@/components/IconButton';
 import ShowroomBanner, {ShowroomBannerSkeleton} from '@/components/ShowroomBanner';
@@ -63,7 +62,6 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
       : serviceSearch ? <><ServiceSearchField state={serviceSearch} onDark desktopHero/><ServiceHeroControls searchState={serviceSearch}/></> : null;
   return <div {...stylex.props(s.screen)}>
     {alternative ? <div {...stylex.props(s.alternativeHeader)}><PageHeader compact showBack={kind !== 'service'} title={tx(current.mobileTitle).replace(/\.$/, '')} backHref="/services" backLabel="Back to services" action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/></div> : null}
-    <div {...stylex.props(s.discovery, alternative && s.alternativeDiscovery)}><DiscoveryHeader active={kind} hideMobileIdentity /></div>
     <DealerMobileBanner mobileCard={alternative} controlOnly={alternative} title={current.mobileTitle} description={current.mobileCopy}>
       {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark plainOnMobile={alternative}/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry plainOnMobile={alternative} expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : alternative ? <SellCarEntry expanded={sellIntent !== null} onClick={() => start()}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
     </DealerMobileBanner>
@@ -79,8 +77,6 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
 const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 'calc(84px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
   alternativeHeader: {display: {[media.mobile]: 'contents', default: 'none'}},
-  discovery: {display: 'contents'},
-  alternativeDiscovery: {display: {[media.mobile]: 'none', default: 'contents'}},
   alternativeContent: {paddingTop: {[media.mobile]: 0, default: 8}, borderTopLeftRadius: {[media.mobile]: 0, default: 32}, borderTopRightRadius: {[media.mobile]: 0, default: 32}},
   // Keep the first row's margin inside every mobile landing panel.
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: {[media.mobile]: 0, default: 8}, display: {[media.mobile]: 'flow-root', default: 'block'}},

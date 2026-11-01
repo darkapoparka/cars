@@ -1,7 +1,7 @@
 'use client';
 
 import {createContext, useContext, type ReactNode} from 'react';
-export {isHomeAlternative, primaryHomePath, homeAlternativeHref} from './home-paths';
+export {isHomeAlternative, primaryHomePath, homeAlternativeHref, isServicesRoute} from './home-paths';
 
 const AlternativeHomeContext = createContext(false);
 export function HomeAlternativeProvider({enabled, children}: {enabled: boolean; children: ReactNode}) {

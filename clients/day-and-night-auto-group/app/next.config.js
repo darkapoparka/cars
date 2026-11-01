@@ -8,6 +8,7 @@ const remotePatterns = origins.map(origin => {const url = new URL(origin); retur
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  outputFileTracingRoot: __dirname,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   distDir: process.env.NEXT_DIST_DIR || '.next',
   devIndicators: false,

@@ -22,7 +22,12 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [details, setDetails] = useState<string>(service ? tx(service.name) : '');
-  const panel = useModal(true, onClose);
+  const [draftSubject, setDraftSubject] = useState<string | null>(null);
+  const panel = useModal(true, onClose, {onBack: () => {
+    if (view === 'draft') {changeView('enquiry'); return true;}
+    if (view === 'enquiry' && service) {changeView('details'); return true;}
+    return false;
+  }});
   const body = useRef<HTMLDivElement>(null);
   const titleId = useId();
   const formId = useId();
@@ -33,6 +38,7 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
   const subject = [`${make.trim()} ${model.trim()}`, serviceName, notes === serviceName ? '' : notes].filter(Boolean).join('\n');
 
   function changeView(next: View) {
+    if (next === 'draft') setDraftSubject(subject);
     setView(next);
     body.current?.scrollTo({top: 0, behavior: 'instant'});
     panel.current?.focus({preventScroll: true});
@@ -58,7 +64,8 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
             <label {...stylex.props(s.label)}>{tx('Model')}<input required maxLength={100} value={model} onChange={event => setModel(event.target.value)} autoComplete="off" {...stylex.props(s.input)}/></label>
             <label {...stylex.props(s.label)}>{tx('Year, mileage and what you need')}<textarea rows={4} maxLength={2000} value={details} onChange={event => setDetails(event.target.value)} {...stylex.props(s.input, s.textarea)}/></label>
           </form>
-        </> : <DealerEnquiryDraft vehicleTitle={subject}/>}
+        </> : null}
+        {draftSubject !== null ? <div hidden={view !== 'draft'}><DealerEnquiryDraft key={draftSubject} vehicleTitle={draftSubject}/></div> : null}
       </div>
       {view !== 'draft' ? <footer {...stylex.props(s.footer)}>
         <p {...stylex.props(s.note)}>{tx('Service availability, prices and terms must be confirmed directly with the dealer.')}</p>

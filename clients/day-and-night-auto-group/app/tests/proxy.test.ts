@@ -39,3 +39,23 @@ it('keeps this preview non-submitting while accepting HEAD requests', () => {
   }
   assert.equal(proxy(new NextRequest('https://example.test/en', {method: 'HEAD'})).status, 200);
 });
+it('forwards the standalone App path, current origin and trusted locale together', () => {
+  const response = proxy(new NextRequest('https://example.test/bg/cars', {headers: {'x-cars-public-path': '/untrusted', 'x-cars-public-origin': 'https://untrusted.test'}}));
+  assert.equal(response.headers.get('x-middleware-request-x-cars-public-path'), '/bg/cars');
+  assert.equal(response.headers.get('x-middleware-request-x-cars-public-origin'), 'https://example.test');
+  assert.equal(response.headers.get('x-middleware-request-x-cars-app-locale'), 'bg');
+});
+it('retains the actual configured mount in public App paths', () => {
+  const request = new NextRequest('https://example.test/variant-4/bg/cars', {nextConfig: {basePath: '/variant-4'}});
+  const response = proxy(request);
+  assert.equal(response.headers.get('x-middleware-request-x-cars-public-path'), '/variant-4/bg/cars');
+  assert.equal(response.headers.get('x-middleware-request-x-cars-public-origin'), 'https://example.test');
+});
+it('retains the local preview origin and port', () => {
+  const response = proxy(new NextRequest('http://localhost:6473/bg/cars', {headers: {host: '127.0.0.1:6473'}}));
+  assert.equal(response.headers.get('x-middleware-request-x-cars-public-origin'), 'http://127.0.0.1:6473');
+});
+it('uses the public host and HTTPS protocol behind the deployment proxy', () => {
+  const response = proxy(new NextRequest('http://localhost:3000/bg/cars', {headers: {host: 'dn-client-app.vercel.app', 'x-forwarded-proto': 'https'}}));
+  assert.equal(response.headers.get('x-middleware-request-x-cars-public-origin'), 'https://dn-client-app.vercel.app');
+});

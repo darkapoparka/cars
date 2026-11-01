@@ -1,14 +1,17 @@
+import {dealerShareMetadata} from "../../../lib/cars-dealer-share";
 import type { Metadata } from 'next';
 import InventoryClient from '@/components/InventoryClient';
 import {readInventorySearch} from '@/lib/inventory-search';
 import {getCopy} from '@/lib/locale-server';
+import {readCarsPurpose} from '@/lib/rental-enquiry';
 
-export async function generateMetadata(): Promise<Metadata> {
+async function carsOriginalGenerateMetadata(): Promise<Metadata> {
   const tx = await getCopy();
   return {title: tx('Our cars')};
 }
 
 type CarsSearchParams = {
+  purpose?: string | string[];
   emiMax?: string | string[];
   q?: string | string[];
   brand?: string | string[];
@@ -36,6 +39,7 @@ export default async function CarsPage({ searchParams }: { searchParams: Promise
   return (
     <InventoryClient
       key={JSON.stringify(params)}
+      initialPurpose={readCarsPurpose(first(params.purpose))}
       initialEmiMax={state.emiMax}
       initialQuery={state.query}
       initialFilters={state.filters}
@@ -44,4 +48,8 @@ export default async function CarsPage({ searchParams }: { searchParams: Promise
       initialOpen={first(params.open).toUpperCase() || null}
     />
   );
+}
+
+export async function generateMetadata(...args: Parameters<typeof carsOriginalGenerateMetadata>) {
+  return dealerShareMetadata(carsOriginalGenerateMetadata(...args));
 }

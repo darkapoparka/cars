@@ -124,19 +124,19 @@ export function MobileAlternativeDiscovery() {
 export function MobileAlternativeDock({pathname}: {pathname: string}) {
   const tx = useCopy();
   return <nav data-alternative-dock aria-label={tx('App navigation')} {...stylex.props(compactDock.root, s.phoneDock)}>{navigation.map(item => {
-    const active = item.href === '/' ? pathname === '/' : item.href === '/services' ? ['/services', '/sell', '/finance', '/service'].includes(pathname) : item.href === '/more' ? pathname === '/more' || pathname === '/saved' : pathname === item.href;
+    const active = item.href === '/' ? pathname === '/' : item.href === '/services' ? ['/services', '/sell', '/finance', '/service'].includes(pathname) : item.href === '/more' ? ['/more', '/saved', '/shop'].includes(pathname) : pathname === item.href;
     return <Link key={item.href} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active ? 'page' : undefined} {...stylex.props(compactDock.link, active && compactDock.active)}><ShowroomIcon dock name={item.icon} active={active}/></Link>;
   })}</nav>;
 }
 
-export function MobileAlternativeServices() {
+export function MobileAlternativeServices({fullPage = false}: {fullPage?: boolean} = {}) {
   const tx = useCopy();
-  return <><div {...stylex.props(s.phoneOnly, s.serviceScreen)}><PageHeader compact showBack={false} title={tx('Services')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/><main data-alternative-services {...stylex.props(s.services)}>
+  return <><div {...stylex.props(s.phoneOnly, fullPage && s.fullPage, s.serviceScreen)}><PageHeader compact showBack={false} title={tx('Services')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/><main data-services-hub data-alternative-services {...stylex.props(s.services, fullPage && s.fullPageServices)}>
     <nav aria-label={tx('Car services')} {...stylex.props(s.serviceList)}>{services.map(item => <Link key={item.href} href={item.href} {...stylex.props(s.service)}>
       <img src={assetPath(item.image)} width={52} height={52} alt="" {...stylex.props(s.serviceImage)}/>
       <span {...stylex.props(s.serviceCopy)}><span {...stylex.props(s.serviceTitleRow)}><span {...stylex.props(s.serviceTitle)}>{tx(item.title).replace(/\.$/, '')}</span><ArrowRight size={16} aria-hidden="true" {...stylex.props(s.serviceArrow)}/></span><span {...stylex.props(s.serviceDescription)}>{tx(item.copy)}</span></span>
     </Link>)}</nav>
-  </main></div><div {...stylex.props(s.wideOnly)}><FeatureLanding kind="service"/></div></>;
+  </main></div>{!fullPage?<div {...stylex.props(s.wideOnly)}><FeatureLanding kind="service"/></div>:null}</>;
 }
 
 const s = stylex.create({
@@ -171,6 +171,8 @@ const s = stylex.create({
   pickSurface: {borderWidth: 0, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
   phoneDock: {display: {[media.mobile]: 'grid', default: 'none'}},
   serviceScreen: {minHeight: '100svh'},
+  fullPage: {display: 'block'},
+  fullPageServices: {maxWidth: 720, marginInline: 'auto'},
   services: {padding: '12px 12px 32px', color: $.ink},
   serviceList: {display: 'grid', gap: 10},
   service: {display: 'grid', gridTemplateColumns: '52px minmax(0,1fr)', alignItems: 'center', gap: 12, minHeight: 92, padding: '14px', borderRadius: 20, color: $.ink, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, outlineOffset: -3},

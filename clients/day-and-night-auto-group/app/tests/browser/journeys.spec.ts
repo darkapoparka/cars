@@ -10,6 +10,91 @@ for (const locale of locales) for (const variant of ['', '/2']) {
     for (const section of ['', '/cars', '/saved', '/sell', '/finance', '/service']) await open(page, locale + variant + section);
   });
 }
+test('Rental dates validate and survive review, Back and reopening', async ({page}) => {
+  const locale = locales.includes('en') ? 'en' : locales[0];
+  const copy = locale === 'bg'
+    ? {plan: 'Планирай наем', pickup: 'Вземане', returning: 'Връщане', preference: 'Предпочитан автомобил', review: 'Прегледайте запитването', close: 'Затвори запитването за наем'}
+    : {plan: 'Plan your rental', pickup: 'Pick-up date', returning: 'Return date', preference: 'Vehicle preference', review: 'Review enquiry', close: 'Close rental enquiry'};
+  await open(page, locale + '/cars?purpose=rent&filters=1&sort=1&open=BRAND');
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect.poll(() => page.locator('body').evaluate(body => body.style.overflow)).not.toBe('hidden');
+  await page.getByRole('button', {name: copy.plan, exact: true}).click();
+  const sheet = page.locator('[data-rental-sheet]');
+  await sheet.getByRole('button', {name: copy.review, exact: true}).click();
+  await expect(sheet).toHaveAttribute('data-rental-view', 'dates');
+  const today = await sheet.getByLabel(copy.pickup, {exact: true}).getAttribute('min');
+  const day = (offset: number) => {const date = new Date(today + 'T00:00:00Z'); date.setUTCDate(date.getUTCDate() + offset); return date.toISOString().slice(0, 10);};
+  await sheet.getByLabel(copy.pickup, {exact: true}).fill(day(5));
+  await sheet.getByLabel(copy.returning, {exact: true}).fill(day(3));
+  await sheet.getByRole('button', {name: copy.review, exact: true}).click();
+  await expect(sheet).toHaveAttribute('data-rental-view', 'dates');
+  await sheet.getByLabel(copy.returning, {exact: true}).fill(day(8));
+  await sheet.getByLabel(copy.preference, {exact: true}).fill('BMW X3');
+  await sheet.getByRole('button', {name: copy.review, exact: true}).click();
+  await expect(sheet).toHaveAttribute('data-rental-view', 'review');
+  await expect(sheet.locator('a[href^="tel:"]')).toHaveAttribute('href', 'tel:' + dealer.phoneE164);
+  await page.goBack();
+  await expect(sheet).toHaveAttribute('data-rental-view', 'dates');
+  await expect(sheet.getByLabel(copy.pickup, {exact: true})).toHaveValue(day(5));
+  await sheet.getByRole('button', {name: copy.close, exact: true}).click();
+  await page.getByRole('button', {name: copy.plan, exact: true}).click();
+  await expect(sheet.getByLabel(copy.preference, {exact: true})).toHaveValue('BMW X3');
+});
+
+test('Buy sorting remains portable after switching out of a direct Rent URL', async ({page, viewport}) => {
+  test.skip(!viewport || viewport.width >= 768 || !vehicles.some(vehicle => vehicle.make === 'BMW'), 'Requires phone sorting and stocked BMW vehicles.');
+  const locale = locales.includes('en') ? 'en' : locales[0];
+  const buy = locale === 'bg' ? 'Купи' : 'Buy', rent = locale === 'bg' ? 'Наеми' : 'Rent';
+  await open(page, locale + '/cars?purpose=rent&filters=1&campaign=owner&brand=BMW&order=price-asc');
+  await page.getByRole('button', {name: buy, exact: true}).click();
+  await page.locator('[data-inventory-sort-action]').click();
+  await page.getByRole('radio', {name: locale === 'bg' ? 'Цена: От висока към ниска' : 'Price: High to low', exact: true}).click();
+  await page.getByRole('button', {name: rent, exact: true}).click();
+  await page.getByRole('button', {name: buy, exact: true}).click();
+  await expect(page).toHaveURL(/order=price-desc/);
+  await expect(page).toHaveURL(/campaign=owner/);
+  await expect(page).not.toHaveURL(/filters=1/);
+  await page.reload();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  const prices = await page.locator('article[data-price]').evaluateAll(cards => cards.map(card => Number(card.getAttribute('data-price'))));
+  expect(prices.length).toBeGreaterThan(0);
+  expect(prices).toEqual([...prices].sort((a, b) => b - a));
+});
+
+test('service drafts survive Back and refresh only when vehicle details change', async ({page}) => {
+  const locale = locales.includes('en') ? 'en' : locales[0];
+  const labels = locale === 'bg'
+    ? {enquire: 'Запитване', make: 'Марка', model: 'Модел', prepare: 'Подготви запитване', back: 'Към запитването', draft: 'Чернова на запитването'}
+    : {enquire: 'Enquire', make: 'Make', model: 'Model', prepare: 'Prepare enquiry', back: 'Back to enquiry', draft: 'Your enquiry draft'};
+  await open(page, locale + '/service');
+  await page.locator('[data-service-card="diagnostics"]').click();
+  const sheet = page.locator('[data-service-detail-sheet]');
+  await sheet.getByRole('button', {name: labels.enquire, exact: true}).click();
+  await sheet.getByLabel(labels.make, {exact: true}).fill('BMW');
+  await sheet.getByLabel(labels.model, {exact: true}).fill('X3');
+  await sheet.getByRole('button', {name: labels.prepare, exact: true}).click();
+  const draft = sheet.getByLabel(labels.draft, {exact: true});
+  await draft.fill('My edited enquiry');
+  await sheet.getByRole('button', {name: labels.back, exact: true}).click();
+  await sheet.getByRole('button', {name: labels.prepare, exact: true}).click();
+  await expect(draft).toHaveValue('My edited enquiry');
+  await page.goBack();
+  await expect(sheet).toHaveAttribute('data-service-view', 'enquiry');
+  await expect(sheet.getByLabel(labels.make, {exact: true})).toHaveValue('BMW');
+  await expect(sheet.getByLabel(labels.model, {exact: true})).toHaveValue('X3');
+  await sheet.getByLabel(labels.model, {exact: true}).fill('X5');
+  await sheet.getByRole('button', {name: labels.prepare, exact: true}).click();
+  await expect(draft).toHaveValue(/BMW X5/);
+  await expect(draft).not.toHaveValue('My edited enquiry');
+  for (const view of ['enquiry', 'details']) {
+    await page.goBack();
+    await expect(sheet).toHaveAttribute('data-service-view', view);
+  }
+  await page.goBack();
+  await expect(sheet).toHaveCount(0);
+  await expect.poll(() => page.locator('body').evaluate(body => body.style.overflow)).not.toBe('hidden');
+});
+
 test('sorting survives reload without mutating the source catalogue', async ({page}) => {
   await open(page, locales[0] + '/cars?order=price-asc');
   const prices = await page.locator('article[data-price]').evaluateAll(cards => cards.map(card => Number(card.getAttribute('data-price'))).filter(price => price > 0));

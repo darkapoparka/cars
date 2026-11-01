@@ -1,4 +1,4 @@
 import {redirect} from 'next/navigation';
 import {dealer} from '@/lib/dealer-config';
-import {browserPath} from '@/lib/paths';
-export default function EntryPage() { redirect(browserPath('/', dealer.defaultLocale)); }
+import {localePath} from '@/lib/paths';
+export default function EntryPage() { redirect(localePath('/', dealer.defaultLocale)); }

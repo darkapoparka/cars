@@ -40,7 +40,9 @@
     "lib/**/*.tsx",
     "proxy.ts",
     "playwright.config.ts",
-    "tests/browser/**/*.ts"
+    "tests/browser/**/*.ts",
+    ".next-local-dev/types/**/*.ts",
+    ".next-local-dev/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",

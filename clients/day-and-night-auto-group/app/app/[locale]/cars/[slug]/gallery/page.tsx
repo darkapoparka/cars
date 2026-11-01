@@ -1,3 +1,4 @@
+import {dealerShareMetadata} from "../../../../../lib/cars-dealer-share";
 import {displayMake} from '@/lib/inventory-labels';
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
@@ -7,7 +8,7 @@ import {getVehicle, vehicles} from '@/lib/data';
 import type {GalleryCategory} from '@/lib/vehicle-gallery';
 
 export function generateStaticParams() {return vehicles.map(vehicle => ({slug: vehicle.slug}));}
-export async function generateMetadata({params}: {params: Promise<{slug: string}>}): Promise<Metadata> {
+async function carsOriginalGenerateMetadata({params}: {params: Promise<{slug: string}>}): Promise<Metadata> {
   const {slug} = await params;
   const vehicle = getVehicle(slug);
   return {title: vehicle ? `${displayMake(vehicle.make)} ${vehicle.model} photos` : 'Vehicle photos'};
@@ -20,4 +21,8 @@ export default async function GalleryPage({params, searchParams}: {params: Promi
   const category = Array.isArray(query.category) ? query.category[0] : query.category;
   const initialCategory: GalleryCategory = category === 'Interiors' || category === 'Features' ? category : 'Exteriors';
   return <VehicleGallery key={slug} vehicle={vehicle} initialCategory={initialCategory} capturedPhotos={getReferenceVehicleDetail(slug)?.gallery} />;
+}
+
+export async function generateMetadata(...args: Parameters<typeof carsOriginalGenerateMetadata>) {
+  return dealerShareMetadata(carsOriginalGenerateMetadata(...args));
 }

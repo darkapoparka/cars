@@ -8,6 +8,7 @@ export const pillStyles = stylex.create({
   surface: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: {[media.mobile]: 6, default: 5}, minHeight: {[media.mobile]: 40, default: 36}, paddingInline: {[media.mobile]: 12, default: 8}, borderWidth: 0, borderRadius: 9999, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
   soft: {fontSize: {[media.mobile]: 15, default: $.controlFontSize}, fontWeight: 400},
   grey: {backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
+  white: {backgroundColor: {default: $.surface, ':hover': $.rail}},
   selected: {color: '#fff', borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark}},
   onDark: {color: $.ink, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt}},
   selectedOnDark: {color: '#fff', borderWidth: 1, borderStyle: 'solid', borderColor: '#fff', backgroundColor: {default: $.ink, ':hover': $.violetDark}},
