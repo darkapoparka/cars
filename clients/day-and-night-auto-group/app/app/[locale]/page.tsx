@@ -59,7 +59,7 @@ export default function HomePage() {
     {alternative ? <MobileAlternativeHero/> : null}
     <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content)}>
       {alternative ? <MobileAlternativeDiscovery/> : null}
-      <div {...stylex.props(s.contents, alternative && s.hideAlternativePhone)}><BrandRow showTitle={false} /></div>
+      {alternative ? <div {...stylex.props(s.contents,s.hideAlternativePhone)}><BrandRow showTitle={false}/></div> : null}
       <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers, alternative && s.hideAlternativeOffers)}><ShowroomHighlights /></section>
       <section aria-label={tx('Available cars')}>
         <div {...stylex.props(s.feed, s.firstFeed, alternative && s.alternativeFeed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile mobileTile={!alternative} showDiscount={false} />)}</div>

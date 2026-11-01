@@ -128,7 +128,7 @@ for (const variant of ['', '/2']) {
     await clear.focus();
     await page.keyboard.press('Enter');
     await expect(rail.locator('[data-mobile-applied-filters]')).toHaveCount(0);
-    await expect(rail.getByRole('button', {name: 'Brand', exact: true})).toBeFocused();
+    await expect(rail.getByRole('button', {name: 'Filter', exact: true})).toBeFocused();
   });
 }
 test('vehicle navigation returns to the exact filtered collection', async ({page}) => {
