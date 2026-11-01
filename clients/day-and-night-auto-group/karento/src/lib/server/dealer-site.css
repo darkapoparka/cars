@@ -1,0 +1,607 @@
+/* Preserve the reference styling; make its existing menus keyboard-accessible. */
+/* Product detail: shared Shop breadcrumb treatment and a contained buy box. */
+.karento-product-breadcrumb > .container {
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
+  padding-bottom: 32px;
+}
+.karento-product-breadcrumb .breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 12px;
+  background: var(--bs-background-card);
+  text-align: center;
+}
+.karento-product-breadcrumb .breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 0;
+}
+.karento-product-breadcrumb .breadcrumbs li .arrow-right {
+  position: static;
+  display: flex;
+  flex-shrink: 0;
+}
+.karento-product-buybox {
+  padding: 32px;
+  margin-bottom: 0;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 12px;
+  background: var(--bs-background-card);
+}
+.karento-product-buybox .tour-title-main { margin-bottom: 20px; }
+.karento-product-buybox .tour-metas {
+  align-items: stretch;
+  flex-direction: column;
+  gap: 16px;
+}
+.karento-product-buybox .tour-meta-left {
+  gap: 12px;
+  margin-bottom: 0;
+}
+.karento-product-buybox .add-to-cart { margin-right: 0 !important; }
+.karento-product-buybox .button-add-to-cart {
+  flex: 1;
+  justify-content: center;
+}
+.karento-product-buybox .tour-meta-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.karento-product-buybox > .d-flex:last-child {
+  align-items: baseline !important;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .karento-product-buybox { margin-top: 28px; }
+}
+@media (max-width: 575px) {
+  .karento-product-breadcrumb > .container { padding-top: 20px; padding-bottom: 24px; }
+  .karento-product-breadcrumb .breadcrumbs { gap: 8px 12px; padding: 12px; }
+  .karento-product-breadcrumb .breadcrumbs li:last-child {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .karento-product-breadcrumb .text-breadcrumb { overflow-wrap: anywhere; }
+  .karento-product-buybox { padding: 20px; }
+  .karento-product-buybox .tour-meta-left .button-add-to-cart { flex-basis: 100%; }
+}
+
+/* Restrained motion: stable surfaces, immediate content, deliberate controls. */
+html { scroll-behavior: auto; }
+a, button, .btn, .card, [class*="card-"], img, input, select, textarea, span, h4 {
+  transition-property: color, background-color, border-color, box-shadow, opacity;
+  transition-duration: 140ms;
+  transition-timing-function: ease-out;
+}
+.hover-up, .hover-up:hover, a.icon-socials:hover, .mobile-social-icon a:hover {
+  transform: none;
+}
+.mobile-social-icon a:hover { margin-top: 0; }
+.jump, .blur-move, .shape-1, .shape-2, .shape-3, #scrollUp,
+.spinning-coin-fall::before, .sticky-bar.stick {
+  animation: none !important;
+}
+.header.sticky-bar, .header.sticky-bar.stick {
+  position: sticky;
+  top: 0;
+  transform: none;
+  transition: box-shadow 140ms ease-out;
+}
+.card-journey-small:hover, .card-journey-big:hover, .card-news:hover,
+.card-home-link:hover, .card-why-choose-us:hover {
+  box-shadow: none;
+  border-color: var(--bs-neutral-400);
+}
+.karento-static-brands .carouselTicker__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+.karento-static-brands .carouselTicker__item { float: none; margin: 0; }
+.karento-mobile-account { padding: 20px; border-top: 1px solid var(--bs-neutral-200); }
+.karento-mobile-account a { color: var(--bs-neutral-1000); font-weight: 600; }
+.karento-demo-signout {
+  border: 0;
+  background: transparent;
+  padding: 8px 10px;
+  color: var(--bs-neutral-500);
+  font-size: 13px;
+}
+.karento-demo-signout[hidden] { display: none; }
+@media (min-width: 1200px) {
+  .header .container-fluid { padding-inline: clamp(24px, 2.5vw, 60px); }
+  .header .main-header { gap: 20px; min-height: 76px; }
+  .header .main-header .header-left { width: auto; flex: 1; min-width: 0; }
+  .header .main-header .header-left .header-nav { width: auto; flex: 1; min-width: 0; }
+  .header .main-header .header-right { width: auto; min-width: 0; flex: 0 0 auto; gap: 12px; }
+  .header .main-menu { display: flex; align-items: center; flex-wrap: nowrap; }
+  .header .main-menu > li { padding: 0 3px; flex: 0 0 auto; }
+  .header .main-menu > li > a { white-space: nowrap; }
+  .header .main-header .header-right .karento-header-actions {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: 0 !important;
+    white-space: nowrap;
+  }
+  .karento-header-actions > .d-none.d-xxl-inline-block {
+    display: flex !important;
+    align-items: center;
+    margin: 0 !important;
+  }
+  .karento-header-actions .btn-signin { padding-inline: 12px; }
+  .karento-header-actions .btn-mode { width: 44px; height: 44px; padding: 10px; margin: 0 !important; }
+  .karento-header-actions .karento-demo-signout { white-space: nowrap; }
+}
+.karento-dashboard-notice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 8px;
+  color: var(--bs-neutral-500);
+  font-size: 14px;
+}
+.karento-dashboard-notice strong { color: var(--bs-neutral-1000); }
+.dashboard-sidebar-menu a[aria-current="page"] { color: var(--bs-neutral-1000); font-weight: 700; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--bs-neutral-1000);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.karento-how-it-works {
+  padding: 72px 0;
+}
+.karento-process-heading {
+  margin-bottom: 36px;
+}
+.karento-process-label {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.karento-process-heading h3 {
+  margin: 18px 0 12px;
+}
+.karento-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.karento-process-step {
+  min-width: 0;
+  text-align: center;
+}
+.karento-process-image {
+  display: block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.karento-process-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+}
+.karento-process-number {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--bs-brand-2);
+  color: #101010;
+  font-size: 14px;
+  font-weight: 700;
+}
+.karento-process-step h6 {
+  margin: 18px 0 10px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+.karento-process-step h6 a {
+  color: inherit;
+}
+.karento-process-step p {
+  max-width: 28ch;
+  margin: 0 auto;
+}
+.karento-process-step a:focus-visible {
+  outline: 2px solid var(--bs-neutral-1000);
+  outline-offset: 4px;
+}
+@media (max-width: 991px) {
+  .karento-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .karento-how-it-works {
+    padding: 48px 0;
+  }
+  .karento-process-heading {
+    margin-bottom: 28px;
+  }
+  .karento-process-heading h3 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .karento-process-grid {
+    column-gap: 14px;
+  }
+  .karento-process-number {
+    left: 8px;
+    bottom: 8px;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .karento-process-step h6 {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  .karento-process-step p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.section-cta-4[data-home-section-source="index-2"] {
+  padding-top: 64px;
+  padding-bottom: 56px;
+}
+.section-cta-4[data-home-section-source="index-2"] .row.mt-60,
+.section-cta-4[data-home-section-source="index-2"] .karento-system-stats.mt-60 {
+  margin-top: 32px !important;
+}
+.section-cta-4[data-home-section-source="index-2"] .col-lg-4 > .p-5 {
+  padding: 28px !important;
+  gap: 16px !important;
+}
+.section-cta-4[data-home-section-source="index-2"] .row > .col-lg-4.text-center > img {
+  max-height: 300px;
+  width: auto;
+  max-width: 100%;
+}
+.section-cta-4[data-home-section-source="index-2"] .row {
+  align-items: center;
+  row-gap: 24px;
+}
+.karento-system-stats.pt-30.pb-30 {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+.karento-system-stats h3 {
+  font-size: 34px;
+  line-height: 1.2;
+}
+.karento-system-stats .text-lg-bold {
+  font-size: 16px;
+  line-height: 24px;
+}
+.karento-system-stats .justify-content-md-start {
+  justify-content: center !important;
+}
+.karento-system-stats .text-md-start {
+  text-align: center !important;
+}
+.header .main-menu > li:focus-within > .sub-menu,
+.header .main-menu > li:focus-within > .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+  section[data-home-section-source="index-2"] .block-testimonials {
+    padding-inline: 12px;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  section[data-home-section-source="index-2"] .container-testimonials {
+    width: 100%;
+    min-width: 0;
+  }
+  section[data-home-section-source="index-2"] .swiper-group-journey .swiper-slide {
+    width: 100%;
+  }
+  section[data-home-section-source="index-2"] .card-testimonial {
+    max-width: none;
+    padding: 24px;
+  }
+  section[data-home-section-source="index-2"] .card-testimonial .card-top {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .dashboard .flex-fill {
+    min-width: 0;
+  }
+  .dashboard .flex-fill .text-truncate {
+    min-width: 0;
+  }
+  .dashboard .card-header > .d-flex {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .dashboard .card-header .fillter {
+    min-width: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.header .main-menu a:focus-visible,
+.mobile-menu a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* The reference's 170px logo + 150px controls overflow a 320px screen. */
+@media (max-width: 360px) {
+  .header .main-header .header-left .header-logo {
+    min-width: 0;
+    width: 150px;
+    max-width: 150px;
+    flex: 0 0 150px;
+  }
+  .header .main-header .header-left .header-logo img {
+    max-width: 100%;
+  }
+  .header .main-header .header-nav {
+    display: none;
+  }
+  .header .main-header .header-right {
+    min-width: 100px;
+    width: 100px;
+    margin-left: auto;
+  }
+}
+
+/* Solid accent surfaces use the profile's contrast-tested foreground.
+   Neutral and softly tinted surfaces retain the template text colors. */
+body :is(
+  .background-brand-2, .btn.btn-primary:not(:hover), .btn.btn-brand-2, .btn.btn-book,
+  .btn.btn-gray:hover, .btn.btn-gray2:hover, .btn.btn-primary2:hover,
+  .category-link.active, .category-link:hover, .karento-process-number,
+  .burger-icon-2, .close-canvas, .form-subscriber .btn-submit,
+  .card-left .lightning, .card-popular .card-button a:hover,
+  .card-spot .card-button a:hover, .card-news:hover .icon-shape-arrow,
+  .card-home-link:hover .card-icon, .item-quicklinks:hover .item-icon,
+  .swiper-button-prev-style-1:hover, .swiper-button-next-style-1:hover,
+  .card-banner-slide-3 .box-title-top p, .card-banner-slide-3 .box-title-middle h6,
+  .datepicker td.active, .authors-partner-left .item-author
+) {
+  color: var(--dealer-accent-ink, #fff) !important;
+}
+body :is(.btn.btn-brand-2:hover, .btn.btn-signin:hover) {
+  color: var(--dealer-accent-hover-ink, #fff) !important;
+}
+body .btn.btn-primary:not(.background-brand-2):hover {
+  color: var(--bs-neutral-1000) !important;
+}
+body .background-brand-2 :is(.text-dark, [class*="neutral-"]) {
+  color: var(--dealer-accent-ink, #fff) !important;
+}
+body :is(.btn, .card-button a, .icon-shape-arrow, .card-icon, .item-icon,
+  .swiper-button-prev-style-1, .swiper-button-next-style-1) svg,
+body :is(.btn, .card-button a, .icon-shape-arrow, .card-icon, .item-icon,
+  .swiper-button-prev-style-1, .swiper-button-next-style-1) svg [stroke] {
+  stroke: currentColor !important;
+}
+body .btn svg [fill]:not([fill="none"]),
+body .btn.btn-primary2 svg path {
+  fill: currentColor !important;
+}
+body :is(.burger-icon-2, .close-canvas) img {
+  filter: var(--dealer-accent-icon-filter);
+}
+/* Keep the reference's compact 40px card action beside the sale price. */
+body .card-journey-small .card-button { flex: 0 0 auto; }
+body .card-journey-small .card-button .btn { white-space: nowrap; }
+body .card-journey-small .card-price h6 { white-space: nowrap; }
+body .card-journey-small[data-vehicle-id] .card-button .dealer-card-view {
+  background-color: var(--bs-brand-2);
+  border-color: var(--bs-brand-2);
+  border-radius: 8px;
+  color: var(--dealer-accent-ink, #fff) !important;
+}
+body .card-journey-small[data-vehicle-id] .card-button .dealer-card-view:hover {
+  background-color: var(--bs-brand-2-darken);
+  border-color: var(--bs-brand-2-darken);
+  color: var(--dealer-accent-hover-ink, #fff) !important;
+}
+body .card-journey-small[data-vehicle-id] .card-button .dealer-card-view:focus-visible {
+  outline: 2px solid var(--bs-neutral-1000) !important;
+  outline-offset: 3px;
+}
+
+/* Dealer photos and model names vary; keep every vehicle row aligned. */
+body :is(.row, .swiper-wrapper) > :has(> .card-journey-small[data-vehicle-id]) {
+  display: flex;
+}
+body .card-journey-small[data-vehicle-id] {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+body .card-journey-small[data-vehicle-id] .card-image {
+  flex: 0 0 auto;
+  aspect-ratio: 4 / 3;
+}
+body .card-journey-small[data-vehicle-id] .card-image > a:not(.wish) {
+  display: block;
+  height: 100%;
+}
+body .card-journey-small[data-vehicle-id] .card-image img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  max-width: 100%;
+  object-fit: cover;
+}
+body .card-journey-small[data-vehicle-id] .card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+body .card-journey-small[data-vehicle-id] .card-title a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+body .card-journey-small[data-vehicle-id] .card-program {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+body .card-journey-small[data-vehicle-id] .endtime {
+  margin-top: auto;
+}
+body .card-journey-small[data-vehicle-id] .card-info .card-program .card-facitlities {
+  display: block;
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 10px;
+  margin-bottom: 18px;
+}
+body .card-journey-small[data-vehicle-id] .dealer-spec-list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+}
+body .card-journey-small[data-vehicle-id] .dealer-spec {
+  grid-column: span 3;
+  min-width: 0;
+  padding: 3px 4px;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 6px;
+  background: var(--bs-neutral-100);
+  color: var(--bs-neutral-1000);
+}
+body .card-journey-small[data-vehicle-id] .dealer-spec-list[data-secondary-count="3"] .dealer-spec:nth-child(n+3) {
+  grid-column: span 2;
+}
+body .card-journey-small[data-vehicle-id] .dealer-spec-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+body .card-journey-small[data-vehicle-id] .dealer-spec-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+}
+body .card-journey-small[data-vehicle-id] .dealer-spec-icon {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  opacity: .7;
+  background: currentColor;
+  mask: var(--dealer-spec-icon) center / contain no-repeat;
+}
+body [data-spec="mileage"] { --dealer-spec-icon: url('/assets/imgs/template/icons/mile.svg'); }
+body [data-spec="transmission"] { --dealer-spec-icon: url('/assets/imgs/template/icons/automatic.svg'); }
+body [data-spec="year"] { --dealer-spec-icon: url('/assets/imgs/template/icons/calendar.svg'); }
+body [data-spec="fuel"] { --dealer-spec-icon: url('/assets/imgs/template/icons/fuel.svg'); }
+body [data-spec="power"] { --dealer-spec-icon: url('/assets/imgs/template/icons/lightning.svg'); }
+@media (min-width: 992px) and (max-width: 1199px) {
+  body .card-journey-small[data-vehicle-id] .card-info {
+    padding-inline: 10px !important;
+  }
+  body .card-journey-small[data-vehicle-id] .dealer-spec-value {
+    font-size: 12px;
+  }
+  body .card-journey-small[data-vehicle-id] .dealer-spec:nth-child(n+3) {
+    padding-inline: 2px;
+  }
+  body .card-journey-small[data-vehicle-id] .dealer-spec:nth-child(n+3) .dealer-spec-value {
+    gap: 2px;
+  }
+  body .card-journey-small[data-vehicle-id] .dealer-spec:nth-child(n+3) .dealer-spec-icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+body .card-journey-small[data-vehicle-id] .card-info .card-rating .card-right .rating {
+  background-image: none;
+  padding-inline: 14px;
+}
+body .card-testimonial .dealer-review-star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  padding: 4px;
+  background: var(--bs-brand-2);
+}
+body .card-testimonial .card-rate .dealer-review-star img {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  filter: var(--dealer-accent-icon-filter);
+}
+body .item-banner-slide-review .text-primary {
+  color: #fff !important;
+}
+.header-logo img, .mobile-header-logo img, .sidebar-canvas-logo img { width:190px; height:50px; object-fit:contain; }
+.mobile-header-logo img { width:150px; height:40px; }
+footer img[src*=dealer-brand] { width:210px; height:60px; object-fit:contain; }
+.dealer-preview-note { text-align:center; padding:12px 20px; margin:0; }
+body .banner-slide-activity img, body .banner-slide img { object-fit:contain; background:#f2f4f6; }
+.dealer-single-photo .slick-arrow { display:none !important; }
+.dealer-single-photo .banner-slide-activity img { width:100%; height:clamp(220px, 36vw, 480px); object-fit:contain; }

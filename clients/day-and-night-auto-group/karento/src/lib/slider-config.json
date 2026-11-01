@@ -1,0 +1,450 @@
+{
+  ".swiper-group-8": {
+    "slidesPerView": 8,
+    "spaceBetween": 10,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-group-8",
+      "prevEl": ".swiper-button-prev-group-8"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 2,
+        "slidesPerGroup": 1,
+        "spaceBetween": 15
+      },
+      "400": {
+        "slidesPerView": 2
+      },
+      "650": {
+        "slidesPerView": 4
+      },
+      "800": {
+        "slidesPerView": 4
+      },
+      "992": {
+        "slidesPerView": 5
+      },
+      "1199": {
+        "slidesPerView": 6
+      },
+      "1399": {
+        "slidesPerView": 8
+      }
+    }
+  },
+  ".swiper-group-6": {
+    "spaceBetween": 30,
+    "slidesPerView": 6,
+    "slidesPerGroup": 2,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next",
+      "prevEl": ".swiper-button-prev"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "breakpoints": {
+      "350": {
+        "slidesPerView": 1,
+        "slidesPerGroup": 1,
+        "spaceBetween": 15
+      },
+      "400": {
+        "slidesPerView": 2
+      },
+      "800": {
+        "slidesPerView": 3
+      },
+      "1299": {
+        "slidesPerView": 4
+      },
+      "1499": {
+        "slidesPerView": 5
+      },
+      "1599": {
+        "slidesPerView": 6
+      }
+    }
+  },
+  ".swiper-group-5": {
+    "spaceBetween": 30,
+    "slidesPerView": 5,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-group-5",
+      "prevEl": ".swiper-button-prev-group-5"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 1,
+        "slidesPerGroup": 1,
+        "spaceBetween": 15
+      },
+      "400": {
+        "slidesPerView": 2
+      },
+      "800": {
+        "slidesPerView": 3
+      },
+      "1299": {
+        "slidesPerView": 4
+      },
+      "1499": {
+        "slidesPerView": 5
+      },
+      "1599": {
+        "slidesPerView": 5
+      }
+    }
+  },
+  ".swiper-group-4": {
+    "spaceBetween": 30,
+    "slidesPerView": 4,
+    "slidesPerGroup": 2,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next",
+      "prevEl": ".swiper-button-prev"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 1
+      },
+      "350": {
+        "slidesPerView": 1
+      },
+      "500": {
+        "slidesPerView": 2
+      },
+      "800": {
+        "slidesPerView": 3
+      },
+      "1199": {
+        "slidesPerView": 4
+      }
+    },
+    "on": {}
+  },
+  ".swiper-group-3": {
+    "spaceBetween": 30,
+    "slidesPerView": 3,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next",
+      "prevEl": ".swiper-button-prev"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 1
+      },
+      "400": {
+        "slidesPerView": 1
+      },
+      "800": {
+        "slidesPerView": 2
+      },
+      "1199": {
+        "slidesPerView": 3
+      }
+    }
+  },
+  ".swiper-group-2": {
+    "slidesPerView": 2,
+    "spaceBetween": 30,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-2",
+      "prevEl": ".swiper-button-prev-2"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 1
+      },
+      "400": {
+        "slidesPerView": 1
+      },
+      "800": {
+        "slidesPerView": 1
+      },
+      "1199": {
+        "slidesPerView": 2
+      }
+    }
+  },
+  ".swiper-group-1": {
+    "slidesPerView": 1,
+    "spaceBetween": 50,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next",
+      "prevEl": ".swiper-button-prev"
+    },
+    "pagination": {
+      "el": ".swiper-pagination-group-1",
+      "clickable": true
+    },
+    "autoplay": {
+      "delay": 100000
+    }
+  },
+  ".swiper-group-testimonials-1": {
+    "slidesPerView": 1,
+    "spaceBetween": 50,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-group-1",
+      "prevEl": ".swiper-button-prev-group-1"
+    },
+    "pagination": {
+      "el": ".swiper-pagination-testimonials-1",
+      "clickable": true
+    },
+    "autoplay": {
+      "delay": 100000
+    }
+  },
+  ".swiper-group-payment": {
+    "spaceBetween": 10,
+    "slidesPerView": 4,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-payment",
+      "prevEl": ".swiper-button-prev-payment"
+    },
+    "autoplay": {
+      "delay": 5000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 2
+      },
+      "320": {
+        "slidesPerView": 2
+      },
+      "350": {
+        "slidesPerView": 3
+      },
+      "500": {
+        "slidesPerView": 4
+      },
+      "800": {
+        "slidesPerView": 4
+      },
+      "1199": {
+        "slidesPerView": 4
+      }
+    }
+  },
+  ".swiper-group-payment-9": {
+    "spaceBetween": 20,
+    "slidesPerView": 9,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-payment",
+      "prevEl": ".swiper-button-prev-payment"
+    },
+    "autoplay": {
+      "delay": 5000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 2
+      },
+      "320": {
+        "slidesPerView": 3
+      },
+      "450": {
+        "slidesPerView": 3
+      },
+      "575": {
+        "slidesPerView": 5
+      },
+      "650": {
+        "slidesPerView": 6
+      },
+      "800": {
+        "slidesPerView": 7
+      },
+      "1199": {
+        "slidesPerView": 9
+      }
+    }
+  },
+  ".swiper-group-payment-10": {
+    "spaceBetween": 20,
+    "slidesPerView": 10,
+    "slidesPerGroup": 2,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-payment",
+      "prevEl": ".swiper-button-prev-payment"
+    },
+    "autoplay": {
+      "delay": 5000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 2
+      },
+      "320": {
+        "slidesPerView": 3
+      },
+      "450": {
+        "slidesPerView": 3
+      },
+      "575": {
+        "slidesPerView": 5
+      },
+      "650": {
+        "slidesPerView": 6
+      },
+      "800": {
+        "slidesPerView": 8
+      },
+      "1199": {
+        "slidesPerView": 10
+      }
+    }
+  },
+  ".swiper-group-payment-7": {
+    "spaceBetween": 20,
+    "slidesPerView": 7,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-payment",
+      "prevEl": ".swiper-button-prev-payment"
+    },
+    "autoplay": {
+      "delay": 5000
+    },
+    "breakpoints": {
+      "250": {
+        "slidesPerView": 2
+      },
+      "320": {
+        "slidesPerView": 3
+      },
+      "450": {
+        "slidesPerView": 3
+      },
+      "575": {
+        "slidesPerView": 4
+      },
+      "650": {
+        "slidesPerView": 5
+      },
+      "800": {
+        "slidesPerView": 6
+      },
+      "1199": {
+        "slidesPerView": 7
+      }
+    }
+  },
+  ".swiper-group-testimonials": {
+    "spaceBetween": 30,
+    "slidesPerView": 2,
+    "slidesPerGroup": 1,
+    "loop": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next-testimonials",
+      "prevEl": ".swiper-button-prev-testimonials"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "breakpoints": {
+      "350": {
+        "slidesPerView": 1
+      },
+      "400": {
+        "slidesPerView": 1
+      },
+      "1000": {
+        "slidesPerView": 1
+      },
+      "1199": {
+        "slidesPerView": 2
+      }
+    },
+    "on": {}
+  },
+  ".swiper-group-animate": {
+    "spaceBetween": 24,
+    "slidesPerView": "auto",
+    "slidesPerGroup": 1,
+    "loop": true,
+    "speed": 1000,
+    "navigation": {
+      "nextEl": ".swiper-button-next-animate",
+      "prevEl": ".swiper-button-prev-animate"
+    },
+    "autoplay": {
+      "delay": 10000
+    },
+    "on": {},
+    "breakpoints": {
+      "350": {
+        "slidesPerView": 1
+      },
+      "575": {
+        "slidesPerView": 1
+      },
+      "600": {
+        "slidesPerView": "auto"
+      },
+      "1199": {
+        "slidesPerView": "auto"
+      }
+    }
+  },
+  ".swiper-center": {
+    "navigation": {
+      "nextEl": ".swiper-button-next-center",
+      "prevEl": ".swiper-button-prev-center"
+    },
+    "slidesPerView": 2,
+    "centeredSlides": true,
+    "paginationClickable": true,
+    "loop": true,
+    "spaceBetween": 16,
+    "slideToClickedSlide": true
+  },
+  ".swiper-group-center-4": {
+    "navigation": {
+      "nextEl": ".swiper-button-next-center-4",
+      "prevEl": ".swiper-button-prev-center-4"
+    },
+    "slidesPerView": "auto",
+    "watchOverflow": true,
+    "loop": true,
+    "spaceBetween": 18,
+    "slideToClickedSlide": true
+  }
+}

@@ -1,0 +1,396 @@
+@import "./desktop-typography.css";
+@import "./desktop-geometry.css";
+
+/* Desktop refinements share the existing shell, artwork and neutral palette. */
+@media (min-width: 992px) {
+  .main .karento-desktop-account-heading {
+    padding-top: var(--karento-desktop-space-10) !important;
+  }
+  .main .karento-desktop-account-heading h3 {
+    font-size: var(--karento-desktop-page-title-size);
+    line-height: var(--karento-type-page-leading);
+  }
+  .main .dashboard {
+    padding-top: var(--karento-desktop-space-8) !important;
+    padding-bottom: var(--karento-desktop-space-16) !important;
+  }
+  .main .dashboard .karento-dashboard-notice {
+    padding: var(--karento-desktop-space-3) var(--karento-desktop-space-4);
+    border-radius: var(--karento-desktop-control-radius);
+    background: var(--bs-neutral-100);
+    color: var(--bs-neutral-600);
+  }
+  .main .dashboard .user-sidebar {
+    position: sticky;
+    top: 24px;
+    max-height: calc(100dvh - 48px);
+    overflow-y: auto;
+  }
+  .main .dashboard .user-sidebar-header {
+    padding: var(--karento-desktop-space-4);
+  }
+  .main .dashboard .user-sidebar-body {
+    padding: var(--karento-desktop-space-3);
+  }
+  .main .dashboard .dashboard-sidebar-menu li {
+    padding-block: 2px !important;
+  }
+  .main .dashboard .dashboard-sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: var(--karento-desktop-control-height);
+    padding: 10px var(--karento-desktop-space-3);
+    border-radius: var(--karento-desktop-control-radius);
+    color: var(--bs-neutral-600);
+    line-height: var(--karento-type-control-leading);
+  }
+  .main .dashboard .dashboard-sidebar-menu a:hover,
+  .main .dashboard .dashboard-sidebar-menu a[aria-current="page"] {
+    background: var(--bs-neutral-100);
+    color: var(--bs-neutral-1000);
+  }
+  .main .dashboard .card {
+    border-radius: var(--karento-desktop-card-radius);
+  }
+  .main .dashboard .card-header:not(.user-sidebar-header) {
+    padding: var(--karento-desktop-space-4) var(--karento-desktop-panel-padding);
+    border-radius: var(--karento-desktop-card-radius)
+      var(--karento-desktop-card-radius) 0 0;
+    background: var(--bs-neutral-100);
+  }
+  .main .dashboard .card-body:not(.user-sidebar-body) {
+    padding: var(--karento-desktop-panel-padding);
+  }
+  .main .dashboard .table :is(th, td) {
+    padding: var(--karento-desktop-space-3) 14px;
+    line-height: var(--karento-type-meta-leading);
+  }
+  .main .dashboard .table .thead-light th {
+    background: var(--bs-neutral-100);
+    color: var(--bs-neutral-600);
+    font-size: var(--karento-type-meta-size);
+    white-space: nowrap;
+  }
+  .main .dashboard .dropdown-menu {
+    max-height: min(320px, calc(100dvh - 48px));
+    overflow-y: auto;
+    padding: var(--karento-desktop-space-2);
+    border-radius: var(--karento-desktop-control-radius);
+  }
+  .main .dashboard .dropdown-item:hover,
+  .main .dashboard .dropdown-item:focus-visible {
+    background: var(--bs-neutral-100);
+    color: var(--bs-neutral-1000);
+  }
+
+  .main .karento-account-access {
+    padding-top: var(--karento-desktop-space-16) !important;
+    padding-bottom: var(--karento-desktop-section-padding) !important;
+  }
+  .main .karento-account-access .karento-access-panel {
+    padding: var(--karento-desktop-panel-padding) !important;
+    border-radius: var(--karento-desktop-card-radius) !important;
+  }
+  .main .karento-account-access .form-login {
+    margin-top: var(--karento-desktop-space-6) !important;
+  }
+  .main
+    :is(.dashboard, .karento-account-access, .karento-contact-enquiry)
+    :is(input.form-control, select.form-control) {
+    min-height: var(--karento-desktop-control-height);
+    height: var(--karento-desktop-control-height);
+    border-radius: var(--karento-desktop-control-radius);
+  }
+  .main
+    :is(.dashboard, .karento-account-access, .karento-contact-enquiry)
+    textarea.form-control {
+    border-radius: var(--karento-desktop-control-radius);
+  }
+  .main
+    :is(.dashboard, .karento-account-access, .karento-contact-enquiry)
+    .form-control:focus {
+    border-color: var(--bs-neutral-1000);
+    box-shadow: none;
+    outline: 2px solid var(--bs-neutral-1000);
+    outline-offset: 2px;
+  }
+  .main :is(.dashboard, .karento-account-access) .btn-primary {
+    min-height: var(--karento-desktop-control-height);
+    padding: 11px var(--karento-desktop-space-5);
+    border-radius: var(--karento-desktop-control-radius);
+  }
+  .main .karento-page-hero .karento-hero-action {
+    min-height: var(--karento-desktop-control-height);
+    padding: var(--karento-desktop-space-3) var(--karento-desktop-space-5);
+    border-radius: var(--karento-desktop-control-radius);
+  }
+
+  .main .box-content-tour-detail .tour-header {
+    margin-bottom: var(--karento-desktop-space-6) !important;
+  }
+  .main .box-content-tour-detail .tour-header .tour-rate {
+    margin-bottom: var(--karento-desktop-space-3) !important;
+  }
+  .main .box-content-tour-detail .tour-title-main h4 {
+    font-size: var(--karento-type-detail-size);
+    line-height: var(--karento-type-panel-leading);
+  }
+  .main .box-content-tour-detail .tour-header .tour-title-main {
+    margin-bottom: var(--karento-desktop-space-4) !important;
+  }
+  .main .box-content-tour-detail .tour-metas {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--karento-desktop-space-3) var(--karento-desktop-space-6);
+  }
+  .main
+    .box-content-tour-detail
+    .tour-metas
+    :is(.tour-meta-left, .tour-meta-right) {
+    margin-bottom: 0 !important;
+  }
+  .main .box-content-tour-detail .tour-meta-right {
+    display: flex;
+    align-items: center;
+    gap: var(--karento-desktop-space-2);
+  }
+  .main
+    .box-content-tour-detail
+    .group-collapse-expand:not(.karento-detail-accordion) {
+    padding: var(--karento-desktop-space-6);
+    border-radius: var(--karento-desktop-card-radius);
+  }
+  .main
+    .box-content-tour-detail
+    .group-collapse-expand:not(.karento-detail-accordion)
+    .btn-collapse {
+    gap: var(--karento-desktop-space-4);
+    min-height: var(--karento-desktop-control-height);
+    padding-block: var(--karento-desktop-space-2);
+    white-space: normal;
+    text-align: left;
+  }
+  .main .box-content-tour-detail .btn-collapse h6 {
+    margin: 0;
+    font-size: var(--karento-type-panel-size);
+    line-height: var(--karento-type-panel-leading);
+  }
+  .main .box-content-tour-detail .btn-collapse svg {
+    flex-shrink: 0;
+  }
+
+  .main .karento-import-directory {
+    padding-block: var(--karento-desktop-space-12) !important;
+  }
+  .main .karento-import-directory h4 {
+    font-size: var(--karento-desktop-section-title-size);
+    line-height: var(--karento-type-panel-leading);
+  }
+  .main .karento-import-directory .row.mt-60 {
+    margin-top: var(--karento-desktop-space-8) !important;
+  }
+  .main .karento-import-directory .card-contact {
+    height: calc(100% - var(--karento-desktop-grid-gap));
+    padding: var(--karento-desktop-card-padding);
+    border-radius: var(--karento-desktop-card-radius);
+  }
+  .main .karento-import-directory .card-contact .title {
+    font-size: var(--karento-type-card-size);
+    line-height: var(--karento-type-panel-leading);
+  }
+  .main .karento-import-directory .card-contact .card-info {
+    min-width: 0;
+  }
+
+  .main .section-pricing-1 {
+    padding-bottom: var(--karento-desktop-space-16) !important;
+  }
+  .main .membership-heading h3 {
+    display: none;
+  }
+  .main .membership-plan {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .membership-plan > .btn {
+    margin-top: auto;
+  }
+  .main .karento-calculator-hero {
+    padding-bottom: var(--karento-desktop-space-12) !important;
+  }
+  .main .karento-calculator-hero + .section-cta-12 {
+    padding-block: var(--karento-desktop-space-12) !important;
+  }
+  .main .karento-calculator-hero + .section-cta-12 .card-image {
+    margin-bottom: var(--karento-desktop-space-16) !important;
+  }
+
+  .main .karento-faq-topics {
+    padding-bottom: var(--karento-desktop-space-12) !important;
+  }
+  .main .karento-faq-topics h3,
+  .main .section-faqs-2 h2 {
+    font-size: var(--karento-type-faq-group-size);
+    line-height: var(--karento-type-faq-group-leading);
+  }
+  .main .section-faqs-2 {
+    padding-block: var(--karento-desktop-space-12) !important;
+  }
+
+  .main .karento-news-grid > .container > .text-center h3 {
+    font-size: var(--karento-desktop-page-title-size);
+    line-height: var(--karento-type-page-leading);
+  }
+  .main .karento-news-hero {
+    height: var(--karento-desktop-hero-height);
+    min-height: var(--karento-desktop-hero-height);
+    padding-block: var(--karento-desktop-space-8) !important;
+  }
+  .main .karento-news-hero .karento-news-hero-title {
+    font-size: var(--karento-desktop-hero-title-size);
+    line-height: var(--karento-type-hero-leading);
+    margin-block: var(--karento-desktop-space-4) !important;
+  }
+  .main .karento-news-article .section-box {
+    padding-top: var(--karento-desktop-space-16) !important;
+  }
+  .main .karento-news-article .section-box > .container {
+    max-width: none;
+    padding-inline: 0;
+  }
+  .main .karento-news-article .content-detail-post p {
+    line-height: var(--karento-type-prose-leading);
+  }
+
+  .main .box-section-term {
+    padding-bottom: var(--karento-desktop-space-12) !important;
+  }
+  .main .box-section-term .sidebar {
+    position: sticky;
+    top: 24px;
+    max-height: calc(100dvh - 48px);
+    overflow-y: auto;
+    padding: var(--karento-desktop-space-6) !important;
+    border-radius: var(--karento-desktop-card-radius) !important;
+  }
+  .main .box-section-term .content h3 {
+    scroll-margin-top: calc(
+      var(--karento-desktop-space-16) + var(--karento-desktop-space-8)
+    );
+  }
+  .main .box-section-term .content p {
+    line-height: var(--karento-type-prose-leading);
+  }
+
+  .main
+    :is(.dashboard, .karento-account-access, .box-content-tour-detail)
+    :is(a, button):focus-visible {
+    outline: 2px solid var(--bs-neutral-1000);
+    outline-offset: 3px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header .nav-main-menu,
+  .header .main-header .header-right {
+    display: flex;
+  }
+  .header .main-menu > li {
+    padding: 3px;
+  }
+  .header .main-menu > li > :is(a, button) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--karento-desktop-control-height);
+    padding: 10px var(--karento-desktop-space-3);
+    border: 1px solid transparent;
+    border-radius: var(--karento-desktop-pill-radius);
+    line-height: var(--karento-type-nav-leading);
+  }
+  .header .main-menu > li > button {
+    appearance: none;
+    position: relative;
+    background: transparent;
+    color: var(--bs-neutral-1000);
+    font-family: inherit;
+    cursor: pointer;
+    transition-duration: 0.2s;
+  }
+  .header .main-menu > li > button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+  .header .main-menu > li > :is(a, button):hover,
+  .header .main-menu > li > :is(a, button):focus-visible,
+  .header .main-menu > li > :is(a, button)[aria-current="page"],
+  .header .main-menu > .has-children:focus-within > :is(a, button),
+  .header
+    .main-menu
+    > .has-children:has(> .sub-menu a[aria-current="page"])
+    > :is(a, button) {
+    background: var(--bs-neutral-100);
+    color: var(--bs-neutral-1000) !important;
+  }
+  .header .main-menu > li.has-children > :is(a, button) {
+    padding-right: 30px;
+  }
+  .header .main-menu > li.has-children > button::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url(/assets/imgs/template/icons/arrow-down.svg) no-repeat center;
+    opacity: 0.6;
+  }
+  [data-bs-theme="dark"] .header .main-menu > li.has-children > button::after {
+    background-image: url(/assets/imgs/template/icons/arrow-down-white.svg);
+  }
+  .header .main-menu > li.has-children > :is(a, button)::after {
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+  .header .main-menu > li > .sub-menu[hidden] {
+    display: none;
+  }
+  .header .main-menu > li > .sub-menu:not([hidden]) {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .header .main-menu > li > .sub-menu {
+    min-width: 210px;
+    padding: var(--karento-desktop-space-2);
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--karento-desktop-card-radius);
+  }
+  .header .main-menu > li > .sub-menu > li {
+    padding: 2px 0;
+  }
+  .header .main-menu > li > .sub-menu > li > :is(a, button) {
+    min-width: 0;
+    min-height: var(--karento-desktop-control-height);
+    padding: 10px var(--karento-desktop-space-3);
+    border-radius: var(--karento-desktop-control-radius);
+  }
+  .header .main-menu > li > .sub-menu > li > :is(a, button):hover,
+  .header .main-menu > li > .sub-menu > li > :is(a, button):focus-visible,
+  .header
+    .main-menu
+    > li
+    > .sub-menu
+    > li
+    > :is(a, button)[aria-current="page"] {
+    padding: 10px var(--karento-desktop-space-3);
+    background: var(--bs-neutral-100);
+    color: var(--bs-neutral-1000) !important;
+  }
+  .header .karento-header-cta {
+    border-radius: var(--karento-desktop-pill-radius);
+  }
+  .header .karento-menu-toggle {
+    border-radius: 50%;
+  }
+}

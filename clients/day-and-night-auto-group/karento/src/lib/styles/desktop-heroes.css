@@ -1,0 +1,35 @@
+/* Shared photo and compact hero heights. Mobile keeps its own tokens. */
+@media (min-width: 992px) {
+  :root {
+    --karento-desktop-hero-height: 376px;
+    --karento-desktop-hero-compact-height: 160px;
+    --karento-desktop-hero-content-gap: var(--karento-desktop-heading-gap);
+    --karento-desktop-toolbar-content-gap: var(
+      --karento-desktop-heading-gap-compact
+    );
+  }
+
+  html:root .main .desktop-heading-container {
+    padding-top: var(--karento-desktop-space-8) !important;
+  }
+
+  html:root .main .desktop-page-hero {
+    margin-bottom: calc(
+      var(--karento-desktop-pill-height) / 2 +
+        var(--karento-desktop-hero-content-gap)
+    );
+  }
+
+  html:root .main .desktop-hero-content,
+  html:root .main .desktop-content-toolbar + * {
+    margin-top: 0 !important;
+  }
+
+  html:root .main section.desktop-hero-content {
+    padding-top: 0 !important;
+  }
+
+  html:root .main .desktop-content-toolbar {
+    padding-bottom: var(--karento-desktop-toolbar-content-gap) !important;
+  }
+}

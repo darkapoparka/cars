@@ -1,0 +1,46 @@
+[
+  {
+    "name": "New York",
+    "address": "750 7th Avenue, Manhattan, New York, NY 10019, USA",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=750%207th%20Avenue%2C%20Manhattan%2C%20New%20York%2C%20NY%2010019%2C%20USA",
+    "phone": "+1 212 555 0146",
+    "phoneHref": "tel:+1 212 555 0146",
+    "email": "newyork@carento.com",
+    "emailHref": "mailto:newyork@carento.com",
+    "country": "United States",
+    "avatar": "/assets/karento-best/contact-avatars/portrait-01-20261007.webp"
+  },
+  {
+    "name": "Tokyo",
+    "address": "2-11-3 Meguro, Meguro City, Tokyo 153-0063, Japan",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=2-11-3%20Meguro%2C%20Meguro%20City%2C%20Tokyo%20153-0063%2C%20Japan",
+    "phone": "+81 3 3456 7890",
+    "phoneHref": "tel:+81 3 3456 7890",
+    "email": "tokyo@carento.com",
+    "emailHref": "mailto:tokyo@carento.com",
+    "country": "Japan",
+    "avatar": "/assets/karento-best/contact-avatars/portrait-04-20261007.webp"
+  },
+  {
+    "name": "Paris",
+    "address": "22 Rue de la Paix, 75002 Paris, France",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=22%20Rue%20de%20la%20Paix%2C%2075002%20Paris%2C%20France",
+    "phone": "+33 1 42 68 53 00",
+    "phoneHref": "tel:+33 1 42 68 53 00",
+    "email": "paris@carento.com",
+    "emailHref": "mailto:paris@carento.com",
+    "country": "France",
+    "avatar": "/assets/karento-best/contact-avatars/portrait-03-20261007.webp"
+  },
+  {
+    "name": "Sydney",
+    "address": "88 George Street, The Rocks, Sydney NSW 2000, Australia",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=88%20George%20Street%2C%20The%20Rocks%2C%20Sydney%20NSW%202000%2C%20Australia",
+    "phone": "+61 2 9255 6000",
+    "phoneHref": "tel:+61 2 9255 6000",
+    "email": "sydney@carento.com",
+    "emailHref": "mailto:sydney@carento.com",
+    "country": "Australia",
+    "avatar": "/assets/karento-best/contact-avatars/portrait-02-20261007.webp"
+  }
+]
