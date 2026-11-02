@@ -21,7 +21,15 @@
   );
   const mobileDetails = $derived({
     ...referenceProductDetailContent,
-    includedFeatures: selected.features,
+    overview: [
+      locale.t(
+        "ui.product-purchase-banner.sample-collection-ask-us-about-availability-and-suitability-for",
+      ),
+    ],
+    includedFeatures:
+      selected.featureKeys?.map((key, index) =>
+        key ? locale.t(key) : selected.features[index],
+      ) ?? selected.features,
   });
 </script>
 
@@ -30,18 +38,19 @@
     class="shop-desktop-information container"
     aria-labelledby="shop-more-heading"
   >
-    <div class="shop-more-heading"
-      ><h2 id="shop-more-heading" class="desktop-type-panel"
-        >{locale.t("ui.product-detail.more-parts-accessories")}</h2
-      ><a href={locale.href("/shop")} class="desktop-type-control"
+    <div class="shop-more-heading">
+      <h2 id="shop-more-heading" class="desktop-type-panel">
+        {locale.t("ui.product-detail.more-parts-accessories")}
+      </h2>
+      <a href={locale.href("/shop")} class="desktop-type-control"
         >{locale.t("ui.product-detail.view-all")}</a
-      ></div
-    >
-    <div class="shop-more-products"
-      >{#each otherProducts as product (product.id)}<DesktopShopProductCard
+      >
+    </div>
+    <div class="shop-more-products">
+      {#each otherProducts as product (product.id)}<DesktopShopProductCard
           {product}
-        />{/each}</div
-    >
+        />{/each}
+    </div>
   </section>
 {:else if phone.current}
   <section class="mobile-shop-product-information container">
@@ -61,7 +70,7 @@
     <div class="container">
       <div class="row pt-30">
         <div class="col-lg-8">
-          <VehicleDetailPanels product />
+          <VehicleDetailPanels product details={mobileDetails} />
         </div>
         <div class="col-lg-4">
           <DetailSellerCard />

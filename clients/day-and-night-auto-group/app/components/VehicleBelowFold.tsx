@@ -8,6 +8,7 @@ import {useState,type ReactNode} from 'react';
 import {dealer,isDealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import Link from '@/components/AppLink';
+import {actionButton} from './action-button.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {CarFront, Check, ChevronRight, ClipboardCheck, History, Info, Music2, ShieldCheck} from 'lucide-react';
 import StructuralSummary from '@/components/StructuralSummary';
@@ -85,7 +86,7 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
     <section id="features" aria-label={tx('Features')} {...stylex.props(s.features,structural&&s.featuresAfterSummary)}>
       <h2 {...stylex.props(s.sectionHeading)}>{tx('Features')}</h2>
       <ul {...stylex.props(s.featureHighlights)}>{previewFeatures.map(feature=><li key={feature} {...stylex.props(s.featureItem)}><span aria-hidden="true" {...stylex.props(s.featureCheck)}><Check size={12} strokeWidth={2.5}/></span>{tx(feature)}</li>)}</ul>
-      <Link href={`/cars/${vehicle.slug}/features`} {...stylex.props(s.allFeatures)}>{tx('View all features')}<ChevronRight size={18} aria-hidden="true"/></Link>
+      <Link href={`/cars/${vehicle.slug}/features`} {...stylex.props(s.allFeatures, actionButton.secondary)}>{tx('View all features')}<ChevronRight size={18} aria-hidden="true"/></Link>
     </section>
     <div {...stylex.props(s.recordGroup)}>
       {reference?.inspection.length?<RecordRow id="condition" title="Inspection report" status="View inspection report" icon={<CarFront size={21}/>} open={record==='condition'} onOpen={()=>setRecord('condition')}/>:null}
@@ -127,7 +128,7 @@ featuresAfterSummary:{marginTop:16},
 specValue:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:4,minWidth:0,margin:0,color:$.ink,fontFamily:$.fontSans,fontSize:{[media.mobile]:14,[media.desktop]:$.desktopTextSize,default:15},fontWeight:600,lineHeight:{[media.mobile]:'20px',[media.desktop]:'24px',default:'22px'},overflowWrap:'anywhere'},
 specInfo:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:$.surfaceAlt,cursor:'pointer'},
 features: {scrollMarginTop: 152, marginTop: 16, padding: 16, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
-allFeatures: {display:'flex',alignItems:'center',justifyContent:'center',gap:8,width:'100%',minHeight:44,marginTop:12,padding:'10px 12px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:500,lineHeight:'20px',borderWidth:1,borderStyle:'solid',borderColor:$.controlBorder,borderRadius:$.radiusPill,backgroundColor:{default:$.surface,':hover':$.rail},outlineOffset:3},
+allFeatures: {display:'flex', alignItems:'center', justifyContent:'center', gap:8, width:'100%', minHeight:44, marginTop:12, padding:'10px 12px', fontFamily:$.fontSans, fontSize:14, fontWeight:500, lineHeight:'20px', borderWidth:1, borderStyle:'solid', borderRadius:$.radiusPill, outlineOffset:3},
 sectionHeading: {color: $.ink, fontFamily: $.fontSans, fontSize: 18, fontWeight: 600, lineHeight: '26px', overflowWrap: 'anywhere'},
 featureHighlights: {display: 'grid', gridTemplateColumns: {[media.mobile]:'1fr',default:'repeat(2,minmax(0,1fr))'}, gap: 8, margin: '12px 0 0', padding: 0, listStyle:'none', color: $.ink, fontFamily: $.fontSans, fontSize: 14, lineHeight: '21px'},
 featureItem: {display: 'flex', alignItems: 'center', gap: 10, minWidth: 0, minHeight: 44, padding: '10px 12px', borderRadius: $.radiusSm, backgroundColor: $.surface, overflowWrap: 'anywhere'},

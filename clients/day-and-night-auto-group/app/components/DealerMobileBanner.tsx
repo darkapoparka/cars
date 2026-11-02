@@ -10,18 +10,18 @@ import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
-/** Phone heroes use the soft page surface; wider heroes retain the satin backdrop. */
-export default function DealerMobileBanner({title, description, secondary, children, mobileCard = false, controlOnly = false, compactBrand = false}: {title?: string; description?: string; secondary?: ReactNode; children: ReactNode; mobileCard?: boolean; controlOnly?: boolean; compactBrand?: boolean}) {
+/** Phone headers share the white page surface; wider heroes retain the satin backdrop. */
+export default function DealerMobileBanner({title, description, secondary, children, mobileCard = false, controlOnly = false, compactBrand = false, onRail = false}: {title?: string; description?: string; secondary?: ReactNode; children: ReactNode; mobileCard?: boolean; controlOnly?: boolean; compactBrand?: boolean; onRail?: boolean}) {
   const tx = useCopy();
   const titleId = useId();
   return <div {...stylex.props(s.mobileOnly)}><ShowroomBannerFrame inline mobileCard={mobileCard && !controlOnly}>
-    <section data-dealer-mobile-banner aria-labelledby={titleId} {...stylex.props(s.panel, !controlOnly && s.safeAreaPanel, controlOnly && s.plainPanel)}>
+    <section data-dealer-mobile-banner aria-labelledby={titleId} {...stylex.props(s.panel, !controlOnly && s.safeAreaPanel, controlOnly && s.plainPanel, onRail && s.railPanel)}>
       <img src={assetPath('/showroom/black/dealer-satin-v1.webp')} alt="" aria-hidden="true" width={1536} height={512} {...stylex.props(s.backdrop, controlOnly && s.compactBackdrop)}/>
-      <div {...stylex.props(s.identity, compactBrand && s.homeIdentity, controlOnly && s.compactIdentity)}>
+      <div {...stylex.props(s.identity, compactBrand && s.homeIdentity, controlOnly && s.compactIdentity, onRail && s.railIdentity)}>
         {title ? <><h1 id={titleId} {...stylex.props(s.title)}>{tx(title)}</h1>{description ? <p {...stylex.props(s.description)}>{tx(description)}</p> : null}</> : <h1 id={titleId} {...stylex.props(s.brand)}><DealerBrand hero onDark mobileOnLight/></h1>}
         {secondary}
       </div>
-      <div {...stylex.props(s.control, compactBrand && s.homeControl, controlOnly && s.compactControl)}>{children}</div>
+      <div {...stylex.props(s.control, compactBrand && s.homeControl, controlOnly && s.compactControl, onRail && s.railControl)}>{children}</div>
     </section>
   </ShowroomBannerFrame></div>;
 }
@@ -34,8 +34,11 @@ export function DealerBannerAction({label, icon, onClick, expanded, searchEntry 
 }
 
 const s = stylex.create({
+  railPanel: {backgroundColor: {[media.mobile]: $.surface, default: '#202023'}},
+  railIdentity: {display: {[media.mobile]: 'none', default: 'flex'}},
+  railControl: {paddingTop: {[media.mobile]: 4, default: 0}, paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 12, default: 24}},
   mobileOnly: {display: {[media.desktop]: 'none', default: 'block'}},
-  panel: {position: 'relative', overflow: 'hidden', backgroundColor: {[media.mobile]: $.rail, default: '#202023'}, color: {[media.mobile]: $.ink, default: '#fff'}},
+  panel: {position: 'relative', overflow: 'hidden', backgroundColor: {[media.mobile]: $.surface, default: '#202023'}, color: {[media.mobile]: $.ink, default: '#fff'}},
   safeAreaPanel: {paddingTop: {[media.mobile]: 'env(safe-area-inset-top)', default: 0}},
   plainPanel: {overflow: {[media.mobile]: 'visible', default: 'hidden'}, backgroundColor: {[media.mobile]: '#fff', default: '#202023'}},
   backdrop: {display: {[media.mobile]: 'none', default: 'block'}, position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: .14, pointerEvents: 'none'},
@@ -49,7 +52,7 @@ const s = stylex.create({
   description: {color: {[media.mobile]: $.muted, default: '#d1d1d5'}, fontSize: 14, lineHeight: '20px'},
   control: {position: 'relative', width: '100%', maxWidth: 640, marginInline: 'auto', padding: {[media.mobile]: '0 12px 20px', default: '0 28px 24px'}},
   compactControl: {padding: {[media.mobile]: '4px 12px 0', default: null}},
-  action: {width: '100%', color: '#202024', backgroundColor: {default: $.surface, ':hover': $.surfaceAlt}, textAlign: 'left', cursor: 'pointer', outlineColor: {':focus-visible': {[media.mobile]: $.ink, default: '#fff'}}, outlineOffset: 3},
+  action: {width: '100%', color: '#202024', backgroundColor: {[media.mobile]: {default: $.surfaceAlt, ':hover': $.line}, default: $.surface, ':hover': $.surfaceAlt}, textAlign: 'left', cursor: 'pointer', outlineColor: {':focus-visible': {[media.mobile]: $.ink, default: '#fff'}}, outlineOffset: 3},
   plainMobileAction: {backgroundColor: {[media.mobile]: $.surfaceAlt, default: $.surface}, outlineColor: {':focus-visible': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
   searchEntry: {color: $.muted},
   icon: {display: 'flex', flexShrink: 0, alignItems: 'center', justifyContent: 'center', width: 20, height: 20},

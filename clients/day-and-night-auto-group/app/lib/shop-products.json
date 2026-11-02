@@ -4,6 +4,7 @@
   "products": [
     {
       "id": "signature-product-1",
+      "category": "oils",
       "title": "Mobil 1 Extended Performance motor oil",
       "sourceTitle": "Mobil 1 Extended Performance Full Synthetic Motor Oil",
       "image": "/shop/product1.png",
@@ -12,6 +13,7 @@
     },
     {
       "id": "signature-product-2",
+      "category": "accessories",
       "title": "Thinkware F770 dash camera",
       "sourceTitle": "Thinkware F770 Dash Cam Dual Channel Wifi",
       "image": "/shop/product2.png",
@@ -20,6 +22,7 @@
     },
     {
       "id": "signature-product-3",
+      "category": "wheels",
       "title": "Alloy wheel",
       "sourceTitle": "Mobil Delvac 1300 Super Heavy Duty Synthetic Blend",
       "image": "/shop/product3.png",
@@ -28,6 +31,7 @@
     },
     {
       "id": "signature-product-4",
+      "category": "lighting",
       "title": "Projector headlights",
       "sourceTitle": "Spyder® – Projector Headlight Misubisi 2024",
       "image": "/shop/product4.png",
@@ -36,6 +40,7 @@
     },
     {
       "id": "signature-product-5",
+      "category": "wheels",
       "title": "HRE FlowForm FT01 alloy wheel",
       "sourceTitle": "HRE FlowForm® – FT01 Tarma Honda 2024",
       "image": "/shop/product5.png",
@@ -44,6 +49,7 @@
     },
     {
       "id": "signature-product-6",
+      "category": "brakes",
       "title": "Drilled brake rotors",
       "sourceTitle": "Right Stuff® – Drilled and Slotted Brake Rotor",
       "image": "/shop/product6.png",
@@ -52,6 +58,7 @@
     },
     {
       "id": "signature-product-7",
+      "category": "wheels",
       "title": "Tyre and wheel",
       "sourceTitle": "PIRELLI TIRES® – P4 FOUR SEASONS PLUS",
       "image": "/shop/product7.png",
@@ -60,6 +67,7 @@
     },
     {
       "id": "signature-product-8",
+      "category": "lighting",
       "title": "LED headlights",
       "sourceTitle": "Lumen® – Custom Sealed Beam LED Headlights",
       "image": "/shop/product8.png",
@@ -68,6 +76,7 @@
     },
     {
       "id": "signature-product-9",
+      "category": "oils",
       "title": "Mobil 1 Extended Performance 0W-20",
       "sourceTitle": "Shell Rotella T1 SAE 30 Conventional Heavy Duty",
       "image": "/shop/product9.png",
@@ -76,6 +85,7 @@
     },
     {
       "id": "signature-product-10",
+      "category": "brakes",
       "title": "Brake rotors",
       "sourceTitle": "R1 Concepts® – eLINE Series Plain Brake Rotors",
       "image": "/shop/product10.png",
@@ -84,6 +94,7 @@
     },
     {
       "id": "signature-product-11",
+      "category": "oils",
       "title": "Mobil Delvac 1300 Super 15W-40",
       "sourceTitle": "Mobil Delvac 1300 Super Heavy Duty Synthetic Blend",
       "image": "/shop/product11.png",
@@ -92,6 +103,7 @@
     },
     {
       "id": "signature-product-12",
+      "category": "oils",
       "title": "Pennzoil Platinum High Mileage 0W-20",
       "sourceTitle": "Mobil Delvac 1300 Super Heavy Duty Synthetic Blend",
       "image": "/shop/product12.png",

@@ -16,9 +16,15 @@
     hasReferenceDiscount,
   } from "#lib/data/shop-mobile.ts";
   const phone = new MediaQuery("(max-width: 767.98px)");
-  const desktop = new MediaQuery("(min-width: 992px)");
+  const desktop = new MediaQuery("(min-width: 768px)");
   const selected = $derived(selectedReferenceProduct(page.url.searchParams));
   const discounted = $derived(hasReferenceDiscount(selected));
+  const backHref = $derived.by(() => {
+    const parameters = new URLSearchParams(page.url.searchParams.toString());
+    parameters.delete("product");
+    const query = parameters.toString();
+    return locale.href(`/shop${query ? "?" + query : ""}`);
+  });
   let { mobilePart = "full" }: { mobilePart?: "full" | "image" | "summary" } =
     $props();
 </script>
@@ -39,31 +45,29 @@
       <span class="shop-product-reference desktop-type-badge"
         >{locale.t("ui.product-purchase-banner.reference-product")}</span
       >
-      <h1 class="desktop-type-detail" id="shop-product-title"
-        >{selected.title}</h1
-      >
-      <div class="shop-product-price"
-        ><strong class="desktop-type-buy-price">{selected.price}</strong
+      <h1 class="desktop-type-detail" id="shop-product-title">
+        {selected.title}
+      </h1>
+      <div class="shop-product-price">
+        <strong class="desktop-type-buy-price">{selected.price}</strong
         >{#if discounted}<s class="desktop-type-body"
             >{selected.originalPrice}</s
-          >{/if}</div
-      >
-      <p
-        >{locale.t(
+          >{/if}
+      </div>
+      <p>
+        {locale.t(
           "ui.product-purchase-banner.sample-collection-ask-us-about-availability-and-suitability-for",
-        )}</p
-      >
-      <div class="shop-product-actions"
-        ><a
+        )}
+      </p>
+      <div class="shop-product-actions">
+        <a
           class="shop-product-enquiry desktop-type-control"
           href={locale.href("/contact#contact-enquiry")}
           >{locale.t("ui.product-purchase-banner.contact-us")}</a
-        ><a
-          class="shop-product-back desktop-type-control"
-          href={locale.href("/shop")}
+        ><a class="shop-product-back desktop-type-control" href={backHref}
           >{locale.t("ui.product-purchase-banner.back-to-shop")}</a
-        ></div
-      >
+        >
+      </div>
     </div>
   </section>
 {:else}
@@ -135,11 +139,11 @@
         {#if mobilePart !== "image"}
           <div class="col-lg-6 ps-lg-4">
             <div class="tour-header karento-product-buybox">
-              {#if phone.current}<p class="product-demo-note"
-                  >{locale.t(
+              {#if phone.current}<p class="product-demo-note">
+                  {locale.t(
                     "ui.product-purchase-banner.reference-product-demo-purchase-controls",
-                  )}</p
-                >{/if}
+                  )}
+                </p>{/if}
               <div class="d-flex flex-wrap align-items-center gap-4 mb-3">
                 <div class="tour-rate mb-0">
                   <div class="rate-element">
@@ -178,9 +182,9 @@
               </div>
               <div class="tour-title-main">
                 {#if phone.current && mobilePart === "summary"}
-                  <h1 class="neutral-1000" id="shop-product-title"
-                    >{selected.title}</h1
-                  >
+                  <h1 class="neutral-1000" id="shop-product-title">
+                    {selected.title}
+                  </h1>
                 {:else}
                   <h5 class="neutral-1000">
                     {phone.current
@@ -199,20 +203,20 @@
                     {phone.current ? selected.originalPrice : "$68.53"}
                   </span>
                 {/if}
-                <h4 class="neutral-1000"
-                  >{phone.current ? selected.price : "$48.25"}</h4
-                >
+                <h4 class="neutral-1000">
+                  {phone.current ? selected.price : "$48.25"}
+                </h4>
               </div>
               {#if !phone.current}<ul class="list-style-disc ps-3 pe-4">
-                  <li class="text-md-medium neutral-1000"
-                    >Mobil Delvac 1300 Super Heavy Duty Synthetic Blend</li
-                  >
-                  <li class="text-md-medium neutral-1000"
-                    >{locale.t("reference.shop.feature.weather")}</li
-                  >
-                  <li class="text-md-medium neutral-1000"
-                    >{locale.t("reference.shop.feature.alignment")}</li
-                  >
+                  <li class="text-md-medium neutral-1000">
+                    Mobil Delvac 1300 Super Heavy Duty Synthetic Blend
+                  </li>
+                  <li class="text-md-medium neutral-1000">
+                    {locale.t("reference.shop.feature.weather")}
+                  </li>
+                  <li class="text-md-medium neutral-1000">
+                    {locale.t("reference.shop.feature.alignment")}
+                  </li>
                 </ul>{/if}
               <div class="tour-metas mt-4 border-top pt-4">
                 {#if phone.current}
@@ -381,20 +385,20 @@
 {/if}
 
 <style>
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .shop-desktop-purchase {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       align-items: center;
-      gap: var(--karento-desktop-space-10);
-      padding-top: var(--karento-desktop-space-4);
+      gap: var(--karento-desktop-space-10, 40px);
+      padding-top: var(--karento-desktop-space-4, 16px);
     }
     .shop-product-photo {
       min-width: 0;
-      padding: var(--karento-desktop-panel-padding);
+      padding: var(--karento-desktop-panel-padding, 24px);
       overflow: hidden;
       border: 1px solid var(--bs-neutral-200);
-      border-radius: var(--karento-desktop-card-radius);
+      border-radius: var(--karento-desktop-card-radius, 16px);
       background: var(--bs-neutral-100);
     }
     .shop-product-photo :global(.shop-product-gallery) {
@@ -415,60 +419,62 @@
       outline-offset: -3px;
     }
     .shop-product-summary {
-      padding: var(--karento-desktop-space-6) 0;
+      padding: var(--karento-desktop-space-6, 24px) 0;
     }
     .shop-product-reference {
       display: inline-block;
-      margin-bottom: var(--karento-desktop-space-4);
-      padding: var(--karento-desktop-space-1) var(--karento-desktop-space-3);
-      border-radius: var(--karento-desktop-pill-radius);
+      margin-bottom: var(--karento-desktop-space-4, 16px);
+      padding: var(--karento-desktop-space-1, 4px)
+        var(--karento-desktop-space-3, 12px);
+      border-radius: var(--karento-desktop-pill-radius, 999px);
       background: var(--bs-neutral-100);
       color: var(--bs-neutral-600);
-      font-size: var(--karento-type-badge-size);
-      line-height: var(--karento-type-badge-leading);
+      font-size: var(--karento-type-badge-size, 12px);
+      line-height: var(--karento-type-badge-leading, 18px);
     }
     .shop-product-summary h1 {
       margin: 0;
-      font-size: var(--karento-type-detail-size);
-      line-height: var(--karento-type-detail-leading);
+      font-size: var(--karento-type-detail-size, 28px);
+      line-height: var(--karento-type-detail-leading, 34px);
       overflow-wrap: anywhere;
     }
     .shop-product-price {
       display: flex;
       align-items: baseline;
-      gap: var(--karento-desktop-space-3);
-      margin: var(--karento-desktop-space-5) 0;
+      gap: var(--karento-desktop-space-3, 12px);
+      margin: var(--karento-desktop-space-5, 20px) 0;
     }
     .shop-product-price strong {
-      font-size: var(--karento-type-buy-price-size);
-      font-weight: var(--karento-type-buy-price-weight);
-      line-height: var(--karento-type-buy-price-leading);
+      font-size: var(--karento-type-buy-price-size, 28px);
+      font-weight: var(--karento-type-buy-price-weight, 600);
+      line-height: var(--karento-type-buy-price-leading, 34px);
     }
     .shop-product-price s {
       color: var(--bs-neutral-500);
-      font-size: var(--karento-type-body-size);
+      font-size: var(--karento-type-body-size, 16px);
     }
     .shop-product-summary p {
       max-width: 420px;
       margin: 0;
       color: var(--bs-neutral-600);
-      font-size: var(--karento-type-body-small-size);
-      line-height: var(--karento-type-body-small-leading);
+      font-size: var(--karento-type-body-small-size, 14px);
+      line-height: var(--karento-type-body-small-leading, 21px);
     }
     .shop-product-actions {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: var(--karento-desktop-space-5);
-      margin-top: var(--karento-desktop-space-6);
+      gap: var(--karento-desktop-space-5, 20px);
+      margin-top: var(--karento-desktop-space-6, 24px);
     }
     .shop-product-actions a {
-      font-size: var(--karento-type-control-size);
-      font-weight: var(--karento-type-control-weight);
+      font-size: var(--karento-type-control-size, 14px);
+      font-weight: var(--karento-type-control-weight, 600);
     }
     .shop-product-enquiry {
-      padding: var(--karento-desktop-space-3) var(--karento-desktop-space-5);
-      border-radius: var(--karento-desktop-control-radius);
+      padding: var(--karento-desktop-space-3, 12px)
+        var(--karento-desktop-space-5, 20px);
+      border-radius: var(--karento-desktop-control-radius, 12px);
       background: var(--bs-neutral-1000);
       color: var(--bs-neutral-0);
     }

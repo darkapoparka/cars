@@ -210,7 +210,16 @@
                 : locale.t("catalog.makeFirst"),
             )}
           {/if}
-          {#if panel === "filters"}{@render budgetField()}{/if}
+          {#if panel === "filters"}
+            {@render budgetField()}
+            {#if !productMode}
+              <div class="catalog-year-fields">
+                {#each (["yearFrom", "yearTo"] as const) as key (key)}
+                  <label>{locale.t(`catalog.${key}`)}<input type="number" min="1900" max="2100" step="1" placeholder="—" bind:value={() => draft[key as "yearFrom" | "yearTo"], (value) => draft[key as "yearFrom" | "yearTo"] = value == null ? "" : String(value)} /></label>
+                {/each}
+              </div>
+            {/if}
+          {/if}
         {:else if panel === "make"}
           <MobileChoicePicker
             label={locale.t("ui.catalog-filter-sheet.vehicle-make")}
@@ -295,6 +304,9 @@
 />
 
 <style>
+  .catalog-year-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .catalog-year-fields label { display: grid; gap: 8px; min-width: 0; font-size: 14px; }
+  .catalog-year-fields input { width: 100%; min-width: 0; height: 44px; padding: 10px 12px; border: 1px solid var(--bs-neutral-200); border-radius: 10px; font-size: 16px; background: var(--bs-neutral-0); color: var(--bs-neutral-1000); }
   @media (max-width: 767.98px) {
     .mobile-filter-body {
       gap: var(--karento-space-3);

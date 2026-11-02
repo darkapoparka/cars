@@ -12,8 +12,8 @@
   import { afterNavigate, goto } from "$app/navigation";
   import { dealer } from "#lib/content.ts";
   import { MediaQuery } from "svelte/reactivity";
-  import type { Attachment } from "svelte/attachments";
   const phone = new MediaQuery("(max-width: 767.98px)");
+  const wide = new MediaQuery("(min-width:1200px)");
   const preview = usePreview();
   const activePath = $derived(
     "/" +
@@ -21,37 +21,17 @@
         ([, source]) => source === resolveRoute(page.params.path ?? ""),
       )?.[0] ?? "__no-active-route"),
   );
+  const buyActive = $derived(
+    activePath === "/vehicles" ||
+      activePath === "/vehicle" ||
+      (activePath === "/contact" && page.url.searchParams.has("vehicleId")),
+  );
   let scrollY = $state(0);
   const sticky = $derived(scrollY >= 200);
   import { scrollbar } from "#lib/vendor.ts";
-  let mobileExpanded0 = $state(false);
-  let desktopExploreOpen = $state(false);
-  const desktopExploreId = $props.id();
-  let desktopExploreNode: HTMLLIElement | undefined;
-  const ownDesktopExplore: Attachment<HTMLLIElement> = (node) => {
-    desktopExploreNode = node;
-    return () => {
-      desktopExploreNode = undefined;
-    };
-  };
-  function closeDesktopExplore(restoreFocus = false) {
-    desktopExploreOpen = false;
-    if (restoreFocus)
-      desktopExploreNode
-        ?.querySelector<HTMLButtonElement>("button")
-        ?.focus({ preventScroll: true });
-  }
-  function dismissDesktopExplore(event: PointerEvent) {
-    if (
-      desktopExploreOpen &&
-      event.target instanceof Node &&
-      !desktopExploreNode?.contains(event.target)
-    )
-      closeDesktopExplore();
-  }
   afterNavigate(() => {
-    mobileExpanded0 = false;
-    closeDesktopExplore();
+    preview.drawer = false;
+    preview.mobile = false;
   });
 </script>
 
@@ -94,161 +74,88 @@
         </div>
         <div class="header-nav">
           <nav class="nav-main-menu">
-            <ul class="main-menu" data-site-navigation="karento-best"
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/")}
-                  aria-current={activePath === "/" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.home")}
-                  >{locale.t("ui.header.home")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
+            <ul class="main-menu" data-site-navigation="karento-best">
+              <li class="menu-item">
+                <a
                   href={locale.href("/vehicles")}
-                  aria-current={activePath === "/vehicles" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.vehicles")}
-                  >{locale.t("ui.header.vehicles")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
+                  aria-current={buyActive ? "page" : undefined}
+                  aria-label={locale.t("navigation.buy")}
+                  >{locale.t("navigation.buy")}</a
+                >
+              </li>
+              <li class="menu-item">
+                <a
+                  href={locale.href("/rent")}
+                  aria-current={activePath === "/rent" ? "page" : undefined}
+                  aria-label={locale.t("navigation.rent")}
+                  >{locale.t("navigation.rent")}</a
+                >
+              </li>
+              <li class="menu-item">
+                <a
                   href={locale.href("/services")}
                   aria-current={activePath === "/services" ? "page" : undefined}
                   aria-label={locale.t("ui.header.services")}
                   >{locale.t("ui.header.services")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
+                >
+              </li>
+              <li class="menu-item">
+                <a
                   href={locale.href("/shop")}
                   aria-current={activePath === "/shop" ? "page" : undefined}
                   aria-label={locale.t("ui.header.shop")}
                   >{locale.t("ui.header.shop")}</a
-                ></li
-              ><li
-                class="has-children"
-                {@attach ownDesktopExplore}
-                onfocusout={(event) => {
-                  if (
-                    !(event.relatedTarget instanceof Node) ||
-                    !event.currentTarget.contains(event.relatedTarget)
-                  )
-                    closeDesktopExplore();
-                }}
-                ><button
-                  class="desktop-explore-toggle desktop-type-nav"
+                >
+              </li>
+              <li class="menu-item">
+                <button
+                  class="desktop-menu-trigger"
                   type="button"
-                  aria-expanded={desktopExploreOpen}
-                  aria-controls={desktopExploreId}
-                  onclick={() => (desktopExploreOpen = !desktopExploreOpen)}
-                  aria-label={locale.t("ui.header.explore")}
-                  >{locale.t("ui.header.explore")}</button
-                ><ul
-                  id={desktopExploreId}
-                  class="sub-menu"
-                  hidden={!desktopExploreOpen}
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/about")}
-                      aria-current={activePath === "/about"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.about-us")}
-                      >{locale.t("ui.header.about-us")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/import")}
-                      aria-current={activePath === "/import"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.import")}
-                      >{locale.t("ui.header.import")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/news")}
-                      aria-current={activePath === "/news" ? "page" : undefined}
-                      aria-label={locale.t("ui.header.news")}
-                      >{locale.t("ui.header.news")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/calculator")}
-                      aria-current={activePath === "/calculator"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.car-calculator")}
-                      >{locale.t("ui.header.car-calculator")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/faq")}
-                      aria-current={activePath === "/faq" ? "page" : undefined}
-                      aria-label={locale.t("ui.header.faq")}
-                      >{locale.t("ui.header.faq")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/terms")}
-                      aria-current={activePath === "/terms"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.terms")}
-                      >{locale.t("ui.header.terms")}</a
-                    ></li
-                  ></ul
-                ></li
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/membership")}
-                  aria-current={activePath === "/membership"
-                    ? "page"
-                    : undefined}
-                  aria-label={locale.t("ui.header.plans")}
-                  >{locale.t("ui.header.plans")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/contact")}
-                  aria-current={activePath === "/contact" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.contact")}
-                  >{locale.t("ui.header.contact")}</a
-                ></li
-              ></ul
-            >
+                  aria-label={locale.t("navigation.menu")}
+                  aria-expanded={preview.drawer}
+                  aria-controls="karento-account-drawer"
+                  onclick={() => {
+                    preview.mobile = false;
+                    preview.drawer = !preview.drawer;
+                  }}>{locale.t("navigation.menu")}</button
+                >
+              </li>
+            </ul>
           </nav>
         </div>
         <div class="header-right">
           <div
             class="d-none d-xxl-inline-block align-middle mr-15 karento-header-actions"
-            ><a
-                class="btn btn-primary karento-header-cta"
-                href={locale.href(preview.accountHref)}
-                data-demo-account-link=""
-                data-demo-fixed-label=""
-                aria-label={locale.t("ui.header.account")}
-                ><svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                  focusable="false"
-                  ><circle
-                    cx="12"
-                    cy="8"
-                    r="3.5"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                  ></circle><path
-                    d="M5 21v-2a7 7 0 0 1 14 0v2"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                  ></path></svg
-                ><span>{locale.t("ui.header.account")}</span></a
-              ></div
           >
-          <button
+            <a
+              class="btn btn-primary karento-header-cta"
+              href={locale.href(preview.accountHref)}
+              data-demo-account-link=""
+              data-demo-fixed-label=""
+              aria-label={locale.t("ui.header.account")}
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                focusable="false"
+                ><circle
+                  cx="12"
+                  cy="8"
+                  r="3.5"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                ></circle><path
+                  d="M5 21v-2a7 7 0 0 1 14 0v2"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                ></path></svg
+              ><span>{locale.t("ui.header.account")}</span></a
+            >
+          </div>
+          {#if !wide.current}<button
               class={"burger-icon-2 karento-menu-toggle" +
                 (preview.drawer ? " burger-2-close" : "")}
               onclick={() => (preview.drawer = !preview.drawer)}
@@ -263,209 +170,13 @@
                 width="18"
                 height="18"
               />
-            </button>
-          <div
-            role="button"
-            tabindex="0"
-            aria-label={locale.t("ui.header.open-mobile-navigation")}
-            onkeydown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                preview.mobile = !preview.mobile;
-              }
-            }}
-            onclick={() => (preview.mobile = !preview.mobile)}
-            class={"burger-icon burger-icon-white" +
-              (preview.mobile ? " burger-close" : "")}
-          >
-            <span class="burger-icon-top"></span>
-            <span class="burger-icon-mid"> </span>
-            <span class="burger-icon-bottom"> </span>
-          </div>
+            </button>{/if}
         </div>
       </div>
     </div>
   </div>
-</header><div
-  {@attach drawerFocus(() => preview.mobile)}
-  inert={!preview.mobile}
-  aria-hidden={!preview.mobile}
-  class={"mobile-header-active mobile-header-wrapper-style perfect-scrollbar button-bg-2" +
-    (preview.mobile ? " sidebar-visible" : "")}
->
-  <div class="mobile-header-wrapper-inner" {@attach scrollbar}>
-    <div class="mobile-header-logo">
-      <a
-        class="d-flex"
-        href={locale.href("/")}
-        aria-current={activePath === "/" ? "page" : undefined}
-        aria-label={`${dealer.name} home`}
-        ><img
-          class="light-mode"
-          alt={dealer.logo.alt}
-          src={dealer.logo.light}
-          width="168"
-          height="76"
-          style:object-fit="contain"
-        /><img
-          class="dark-mode"
-          alt={dealer.logo.alt}
-          src={dealer.logo.archivedDark}
-          width="168"
-          height="76"
-          style:object-fit="contain"
-          style:filter={dealer.logo.monochromeOnDark
-            ? "brightness(0) invert(1)"
-            : undefined}
-        /></a
-      >
-      <div
-        class="burger-icon burger-icon-white"
-        role="button"
-        tabindex="0"
-        aria-label={locale.t("ui.header.close-mobile-navigation")}
-        onclick={() => (preview.mobile = false)}
-        onkeydown={(event) => {
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            preview.mobile = false;
-          }
-        }}
-      ></div>
-    </div>
-
-    <div class="mobile-header-content-area">
-      <div class="perfect-scroll">
-        <div class="mobile-menu-wrap mobile-header-border">
-          <nav>
-            <ul
-              class="mobile-menu font-heading"
-              data-site-navigation="karento-best"
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/")}
-                  aria-current={activePath === "/" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.home")}
-                  >{locale.t("ui.header.home")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/vehicles")}
-                  aria-current={activePath === "/vehicles" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.vehicles")}
-                  >{locale.t("ui.header.vehicles")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/services")}
-                  aria-current={activePath === "/services" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.services")}
-                  >{locale.t("ui.header.services")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/shop")}
-                  aria-current={activePath === "/shop" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.shop")}
-                  >{locale.t("ui.header.shop")}</a
-                ></li
-              ><li class="has-children"
-                ><a
-                  href="#!"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-label={locale.t("ui.header.explore")}
-                  aria-expanded={mobileExpanded0}
-                  onclick={(event) => {
-                    event.preventDefault();
-                    mobileExpanded0 = !mobileExpanded0;
-                  }}>{locale.t("ui.header.explore")}</a
-                ><ul
-                  class="sub-menu"
-                  style:display={mobileExpanded0 ? "block" : "none"}
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/about")}
-                      aria-current={activePath === "/about"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.about-us")}
-                      >{locale.t("ui.header.about-us")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/import")}
-                      aria-current={activePath === "/import"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.import")}
-                      >{locale.t("ui.header.import")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/news")}
-                      aria-current={activePath === "/news" ? "page" : undefined}
-                      aria-label={locale.t("ui.header.news")}
-                      >{locale.t("ui.header.news")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/calculator")}
-                      aria-current={activePath === "/calculator"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.car-calculator")}
-                      >{locale.t("ui.header.car-calculator")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/faq")}
-                      aria-current={activePath === "/faq" ? "page" : undefined}
-                      aria-label={locale.t("ui.header.faq")}
-                      >{locale.t("ui.header.faq")}</a
-                    ></li
-                  ><li class="menu-item"
-                    ><a
-                      href={locale.href("/terms")}
-                      aria-current={activePath === "/terms"
-                        ? "page"
-                        : undefined}
-                      aria-label={locale.t("ui.header.terms")}
-                      >{locale.t("ui.header.terms")}</a
-                    ></li
-                  ></ul
-                ></li
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/membership")}
-                  aria-current={activePath === "/membership"
-                    ? "page"
-                    : undefined}
-                  aria-label={locale.t("ui.header.plans")}
-                  >{locale.t("ui.header.plans")}</a
-                ></li
-              ><li class="menu-item"
-                ><a
-                  href={locale.href("/contact")}
-                  aria-current={activePath === "/contact" ? "page" : undefined}
-                  aria-label={locale.t("ui.header.contact")}
-                  >{locale.t("ui.header.contact")}</a
-                ></li
-              ></ul
-            ><div class="karento-mobile-account">
-              <a
-                href={locale.href(preview.accountHref)}
-                data-demo-account-link="true"
-                aria-label={locale.t("ui.header.sign-in")}
-                >{locale.t("ui.header.sign-in")}</a
-              >
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><div
+</header>
+<div
   {@attach drawerFocus(() => preview.drawer)}
   class={"sidebar-canvas-wrapper perfect-scrollbar button-bg-2 karento-account-drawer" +
     (preview.drawer ? " sidebar-canvas-visible" : "")}
@@ -475,9 +186,10 @@
   aria-modal="true"
   aria-hidden={!preview.drawer}
   inert={!preview.drawer}
-  ><div class="sidebar-canvas-container" {@attach scrollbar}>
-    <div class="sidebar-canvas-head"
-      ><div class="sidebar-canvas-logo">
+>
+  <div class="sidebar-canvas-container" {@attach scrollbar}>
+    <div class="sidebar-canvas-head">
+      <div class="sidebar-canvas-logo">
         <a
           class="d-flex"
           href={locale.href("/")}
@@ -527,13 +239,13 @@
         class="karento-drawer-account"
         aria-label={locale.t("ui.header.account")}
       >
-        <p class="karento-account-heading" data-demo-account-heading=""
-          >{preview.role === "guest"
+        <p class="karento-account-heading" data-demo-account-heading="">
+          {preview.role === "guest"
             ? locale.t("ui.header.your-account")
             : preview.role === "owner"
               ? locale.t("ui.header.dealership-owner")
-              : locale.t("ui.header.member-account")}</p
-        >
+              : locale.t("ui.header.member-account")}
+        </p>
         <a
           href={locale.href(preview.accountHref)}
           data-demo-account-link=""
@@ -583,102 +295,124 @@
         aria-label={locale.t("ui.header.website")}
         data-site-navigation="karento-best"
       >
-        <ul
-          ><li class="menu-item"
-            ><a
+        <ul>
+          <li class="menu-item">
+            <a
               href={locale.href("/")}
               aria-current={activePath === "/" ? "page" : undefined}
               aria-label={locale.t("ui.header.home")}
               >{locale.t("ui.header.home")}</a
-            ></li
-          ><li class="menu-item"
-            ><a
+            >
+          </li>
+          <li class="menu-item">
+            <a
               href={locale.href("/vehicles")}
-              aria-current={activePath === "/vehicles" ? "page" : undefined}
-              aria-label={locale.t("ui.header.vehicles")}
-              >{locale.t("ui.header.vehicles")}</a
-            ></li
-          ><li class="menu-item"
-            ><a
+              aria-current={buyActive ? "page" : undefined}
+              aria-label={locale.t("navigation.buy")}
+              >{locale.t("navigation.buy")}</a
+            >
+          </li>
+          <li class="menu-item">
+            <a
+              href={locale.href("/rent")}
+              aria-current={activePath === "/rent" ? "page" : undefined}
+              >{locale.t("navigation.rent")}</a
+            >
+          </li>
+          <li class="menu-item">
+            <a
               href={locale.href("/services")}
               aria-current={activePath === "/services" ? "page" : undefined}
               aria-label={locale.t("ui.header.services")}
               >{locale.t("ui.header.services")}</a
-            ></li
-          ><li class="menu-item"
-            ><a
+            >
+          </li>
+          <li class="menu-item">
+            <a
               href={locale.href("/shop")}
               aria-current={activePath === "/shop" ? "page" : undefined}
               aria-label={locale.t("ui.header.shop")}
               >{locale.t("ui.header.shop")}</a
-            ></li
-          ><li class="menu-item"
-            ><a
+            >
+          </li>
+          <li class="menu-item">
+            <a
               href={locale.href("/membership")}
               aria-current={activePath === "/membership" ? "page" : undefined}
               aria-label={locale.t("ui.header.plans")}
               >{locale.t("ui.header.plans")}</a
-            ></li
-          ><li class="menu-item"
-            ><a
+            >
+          </li>
+          <li class="menu-item">
+            <a
               href={locale.href("/contact")}
               aria-current={activePath === "/contact" ? "page" : undefined}
               aria-label={locale.t("ui.header.contact")}
               >{locale.t("ui.header.contact")}</a
-            ></li
-          ></ul
+            >
+          </li>
+        </ul>
+        <section
+          class="karento-drawer-information"
+          aria-label={locale.locale === "bg" ? "Информация" : "Information"}
         >
-        <details class="karento-drawer-explore"
-          ><summary>{locale.t("ui.header.explore")}</summary><ul
-            ><li class="menu-item"
-              ><a
+          <p>{locale.locale === "bg" ? "Информация" : "Information"}</p>
+          <ul>
+            <li class="menu-item">
+              <a
                 href={locale.href("/about")}
                 aria-current={activePath === "/about" ? "page" : undefined}
                 aria-label={locale.t("ui.header.about-us")}
                 >{locale.t("ui.header.about-us")}</a
-              ></li
-            ><li class="menu-item"
-              ><a
+              >
+            </li>
+            <li class="menu-item">
+              <a
                 href={locale.href("/import")}
                 aria-current={activePath === "/import" ? "page" : undefined}
                 aria-label={locale.t("ui.header.import")}
                 >{locale.t("ui.header.import")}</a
-              ></li
-            ><li class="menu-item"
-              ><a
+              >
+            </li>
+            <li class="menu-item">
+              <a
                 href={locale.href("/news")}
                 aria-current={activePath === "/news" ? "page" : undefined}
                 aria-label={locale.t("ui.header.news")}
                 >{locale.t("ui.header.news")}</a
-              ></li
-            ><li class="menu-item"
-              ><a
+              >
+            </li>
+            <li class="menu-item">
+              <a
                 href={locale.href("/calculator")}
                 aria-current={activePath === "/calculator" ? "page" : undefined}
                 aria-label={locale.t("ui.header.car-calculator")}
                 >{locale.t("ui.header.car-calculator")}</a
-              ></li
-            ><li class="menu-item"
-              ><a
+              >
+            </li>
+            <li class="menu-item">
+              <a
                 href={locale.href("/faq")}
                 aria-current={activePath === "/faq" ? "page" : undefined}
                 aria-label={locale.t("ui.header.faq")}
                 >{locale.t("ui.header.faq")}</a
-              ></li
-            ><li class="menu-item"
-              ><a
+              >
+            </li>
+            <li class="menu-item">
+              <a
                 href={locale.href("/terms")}
                 aria-current={activePath === "/terms" ? "page" : undefined}
                 aria-label={locale.t("ui.header.terms")}
                 >{locale.t("ui.header.terms")}</a
-              ></li
-            ></ul
-          ></details
-        >
+              >
+            </li>
+          </ul>
+        </section>
       </nav>
     </div>
-  </div></div
->{#if preview.drawer || preview.mobile}<div
+  </div>
+</div>
+{#if preview.drawer || preview.mobile}<div
     class="body-overlay-1"
     role="button"
     tabindex="0"
@@ -697,16 +431,8 @@
   ></div>{/if}
 <svelte:window
   bind:scrollY
-  onpointerdown={dismissDesktopExplore}
-  onresize={() => {
-    if (window.innerWidth < 1200) closeDesktopExplore();
-  }}
   onkeydown={(event) => {
     if (event.key === "Escape") {
-      if (desktopExploreOpen) {
-        event.preventDefault();
-        closeDesktopExplore(true);
-      }
       preview.drawer = false;
       preview.mobile = false;
     }
@@ -714,7 +440,40 @@
 />
 
 <style>
+  .karento-account-drawer .sidebar-canvas-container {
+    padding-top: 0;
+  }
+  .karento-account-drawer .sidebar-canvas-head {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--bs-neutral-0);
+    padding-top: 16px;
+  }
+  .karento-drawer-information {
+    margin-top: 16px;
+  }
+  .karento-drawer-information p {
+    margin: 0 0 8px;
+    color: var(--bs-neutral-500);
+    font-size: 13px;
+  }
+  .karento-drawer-information ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .karento-drawer-information a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--bs-neutral-1000);
+    text-decoration: none;
+  }
   @media (max-width: 767.98px) {
+    :global(body:has(.discovery-home, .vehicle-landing-hero)) .header {
+      box-shadow: none;
+    }
     .header .main-header .header-left .header-logo {
       width: 144px;
       max-width: 144px;

@@ -7,6 +7,7 @@ import * as stylex from '@stylexjs/stylex';
 import {Heart, Phone} from 'lucide-react';
 import DealerBrand from '@/components/DealerBrand';
 import DesktopHeaderMenu from '@/components/DesktopHeaderMenu';
+import IconButton from '@/components/IconButton';
 import dynamic from 'next/dynamic';
 import {HomeAlternativeProvider, isHomeAlternative, primaryHomePath, isServicesRoute} from '@/lib/home-alternative';
 import ShowroomIcon from '@/components/ShowroomIcon';
@@ -31,6 +32,7 @@ export default function AppShell({children}: {children:ReactNode}){
   const currentPath=usePathname();
   const alternative=isHomeAlternative(currentPath);
   const pathname=primaryHomePath(currentPath);
+  const dockNavigation=alternative?showroom.navigation.filter(item=>item.href!=='/shop'):showroom.navigation;
   const hideMobileNav=pathname.startsWith('/cars/')||pathname==='/search'||pathname.endsWith('/details')||pathname.startsWith('/benefits/');
   function skipNavigation(event: MouseEvent<HTMLAnchorElement>) {
     const content = [...document.querySelectorAll<HTMLElement>('main')].find(element=>element.getClientRects().length>0) ?? document.getElementById('app-content');
@@ -50,17 +52,18 @@ export default function AppShell({children}: {children:ReactNode}){
         return <Link key={item.key} href={item.href} aria-current={active?'page':undefined} {...stylex.props(s.journey)}><span {...stylex.props(s.journeyLabel,active&&s.journeyActive)}>{tx(item.key==='finance'?'Finance navigation':item.label)}</span></Link>;
       })}</nav>
       <nav data-desktop-tools aria-label={tx('Header actions')} {...stylex.props(s.actions)}>
-        <Link href="/saved" aria-label={tx("Saved cars")} title={tx("Saved cars")} {...stylex.props(s.iconButton)}><Heart size={21} aria-hidden="true"/></Link>
-        {dealer.phoneE164 ? <a href={`tel:${dealer.phoneE164}`} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} title={dealer.phoneDisplay || dealer.phoneE164} {...stylex.props(s.iconButton)}><Phone size={20} aria-hidden="true"/></a> : null}
+        <IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>
+        {dealer.phoneE164 ? <IconButton href={`tel:${dealer.phoneE164}`} label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} icon={Phone}/> : null}
         <DesktopHeaderMenu key={currentPath}/>
       </nav>
     </div></header>
     {alternative&&pathname==='/'?<MobileAlternativeHeader onDark/>:null}
-    <div id="app-content" {...stylex.props(s.main,hideMobileNav&&s.mainWithoutNav)}>{tx(children)}</div>
+    <div id="app-content" {...stylex.props(s.main,hideMobileNav&&s.mainWithoutNav,pathname==='/more'&&!alternative&&s.menuOnRail)}>{tx(children)}</div>
     </div>
-    {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(compactDock.root,!alternative&&compactDock.labeledRoot,alternative&&s.standardAlternativeDock)}>{showroom.navigation.map(item=>{
-      const active=item.href==='/'?pathname==='/':item.href==='/services'?isServicesRoute(pathname):item.href==='/more'?['/more','/saved','/shop'].includes(pathname):pathname.startsWith(item.href);
-      return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(compactDock.link,!alternative&&compactDock.labeledLink,active&&compactDock.active)}><ShowroomIcon dock name={item.icon} active={active}/>{!alternative?<span {...stylex.props(compactDock.label)}>{tx(item.label)}</span>:null}</Link>;
+    {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(compactDock.root,!alternative&&compactDock.labeledRoot,alternative&&s.standardAlternativeDock)}>{dockNavigation.map(item=>{
+      const active=item.href==='/'?pathname==='/':item.href==='/services'?isServicesRoute(pathname):item.href==='/more'?['/more','/saved',...(alternative?['/shop']:[])].includes(pathname):pathname.startsWith(item.href);
+      const label=tx(!alternative&&item.label==='Cars'?'Cars dock':item.label);
+      return <Link key={item.label} href={item.href} aria-label={label} title={label} aria-current={active?'page':undefined} {...stylex.props(compactDock.link,!alternative&&compactDock.labeledLink,active&&compactDock.active)}><ShowroomIcon dock name={item.icon} active={active}/>{!alternative?<span {...stylex.props(compactDock.label)}>{label}</span>:null}</Link>;
     })}</nav>:null}
     {alternative&&!hideMobileNav?<MobileAlternativeDock pathname={pathname}/>:null}
   </div></VehicleDrawerProvider></HomeAlternativeProvider>;
@@ -72,6 +75,7 @@ const s=stylex.create({
  skip:{position:'fixed',top:8,left:12,zIndex:300,display:'flex',alignItems:'center',minHeight:44,paddingInline:16,color:$.ink,fontSize:14,fontWeight:500,borderRadius:12,backgroundColor:'#fff',boxShadow:$.shadowStrong,transform:{default:'translateY(-150%)',':focus':'translateY(0)'}},
  main:{minHeight:{[media.desktop]:'calc(100svh - 64px)',default:'100svh'},paddingBottom:{[media.desktop]:0,default:'calc(80px + env(safe-area-inset-bottom))'}},
  mainWithoutNav:{paddingBottom:0},
+ menuOnRail:{backgroundColor:{[media.mobile]:$.surface,default:'transparent'}},
  desktopHeader:{display:{[media.desktop]:'block',default:'none'},position:'sticky',top:0,zIndex:90,backgroundColor:'rgba(255,255,255,.97)',backdropFilter:'blur(16px)'},
  headerInner:{display:'grid',gridTemplateColumns:'minmax(0,1fr) auto minmax(0,1fr)',alignItems:'center',gap:24,width:'100%',maxWidth:$.content,minHeight:64,marginInline:'auto',paddingInline:28},
  wordmark:{display:'inline-flex',alignItems:'center',justifySelf:'start',minHeight:44,color:$.ink},
@@ -80,6 +84,5 @@ const s=stylex.create({
  journeyLabel:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:36,paddingInline:12,borderRadius:$.radiusPill,backgroundColor:{default:'transparent',':hover':$.surfaceAlt}},
  journeyActive:{color:$.ink,fontWeight:500,backgroundColor:{default:$.surfaceAlt,':hover':$.line}},
  actions:{display:'flex',alignItems:'center',justifySelf:'end',gap:8},
- iconButton:{display:'grid',placeItems:'center',width:44,height:44,color:$.ink,borderWidth:0,borderRadius:$.radiusPill,backgroundColor:{default:'transparent',':hover':$.surfaceAlt}},
  standardAlternativeDock:{display:{[media.mobile]:'none',[media.desktop]:'none',default:'grid'}},
 });

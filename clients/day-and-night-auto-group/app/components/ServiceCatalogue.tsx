@@ -11,13 +11,14 @@ import {serviceOptions, type ServiceOption} from '@/lib/service-catalogue';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 import FilterPill from '@/components/FilterPill';
+import {surfaceStyles} from '@/components/surface.stylex';
 import {desktopHero} from '@/components/desktop-hero.stylex';
 
-function ServiceCategories({searchState, onDark = false}: {searchState: ServiceSearchState; onDark?: boolean}) {
+function ServiceCategories({searchState, onDark = false, compactMobile = false}: {searchState: ServiceSearchState; onDark?: boolean; compactMobile?: boolean}) {
   const tx = useCopy();
   const {query, category, update} = searchState;
   return <div role="group" aria-label={tx('Service categories')} {...stylex.props(s.pills)}>
-    {[{id: 'all', label: 'All'}, ...serviceOptions].map(option => <FilterPill key={option.id} label={option.label} tone="soft" onDark={onDark} pressed={category === option.id} onClick={() => update(query, option.id)}/>)}
+    {[{id: 'all', label: 'All'}, ...serviceOptions].map(option => <FilterPill key={option.id} label={option.label} tone="soft" compact={compactMobile} onDark={onDark} pressed={category === option.id} onClick={() => update(query, option.id)}/>)}
   </div>;
 }
 
@@ -30,7 +31,7 @@ export function ServiceHeroControls({searchState}: {searchState: ServiceSearchSt
   </>;
 }
 
-export default function ServiceCatalogue({searchState}: {searchState: ServiceSearchState}) {
+export default function ServiceCatalogue({searchState, compactMobile = false}: {searchState: ServiceSearchState; compactMobile?: boolean}) {
   const tx = useCopy();
   const [selection, setSelection] = useState<{service: ServiceOption | null; initialView: 'details' | 'enquiry'} | null>(null);
   const {query, category, clear} = searchState;
@@ -43,16 +44,17 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
 
   return <section aria-label={tx('Service options')} {...stylex.props(s.catalogue)}>
     <div {...stylex.props(s.toolbar)}>
-    <ServiceCategories searchState={searchState}/>
+    <ServiceCategories searchState={searchState} compactMobile={compactMobile}/>
     </div>
     <span role="status" {...stylex.props(s.srOnly)}>{visible.length} {tx('Service options')}</span>
-    {visible.length > 0 ? <div {...stylex.props(s.cards)}>{visible.map(option => <button key={option.id} type="button" aria-haspopup="dialog" onClick={() => setSelection({service: option, initialView: 'details'})} aria-label={`${tx('Choose a service')}: ${tx(option.label)}`} data-service-card={option.id} {...stylex.props(s.card, s.compactCard)}>
-      <div {...stylex.props(s.artwork, s.compactArtwork)}>
-        <Image src={option.image} width={1200} height={800} sizes="(min-width: 1240px) 284px, (min-width: 1100px) 25vw, (max-width: 767px) 88px, 50vw" alt="" {...stylex.props(s.image, s.compactImage)}/>
+    {visible.length > 0 ? <div {...stylex.props(s.cards)}>{visible.map(option => <button key={option.id} type="button" aria-haspopup="dialog" onClick={() => setSelection({service: option, initialView: 'details'})} aria-label={`${tx('Choose a service')}: ${tx(option.label)}`} data-service-card={option.id} {...stylex.props(s.card, s.compactCard, compactMobile && s.mobileCard, compactMobile && surfaceStyles.card)}>
+      <div {...stylex.props(s.artwork, s.compactArtwork, compactMobile && s.mobileArtwork)}>
+        <Image src={option.image} width={1200} height={800} sizes={compactMobile ? '(min-width: 1240px) 284px, (min-width: 1100px) 25vw, (max-width: 767px) 64px, 50vw' : '(min-width: 1240px) 284px, (min-width: 1100px) 25vw, (max-width: 767px) 88px, 50vw'} alt="" {...stylex.props(s.image, s.compactImage)}/>
       </div>
       <div {...stylex.props(s.cardBody, s.compactBody)}>
-        <div {...stylex.props(s.cardHeading, s.compactHeading)}><h2 {...stylex.props(t.heading, s.title, s.compactTitle)}>{tx(option.label)}</h2><span {...stylex.props(s.arrow, s.compactArrow)}><ArrowRight size={20} aria-hidden="true"/></span></div>
-        <ul {...stylex.props(s.checks, s.compactChecks)}>{option.checks.map(check => <li key={check} {...stylex.props(t.body, s.check, s.compactCheck)}><span aria-hidden="true" {...stylex.props(s.icon, s.compactIcon)}><Check size={14} strokeWidth={1.8}/></span>{tx(check)}</li>)}</ul>
+        <div {...stylex.props(s.cardHeading, s.compactHeading)}><h2 {...stylex.props(t.heading, s.title, s.compactTitle, compactMobile && s.mobileTitle)}>{tx(option.label)}</h2><span {...stylex.props(s.arrow, s.compactArrow)}><ArrowRight size={20} aria-hidden="true"/></span></div>
+        {compactMobile ? <p {...stylex.props(s.mobileDescription)}>{tx(option.copy)}</p> : null}
+        <ul {...stylex.props(s.checks, s.compactChecks, compactMobile && s.mobileChecks)}>{option.checks.map(check => <li key={check} {...stylex.props(t.body, s.check, s.compactCheck)}><span aria-hidden="true" {...stylex.props(s.icon, s.compactIcon)}><Check size={14} strokeWidth={1.8}/></span>{tx(check)}</li>)}</ul>
       </div>
     </button>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.title)}>{tx('No matching services.')}</p><button type="button" onClick={() => clear('all')} {...stylex.props(s.reset, t.control)}>{tx('Show all services')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
     {selection ? <ServiceDetailsSheet key={selection.service?.id || 'service-enquiry'} {...selection} onClose={() => setSelection(null)}/> : null}
@@ -60,6 +62,11 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
 }
 
 const s = stylex.create({
+  mobileCard: {backgroundColor: {[media.mobile]: {default: $.surface, ':hover': $.surface}, default: $.surfaceAlt, ':hover': '#ededf0'}},
+  mobileArtwork: {width: {[media.mobile]: 64, default: 'auto'}, height: {[media.mobile]: 64, default: 'auto'}, borderRadius: {[media.mobile]: 12, default: 0}},
+  mobileTitle: {fontSize: {[media.mobile]: 16, [media.desktop]: 20, default: 28}, lineHeight: {[media.mobile]: '22px', [media.desktop]: '26px', default: '34px'}},
+  mobileDescription: {display: {[media.mobile]: 'block', default: 'none'}, margin: '4px 0 0', color: $.muted, fontSize: 13, lineHeight: '18px'},
+  mobileChecks: {display: {[media.mobile]: 'none', default: 'grid'}},
   catalogue: {marginTop: {[media.mobile]: $.mobilePillGap, [media.desktop]: 12, default: 24}},
   toolbar: {display: {[media.desktop]: 'none', default: 'contents'}, alignItems: 'center', justifyContent: 'space-between', gap: 16},
   pills: {display: 'flex', minWidth: 0, gap: 8, overflowX: 'auto', marginTop: {[media.mobile]: 0, [media.desktop]: 0, default: 10}, paddingBlock: {[media.mobile]: 0, [media.desktop]: 0, default: 3}, scrollbarWidth: 'none'},

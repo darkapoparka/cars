@@ -159,7 +159,7 @@
         12,
     );
     if (
-      window.innerWidth < (showPurpose ? 768 : 992) ||
+      window.innerWidth < 768 ||
       anchor.bottom <= viewportTop ||
       anchor.top >= window.innerHeight - 16
     ) {
@@ -345,7 +345,8 @@
   role="search"
   aria-label={locale.t("ui.dealership-vehicle-search.find-a-car")}
   class={[
-    "dealership-search background-card",
+    "dealership-search",
+    { "background-card": !showPurpose },
     { "home-search-panel": showPurpose },
   ]}
   onsubmit={(event) => {
@@ -358,7 +359,7 @@
 >
   {#if showPurpose}
     <div class="purpose-tabs">
-      <SearchPurpose bind:value={purpose} onchange={() => close()} standalone />
+      <SearchPurpose bind:value={purpose} onchange={() => close()} expanded />
     </div>
   {/if}
   <input type="hidden" name="lang" value={locale.locale} />
@@ -371,11 +372,11 @@
   {/each}
   <div class="search-fields" class:with-purpose={showPurpose}>
     {#if showPurpose && purpose === "rent"}
-      {#each [{ label: locale.locale === "bg" ? "Вземане" : "Pick-up", value: rentalPickup ? locale.date(rentalPickup) : locale.locale === "bg" ? "Избери дата" : "Choose date" }, { label: locale.locale === "bg" ? "Връщане" : "Return", value: rentalReturn ? locale.date(rentalReturn) : locale.locale === "bg" ? "Избери дата" : "Choose date" }, { label: locale.locale === "bg" ? "Автомобил" : "Vehicle", value: rentalPreference.trim() || (locale.locale === "bg" ? "По предпочитание" : "Your preference") }] as field (field.label)}
+      {#each [{ key: "pickup" as const, label: locale.locale === "bg" ? "Вземане" : "Pick-up", value: rentalPickup ? locale.date(rentalPickup) : locale.locale === "bg" ? "Избери дата" : "Choose date" }, { key: "returning" as const, label: locale.locale === "bg" ? "Връщане" : "Return", value: rentalReturn ? locale.date(rentalReturn) : locale.locale === "bg" ? "Избери дата" : "Choose date" }, { key: "preference" as const, label: locale.locale === "bg" ? "Автомобил" : "Vehicle", value: rentalPreference.trim() || (locale.locale === "bg" ? "По предпочитание" : "Your preference") }] as field (field.label)}
         <button
           type="button"
           class="search-field"
-          onclick={() => rental?.openSearch()}
+          onclick={() => rental?.openSearch(field.key)}
           aria-haspopup="dialog"
           ><span class="field-label desktop-type-label">{field.label}</span
           ><span class="field-value desktop-type-control"
@@ -722,7 +723,26 @@
     box-shadow: 0 8px 24px rgb(0 0 0 / 6%);
   }
   .dealership-search.home-search-panel {
-    padding-block: 8px;
+    display: grid;
+    grid-template-columns: 192px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    padding: 10px 12px;
+    border: 1px solid #e4e4e4;
+    background: #fff;
+    box-shadow: none;
+  }
+  .home-search-panel .search-fields {
+    min-height: 52px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+  }
+  .home-search-panel .field-value {
+    --karento-type-control-size: 15px;
+    font-size: 15px;
   }
   .search-fields {
     display: grid;
@@ -734,16 +754,27 @@
   }
   .purpose-tabs {
     display: flex;
-    width: fit-content;
-    margin-bottom: 4px;
-    padding-inline: 20px;
+    justify-content: center;
+    min-width: 0;
+    margin: 0;
   }
-  @media (min-width: 992px) {
-    .home-search-panel {
-      --search-purpose-row-height: 28px;
+  @media (max-width: 1100px) {
+    .dealership-search.home-search-panel {
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 12px;
     }
-    .purpose-tabs {
-      margin-bottom: 8px;
+    .home-search-panel .search-field {
+      padding-inline: 6px;
+    }
+    .home-search-panel .field-value {
+      --karento-type-control-size: 14px;
+      gap: 4px;
+    }
+    .home-search-panel .search-fields.with-purpose {
+      grid-template-columns: 1.25fr 1.25fr 1fr auto;
+    }
+    .home-search-panel .search-button {
+      margin-left: 8px;
     }
   }
   .search-field {

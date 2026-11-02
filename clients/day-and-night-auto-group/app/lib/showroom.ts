@@ -62,6 +62,7 @@ export const showroom = {
   navigation: [
     {href: '/', label: 'Home', icon: 'home'},
     {href: '/cars', label: 'Cars', icon: 'cars'},
+    {href: '/shop', label: 'Shop', icon: 'shop'},
     {href: '/services', label: 'Services', icon: 'service'},
     {href: '/more', label: 'Menu', icon: 'more'},
   ],

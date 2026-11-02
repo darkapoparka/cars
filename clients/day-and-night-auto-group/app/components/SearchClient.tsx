@@ -1,4 +1,5 @@
 'use client';
+import IconButton from '@/components/IconButton';
 import {displayMake} from '@/lib/inventory-labels';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
@@ -69,7 +70,7 @@ export default function SearchClient({initialQuery = '', overlay = false, formId
     <div {...stylex.props(overlay && s.overlaySearchBar)}><form id={formId} data-search-field role="search" onSubmit={submit} {...stylex.props(searchField.field)}>
       <Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)}/>
       <input data-search-input ref={input} type="search" enterKeyHint="search" role="combobox" aria-label={tx("Search by brand or model")} aria-autocomplete="list" aria-expanded={suggestions.length > 0} aria-controls={suggestions.length ? "search-suggestions" : undefined} aria-activedescendant={active >= 0 ? `suggestion-${active}` : undefined} placeholder={tx("Make or model")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={event => {setQuery(event.target.value); setActive(-1);}} onKeyDown={keydown} {...stylex.props(searchField.input)} />
-      {query ? <button type="button" aria-label={tx("Clear search")} onClick={() => {setQuery(''); setActive(-1); input.current?.focus();}} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true" /></button> : null}
+      {query ? <IconButton icon={X} tone="embedded" label={tx("Clear search")} onClick={() => {setQuery(''); setActive(-1); input.current?.focus();}} layout={searchField.clear}/> : null}
     </form></div>
     <p role="status" className="visually-hidden">{query.trim() ? `${suggestions.length} ${tx('search suggestions available')}` : ''}</p>
     {query.trim() ? <div id="search-suggestions" role={suggestions.length ? "listbox" : undefined} aria-label={suggestions.length ? tx("Search suggestions") : undefined} {...stylex.props(s.suggestions)}>

@@ -3,6 +3,9 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
+  import { page } from "$app/state";
+  import { dealerDetailFor } from "#lib/data/dealer-detail.ts";
+  import PurchaseEnquiry from "#lib/components/contact/PurchaseEnquiry.svelte";
   import ContactEnquiryForm from "#lib/components/contact/ContactEnquiryForm.svelte";
   import MobileSheet from "#lib/components/MobileSheet.svelte";
   import MobilePill from "#lib/components/mobile/MobilePill.svelte";
@@ -10,6 +13,10 @@
   import { dealer } from "#lib/content.ts";
   let { open = $bindable(false) }: { open?: boolean } = $props();
   const phone = new MediaQuery("(max-width: 767.98px)");
+
+  const selected = $derived(page.url.searchParams.has("vehicleId") ? dealerDetailFor(page.url.searchParams.get("vehicleId")) : null);
+  const viewing = $derived(page.url.searchParams.get("intent") === "viewing");
+  const enquiryTitle = $derived(selected ? locale.locale === "bg" ? viewing ? "Уговори оглед" : "Запитване за покупка" : viewing ? "Arrange a viewing" : "Purchase enquiry" : locale.t("ui.contact-enquiry.send-an-enquiry"));
 
   const address = dealer.locations[0]?.address ?? "";
   const locationQuery = encodeURIComponent(address);
@@ -28,7 +35,7 @@
               id="contact-enquiry"
               tabindex="-1"
               class="neutral-1000 mb-25 karento-hero-target desktop-section-title"
-              >{locale.t("ui.contact-enquiry.get-in-touch")}</h2
+              >{selected ? enquiryTitle : locale.t("ui.contact-enquiry.get-in-touch")}</h2
             >
             {#if phone.current}
               <div class="mobile-contact-opener">
@@ -40,14 +47,14 @@
                   )}</p
                 >
                 <MobilePill
-                  label={locale.t("ui.contact-enquiry.send-an-enquiry")}
+                  label={enquiryTitle}
                   trailingIcon="arrow-up-right"
                   popup="dialog"
                   expanded={open}
                   onclick={() => (open = true)}
                 />
               </div>
-            {:else}<ContactEnquiryForm />{/if}
+            {:else if selected}<PurchaseEnquiry vehicle={selected} {viewing} />{:else}<ContactEnquiryForm />{/if}
             {#if address}<div class="karento-contact-location">
                 <p class="neutral-500 karento-contact-address">{address}</p>
                 <a
@@ -89,11 +96,11 @@
 {#if phone.current}
   <MobileSheet
     bind:open
-    title={locale.t("ui.contact-enquiry.send-an-enquiry")}
+    title={enquiryTitle}
     class="mobile-contact-sheet"
   >
     <div class="mobile-contact-form">
-      <ContactEnquiryForm idPrefix="mobile-contact" />
+      {#if selected}<PurchaseEnquiry vehicle={selected} {viewing} />{:else}<ContactEnquiryForm idPrefix="mobile-contact" />{/if}
     </div>
   </MobileSheet>
 {/if}

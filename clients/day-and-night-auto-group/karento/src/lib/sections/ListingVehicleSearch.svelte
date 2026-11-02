@@ -21,6 +21,9 @@
 {/if}
 
 <style>
+  @media (max-width: 767.98px) {
+    .box-search-advance-home10 :global(.mobile-catalog-search) { top: 0; margin-bottom: 0; box-shadow: none; }
+  }
   @media (min-width: 992px) {
     .karento-catalog-search {
       position: relative;

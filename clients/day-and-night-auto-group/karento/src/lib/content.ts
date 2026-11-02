@@ -25,6 +25,7 @@ export interface VehicleCardContent {
   fuel: string;
   seats: string;
   bodyType?: string;
+  year?: number;
   price: string;
   pricePeriod: string;
   action: string;

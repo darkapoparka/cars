@@ -11,11 +11,11 @@ import {searchField} from '@/components/search-field.stylex';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 /** Shared Home search entry, including its actual stock count. */
-export default function ShowroomSearchField({onDark = false}: {onDark?: boolean}) {
+export default function ShowroomSearchField({onDark = false, plainOnMobile = false}: {onDark?: boolean; plainOnMobile?: boolean}) {
   const tx = useCopy();
   const labelId = useId();
   const [open, setOpen] = useState(false);
-  return <><button type="button" data-search-field aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen(true)} aria-labelledby={labelId} {...stylex.props(searchField.field, s.entry, onDark && s.onDark)}>
+  return <><button type="button" data-search-field aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen(true)} aria-labelledby={labelId} {...stylex.props(searchField.field, s.entry, onDark && s.onDark, plainOnMobile && s.plainOnMobile)}>
     <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
     <span id={labelId} {...stylex.props(searchField.copy)}>
       <span data-search-prompt {...stylex.props(s.desktopPrompt)}>{tx(showroom.searchPlaceholder)}</span>
@@ -28,6 +28,7 @@ export default function ShowroomSearchField({onDark = false}: {onDark?: boolean}
 const s = stylex.create({
   entry: {width: '100%', paddingBlock: 0, textAlign: 'left', cursor: 'pointer'},
   onDark: {backgroundColor: $.surface, outlineColor: {':focus-visible': {[media.mobile]: '#242428', default: '#fff'}}, outlineOffset: 3},
+  plainOnMobile: {backgroundColor: {[media.mobile]: $.surfaceAlt, default: $.surface}},
   desktopPrompt: {display: {[media.mobile]: 'none', default: 'block'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
   mobilePrompt: {display: {[media.mobile]: 'block', default: 'none'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
 });

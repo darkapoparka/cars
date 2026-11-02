@@ -1,6 +1,7 @@
 'use client';
 
 import {useState} from 'react';
+import {formControl} from './form-control.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {useCopy, useLocale} from '@/lib/locale';
 import {media, tokens as $} from '@/app/tokens.stylex';
@@ -22,7 +23,7 @@ function ValueField({value, label, minimum, maximum, decimal, format, onChange, 
     if (next !== null && Number.isFinite(next)) onChange(Math.max(minimum, Math.min(maximum, next)));
     setEditing(false);
   }
-  return <input type="text" data-focus-owner={embedded ? 'field' : undefined} inputMode={decimal ? 'decimal' : 'numeric'} aria-label={label} value={editing ? draft : format(value)} onFocus={event => {setDraft(String(value)); setEditing(true); event.currentTarget.select();}} onChange={event => {setDraft(event.target.value); const next = parse(event.target.value); if (next !== null && next >= minimum && next <= maximum) onChange(next);}} onBlur={event => commit(event.currentTarget.value)} onKeyDown={event => {if (event.key === 'Enter') {event.preventDefault(); event.currentTarget.blur();}}} {...stylex.props(s.input)}/>;
+  return <input type="text" data-focus-owner={embedded ? 'field' : undefined} inputMode={decimal ? 'decimal' : 'numeric'} aria-label={label} value={editing ? draft : format(value)} onFocus={event => {setDraft(String(value)); setEditing(true); event.currentTarget.select();}} onChange={event => {setDraft(event.target.value); const next = parse(event.target.value); if (next !== null && next >= minimum && next <= maximum) onChange(next);}} onBlur={event => commit(event.currentTarget.value)} onKeyDown={event => {if (event.key === 'Enter') {event.preventDefault(); event.currentTarget.blur();}}} {...stylex.props(s.input, formControl.surface, formControl.focus, embedded && formControl.embedded)}/>;
 }
 
 /** Phone range: both editable bounds stay together, with separate keyboard-accessible sliders. */
@@ -50,7 +51,7 @@ const s = stylex.create({
   embeddedRange: {gap: {[media.desktop]: 0, default: 12}},
   fields: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12},
   field: {display: 'grid', gap: 6, minWidth: 0, color: $.muted, fontSize: 12, lineHeight: '18px'},
-  input: {width: '100%', minWidth: 0, minHeight: 48, paddingInline: 12, color: $.ink, fontFamily: $.fontSans, fontSize: 16, fontWeight: 400, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: 12, backgroundColor: $.surface, outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: 2},
+  input: {width: '100%', minWidth: 0, minHeight: 48, paddingInline: 12, color: $.ink, fontFamily: $.fontSans, fontSize: 16, fontWeight: 400, borderWidth: 1, borderStyle: 'solid', borderRadius: 12},
   sliderRow: {display: 'grid', gap: 2, minWidth: 0},
   sliderLabel: {display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8, color: $.muted, fontSize: 12, lineHeight: '18px'},
   slider: {width: '100%', minWidth: 0, height: 44, margin: 0, padding: 0, accentColor: $.ink},

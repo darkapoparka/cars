@@ -24,7 +24,7 @@ export default function DealerHomeBanner({desktopSearch, desktopFilters}: {deskt
     {dealer.phoneE164 ? <a href={`tel:${dealer.phoneE164}`} title={dealer.phoneDisplay || dealer.phoneE164} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} {...stylex.props(s.action)}><span data-dealer-contact-pill {...stylex.props(s.contactPill, t.caption)}><Phone size={15} strokeWidth={1.75} aria-hidden="true"/><span>{tx('Call us')}</span></span></a> : null}
   </div>;
   return <>
-    <DealerMobileBanner compactBrand secondary={contacts}><ShowroomSearchField onDark/></DealerMobileBanner>
+    <DealerMobileBanner compactBrand secondary={contacts}><ShowroomSearchField onDark plainOnMobile/></DealerMobileBanner>
     <ShowroomBanner title={showroom.promotion.title} control={<>{desktopSearch ?? <ShowroomSearchField onDark/>}{desktopFilters}</>}/>
     <DealerLocationSheet open={locationOpen} onClose={() => setLocationOpen(false)}/>
   </>;
@@ -32,5 +32,5 @@ export default function DealerHomeBanner({desktopSearch, desktopFilters}: {deskt
 const s = stylex.create({
   actions: {display: {[media.mobile]: 'none', [media.desktop]:'none', default: 'flex'}, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0px 8px', maxWidth: '100%'},
   action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: $.controlHeight, maxWidth: '100%', padding: 0, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer', color: {default: '#303036', ':hover': '#000'}, borderRadius: 999, outline: {default: 'none', ':focus-visible': '2px solid #fff'}, outlineOffset: 2},
-  contactPill: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: 34, padding: '6px 12px', color: 'inherit', borderRadius: 999, backgroundColor: '#fff', overflowWrap: 'anywhere'},
+  contactPill: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: 34, padding: '6px 12px', color: 'inherit', borderRadius: 999, backgroundColor: {[media.mobile]: $.surfaceAlt, default: $.surface}, overflowWrap: 'anywhere'},
 });

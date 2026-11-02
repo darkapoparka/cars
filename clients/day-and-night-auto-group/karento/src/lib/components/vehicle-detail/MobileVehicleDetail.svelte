@@ -1,6 +1,8 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
+  import { page } from "$app/state";
+  import { buyReturn } from "#lib/data/journeys.ts";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import { shareVehiclePage, type ShareResult } from "#lib/i18n/share.ts";
   const locale = useLocale();
@@ -81,7 +83,7 @@
       aria-label={locale.t("vehicle.actions")}
     >
       <MobileIconButton
-        href={locale.href("/vehicles")}
+        href={locale.href(buyReturn(page.url.searchParams.get("returnTo")))}
         label={locale.t("action.backVehicles")}
         icon="arrow-left"
         surface="circle"

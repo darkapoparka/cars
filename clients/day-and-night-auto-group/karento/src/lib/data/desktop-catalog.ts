@@ -32,6 +32,8 @@ export const desktopCatalogFilterLabels: Record<
   DesktopCatalogFilterKey,
   string
 > = {
+  yearFrom: "Year from",
+  yearTo: "Year to",
   type: "Type",
   q: "Search",
   make: "Make",
@@ -45,6 +47,8 @@ export const desktopCatalogFilterLabels: Record<
 };
 
 export const desktopCatalogFilterMessageKeys = {
+  yearFrom: "catalog.yearFrom",
+  yearTo: "catalog.yearTo",
   type: "catalog.type",
   q: "action.search",
   make: "catalog.make",

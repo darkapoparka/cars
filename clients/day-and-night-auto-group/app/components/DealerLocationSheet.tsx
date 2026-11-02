@@ -1,4 +1,5 @@
 'use client';
+import IconButton from '@/components/IconButton';
 
 import {createPortal} from 'react-dom';
 import {MapPin, Navigation, Phone, X} from 'lucide-react';
@@ -16,7 +17,7 @@ export default function DealerLocationSheet({open, onClose}: {open: boolean; onC
   return createPortal(<div {...stylex.props(s.overlay)} onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <div ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="dealer-location-title" {...stylex.props(s.sheet)}>
       <div aria-hidden="true" {...stylex.props(s.handle)}/>
-      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id="dealer-location-title" {...stylex.props(s.title)}>{tx('Visit showroom')}</h2></div><button type="button" onClick={onClose} aria-label={tx('Close')} {...stylex.props(s.close)}><X size={22}/></button></header>
+      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id="dealer-location-title" {...stylex.props(s.title)}>{tx('Visit showroom')}</h2></div><IconButton icon={X} label={tx('Close')} onClick={onClose}/></header>
       <div {...stylex.props(s.address)}><span {...stylex.props(s.pin)}><MapPin size={24} aria-hidden="true"/></span><div><p {...stylex.props(s.city)}>{dealer.city || dealer.name}</p><p {...stylex.props(s.street)}>{dealer.address || tx('Contact the dealer for the showroom address.')}</p></div></div>
       <div {...stylex.props(s.actions)}>
         {dealer.mapsUrl ? <a href={dealer.mapsUrl} target="_blank" rel="noopener noreferrer" {...stylex.props(s.primary)}><Navigation size={18} aria-hidden="true"/>{tx('Open in Google Maps')}</a> : null}
@@ -32,7 +33,6 @@ const s = stylex.create({
   header: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12},
   eyebrow: {fontSize: 13, color: $.muted, lineHeight: 1.5},
   title: {fontSize: 24, fontWeight: 600, lineHeight: 1.3, marginTop: 3},
-  close: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, borderWidth: 0, borderRadius: '50%', backgroundColor: '#f4f4f5', color: $.ink, cursor: 'pointer'},
   address: {display: 'flex', alignItems: 'flex-start', gap: 14, padding: 18, marginBlock: 24, borderRadius: 16, backgroundColor: '#f5f5f6'},
   pin: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, backgroundColor: '#fff', borderRadius: 14},
   city: {fontSize: 16, fontWeight: 600, lineHeight: 1.5},

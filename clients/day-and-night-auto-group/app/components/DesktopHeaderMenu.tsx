@@ -4,6 +4,7 @@ import {useLayoutEffect, useId, useRef, useState} from 'react';
 import * as stylex from '@stylexjs/stylex';
 import {Menu, X} from 'lucide-react';
 import ShowroomMenu from '@/components/ShowroomMenu';
+import {iconButtonStyles as iconButton} from '@/components/icon-button.stylex';
 import {useCopy} from '@/lib/locale';
 import {usePathname} from '@/lib/navigation';
 import {media, tokens as $} from '@/app/tokens.stylex';
@@ -50,8 +51,8 @@ export default function DesktopHeaderMenu({onDark = false}: {onDark?: boolean}) 
   }, [open]);
 
   return <div {...stylex.props(s.anchor)}>
-    <button ref={trigger} type="button" data-desktop-menu-trigger aria-label={tx('Open menu')} title={tx('Open menu')} aria-expanded={open} aria-controls={open ? id : undefined} onClick={() => open ? setOpen(false) : show()} onKeyDown={event => {if (event.key === 'ArrowDown') {event.preventDefault(); if (open) panel.current?.querySelector<HTMLAnchorElement>('a[href]')?.focus({preventScroll: true}); else show();}}} {...stylex.props(s.trigger, onDark && s.darkTrigger, open && s.activeTrigger, open && onDark && s.darkActiveTrigger)}>
-      {open ? <X size={22} aria-hidden="true"/> : <Menu size={23} aria-hidden="true"/>}
+    <button ref={trigger} type="button" data-desktop-menu-trigger data-header-on-dark={onDark || undefined} aria-label={tx('Open menu')} title={tx('Open menu')} aria-expanded={open} aria-controls={open ? id : undefined} onClick={() => open ? setOpen(false) : show()} onKeyDown={event => {if (event.key === 'ArrowDown') {event.preventDefault(); if (open) panel.current?.querySelector<HTMLAnchorElement>('a[href]')?.focus({preventScroll: true}); else show();}}} {...stylex.props(iconButton.button)}>
+      <span data-icon-surface {...stylex.props(iconButton.content, open && iconButton.selected)}>{open ? <X aria-hidden="true" {...stylex.props(iconButton.icon)}/> : <Menu aria-hidden="true" {...stylex.props(iconButton.icon)}/>}</span>
     </button>
     {open ? <div ref={panel} id={id} role="region" aria-label={tx('Menu')} data-desktop-menu {...stylex.props(s.panel)}><ShowroomMenu compact languagePath={languagePath} onNavigate={() => setOpen(false)}/></div> : null}
   </div>;
@@ -59,9 +60,5 @@ export default function DesktopHeaderMenu({onDark = false}: {onDark?: boolean}) 
 
 const s = stylex.create({
   anchor: {position: 'relative', display: {[media.desktop]: 'block', default: 'none'}},
-  trigger: {display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: 8, backgroundColor: {default: 'transparent', ':hover': $.surfaceAlt}, outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: 2, cursor: 'pointer'},
-  darkTrigger: {color: '#fff', backgroundColor: {default: 'transparent', ':hover': '#333337'}, outlineColor: '#fff'},
-  activeTrigger: {backgroundColor: $.surfaceAlt},
-  darkActiveTrigger: {backgroundColor: '#38383d'},
   panel: {position: 'absolute', top: 'calc(100% + 18px)', right: 0, width: 352, maxWidth: 'calc(100vw - 56px)', maxHeight: 'calc(100dvh - 88px)', overflowY: 'auto', overscrollBehaviorY: 'contain', padding: 12, color: $.ink, fontFamily: $.fontSans, backgroundColor: $.surface, borderWidth: 0, borderRadius: $.radiusMd, boxShadow: $.shadowStrong, scrollbarWidth: 'thin'},
 });

@@ -4,6 +4,8 @@ export interface CatalogFilters {
   model: string;
   budget: string;
   sort: string;
+  yearFrom: string;
+  yearTo: string;
 }
 
 export type CatalogPanel =
@@ -13,14 +15,16 @@ export type CatalogPanel =
   | "model"
   | "budget"
   | "sort";
-export type CatalogItem = { title: string; price: string };
-export const catalogFilterKeys = ["q", "make", "model", "budget"] as const;
+export type CatalogItem = { title: string; price: string; year?: number; bodyType?: string };
+export const catalogFilterKeys = ["q", "make", "model", "budget", "yearFrom", "yearTo"] as const;
 export const emptyCatalogFilters: Readonly<CatalogFilters> = {
   q: "",
   make: "",
   model: "",
   budget: "",
   sort: "",
+  yearFrom: "",
+  yearTo: "",
 };
 export const catalogSortOptions = [
   { value: "", label: "Default order", labelKey: "catalog.order.default" },
@@ -52,6 +56,8 @@ export function readCatalogFilters(
   return {
     q: parameters.get("q")?.trim() ?? "",
     make,
+    yearFrom: /^\d{4}$/.test(parameters.get("yearFrom") ?? "") ? parameters.get("yearFrom")! : "",
+    yearTo: /^\d{4}$/.test(parameters.get("yearTo") ?? "") ? parameters.get("yearTo")! : "",
     model: make ? (parameters.get("model") ?? "") : "",
     budget: normalizeCatalogBudget(budget) ?? "",
     sort: ["price-asc", "price-desc"].includes(parameters.get("sort") ?? "")
@@ -71,10 +77,12 @@ export function matchCatalog<T extends CatalogItem>(
   const filtered = items.filter(
     (item) =>
       (!filters.q ||
-        item.title.toLowerCase().includes(filters.q.toLowerCase())) &&
+        filters.q.toLowerCase().split(/\s+/).every((term) => `${item.title} ${item.year ?? ""} ${item.bodyType ?? ""}`.toLowerCase().includes(term))) &&
       (!filters.make || item.title.startsWith(filters.make + " ")) &&
       (!filters.model || item.title === filters.make + " " + filters.model) &&
-      (!budget || price(item) <= Number(budget)),
+      (!budget || price(item) <= Number(budget)) &&
+      (!filters.yearFrom || (item.year !== undefined && item.year >= Number(filters.yearFrom))) &&
+      (!filters.yearTo || (item.year !== undefined && item.year <= Number(filters.yearTo))),
   );
   return filters.sort
     ? filtered.toSorted(

@@ -1,4 +1,5 @@
 'use client';
+import IconButton from '@/components/IconButton';
 
 import {useRef} from 'react';
 import {applicationHistoryState} from '@/lib/history-state';
@@ -41,8 +42,8 @@ export default function ServiceSearchField({state, onDark = false, plainOnMobile
   return <div role="search">
     <div data-search-field {...stylex.props(searchField.field, s.search, onDark && s.onDark, plainOnMobile && s.plainMobileSearch, desktopHero && hero.bar, desktopHero && hero.singleFieldBar)}>
       <Search aria-hidden="true" {...stylex.props(searchField.icon, desktopHero && s.heroIcon)}/>
-      <input ref={desktopHero ? state.desktopInput : onDark ? state.mobileInput : state.desktopInput} data-search-input type="search" aria-label={tx('Search services')} placeholder={tx('Search services')} value={state.query} onChange={event => state.update(event.target.value, state.category)} {...stylex.props(searchField.input, s.input, onDark && s.compactInput, desktopHero && hero.cell)}/>
-      {state.query ? <button type="button" aria-label={tx('Clear search')} onClick={() => state.clear()} {...stylex.props(searchField.clear, s.clear, onDark && s.compactClear, desktopHero && s.heroClear)}><X size={18} aria-hidden="true"/></button> : null}
+      <input ref={desktopHero ? state.desktopInput : onDark ? state.mobileInput : state.desktopInput} data-search-input type="search" aria-label={tx('Search services')} placeholder={tx('Search services')} value={state.query} onChange={event => state.update(event.target.value, state.category)} {...stylex.props(searchField.input, s.input, desktopHero && hero.cell)}/>
+      {state.query ? <IconButton icon={X} tone="embedded" label={tx('Clear search')} onClick={() => state.clear()} layout={[searchField.clear, desktopHero && s.heroClear]}/> : null}
     </div>
   </div>;
 }
@@ -51,10 +52,7 @@ const s = stylex.create({
   search: {minHeight: 48, outline: {default: 'none', ':focus-within': '2px solid #242428'}, outlineOffset: 2},
   onDark: {minHeight: 44, backgroundColor: $.surface, outlineColor: {':focus-within': {[media.mobile]: '#242428', default: '#fff'}}, outlineOffset: 3},
   heroIcon: {marginInlineStart: {[media.desktop]: 14, default: null}},
-  heroClear: {marginRight: {[media.desktop]: 0, default: null}},
+  heroClear: {marginRight: {[media.desktop]: 0, default: -10}},
   plainMobileSearch: {backgroundColor: {[media.mobile]: $.surfaceAlt, default: $.surface}, outlineColor: {':focus-within': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
-  input: {minHeight: 44, appearance: {default: 'auto', '::-webkit-search-cancel-button': 'none'}},
-  compactInput: {minHeight: 40},
-  clear: {width: 44, height: 44},
-  compactClear: {width: 42, height: 42},
+  input: {appearance: {default: 'auto', '::-webkit-search-cancel-button': 'none'}},
 });

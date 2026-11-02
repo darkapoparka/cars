@@ -683,6 +683,19 @@ export function discoveryDestination(
   return "/?" + next.toString() + hash;
 }
 
+/** Map Home discovery choices to the sale catalogue without losing their meaning. */
+export function buySearchDestination(query: string, filters: DiscoveryFilters): string {
+  const next = new URLSearchParams();
+  if (query.trim()) next.set("q", query.trim());
+  if (filters.make) next.set("make", filters.make);
+  if (filters.make && filters.model.startsWith(filters.make + " ")) next.set("model", filters.model.slice(filters.make.length + 1));
+  const budget = normalizeCatalogBudget(filters.priceMax);
+  if (budget) next.set("budget", budget);
+  if (filters.yearFrom) next.set("yearFrom", filters.yearFrom);
+  if (filters.yearTo) next.set("yearTo", filters.yearTo);
+  return "/vehicles" + (next.size ? "?" + next.toString() : "") + "#vehicle-results";
+}
+
 /** Detail returns stay on Home; bookmarked /2 returns normalize to the same route. */
 export function discoveryReturn(value: string | null): string {
   if (!value || !/^\/(?:2)?(?:[?#]|$)/.test(value)) return "/";

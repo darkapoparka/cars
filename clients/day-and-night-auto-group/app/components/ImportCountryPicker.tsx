@@ -1,7 +1,10 @@
 'use client';
+import IconButton from '@/components/IconButton';
 
-import {useId, useState} from 'react';
-import {ArrowRight, X} from 'lucide-react';
+import {useId, useRef, useState} from 'react';
+import {ArrowRight, Globe2, X} from 'lucide-react';
+import {formControl} from './form-control.stylex';
+import {actionButton} from './action-button.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {useCopy} from '@/lib/locale';
 import {showroom} from '@/lib/showroom';
@@ -18,21 +21,22 @@ import {desktopHero} from '@/components/desktop-hero.stylex';
 
 type CountryFilters = {country: string; onCountryChange: (country: string) => void};
 
-export function ImportCountryFilters({country, onCountryChange, hero = false}: CountryFilters & {hero?: boolean}) {
+export function ImportCountryFilters({country, onCountryChange, hero = false, compactMobile = false}: CountryFilters & {hero?: boolean; compactMobile?: boolean}) {
   const tx = useCopy();
   return <div role="group" aria-label={tx('Import country')} {...stylex.props(hero ? desktopHero.secondary : s.pills)}>
-    {[{code: 'all', name: 'All', flagSrc: undefined}, ...showroom.importCountries].map(item => <FilterPill key={item.code} label={item.name} flagSrc={item.flagSrc} tone="soft" onDark={hero} pressed={country === item.code} onClick={() => onCountryChange(item.code)}/>)}
+    {[{code: 'all', name: 'All', flagSrc: undefined}, ...showroom.importCountries].map(item => <FilterPill key={item.code} label={item.name} flagSrc={item.flagSrc} tone="soft" compact={compactMobile} onDark={hero} pressed={country === item.code} onClick={() => onCountryChange(item.code)}/>)}
   </div>;
 }
 
 /** Filter import listings by country and prepare a local enquiry. */
-export default function ImportCountryPicker({country: filterCountry, onCountryChange: setFilterCountry}: CountryFilters) {
+export default function ImportCountryPicker({country: filterCountry, onCountryChange: setFilterCountry, standalone = false}: CountryFilters & {standalone?: boolean}) {
   const tx = useCopy(), id = useId();
   const [selectedListing, setSelectedListing] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   const [origin, setOrigin] = useState<string>(showroom.importCountries[0]?.code || 'other');
   const [details, setDetails] = useState({country: '',model: '',budget: '',listing: ''});
   const [enquiry, setEnquiry] = useState<string | null>(null);
+  const previousGeneralCountry = useRef<string | null>(null);
   const country = showroom.importCountries.find(item => item.code === origin);
   const visible = importListings.filter(listing => filterCountry === 'all' || filterCountry === listing.countryCode);
   function close() {setEnquiry(null); setOpen(false);}
@@ -47,6 +51,13 @@ export default function ImportCountryPicker({country: filterCountry, onCountryCh
     setEnquiry(null); setOpen(true);
   }
   function showAll() {setFilterCountry('all');}
+  function startGeneral() {
+    if (selectedListing || previousGeneralCountry.current !== filterCountry) {
+      if (showroom.importCountries.some(item => item.code === filterCountry)) setOrigin(filterCountry);
+      previousGeneralCountry.current = filterCountry;
+    }
+    setSelectedListing(null); setEnquiry(null); setOpen(true);
+  }
   function update(field: keyof typeof details, value: string) {setDetails(previous => ({...previous,[field]: value}));}
   function prepare() {
     const lines = [tx('Country') + ': ' + (country ? tx(country.name) : details.country.trim())];
@@ -57,20 +68,21 @@ export default function ImportCountryPicker({country: filterCountry, onCountryCh
   }
 
   return <>
+    {standalone ? <button type="button" aria-haspopup="dialog" aria-expanded={open} onClick={startGeneral} {...stylex.props(s.enquiryEntry)}><Globe2 size={20} aria-hidden="true"/><span {...stylex.props(s.enquiryEntryLabel)}>{tx('Request an import')}</span><ArrowRight size={18} aria-hidden="true"/></button> : null}
     <section data-import-countries aria-label={tx('Import cars')} {...stylex.props(s.discovery)}>
-      <div {...stylex.props(s.inlineFilters)}><ImportCountryFilters country={filterCountry} onCountryChange={setFilterCountry}/></div>
+      <div {...stylex.props(s.inlineFilters, standalone && s.standaloneFilters)}><ImportCountryFilters country={filterCountry} onCountryChange={setFilterCountry} compactMobile={standalone}/></div>
       <span role="status" {...stylex.props(s.srOnly)}>{tx('Import cars')}: {visible.length}</span>
-      {visible.length ? <div data-import-listings {...stylex.props(s.listings)}>{visible.map(listing => <VehicleCard key={listing.vehicle.slug} vehicle={listing.vehicle} desktopTile headingLevel={2} importListing={{country: tx(showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode), onEnquire: () => choose(listing)}}/>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.body)}>{tx('No matching import cars.')}</p><button type="button" onClick={showAll} {...stylex.props(s.reset,t.control)}>{tx('Show all cars')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
+      {visible.length ? <div data-import-listings {...stylex.props(s.listings, standalone && s.standaloneListings)}>{visible.map(listing => <VehicleCard key={listing.vehicle.slug} vehicle={listing.vehicle} desktopTile headingLevel={2} importListing={{country: tx(showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode), onEnquire: () => choose(listing)}}/>)}</div> : <div {...stylex.props(s.empty, standalone && s.standaloneEmpty)}><p {...stylex.props(t.body)}>{tx(standalone && !importListings.length ? 'Import on request.' : 'No matching import cars.')}</p>{standalone && !importListings.length ? <p {...stylex.props(s.emptyCopy)}>{tx('No import listings are published. You can prepare an enquiry for a car of your choice.')}</p> : <button type="button" onClick={showAll} {...stylex.props(s.reset, actionButton.secondary,t.control)}>{tx('Show all cars')}<ArrowRight size={18} aria-hidden="true"/></button>}</div>}
     </section>
     {open ? <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && close()}>
       <section id={id + '-dialog'} ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={id + '-title'} {...stylex.props(s.sheet)}>
-        <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow,t.caption)}>{dealer.name}</p><h2 id={id + '-title'} {...stylex.props(t.heading)}>{tx('Import enquiry')}</h2></div><button type="button" aria-label={tx('Close import enquiry')} onClick={close} {...stylex.props(s.close)}><X size={22} aria-hidden="true"/></button></header>
+        <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow,t.caption)}>{dealer.name}</p><h2 id={id + '-title'} {...stylex.props(t.heading)}>{tx('Import enquiry')}</h2></div><IconButton icon={X} label={tx('Close import enquiry')} onClick={close}/></header>
         <form onSubmit={event => {event.preventDefault(); prepare();}} {...stylex.props(s.form)}>
-          <label {...stylex.props(s.label,t.caption)}>{tx('Country')}<select value={origin} onChange={event => setOrigin(event.target.value)} {...stylex.props(s.input,t.input)}>{showroom.importCountries.map(item => <option key={item.code} value={item.code}>{tx(item.name)}</option>)}<option value="other">{tx('Other country')}</option></select></label>
-          {!country ? <label {...stylex.props(s.label,t.caption)}>{tx('Other country')}<input required pattern={'.*\\S.*'} maxLength={80} value={details.country} onChange={event => update('country',event.target.value)} autoComplete="country-name" {...stylex.props(s.input,t.input)}/></label> : null}
-          <label {...stylex.props(s.label,t.caption)}>{tx('Make and model (optional)')}<input maxLength={160} value={details.model} onChange={event => update('model',event.target.value)} autoComplete="off" placeholder={tx('e.g. Toyota Corolla')} {...stylex.props(s.input,t.input)}/></label>
-          <label {...stylex.props(s.label,t.caption)}>{tx('Budget')} ({currency.symbol}, {tx('optional')})<input type="number" inputMode="numeric" min={1} step={1} value={details.budget} onChange={event => update('budget',event.target.value)} placeholder="25000" {...stylex.props(s.input,t.input)}/></label>
-          <label {...stylex.props(s.label,t.caption)}>{tx('Listing link (optional)')}<input type="url" maxLength={2048} value={details.listing} onChange={event => update('listing',event.target.value)} autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder="https://…" {...stylex.props(s.input,t.input)}/></label>
+          <label {...stylex.props(s.label,t.caption)}>{tx('Country')}<select value={origin} onChange={event => setOrigin(event.target.value)} {...stylex.props(s.input, formControl.surface, formControl.focus,t.input)}>{showroom.importCountries.map(item => <option key={item.code} value={item.code}>{tx(item.name)}</option>)}<option value="other">{tx('Other country')}</option></select></label>
+          {!country ? <label {...stylex.props(s.label,t.caption)}>{tx('Other country')}<input required pattern={'.*\\S.*'} maxLength={80} value={details.country} onChange={event => update('country',event.target.value)} autoComplete="country-name" {...stylex.props(s.input, formControl.surface, formControl.focus,t.input)}/></label> : null}
+          <label {...stylex.props(s.label,t.caption)}>{tx('Make and model (optional)')}<input maxLength={160} value={details.model} onChange={event => update('model',event.target.value)} autoComplete="off" placeholder={tx('e.g. Toyota Corolla')} {...stylex.props(s.input, formControl.surface, formControl.focus,t.input)}/></label>
+          <label {...stylex.props(s.label,t.caption)}>{tx('Budget')} ({currency.symbol}, {tx('optional')})<input type="number" inputMode="numeric" min={1} step={1} value={details.budget} onChange={event => update('budget',event.target.value)} placeholder="25000" {...stylex.props(s.input, formControl.surface, formControl.focus,t.input)}/></label>
+          <label {...stylex.props(s.label,t.caption)}>{tx('Listing link (optional)')}<input type="url" maxLength={2048} value={details.listing} onChange={event => update('listing',event.target.value)} autoComplete="off" autoCapitalize="none" spellCheck={false} placeholder="https://…" {...stylex.props(s.input, formControl.surface, formControl.focus,t.input)}/></label>
           <button type="submit" {...stylex.props(s.action,t.control)}>{tx('Prepare enquiry')}<ArrowRight size={18} aria-hidden="true"/></button>
         </form>
       </section>
@@ -80,20 +92,25 @@ export default function ImportCountryPicker({country: filterCountry, onCountryCh
 }
 
 const s = stylex.create({
+  enquiryEntry: {display: 'flex', alignItems: 'center', gap: 10, width: '100%', minHeight: 44, paddingBlock: 10, paddingInline: 14, color: $.ink, fontFamily: $.fontSans, fontSize: 16, lineHeight: '24px', textAlign: 'left', borderWidth: 0, borderRadius: $.radiusPill, backgroundColor: $.surfaceAlt, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: -3, cursor: 'pointer'},
+  enquiryEntryLabel: {flexGrow: 1},
+  standaloneFilters: {display: 'contents'},
+  standaloneListings: {gridTemplateColumns: {[media.mobile]: 'repeat(2,minmax(0,1fr))', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}},
+  standaloneEmpty: {backgroundColor: $.surfaceAlt},
+  emptyCopy: {color: $.muted, fontSize: 13, lineHeight: '20px'},
   discovery: {marginTop: {[media.mobile]: $.mobilePillGap,[media.desktop]: 12,default: 24},color: $.ink,minWidth: 0},
   inlineFilters: {display: {[media.desktop]: 'none', default: 'contents'}},
   pills: {display: 'flex',flexWrap: 'nowrap',gap: 8,overflowX: 'auto',overscrollBehaviorX: 'contain',paddingBlock: {[media.mobile]: 0,[media.desktop]: 0,default: 3},scrollbarWidth: 'none'},
   listings: {display: 'grid',gridTemplateColumns: {[media.mobile]: '1fr',[media.desktop]: 'repeat(4,minmax(0,1fr))',default: 'repeat(2,minmax(0,1fr))'},gap: {[media.mobile]: $.mobileSectionGap,[media.desktop]: 13,default: 12},marginTop: {[media.mobile]: $.mobilePillGap,default: 12}},
   empty: {display: 'grid',justifyItems: 'start',gap: 12,marginTop: {[media.mobile]: $.mobilePillGap,default: 12},padding: '24px 16px',borderRadius: 16,backgroundColor: '#f5f5f6'},
-  reset: {display: 'inline-flex',alignItems: 'center',gap: 8,minHeight: 44,padding: '8px 12px',color: '#fff',borderWidth: 0,borderRadius: 12,backgroundColor: $.ink,cursor: 'pointer'},
+  reset: {display: 'inline-flex', alignItems: 'center', gap: 8, minHeight: 44, padding: '8px 12px', borderWidth: 0, borderRadius: 12, cursor: 'pointer'},
   srOnly: {position: 'absolute',width: 1,height: 1,padding: 0,margin: -1,overflow: 'hidden',clip: 'rect(0,0,0,0)',whiteSpace: 'nowrap',borderWidth: 0},
   backdrop: {position: 'fixed',inset: 0,zIndex: 240,display: 'flex',alignItems: {[media.mobile]: 'flex-end',default: 'center'},justifyContent: 'center',padding: {[media.mobile]: 0,default: 24},backgroundColor: 'rgba(0,0,0,.48)'},
   sheet: {width: '100%',maxWidth: 560,maxHeight: '92dvh',overflowY: 'auto',padding: {[media.mobile]: '20px 20px calc(24px + env(safe-area-inset-bottom))',default: 28},color: $.ink,backgroundColor: '#fff',borderRadius: 24,outlineStyle: 'none'},
   header: {display: 'flex',alignItems: 'center',justifyContent: 'space-between',gap: 12},
   eyebrow: {marginBottom: 4,color: $.muted},
-  close: {display: 'grid',placeItems: 'center',flexShrink: 0,width: 44,height: 44,padding: 0,color: $.ink,borderWidth: 0,borderRadius: '50%',backgroundColor: '#f4f4f5',cursor: 'pointer'},
   form: {display: 'grid',gap: 16,marginTop: 22},
   label: {display: 'grid',gap: 7,minWidth: 0},
-  input: {display: 'block',width: '100%',minWidth: 0,minHeight: 48,padding: '11px 12px',color: $.ink,borderWidth: 1,borderStyle: 'solid',borderColor: $.controlBorder,borderRadius: 12,backgroundColor: '#fff'},
+  input: {display: 'block', width: '100%', minWidth: 0, minHeight: 48, padding: '11px 12px', color: $.ink, borderWidth: 1, borderStyle: 'solid', borderRadius: 12},
   action: {display: 'flex',alignItems: 'center',justifyContent: 'center',gap: 10,minHeight: 50,padding: '12px 16px',color: '#fff',borderWidth: 0,borderRadius: 14,backgroundColor: '#262629',cursor: 'pointer'},
 });

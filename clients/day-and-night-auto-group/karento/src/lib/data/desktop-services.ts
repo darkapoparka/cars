@@ -1,6 +1,7 @@
 import { translate } from "#lib/i18n/messages.ts";
 import type { Locale } from "#lib/i18n/locales.ts";
 import type { PlainMessageKey } from "#lib/i18n/text.ts";
+import { serviceDetails } from "./service-details.ts";
 import {
   serviceFilters,
   type ServiceFilterId,
@@ -21,8 +22,13 @@ export function filterDesktopServices(
     const label = filter?.labelKey
       ? translate(language, filter.labelKey)
       : (filter?.label ?? "");
+    const description =
+      serviceDetails[service.id]?.[language === "bg" ? "bg" : "en"] ??
+      (service.descriptionKey
+        ? translate(language, service.descriptionKey)
+        : service.description);
     const text =
-      `${service.title} ${service.titleKey ? translate(language, service.titleKey) : ""} ${service.description} ${service.descriptionKey ? translate(language, service.descriptionKey) : ""} ${label}`.toLowerCase();
+      `${service.title} ${service.titleKey ? translate(language, service.titleKey) : ""} ${service.summary} ${service.summaryKey ? translate(language, service.summaryKey) : ""} ${description} ${label}`.toLowerCase();
     return terms.every((term) => text.includes(term));
   });
   return {

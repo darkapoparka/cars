@@ -1,6 +1,7 @@
 <svelte:options preserveWhitespace={true} runes={true} />
 
 <script lang="ts">
+  import { page } from "$app/state";
   import { presentVehicle } from "#lib/i18n/vehicle.ts";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
@@ -28,11 +29,10 @@
   const card = $derived(dealer.inventory[referenceCard.title] ?? referenceCard);
   const mobile = new MediaQuery("(max-width: 767.98px)");
   const desktop = new MediaQuery("(min-width: 992px)");
-  const destination = $derived(
-    desktop.current && card === referenceCard
-      ? referenceVehicleDestination(card)
-      : card.href,
-  );
+  const destination = $derived.by(() => {
+    const href = desktop.current && card === referenceCard ? referenceVehicleDestination(card) : card.href;
+    return href + (href.includes("?") ? "&" : "?") + "returnTo=" + encodeURIComponent(page.url.pathname + page.url.search + page.url.hash);
+  });
   const display = $derived(presentVehicle(card, locale));
   const desktopFacts = $derived(
     [

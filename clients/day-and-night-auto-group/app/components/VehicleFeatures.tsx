@@ -1,4 +1,5 @@
 'use client';
+import IconButton from '@/components/IconButton';
 import {useCopy} from '@/lib/locale';
 import {useState} from 'react';
 import * as stylex from '@stylexjs/stylex';
@@ -29,7 +30,7 @@ export default function VehicleFeatures({vehicle,featureGroups}: {vehicle: Vehic
   const filtered = groups.map(group => ({...group, items: group.items.filter(item => `${item} ${tx(item)}`.toLocaleLowerCase().includes(query.toLocaleLowerCase()))})).filter(group => group.items.length);
   return <main {...stylex.props(s.page)}>
     <PageHeader title={tx("Features")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to vehicle")}/>
-    <div {...stylex.props(s.content)}><div data-search-field role="search" {...stylex.props(searchField.field)}><Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)} /><input data-search-input type="search" aria-label={tx("Search for a feature")} placeholder={tx("Search for a feature")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(searchField.input)} />{query ? <button type="button" aria-label={tx("Clear feature search")} onClick={() => setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true" /></button> : null}</div>
+    <div {...stylex.props(s.content)}><div data-search-field role="search" {...stylex.props(searchField.field)}><Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)} /><input data-search-input type="search" aria-label={tx("Search for a feature")} placeholder={tx("Search for a feature")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(searchField.input)} />{query ? <IconButton icon={X} tone="embedded" label={tx("Clear feature search")} onClick={() => setQuery('')} layout={searchField.clear}/> : null}</div>
       {filtered.map(({name, icon: Icon, items}) => <section key={name} {...stylex.props(s.section)}><h2 {...stylex.props(s.sectionTitle)}><span {...stylex.props(s.icon)}><Icon size={18} /></span>{tx(name)}</h2><ul {...stylex.props(s.list)}>{items.map(item => <li key={item} {...stylex.props(s.item)}><span>{tx(item)}{descriptions.get(item)?.description?<button type="button" aria-label={tx(`About ${item}`)} onClick={()=>setInformation(descriptions.get(item)!)} {...stylex.props(s.information)}><Info size={13} fill="#202024" color="#fff"/></button>:null}</span><span {...stylex.props(s.check)}><Check size={11} strokeWidth={2.5} /></span></li>)}</ul></section>)}
       {!filtered.length ? <p {...stylex.props(s.empty)}>{tx("No features match “")}{tx(query)}{tx("”.")}</p> : null}
     </div>

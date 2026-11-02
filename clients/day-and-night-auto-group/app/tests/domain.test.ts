@@ -94,13 +94,13 @@ describe('locale routing', () => {
 
 describe('primary and alternative URL contracts', () => {
   it('keeps Services selected for the hub and its journeys without matching unrelated prefixes', () => {
-    for (const path of ['/services', '/sell', '/sell/details', '/finance', '/service', '/service/details', '/2/services', '/2/finance']) assert.equal(isServicesRoute(path), true, path);
-    for (const path of ['/', '/cars', '/saved', '/serviceable', '/services-other', '/finance-news']) assert.equal(isServicesRoute(path), false, path);
+    for (const path of ['/services', '/sell', '/sell/details', '/finance', '/import', '/service', '/service/details', '/2/services', '/2/finance', '/2/import']) assert.equal(isServicesRoute(path), true, path);
+    for (const path of ['/', '/cars', '/saved', '/serviceable', '/services-other', '/finance-news', '/imports']) assert.equal(isServicesRoute(path), false, path);
   });
   it('only recognizes the /2 segment, not /20', () => {assert.equal(isHomeAlternative('/2/cars'), true); assert.equal(isHomeAlternative('/20'), false);});
   it('recovers the primary root and nested routes', () => {assert.equal(primaryHomePath('/2'), '/'); assert.equal(primaryHomePath('/2/cars'), '/cars');});
   it('preserves query strings, hashes and explicit locales', () => assert.equal(homeAlternativeHref('/bg/cars?brand=Toyota#stock', true), '/bg/2/cars?brand=Toyota#stock'));
-  it('aliases each supported journey', () => {for (const route of ['/cars', '/saved', '/more', '/search', '/sell', '/sell/details', '/finance', '/service', '/service/details', '/services', '/stores', '/shop']) assert.equal(homeAlternativeHref(route, true), '/2'+route);});
+  it('aliases each supported journey', () => {for (const route of ['/cars', '/saved', '/more', '/search', '/sell', '/sell/details', '/finance', '/import', '/service', '/service/details', '/services', '/stores', '/shop']) assert.equal(homeAlternativeHref(route, true), '/2'+route);});
   it('does not duplicate alternative prefixes', () => assert.equal(homeAlternativeHref('/en/2/cars', true), '/en/2/cars'));
   it('keeps vehicle details shared', () => assert.equal(homeAlternativeHref('/cars/car-one', true), '/cars/car-one'));
   it('leaves external, fragment, email and telephone links alone', () => {for (const href of ['https://example.com/', '//example.com/', '#stock', 'mailto:a@example.com', 'tel:+359123']) {assert.equal(homeAlternativeHref(href, true), href); assert.equal(localePath(href, 'bg'), href);}});

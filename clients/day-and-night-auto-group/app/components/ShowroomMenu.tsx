@@ -1,6 +1,7 @@
 'use client';
 
 import {useId} from 'react';
+import {formControl} from './form-control.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {Check, ChevronRight, UserRound} from 'lucide-react';
 import Link from '@/components/AppLink';
@@ -13,15 +14,17 @@ import {homeAlternativeHref, useHomeAlternative} from '@/lib/home-alternative';
 import {showroom} from '@/lib/showroom';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
+import {surfaceStyles} from '@/components/surface.stylex';
 
 const languageNames = {en: 'English', bg: 'Български'};
 
 /** Shared destinations and language controls for the phone page and header disclosure. */
-export default function ShowroomMenu({compact = false, languagePath = '/more', onNavigate}: {compact?: boolean; languagePath?: string; onNavigate?: () => void}) {
+export default function ShowroomMenu({compact = false, languagePath = '/more', onNavigate, onRail = false}: {compact?: boolean; languagePath?: string; onNavigate?: () => void; onRail?: boolean}) {
   const tx = useCopy(), locale = useLocale(), alternative = useHomeAlternative();
+  const nativeSurface = onRail && !compact && !alternative;
   const id = useId();
   return <>
-    <div data-menu-guest {...stylex.props(s.guest, compact && s.compactGuest)}>
+    <div data-menu-guest {...stylex.props(s.guest, formControl.surface, compact && s.compactGuest, nativeSurface && s.nativeGuest)}>
       <span aria-hidden="true" {...stylex.props(s.avatar, compact && s.compactAvatar)}><ShowroomArtwork src={assetPath('/navigation/menu/guest.webp')} size={compact ? 28 : 36} intrinsicSize={80} fallback={<UserRound size={compact ? 20 : 24} strokeWidth={1.75}/>}/></span>
       <div {...stylex.props(s.guestCopy)}>
         <p {...stylex.props(s.greeting, compact && s.compactGreeting)}>{tx('Hi, guest')}</p>
@@ -30,10 +33,10 @@ export default function ShowroomMenu({compact = false, languagePath = '/more', o
     </div>
     {showroom.menu.map((group, index) => <nav key={group.label} aria-labelledby={`${id}-group-${index}`} {...stylex.props(s.section, compact && s.compactSection)}>
       <h2 id={`${id}-group-${index}`} {...stylex.props(t.caption, s.sectionTitle, compact && s.compactTitle)}>{tx(group.label)}</h2>
-      <div {...stylex.props(s.list, compact && s.compactList, alternative && s.alternativeList)}>
-        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.label)} compact={compact} alternative={alternative} onNavigate={onNavigate}/>)}
-        {group.contacts && dealer.phoneE164 ? <MenuRow href={'tel:' + dealer.phoneE164} icon="phone" title={dealer.phoneDisplay || dealer.phoneE164} compact={compact} alternative={alternative} onNavigate={onNavigate}/> : null}
-        {group.contacts && dealer.email ? <MenuRow href={'mailto:' + dealer.email} icon="email" title={dealer.email} compact={compact} alternative={alternative} onNavigate={onNavigate}/> : null}
+      <div {...stylex.props(s.list, compact && s.compactList, alternative && s.alternativeList, nativeSurface && s.nativeList, nativeSurface && surfaceStyles.card)}>
+        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.label)} compact={compact} alternative={alternative} onRail={nativeSurface} onNavigate={onNavigate}/>)}
+        {group.contacts && dealer.phoneE164 ? <MenuRow href={'tel:' + dealer.phoneE164} icon="phone" title={dealer.phoneDisplay || dealer.phoneE164} compact={compact} alternative={alternative} onRail={nativeSurface} onNavigate={onNavigate}/> : null}
+        {group.contacts && dealer.email ? <MenuRow href={'mailto:' + dealer.email} icon="email" title={dealer.email} compact={compact} alternative={alternative} onRail={nativeSurface} onNavigate={onNavigate}/> : null}
       </div>
     </nav>)}
     {dealer.enabledLocales.length > 1 ? <footer data-menu-language {...stylex.props(compact ? s.compactFooter : s.languageFooter)}>
@@ -45,8 +48,8 @@ export default function ShowroomMenu({compact = false, languagePath = '/more', o
   </>;
 }
 
-function MenuRow({href, icon, title, compact, alternative, onNavigate}: {href: string; icon: ShowroomIconName; title: string; compact: boolean; alternative: boolean; onNavigate?: () => void}) {
-  return <Link href={href} onClick={onNavigate} {...stylex.props(t.input, s.row, compact && s.compactRow, alternative && s.alternativeRow)}>
+function MenuRow({href, icon, title, compact, alternative, onRail, onNavigate}: {href: string; icon: ShowroomIconName; title: string; compact: boolean; alternative: boolean; onRail: boolean; onNavigate?: () => void}) {
+  return <Link href={href} onClick={onNavigate} {...stylex.props(t.input, s.row, compact && s.compactRow, alternative && s.alternativeRow, onRail && s.nativeRow)}>
     <span {...stylex.props(s.icon, compact && s.compactIcon)}><ShowroomIcon name={icon} size={compact ? 24 : 28} artwork/></span>
     <span {...stylex.props(s.label)}>{title}</span>
     <ChevronRight size={compact ? 14 : 16} aria-hidden="true" {...stylex.props(s.chevron)}/>
@@ -54,7 +57,10 @@ function MenuRow({href, icon, title, compact, alternative, onNavigate}: {href: s
 }
 
 const s = stylex.create({
-  guest: {display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12, padding: 12, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: $.radiusMd, backgroundColor: $.surface},
+  nativeGuest: {borderColor: 'transparent', backgroundColor: $.surfaceAlt},
+  nativeList: {backgroundColor: {[media.mobile]: $.surface, default: $.surfaceAlt}},
+  nativeRow: {borderBottomWidth: 0, backgroundColor: {default: $.surfaceAlt, ':hover': $.line, ':active': $.line}},
+  guest: {display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12, padding: 12, borderWidth: 1, borderStyle: 'solid', borderRadius: $.radiusMd},
   avatar: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 40, height: 40, color: $.ink, borderRadius: '50%', backgroundColor: $.surfaceAlt},
   guestCopy: {minWidth: 0},
   greeting: {margin: 0, color: $.ink, fontSize: 16, fontWeight: 500, lineHeight: '22px'},

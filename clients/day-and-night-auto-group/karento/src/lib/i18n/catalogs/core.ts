@@ -1,5 +1,9 @@
 /** Literal core EN/BG pair used by the native release catalog audit. */
 export const coreEn = {
+  "navigation.buy": "Buy",
+  "navigation.rent": "Rent",
+  "catalog.yearFrom": "Year from",
+  "catalog.yearTo": "Year to",
   "contact.polish.locationEnquiry": "Enquire about {location}",
   "contact.polish.directions": "Directions to {location}",
   "contact.polish.call": "Call {phone}",
@@ -229,13 +233,17 @@ export const coreEn = {
   "vehicle.actions": "Vehicle page actions",
   "action.wishlist": "Wishlist",
   "action.closeNamed": "Close {name}",
-  "catalog.tools": "Vehicle filters and sorting",
+  "catalog.tools": "Filters and sorting",
   "catalog.vehicleFilters": "Vehicle filters",
   "catalog.productFilterTitle": "Product filters",
   "action.arrangeViewing": "Arrange a viewing",
 } as const;
 
 export const coreBg = {
+  "navigation.buy": "Купи",
+  "navigation.rent": "Наеми",
+  "catalog.yearFrom": "Година от",
+  "catalog.yearTo": "Година до",
   "contact.polish.locationEnquiry": "Запитване за {location}",
   "contact.polish.directions": "Упътвания до {location}",
   "contact.polish.call": "Обадете се на {phone}",
@@ -467,7 +475,7 @@ export const coreBg = {
   "vehicle.actions": "Действия за автомобила",
   "action.wishlist": "Любими",
   "action.closeNamed": "Затвори {name}",
-  "catalog.tools": "Филтри и подреждане на автомобили",
+  "catalog.tools": "Филтри и подреждане",
   "catalog.vehicleFilters": "Филтри за автомобили",
   "catalog.productFilterTitle": "Филтри за продукти",
   "action.arrangeViewing": "Уговорете оглед",

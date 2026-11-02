@@ -1,5 +1,7 @@
 'use client';
+import IconButton from '@/components/IconButton';
 
+import {actionButton} from './action-button.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {ChevronRight, X} from 'lucide-react';
 import {InspectionSection} from '@/components/InspectionReport';
@@ -30,7 +32,7 @@ export default function VehicleRecordsSheet({kind,vehicleTitle,reference,service
     <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="vehicle-records-title" {...stylex.props(s.sheet)}>
       <header {...stylex.props(s.header)}>
         <h2 id="vehicle-records-title" {...stylex.props(s.title)}>{tx(condition?'Inspection report':'Service History')}</h2>
-        <button type="button" aria-label={tx('Close information')} onClick={onClose} {...stylex.props(s.close)}><X size={22} aria-hidden="true"/></button>
+        <IconButton icon={X} label={tx('Close information')} onClick={onClose}/>
       </header>
       <div {...stylex.props(s.body)}>
         <p {...stylex.props(s.vehicle)}>{vehicleTitle}</p>
@@ -43,7 +45,7 @@ export default function VehicleRecordsSheet({kind,vehicleTitle,reference,service
           <h3 {...stylex.props(s.emptyTitle)}>{tx(condition?'No inspection report supplied':'No service records supplied')}</h3>
           <p {...stylex.props(s.copy)}>{tx(condition?'An inspection report is not available for this car. Ask the dealer for its current condition.':'Service records are not available for this car. Request them from the dealer.')}</p>
         </div>}
-        <button type="button" onClick={onRequest} {...stylex.props(s.request)}>{tx(condition?'Request vehicle information':'Request service history')}<ChevronRight size={18} aria-hidden="true" {...stylex.props(s.arrow)}/></button>
+        <button type="button" onClick={onRequest} {...stylex.props(s.request, actionButton.secondary)}>{tx(condition?'Request vehicle information':'Request service history')}<ChevronRight size={18} aria-hidden="true" {...stylex.props(s.arrow)}/></button>
       </div>
     </section>
   </div>;
@@ -54,7 +56,6 @@ const s=stylex.create({
   sheet:{display:'flex',flexDirection:'column',width:'100%',maxWidth:650,maxHeight:'92dvh',color:$.ink,fontFamily:$.fontSans,borderRadius:{[media.mobile]:'24px 24px 0 0',default:24},backgroundColor:$.surface,outlineStyle:'none',overflow:'hidden'},
   header:{display:'flex',alignItems:'center',justifyContent:'space-between',flexShrink:0,gap:12,padding:'16px 20px',},
   title:{minWidth:0,fontSize:20,fontWeight:600,lineHeight:'28px'},
-  close:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:$.surfaceAlt,cursor:'pointer'},
   body:{minHeight:0,overflowY:'auto',overscrollBehaviorY:'contain',padding:'16px 20px calc(24px + env(safe-area-inset-bottom))'},
   vehicle:{color:$.muted,fontSize:13,fontWeight:400,lineHeight:'20px',overflowWrap:'anywhere'},
   sample:{display:'inline-block',maxWidth:'100%',marginTop:12,padding:'5px 9px',color:$.ink,fontSize:12,fontWeight:500,lineHeight:'18px',borderRadius:$.radiusXs,backgroundColor:$.surfaceAlt},
@@ -62,6 +63,6 @@ const s=stylex.create({
   empty:{marginTop:20,padding:16,borderRadius:$.radiusMd,backgroundColor:$.surfaceAlt},
   emptyTitle:{fontSize:16,fontWeight:500,lineHeight:'24px'},
   note:{marginTop:20,color:$.muted,fontSize:12,fontWeight:400,lineHeight:'18px'},
-  request:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:12,width:'100%',minHeight:48,marginTop:20,padding:'12px 16px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:500,lineHeight:'22px',textAlign:'left',borderWidth:1,borderStyle:'solid',borderColor:$.controlBorder,borderRadius:$.radiusPill,backgroundColor:{default:$.surface,':hover':$.rail},outlineOffset:3,cursor:'pointer'},
+  request:{display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, width:'100%', minHeight:48, marginTop:20, padding:'12px 16px', fontFamily:$.fontSans, fontSize:14, fontWeight:500, lineHeight:'22px', textAlign:'left', borderWidth:1, borderStyle:'solid', borderRadius:$.radiusPill, outlineOffset:3, cursor:'pointer'},
   arrow:{flexShrink:0},
 });

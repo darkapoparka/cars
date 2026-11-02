@@ -24,40 +24,42 @@
 </script>
 
 <div class="box-grid-tours">
-  {#if mobileTiles}
-    <div class="mobile-vehicle-grid">
-      {#each cards as card (card.id)}
-        <DiscoveryCard
-          car={{ ...card, year: years.get(card.id) }}
-          href={card.href}
+  <div
+    class="shared-vehicle-grid mobile-vehicle-grid"
+    style:--vehicle-grid-columns={columns}
+  >
+    {#each cards as card (card.id)}
+      {#if recommendations}<VehicleGridCard
+          linkedImage={false}
+          {card}
+          {showLocation}
+        />{:else}<DiscoveryCard
+          car={{ ...card, year: years.get(card.id) ?? card.year }}
           catalog
-        />
-      {/each}
-    </div>
-  {:else}<div class="row">
-      {#each cards as card (card.id)}
-        <div class={columns === 4 ? "col-lg-3 col-md-6" : "col-lg-4 col-md-6"}>
-          {#if recommendations}<VehicleGridCard
-              linkedImage={false}
-              {card}
-              {showLocation}
-            />{:else}<VehicleGridCard {card} {showLocation} />{/if}
-        </div>
-      {/each}
-    </div>{/if}
+        />{/if}
+    {/each}
+  </div>
 </div>
 
 <style>
-  @media (max-width: 767.98px) {
-    .mobile-vehicle-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--karento-space-6) var(--karento-space-3);
+  .shared-vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      var(--vehicle-grid-columns, 4),
+      minmax(0, 1fr)
+    );
+    gap: 28px 24px;
+  }
+  @media (max-width: 991.98px) {
+    .shared-vehicle-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px 16px;
     }
   }
-  @media (min-width: 992px) {
-    .row {
-      --bs-gutter-x: var(--karento-desktop-grid-gap);
+  @media (max-width: 767.98px) {
+    .shared-vehicle-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 12px;
     }
   }
 </style>

@@ -35,10 +35,7 @@
   } = $props();
   let filterLayout = $state<DesktopFilterLayout | null>(null);
   const defaultLayout = $derived(dealer.vehicleFilters?.layout ?? "drawer");
-  const showLayoutOptions = $derived(
-    dealer.vehicleFilters?.showLayoutOptions ??
-      dealer.contentStatus === "reference-demo",
-  );
+  const showLayoutOptions = false;
   const id = $props.id();
   const filterDialogId = id + "-filters";
   const inventory = $derived(

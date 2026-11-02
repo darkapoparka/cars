@@ -5,7 +5,6 @@
   const locale = useLocale();
   import PageMetadata from "#lib/components/PageMetadata.svelte";
   import VehicleFourColumnHero from "#lib/sections/VehicleFourColumnHero.svelte";
-  import ListingVehicleSearch from "#lib/sections/ListingVehicleSearch.svelte";
   import VehicleFleetHeading from "#lib/sections/VehicleFleetHeading.svelte";
   import VehicleFourColumnListing from "#lib/sections/VehicleFourColumnListing.svelte";
   import Footer from "#lib/components/Footer.svelte";
@@ -13,13 +12,14 @@
   const desktop = new MediaQuery("(min-width: 992px)");
 </script>
 
-<PageMetadata title={locale.t("ui.cars-list-2.vehicles")} />
-<main class="main"
-  ><VehicleFourColumnHero />
+<PageMetadata
+  title={locale.locale === "bg" ? "Коли за покупка" : "Cars to buy"}
+/>
+<main class="main">
+  <VehicleFourColumnHero />
   {#if !desktop.current}
-    <ListingVehicleSearch />
     <VehicleFleetHeading />
   {/if}
   <VehicleFourColumnListing />
-  <Footer /></main
->
+  <Footer />
+</main>

@@ -1,6 +1,7 @@
 'use client';
 
 import {useId, useState} from 'react';
+import {formControl} from './form-control.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {useCopy, useLocale} from '@/lib/locale';
 import {tokens as $} from '@/app/tokens.stylex';
@@ -42,7 +43,7 @@ export default function DesktopFilterRange({label, minimum, maximum, low, high, 
       const value = isLow ? low : high;
       const invalid = (isLow ? lowInvalid : highInvalid) || reversed;
       const accessibleLabel = onlyMaximum ? tx('Maximum monthly payment') : `${tx(isLow ? 'Minimum value' : 'Maximum value')}: ${label}`;
-      return <label key={bound} {...stylex.props(s.label)}><span>{tx(onlyMaximum ? 'Maximum monthly payment' : isLow ? 'From' : 'To')}</span><span {...stylex.props(s.field, invalid && s.invalid)}>{prefix ? <span aria-hidden="true" {...stylex.props(s.unit)}>{prefix}</span> : null}<input type="text" data-focus-owner="field" inputMode={step < 1 ? 'decimal' : 'numeric'} aria-label={accessibleLabel} aria-invalid={invalid || undefined} aria-describedby={`${id}-bounds${invalid ? ` ${id}-error` : ''}`} placeholder={tx('Any value')} value={drafts[bound] ?? (anyBounds && value === (isLow ? minimum : maximum) ? '' : number(value))} onFocus={event => event.currentTarget.select()} onChange={event => edit(bound, event.target.value)} onBlur={() => {if (!error) setDrafts(current => ({...current, [bound]: null}));}} onKeyDown={event => {if (event.key === 'Enter') {event.preventDefault(); event.currentTarget.blur();} if (event.key === 'Escape' && error) {event.preventDefault(); event.stopPropagation(); setDrafts({low: null, high: null});}}} {...stylex.props(s.input)}/>{suffix ? <span aria-hidden="true" {...stylex.props(s.unit)}>{suffix}</span> : null}</span></label>;
+      return <label key={bound} {...stylex.props(s.label)}><span>{tx(onlyMaximum ? 'Maximum monthly payment' : isLow ? 'From' : 'To')}</span><span {...stylex.props(s.field, formControl.surface, invalid && s.invalid)}>{prefix ? <span aria-hidden="true" {...stylex.props(s.unit)}>{prefix}</span> : null}<input type="text" data-focus-owner="field" inputMode={step < 1 ? 'decimal' : 'numeric'} aria-label={accessibleLabel} aria-invalid={invalid || undefined} aria-describedby={`${id}-bounds${invalid ? ` ${id}-error` : ''}`} placeholder={tx('Any value')} value={drafts[bound] ?? (anyBounds && value === (isLow ? minimum : maximum) ? '' : number(value))} onFocus={event => event.currentTarget.select()} onChange={event => edit(bound, event.target.value)} onBlur={() => {if (!error) setDrafts(current => ({...current, [bound]: null}));}} onKeyDown={event => {if (event.key === 'Enter') {event.preventDefault(); event.currentTarget.blur();} if (event.key === 'Escape' && error) {event.preventDefault(); event.stopPropagation(); setDrafts({low: null, high: null});}}} {...stylex.props(s.input)}/>{suffix ? <span aria-hidden="true" {...stylex.props(s.unit)}>{suffix}</span> : null}</span></label>;
     })}</div>
     {showTrack ? <DesktopRangeTrack minimum={minimum} maximum={maximum} low={low} high={high} step={step} minimumLabel={`${tx('Minimum value')}: ${label}`} maximumLabel={`${tx('Maximum value')}: ${label}`} format={valueText} onChange={(lower, upper) => {setDrafts({low: null, high: null}); onChange(lower, upper);}}/> : null}
     <p id={`${id}-bounds`} className={showTrack ? undefined : 'visually-hidden'} {...stylex.props(showTrack && s.bounds)}><span>{valueText(minimum)}</span><span> – </span><span>{valueText(maximum)}</span></p>
@@ -54,7 +55,7 @@ const s = stylex.create({
   fields: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 16},
   singleField: {gridTemplateColumns: 'minmax(0,1fr)'},
   label: {display: 'grid', gap: 8, minWidth: 0, color: $.muted, fontSize: $.desktopSupportSize, fontWeight: $.desktopTextWeight, lineHeight: $.desktopSupportLineHeight},
-  field: {display: 'flex', alignItems: 'center', gap: 8, minWidth: 0, height: 48, paddingInline: 14, borderWidth: 1, borderStyle: 'solid', borderColor: {default: $.line, ':hover': $.surfaceBorder}, borderRadius: 10, backgroundColor: $.surface, outline: {default: 'none', ':focus-within': '2px solid #202024'}, outlineOffset: 2},
+  field: {display: 'flex', alignItems: 'center', gap: 8, minWidth: 0, height: 48, paddingInline: 14, borderWidth: 1, borderStyle: 'solid', borderRadius: 10, outline: {default: 'none', ':focus-within': '2px solid #202024'}, outlineOffset: 2},
   input: {width: '100%', minWidth: 0, padding: 0, color: $.ink, fontFamily: $.fontSans, fontSize: $.desktopTextSize, fontWeight: $.desktopTextWeight, fontVariantNumeric: 'tabular-nums', lineHeight: $.desktopTextLineHeight, borderWidth: 0, outlineStyle: 'none', backgroundColor: 'transparent'},
   unit: {flexShrink: 0, color: $.muted, fontSize: $.desktopSupportSize, fontWeight: $.desktopTextWeight, lineHeight: $.desktopSupportLineHeight},
   invalid: {borderColor: '#b42318'},

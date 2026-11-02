@@ -1,4 +1,5 @@
 'use client';
+import IconButton from '@/components/IconButton';
 
 import {useLayoutEffect, useId, useState} from 'react';
 import {createPortal} from 'react-dom';
@@ -46,7 +47,7 @@ export default function ShowroomSearchSheet({onClose, initialQuery = '', onSearc
 
   return createPortal(<div {...stylex.props(s.backdrop, visibleViewport && s.visibleBackdrop(visibleViewport.top, visibleViewport.height))} onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <section ref={panel} role="dialog" aria-modal="true" aria-labelledby={titleId} tabIndex={-1} data-showroom-search-sheet {...stylex.props(s.sheet, visibleViewport && s.visibleSheet(visibleViewport.height, Math.max(0, Math.floor(visibleViewport.height - 8))))}>
-      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} {...stylex.props(s.title)}>{tx('Search')}</h2></div><button type="button" aria-label={tx('Close search')} onClick={onClose} {...stylex.props(s.close)}><X size={21} aria-hidden="true"/></button></header>
+      <header {...stylex.props(s.header)}><div><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} {...stylex.props(s.title)}>{tx('Search')}</h2></div><IconButton icon={X} label={tx('Close search')} onClick={onClose}/></header>
       <div {...stylex.props(s.body)}><SearchClient overlay initialQuery={initialQuery} formId={formId} onDismiss={onClose} onSearch={onSearch}/></div>
       <footer {...stylex.props(s.footer)}><button type="submit" form={formId} {...stylex.props(s.action)}>{tx('Search')}<ArrowRight size={18} aria-hidden="true"/></button></footer>
     </section>
@@ -61,7 +62,6 @@ const s = stylex.create({
   header: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0, gap: 12, paddingTop: {[media.mobile]: 'calc(18px + env(safe-area-inset-top))', default: 18}, paddingBottom: 16, paddingInline: 20},
   eyebrow: {margin: 0, color: $.muted, fontSize: 12, lineHeight: '18px'},
   title: {margin: '3px 0 0', fontSize: 21, fontWeight: 600, lineHeight: '27px', whiteSpace: 'nowrap'},
-  close: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, cursor: 'pointer'},
   body: {flexGrow: 1, minHeight: 0, overflowY: 'auto', overscrollBehaviorY: 'contain', scrollPaddingTop: 68},
   footer: {flexShrink: 0, padding: '0 20px calc(20px + env(safe-area-inset-bottom))'},
   action: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, width: '100%', minHeight: 48, padding: '12px 16px', color: $.surface, fontFamily: $.fontSans, fontSize: 15, fontWeight: 500, lineHeight: '22px', borderWidth: 0, borderRadius: $.radiusPill, backgroundColor: {default: $.ink, ':hover': $.violetDark}, cursor: 'pointer'},

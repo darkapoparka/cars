@@ -2,6 +2,8 @@
 
 <script lang="ts">
   import { stockNotice } from "#lib/i18n/dealer.ts";
+  import { page } from "$app/state";
+  import { vehicleEnquiryHref } from "#lib/data/journeys.ts";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import { dealer } from "#lib/content.ts";
@@ -46,7 +48,7 @@
       <div class="box-button-book"
         ><a
           class="btn btn-book desktop-type-control desktop-panel-action"
-          href={locale.href("/contact#contact-enquiry")}
+          href={locale.href(vehicleEnquiryHref(page.url.searchParams))}
           >{locale.t("action.enquire")}</a
         ></div
       >

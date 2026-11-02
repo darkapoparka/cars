@@ -1,6 +1,8 @@
 <svelte:options preserveWhitespace={true} runes={true} />
 
 <script lang="ts">
+  import { page } from "$app/state";
+  import { vehicleEnquiryHref } from "#lib/data/journeys.ts";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import { dealer } from "#lib/content.ts";
@@ -14,7 +16,7 @@
         >{locale.t("ui.vehicle-price-actions.get-started")}</p
       >
       <a
-        href={locale.href("/contact#contact-enquiry")}
+        href={locale.href(vehicleEnquiryHref(page.url.searchParams, "viewing"))}
         class="btn btn-primary w-100 rounded-3 py-3 mb-3 desktop-type-control desktop-panel-action"
         aria-label={locale.t("action.arrangeViewing")}
       >
@@ -38,7 +40,7 @@
         </svg>
       </a>
       <a
-        href={locale.href("/contact#contact-enquiry")}
+        href={locale.href(vehicleEnquiryHref(page.url.searchParams))}
         class="btn btn-book bg-2 desktop-type-control desktop-panel-action"
         aria-label={locale.t("action.enquire")}
       >

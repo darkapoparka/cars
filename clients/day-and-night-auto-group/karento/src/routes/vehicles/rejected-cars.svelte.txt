@@ -1,0 +1,7 @@
+<script lang="ts">
+  import DealerPage from "../../lib/components/DealerPage.svelte";
+  import type { ShowroomData } from "../../lib/showroom";
+  let { data }: { data: ShowroomData } = $props();
+</script>
+
+<DealerPage {data} kind="cars" />

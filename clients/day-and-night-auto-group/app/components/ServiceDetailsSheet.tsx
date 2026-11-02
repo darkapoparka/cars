@@ -1,8 +1,10 @@
 'use client';
+import IconButton from '@/components/IconButton';
 
 import {useId, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {ArrowLeft, ArrowRight, Check, X} from 'lucide-react';
+import {formControl} from './form-control.stylex';
 import * as stylex from '@stylexjs/stylex';
 import Image from '@/components/AppImage';
 import {DealerEnquiryDraft} from '@/components/DealerEnquirySheet';
@@ -47,9 +49,9 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
   return createPortal(<div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && onClose()}>
     <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={titleId} data-service-detail-sheet data-service-view={view} {...stylex.props(s.sheet)}>
       <header {...stylex.props(s.header)}>
-        {view === 'draft' || view === 'enquiry' && service ? <button type="button" aria-label={tx(view === 'draft' ? 'Back to enquiry' : 'Back to service')} onClick={() => changeView(view === 'draft' ? 'enquiry' : 'details')} {...stylex.props(s.iconButton, s.backButton)}><ArrowLeft size={20} aria-hidden="true"/></button> : null}
+        {view === 'draft' || view === 'enquiry' && service ? <IconButton icon={ArrowLeft} label={tx(view === 'draft' ? 'Back to enquiry' : 'Back to service')} onClick={() => changeView(view === 'draft' ? 'enquiry' : 'details')} layout={[s.iconButton, s.backButton]}/> : null}
         <div {...stylex.props(s.heading)}><p {...stylex.props(s.eyebrow)}>{dealer.name}</p><h2 id={titleId} title={tx(title)} {...stylex.props(s.title)}><span {...stylex.props(s.mobileTitle)}>{tx(mobileTitle)}</span><span {...stylex.props(s.wideTitle)}>{tx(title)}</span></h2></div>
-        <button type="button" aria-label={tx('Close service details')} onClick={onClose} {...stylex.props(s.iconButton)}><X size={21} aria-hidden="true"/></button>
+        <IconButton icon={X} label={tx('Close service details')} onClick={onClose} layout={s.iconButton}/>
       </header>
       <div ref={body} {...stylex.props(s.body)}>
         {view === 'details' && service ? <>
@@ -60,9 +62,9 @@ export default function ServiceDetailsSheet({service, initialView = 'details', o
         </> : view === 'enquiry' ? <>
           <p {...stylex.props(s.copy)}>{tx('Tell the dealer about your car')}</p>
           <form id={formId} onSubmit={event => {event.preventDefault(); changeView('draft');}} {...stylex.props(s.form)}>
-            <label {...stylex.props(s.label)}>{tx('Make')}<input required maxLength={80} value={make} onChange={event => setMake(event.target.value)} autoComplete="off" {...stylex.props(s.input)}/></label>
-            <label {...stylex.props(s.label)}>{tx('Model')}<input required maxLength={100} value={model} onChange={event => setModel(event.target.value)} autoComplete="off" {...stylex.props(s.input)}/></label>
-            <label {...stylex.props(s.label)}>{tx('Year, mileage and what you need')}<textarea rows={4} maxLength={2000} value={details} onChange={event => setDetails(event.target.value)} {...stylex.props(s.input, s.textarea)}/></label>
+            <label {...stylex.props(s.label)}>{tx('Make')}<input required maxLength={80} value={make} onChange={event => setMake(event.target.value)} autoComplete="off" {...stylex.props(s.input, formControl.surface, formControl.focus)}/></label>
+            <label {...stylex.props(s.label)}>{tx('Model')}<input required maxLength={100} value={model} onChange={event => setModel(event.target.value)} autoComplete="off" {...stylex.props(s.input, formControl.surface, formControl.focus)}/></label>
+            <label {...stylex.props(s.label)}>{tx('Year, mileage and what you need')}<textarea rows={4} maxLength={2000} value={details} onChange={event => setDetails(event.target.value)} {...stylex.props(s.input, formControl.surface, formControl.focus, s.textarea)}/></label>
           </form>
         </> : null}
         {draftSubject !== null ? <div hidden={view !== 'draft'}><DealerEnquiryDraft key={draftSubject} vehicleTitle={draftSubject}/></div> : null}
@@ -79,13 +81,13 @@ const s = stylex.create({
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(12,12,16,.5)'},
   sheet: {display: 'flex', flexDirection: 'column', width: '100%', maxWidth: 560, maxHeight: '92dvh', overflow: 'hidden', color: $.ink, fontFamily: $.fontSans, borderRadius: {[media.mobile]: '24px 24px 0 0', default: 24}, backgroundColor: $.surface, boxShadow: $.shadowStrong, outlineStyle: 'none'},
   header: {display: {[media.mobile]: 'grid', default: 'flex'}, gridTemplateColumns: '44px minmax(0,1fr) 44px', alignItems: 'center', flexShrink: 0, gap: {[media.mobile]: 8, default: 12}, padding: {[media.mobile]: '12px 16px', default: '18px 20px 16px'}},
-  heading: {flexGrow: 1, minWidth: 0, gridColumn: {[media.mobile]: 2, default: 'auto'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
+  heading: {flexGrow: 1, minWidth: 0, gridColumn: {[media.mobile]: "2", default: 'auto'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
   eyebrow: {display: {[media.mobile]: 'none', default: 'block'}, margin: 0, color: $.muted, fontSize: 12, lineHeight: '18px'},
   title: {margin: {[media.mobile]: 0, default: '3px 0 0'}, fontSize: 21, fontWeight: 600, lineHeight: '27px', whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, textOverflow: {[media.mobile]: 'ellipsis', default: 'clip'}, overflowWrap: 'anywhere'},
   mobileTitle: {display: {[media.mobile]: 'inline', default: 'none'}},
   wideTitle: {display: {[media.mobile]: 'none', default: 'inline'}},
-  iconButton: {display: 'grid', placeItems: 'center', gridColumn: {[media.mobile]: 3, default: 'auto'}, flexShrink: 0, width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, cursor: 'pointer'},
-  backButton: {gridColumn: {[media.mobile]: 1, default: 'auto'}},
+  iconButton: {gridColumn: {[media.mobile]: "3", default: 'auto'}},
+  backButton: {gridColumn: {[media.mobile]: "1", default: 'auto'}},
   body: {minHeight: 0, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: '0 20px 20px'},
   media: {position: 'relative', overflow: 'hidden', borderRadius: 16},
   image: {display: 'block', width: '100%', height: 'auto', aspectRatio: '2 / 1', objectFit: 'cover', objectPosition: 'center 55%'},
@@ -95,7 +97,7 @@ const s = stylex.create({
   check: {display: 'flex', alignItems: 'center', gap: 10, color: $.muted, fontSize: 15, lineHeight: '22px'},
   form: {display: 'grid', gap: 16, marginTop: 18},
   label: {display: 'grid', gap: 7, color: $.ink, fontSize: 14, lineHeight: '20px'},
-  input: {display: 'block', width: '100%', minHeight: 46, padding: '11px 12px', color: $.ink, fontFamily: $.fontSans, fontSize: 16, lineHeight: '24px', borderWidth: 1, borderStyle: 'solid', borderColor: $.controlBorder, borderRadius: 12, backgroundColor: $.surface},
+  input: {display: 'block', width: '100%', minHeight: 46, padding: '11px 12px', color: $.ink, fontFamily: $.fontSans, fontSize: 16, lineHeight: '24px', borderWidth: 1, borderStyle: 'solid', borderRadius: 12},
   textarea: {resize: 'vertical'},
   footer: {flexShrink: 0, padding: '0 20px calc(20px + env(safe-area-inset-bottom))'},
   note: {margin: '0 0 14px', color: $.muted, fontSize: 12, lineHeight: '18px'},

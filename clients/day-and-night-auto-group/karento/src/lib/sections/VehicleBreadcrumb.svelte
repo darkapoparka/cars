@@ -1,6 +1,8 @@
 <svelte:options preserveWhitespace={true} runes={true} />
 
 <script lang="ts">
+  import { page } from "$app/state";
+  import { buyReturn } from "#lib/data/journeys.ts";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import { dealer } from "#lib/content.ts";
@@ -49,7 +51,7 @@
       </li>
       <li>
         <a
-          href={locale.href("/vehicles")}
+          href={locale.href(buyReturn(page.url.searchParams.get("returnTo")))}
           aria-label={locale.t("ui.vehicle-breadcrumb.vehicles")}
           >{locale.t("ui.vehicle-breadcrumb.vehicles")}</a
         >

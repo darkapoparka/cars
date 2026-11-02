@@ -1,8 +1,16 @@
 <script lang="ts">
+  import { rentalDays } from "#lib/data/rental-catalog.ts";
   import { tick } from "svelte";
   import type { Attachment } from "svelte/attachments";
   import { MediaQuery } from "svelte/reactivity";
-  import { afterNavigate } from "$app/navigation";
+  import { page } from "$app/state";
+  import {
+    localToday,
+    rentalDestination,
+    readRentalRequest,
+  } from "#lib/data/journeys.ts";
+  import EnquiryHandoff from "#lib/components/contact/EnquiryHandoff.svelte";
+  import { afterNavigate, goto } from "$app/navigation";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import { dealer } from "#lib/content.ts";
   import MobileSheet from "#lib/components/MobileSheet.svelte";
@@ -13,14 +21,45 @@
   const phone = new MediaQuery("(max-width: 767.98px)");
   const id = $props.id();
   let {
+    inline = false,
+    autoReview = false,
+    datesOnly = false,
+    dailyRate,
+    onapply,
     pickup = $bindable(""),
     returning = $bindable(""),
     preference = $bindable(""),
-  }: { pickup?: string; returning?: string; preference?: string } = $props();
-  let open = $state(false);
-  let today = $state("");
-  let reviewed = $state(false);
+  }: {
+    inline?: boolean;
+    autoReview?: boolean;
+    datesOnly?: boolean;
+    dailyRate?: number;
+    onapply?: (request: {
+      pickup: string;
+      returning: string;
+      preference: string;
+    }) => void;
+    pickup?: string;
+    returning?: string;
+    preference?: string;
+  } = $props();
+  let open = $derived(
+    autoReview &&
+      page.url.searchParams.get("review") === "1" &&
+      !!readRentalRequest(page.url.searchParams).pickup &&
+      !!readRentalRequest(page.url.searchParams).returning,
+  );
+  let today = $state(localToday());
+  const urlRequest = $derived(readRentalRequest(page.url.searchParams));
+  let reviewed = $derived(
+    (inline || autoReview) &&
+      page.url.searchParams.get("review") === "1" &&
+      !!urlRequest.pickup &&
+      !!urlRequest.returning &&
+      urlRequest.pickup >= today,
+  );
   let pickupInput: HTMLInputElement | undefined;
+  let form: HTMLFormElement | undefined;
   const ownPickup: Attachment<HTMLInputElement> = (node) => {
     pickupInput = node;
     return () => {
@@ -36,14 +75,18 @@
   const copy = $derived(
     locale.locale === "bg"
       ? {
-          title: "Автомобил под наем",
+          title: datesOnly ? "Дати за наем" : "Автомобил под наем",
           pickup: "Вземане",
           returning: "Връщане",
           vehicle: "Предпочитан автомобил",
           placeholder: "Марка, модел или тип автомобил",
           location: "Адрес на автосалона",
           note: "Наличността и цената се потвърждават от Day & Night за избраните дати.",
-          next: "Преглед на запитването",
+          next: datesOnly
+            ? "Готово"
+            : inline
+              ? "Преглед на запитването"
+              : "Продължи",
           review: "Вашето запитване",
           pending:
             "Запитването не е изпратено. Обадете се, за да проверите наличността и условията.",
@@ -54,14 +97,14 @@
           close: "Затвори запитването",
         }
       : {
-          title: "Rent a car",
+          title: datesOnly ? "Rental dates" : "Rent a car",
           pickup: "Pick-up date",
           returning: "Return date",
           vehicle: "Vehicle preference",
           placeholder: "Make, model or vehicle type",
           location: "Dealer location",
           note: "Day & Night will confirm availability and pricing for your dates.",
-          next: "Review enquiry",
+          next: datesOnly ? "Done" : inline ? "Review enquiry" : "Continue",
           review: "Your rental enquiry",
           pending:
             "Your enquiry has not been sent. Call to confirm availability and rental terms.",
@@ -72,24 +115,48 @@
           close: "Close rental enquiry",
         },
   );
-  const phoneHref = $derived(
-    dealer.locations[0]?.phoneHref || `tel:${dealer.contacts.phone}`,
+  const enquiryText = $derived(
+    `${copy.title} — Day & Night\n${copy.pickup}: ${pickup}\n${copy.returning}: ${returning}\n${copy.vehicle}: ${preference.trim() || copy.flexible}\n${copy.location}: ${location}`,
   );
 
-  export function openSearch() {
-    const now = new Date();
-    today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+  export async function openSearch(
+    field: "pickup" | "returning" | "preference" = "pickup",
+  ) {
+    today = localToday();
     reviewed = false;
     open = true;
+    await tick();
+    form
+      ?.querySelector<HTMLInputElement>(`[name="${field}"]`)
+      ?.focus({ preventScroll: true });
   }
 
   function review(event: SubmitEvent) {
     event.preventDefault();
-    reviewed = true;
+    if (onapply) {
+      reviewed = autoReview;
+      open = autoReview;
+      onapply({ pickup, returning, preference });
+      return;
+    }
+    const destination = rentalDestination({ pickup, returning, preference });
+    open = false;
+    if (inline) reviewed = true;
+    void goto(
+      locale.href(
+        destination + (destination.includes("?") ? "&" : "?") + "review=1",
+      ),
+      inline ? { reset: false } : {},
+    );
   }
 
   async function edit() {
     reviewed = false;
+    if (inline)
+      await goto(
+        locale.href(rentalDestination({ pickup, returning, preference })),
+        { reset: false },
+      );
     await tick();
     pickupInput?.focus({ preventScroll: true });
   }
@@ -113,13 +180,14 @@
   }
 
   afterNavigate(() => {
-    open = false;
+    if (!autoReview) open = false;
   });
 </script>
 
 {#snippet body()}
   <form
     id={id + "-rental"}
+    bind:this={form}
     class="rental-body mobile-filter-body"
     onsubmit={review}
   >
@@ -144,6 +212,20 @@
           <dt>{copy.vehicle}</dt>
           <dd>{preference.trim() || copy.flexible}</dd>
         </div>
+        {#if dailyRate}
+          <div>
+            <dt>{locale.locale === "bg" ? "Цена на ден" : "Daily rate"}</dt>
+            <dd>{locale.money(dailyRate, "EUR")}</dd>
+          </div>
+          {#if rentalDays(pickup, returning)}<div>
+              <dt>
+                {locale.locale === "bg" ? "Общо за периода" : "Trip total"}
+              </dt>
+              <dd>
+                {locale.money(dailyRate * rentalDays(pickup, returning), "EUR")}
+              </dd>
+            </div>{/if}
+        {/if}
         <div>
           <dt>{copy.location}</dt>
           <dd>{location}</dd>
@@ -157,8 +239,12 @@
             type="date"
             required
             min={today}
-            max={returning || undefined}
+            name="pickup"
             bind:value={pickup}
+            oninput={(event) => {
+              if (returning && returning < event.currentTarget.value)
+                returning = "";
+            }}
             {@attach ownPickup}
           /></label
         >
@@ -166,23 +252,25 @@
           ><span>{copy.returning}</span><input
             type="date"
             required
-            min={pickup || today}
+            min={pickup && pickup > today ? pickup : today}
+            name="returning"
             bind:value={returning}
           /></label
         >
       </div>
-      <label
-        ><span>{copy.vehicle}</span><input
-          type="text"
-          maxlength="120"
-          placeholder={copy.placeholder}
-          bind:value={preference}
-        /></label
-      >
-      <div class="rental-location">
-        <strong>{copy.location}</strong><span>{location}</span>
-      </div>
-      <p>{copy.note}</p>
+      {#if !datesOnly}<label
+          ><span>{copy.vehicle}</span><input
+            type="text"
+            name="preference"
+            maxlength="120"
+            placeholder={copy.placeholder}
+            bind:value={preference}
+          /></label
+        >
+        <div class="rental-location">
+          <strong>{copy.location}</strong><span>{location}</span>
+        </div>
+        <p>{copy.note}</p>{/if}
     {/if}
   </form>
 {/snippet}
@@ -192,7 +280,7 @@
     <button type="button" class="rental-secondary" onclick={edit}
       >{copy.edit}</button
     >
-    <a class="rental-primary" href={phoneHref}>{copy.call}</a>
+    <EnquiryHandoff text={enquiryText} />
   {:else}
     <button
       type="button"
@@ -201,6 +289,10 @@
         pickup = "";
         returning = "";
         preference = "";
+        if (datesOnly) {
+          open = false;
+          onapply?.({ pickup: "", returning: "", preference: "" });
+        } else if (inline) void goto(locale.href("/rent"), { reset: false });
       }}>{copy.clear}</button
     >
     <button type="submit" class="rental-primary" form={id + "-rental"}
@@ -209,18 +301,28 @@
   {/if}
 {/snippet}
 
-{#if phone.current}
+{#if inline}
+  <div class="rental-inline" data-rental-request>
+    {@render body()}
+    <div class={["rental-inline-actions", { reviewed }]}>
+      {@render actions()}
+    </div>
+  </div>
+{:else if phone.current}
   <MobileSheet
     bind:open
+    closeOnNavigate={!autoReview}
     title={copy.title}
-    class="rental-search-sheet mobile-catalog-editor"
+    class={datesOnly
+      ? "rental-search-sheet"
+      : "rental-search-sheet mobile-catalog-editor"}
   >
     {#if open}{@render body()}{/if}
     {#snippet footer()}{@render actions()}{/snippet}
   </MobileSheet>
 {:else if open}
   <dialog
-    class="rental-dialog"
+    class={["rental-dialog", { "rental-date-dialog": datesOnly }]}
     aria-labelledby={id + "-title"}
     {@attach ownCatalogDialog}
     onclose={() => {
@@ -263,6 +365,20 @@
     line-height: 22px;
     font-weight: 500;
   }
+  .rental-inline-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .rental-inline-actions.reviewed {
+    display: grid;
+    justify-content: stretch;
+  }
+  .rental-inline-actions.reviewed > .rental-secondary {
+    justify-self: start;
+  }
   input {
     width: 100%;
     min-width: 0;
@@ -273,6 +389,7 @@
     background: var(--bs-background-card, #fff);
     color: var(--bs-neutral-1000);
     font: inherit;
+    font-size: 16px;
   }
   input::placeholder {
     color: var(--bs-neutral-500);
@@ -346,7 +463,6 @@
     cursor: pointer;
   }
   input:focus-visible,
-  a:focus-visible,
   button:focus-visible {
     outline: 2px solid var(--bs-neutral-1000);
     outline-offset: 3px;
@@ -368,6 +484,14 @@
     background: var(--bs-background-card, #fff);
     color: var(--bs-neutral-1000);
     overflow: hidden;
+  }
+  dialog.rental-date-dialog {
+    inset: 0;
+    width: min(480px, calc(100vw - 32px));
+    height: fit-content;
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    border-radius: 20px;
   }
   dialog::backdrop {
     background: rgb(0 0 0 / 32%);

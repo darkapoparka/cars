@@ -1,25 +1,20 @@
 'use client';
 
 import * as stylex from '@stylexjs/stylex';
+import type {StyleXStyles} from '@stylexjs/stylex';
 import type {LucideIcon} from 'lucide-react';
 import Link from '@/components/AppLink';
-import {tokens as $} from '@/app/tokens.stylex';
+import {iconButtonStyles as s} from '@/components/icon-button.stylex';
 
 export type IconButtonAction = {href: string; onClick?: never} | {href?: never; onClick: () => void};
-export type IconButtonTone = 'neutral' | 'photo';
-type IconButtonProps = IconButtonAction & {icon: LucideIcon; label: string; tone?: IconButtonTone};
+export type IconButtonTone = 'neutral' | 'photo' | 'rail' | 'grey' | 'embedded';
+type IconButtonProps = IconButtonAction & {icon: LucideIcon; label: string; tone?: IconButtonTone; layout?: StyleXStyles; selected?: boolean; count?: number; expanded?: boolean; pressed?: boolean; hasPopup?: 'dialog' | 'menu'; dataAttributes?: Record<`data-${string}`, string | number | boolean | undefined>};
 
-/** Shared icon geometry: compact visible surface inside a full touch target. */
-export default function IconButton({icon: Icon, label, tone = 'neutral', ...action}: IconButtonProps) {
-  const content = <span {...stylex.props(s.surface, tone === 'photo' && s.photo)}><Icon aria-hidden="true" {...stylex.props(s.icon)}/></span>;
+/** Grey page actions; white photo actions retain contrast over imagery. */
+export default function IconButton({icon: Icon, label, tone = 'neutral', layout, selected = false, count, expanded, pressed, hasPopup, dataAttributes, ...action}: IconButtonProps) {
+  const content = <span data-icon-surface {...stylex.props(s.content, tone === 'photo' && s.photo, tone === 'grey' && s.grey, tone === 'embedded' && s.embedded, selected && s.selected)}><Icon aria-hidden="true" {...stylex.props(s.icon)}/>{count ? <span aria-hidden="true" {...stylex.props(s.badge)}>{count}</span> : null}</span>;
+  const props = {...dataAttributes, ...stylex.props(s.button, layout)};
   return action.href !== undefined
-    ? <Link data-icon-button href={action.href} aria-label={label} {...stylex.props(s.control)}>{content}</Link>
-    : <button data-icon-button type="button" onClick={action.onClick} aria-label={label} {...stylex.props(s.control)}>{content}</button>;
+    ? <Link data-icon-button data-icon-tone={tone} href={action.href} title={label} aria-label={label} aria-expanded={expanded} aria-pressed={pressed} aria-haspopup={hasPopup} {...props}>{content}</Link>
+    : <button data-icon-button data-icon-tone={tone} type="button" onClick={action.onClick} title={label} aria-label={label} aria-expanded={expanded} aria-pressed={pressed} aria-haspopup={hasPopup} {...props}>{content}</button>;
 }
-
-const s = stylex.create({
-  control: {display: 'grid', placeItems: 'center', flexShrink: 0, width: $.controlHeight, height: $.controlHeight, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: 'transparent', outlineWidth: 2, outlineStyle: 'solid', outlineColor: {default: 'transparent', ':focus-visible': $.ink}, outlineOffset: 1, pointerEvents: 'auto', cursor: 'pointer'},
-  surface: {display: 'grid', placeItems: 'center', width: $.controlCompactHeight, height: $.controlCompactHeight, borderRadius: '50%', backgroundColor: {default: $.surfaceAlt, ':hover': $.violetSoft}},
-  photo: {backgroundColor: {default: $.surface, ':hover': $.surface}, boxShadow: '0 1px 6px rgba(0,0,0,.1)'},
-  icon: {display: 'block', flexShrink: 0, width: $.controlIconSize, height: $.controlIconSize},
-});

@@ -1,5 +1,10 @@
 # App dealership template
 
+## Neutral client demo — 2 November 2026
+
+The maintained client PWA demo is published at https://dn-app1.webpreviews.site/bg and featured in https://dn-offer.webpreviews.site/ . The alias streams the existing isolated Cloudflare Preview; real authenticated accounts, private documents and notifications remain proposed implementation scope.
+
+
 A responsive, single-dealer showroom built with Next.js App Router, React, strict TypeScript and StyleX. The primary journey and the alternative phone composition at `/2` share inventory, detail pages, search, saved cars and enquiry drafts. English and Bulgarian are configurable per dealer.
 
 ## Develop and verify

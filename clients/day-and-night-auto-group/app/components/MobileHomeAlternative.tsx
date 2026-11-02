@@ -8,6 +8,8 @@ import Image from '@/components/AppImage';
 import DealerBrand from '@/components/DealerBrand';
 import PageHeader from '@/components/PageHeader';
 import IconButton from '@/components/IconButton';
+import {surfaceStyles} from '@/components/surface.stylex';
+import {iconButtonStyles as iconButton} from '@/components/icon-button.stylex';
 import DealerLocationSheet from '@/components/DealerLocationSheet';
 import DealerEnquirySheet from '@/components/DealerEnquirySheet';
 import ShowroomBannerFrame from '@/components/ShowroomBannerFrame';
@@ -35,6 +37,7 @@ const navigation = [
 const services = [
   {href: '/sell', title: 'Sell', copy: 'Sell or part-exchange.', image: showroom.services[1].mobileImage},
   {href: '/finance', title: 'Leasing', copy: 'Explore your monthly payment.', image: showroom.services[2].mobileImage},
+  {href: '/import', title: 'Import', copy: 'Country, car and budget.', image: showroom.artwork.financeSteps[0]},
   {href: '/service', title: 'Car care.', copy: 'Servicing and diagnostics.', image: showroom.services[3].mobileImage},
 ] as const;
 
@@ -57,17 +60,17 @@ export function MobileAlternativeHeader({onDark = false}: {onDark?: boolean}) {
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const locationLabel = dealer.address || dealer.city;
   return <><header data-alternative-header {...stylex.props(s.header, onDark && s.headerDark)}>
-    <Link href="/" aria-label={tx(`${showroom.name} home`)} {...stylex.props(s.brand, onDark && s.brandDark)}><DealerBrand compact={!onDark} onDark={onDark}/></Link>
+    <Link href="/" aria-label={tx(`${showroom.name} home`)} {...stylex.props(s.brand, onDark && s.brandDark)}><DealerBrand compact={!onDark} onDark={onDark} fit/></Link>
     <div {...stylex.props(s.headerActions)}>
-      {onDark ? <button data-alternative-header-location type="button" onClick={() => setLocationOpen(true)} aria-haspopup="dialog" aria-expanded={locationOpen} aria-label={locationLabel ? `${tx('Visit showroom')} · ${locationLabel}` : tx('Visit showroom')} title={locationLabel || tx('Visit showroom')} {...stylex.props(s.saved, s.savedDark)}><HeaderActionIcon icon={MapPin} onDark/></button> : null}
-      {onDark ? dealer.phoneE164 ? <a data-alternative-header-contact href={`tel:${dealer.phoneE164}`} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} title={dealer.phoneDisplay || tx('Call')} {...stylex.props(s.saved, s.savedDark)}><HeaderActionIcon icon={Phone} onDark/></a> : <button data-alternative-header-contact type="button" onClick={() => setEnquiryOpen(true)} aria-label={tx('Contact us')} title={tx('Contact us')} aria-haspopup="dialog" aria-expanded={enquiryOpen} {...stylex.props(s.saved, s.savedDark)}><HeaderActionIcon icon={MessageSquareText} onDark/></button> : null}
-      <Link href="/saved" aria-label={tx('Saved cars')} title={tx('Saved cars')} {...stylex.props(s.saved, onDark && s.savedDark)}><HeaderActionIcon icon={Heart} onDark={onDark}/></Link>
+      {onDark ? <button data-alternative-header-location type="button" onClick={() => setLocationOpen(true)} aria-haspopup="dialog" aria-expanded={locationOpen} aria-label={locationLabel ? `${tx('Visit showroom')} · ${locationLabel}` : tx('Visit showroom')} title={locationLabel || tx('Visit showroom')} {...stylex.props(iconButton.button)}><HeaderActionIcon icon={MapPin}/></button> : null}
+      {onDark ? dealer.phoneE164 ? <a data-alternative-header-contact href={`tel:${dealer.phoneE164}`} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} title={dealer.phoneDisplay || tx('Call')} {...stylex.props(iconButton.button)}><HeaderActionIcon icon={Phone}/></a> : <button data-alternative-header-contact type="button" onClick={() => setEnquiryOpen(true)} aria-label={tx('Contact us')} title={tx('Contact us')} aria-haspopup="dialog" aria-expanded={enquiryOpen} {...stylex.props(iconButton.button)}><HeaderActionIcon icon={MessageSquareText}/></button> : null}
+      <Link href="/saved" aria-label={tx('Saved cars')} title={tx('Saved cars')} {...stylex.props(iconButton.button)}><HeaderActionIcon icon={Heart}/></Link>
     </div>
   </header><DealerLocationSheet open={locationOpen} onClose={() => setLocationOpen(false)}/><DealerEnquirySheet open={enquiryOpen} onClose={() => setEnquiryOpen(false)}/></>;
 }
 
-function HeaderActionIcon({icon: Icon, onDark}: {icon: LucideIcon; onDark: boolean}) {
-  return <span data-alternative-header-icon {...stylex.props(s.headerIconSurface, onDark && s.headerIconSurfaceDark)}><Icon size={20} strokeWidth={2} absoluteStrokeWidth aria-hidden="true"/></span>;
+function HeaderActionIcon({icon: Icon}: {icon: LucideIcon}) {
+  return <span data-alternative-header-icon {...stylex.props(iconButton.content)}><Icon aria-hidden="true" {...stylex.props(iconButton.icon)}/></span>;
 }
 
 export function MobileAlternativeHero() {
@@ -124,17 +127,18 @@ export function MobileAlternativeDiscovery() {
 export function MobileAlternativeDock({pathname}: {pathname: string}) {
   const tx = useCopy();
   return <nav data-alternative-dock aria-label={tx('App navigation')} {...stylex.props(compactDock.root, s.phoneDock)}>{navigation.map(item => {
-    const active = item.href === '/' ? pathname === '/' : item.href === '/services' ? ['/services', '/sell', '/finance', '/service'].includes(pathname) : item.href === '/more' ? ['/more', '/saved', '/shop'].includes(pathname) : pathname === item.href;
+    const active = item.href === '/' ? pathname === '/' : item.href === '/services' ? ['/services', '/sell', '/finance', '/import', '/service'].includes(pathname) : item.href === '/more' ? ['/more', '/saved', '/shop'].includes(pathname) : pathname === item.href;
     return <Link key={item.href} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active ? 'page' : undefined} {...stylex.props(compactDock.link, active && compactDock.active)}><ShowroomIcon dock name={item.icon} active={active}/></Link>;
   })}</nav>;
 }
 
 export function MobileAlternativeServices({fullPage = false}: {fullPage?: boolean} = {}) {
   const tx = useCopy();
-  return <><div {...stylex.props(s.phoneOnly, fullPage && s.fullPage, s.serviceScreen)}><PageHeader compact showBack={false} title={tx('Services')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/><main data-services-hub data-alternative-services {...stylex.props(s.services, fullPage && s.fullPageServices)}>
-    <nav aria-label={tx('Car services')} {...stylex.props(s.serviceList)}>{services.map(item => <Link key={item.href} href={item.href} {...stylex.props(s.service)}>
+  return <><div {...stylex.props(s.phoneOnly, fullPage && s.fullPage, s.serviceScreen, fullPage && s.nativeServiceScreen)}><PageHeader compact onRail={fullPage} showBack={false} title={tx('Services')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart} tone={fullPage ? 'rail' : 'neutral'}/>}/><main data-services-hub data-alternative-services {...stylex.props(s.services, fullPage && s.fullPageServices)}>
+    <nav aria-label={tx('Car services')} {...stylex.props(s.serviceList)}>{services.map(item => <Link key={item.href} href={item.href} {...stylex.props(s.service, fullPage && s.nativeService, fullPage && surfaceStyles.card)}>
       <img src={assetPath(item.image)} width={52} height={52} alt="" {...stylex.props(s.serviceImage)}/>
-      <span {...stylex.props(s.serviceCopy)}><span {...stylex.props(s.serviceTitleRow)}><span {...stylex.props(s.serviceTitle)}>{tx(item.title).replace(/\.$/, '')}</span><ArrowRight size={16} aria-hidden="true" {...stylex.props(s.serviceArrow)}/></span><span {...stylex.props(s.serviceDescription)}>{tx(item.copy)}</span></span>
+      <span {...stylex.props(s.serviceCopy)}><span {...stylex.props(s.serviceTitleRow, fullPage && s.nativeServiceTitleRow)}><span {...stylex.props(s.serviceTitle, fullPage && s.nativeServiceTitle)}>{tx(item.title).replace(/\.$/, '')}</span><ArrowRight size={16} aria-hidden="true" {...stylex.props(s.serviceArrow, fullPage && s.nativeServiceWideArrow)}/></span><span {...stylex.props(s.serviceDescription, fullPage && s.nativeServiceDescription)}>{tx(item.copy)}</span></span>
+      {fullPage ? <ArrowRight size={16} aria-hidden="true" {...stylex.props(s.nativeServiceArrow)}/> : null}
     </Link>)}</nav>
   </main></div>{!fullPage?<div {...stylex.props(s.wideOnly)}><FeatureLanding kind="service"/></div>:null}</>;
 }
@@ -144,13 +148,9 @@ const s = stylex.create({
   wideOnly: {display: {[media.mobile]: 'none', default: 'block'}},
   header: {display: {[media.mobile]: 'flex', default: 'none'}, position: 'sticky', top: 0, zIndex: 70, alignItems: 'center', justifyContent: 'space-between', gap: 16, minHeight: 'calc(60px + env(safe-area-inset-top))', paddingTop: 'env(safe-area-inset-top)', paddingInline: 16, backgroundColor: 'rgba(255,255,255,.97)', backdropFilter: 'blur(16px)'},
   headerDark: {color: '#fff', backgroundColor: '#202023'},
-  headerActions: {display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0},
-  brand: {display: 'flex', alignItems: 'center', minHeight: 44, borderRadius: 8, outlineOffset: 2},
+  headerActions: {display: 'flex', alignItems: 'center', gap: $.controlActionGap, flexShrink: 0},
+  brand: {display: 'flex', alignItems: 'center', minWidth: 0, minHeight: 44, borderRadius: 8, outlineOffset: 2},
   brandDark: {outlineColor: {':focus-visible': '#fff'}},
-  saved: {display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, borderWidth: 0, borderRadius: '50%', color: $.ink, backgroundColor: 'transparent', cursor: 'pointer', outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineWidth: 2, outlineColor: $.ink, outlineOffset: 1},
-  savedDark: {color: '#fff', outlineColor: '#fff'},
-  headerIconSurface: {display: 'grid', placeItems: 'center', width: $.controlCompactHeight, height: $.controlCompactHeight, borderRadius: '50%', backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
-  headerIconSurfaceDark: {backgroundColor: {default: 'rgba(255,255,255,.08)', ':hover': 'rgba(255,255,255,.15)'}},
   hero: {overflow: 'hidden', color: '#fff', backgroundColor: '#202023'},
   heroControls: {display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', marginInline: 'auto', padding: '4px 12px 0'},
   heroSearch: {width: '100%'},
@@ -171,6 +171,13 @@ const s = stylex.create({
   pickSurface: {borderWidth: 0, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
   phoneDock: {display: {[media.mobile]: 'grid', default: 'none'}},
   serviceScreen: {minHeight: '100svh'},
+  nativeServiceScreen: {backgroundColor: {[media.mobile]: $.surface, default: 'transparent'}},
+  nativeService: {gridTemplateColumns: {[media.mobile]: '52px minmax(0,1fr) 16px', default: '52px minmax(0,1fr)'}, minHeight: {[media.mobile]: 88, default: 92}, padding: {[media.mobile]: 12, default: 14}, backgroundColor: {[media.mobile]: {default: $.surface, ':hover': $.surface, ':active': $.surfaceAlt}, default: $.surfaceAlt, ':hover': $.line}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}},
+  nativeServiceTitleRow: {gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', default: 'minmax(0,1fr) 16px'}},
+  nativeServiceWideArrow: {display: {[media.mobile]: 'none', default: 'block'}},
+  nativeServiceArrow: {display: {[media.mobile]: 'block', default: 'none'}},
+  nativeServiceTitle: {fontSize: {[media.mobile]: 16, default: 18}, lineHeight: {[media.mobile]: '22px', default: '24px'}},
+  nativeServiceDescription: {fontSize: {[media.mobile]: 13, default: 14}, lineHeight: {[media.mobile]: '18px', default: '20px'}},
   fullPage: {display: 'block'},
   fullPageServices: {maxWidth: 720, marginInline: 'auto'},
   services: {padding: '12px 12px 32px', color: $.ink},

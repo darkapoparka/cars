@@ -1,0 +1,2 @@
+import { loadShowroom } from "../lib/server/showroom";
+export const load = ({ url }: { url: URL }) => loadShowroom(url);

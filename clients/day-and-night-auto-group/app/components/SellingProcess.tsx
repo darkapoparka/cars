@@ -7,8 +7,7 @@ import * as stylex from '@stylexjs/stylex';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import {desktopHero} from '@/components/desktop-hero.stylex';
 import {useCopy} from '@/lib/locale';
-import {media} from '@/app/tokens.stylex';
-import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 
 const steps = [
@@ -38,6 +37,6 @@ export default function SellingProcess({hero = false}: {hero?: boolean}) {
 
 const s = stylex.create({
   process: {display: {[media.desktop]: 'none', default: 'flex'}, justifyContent: 'center', marginTop: 24},
-  details: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10, minWidth: 220, maxWidth: '100%', minHeight: 48, padding: '0 22px', color: campaign.lightInk, fontWeight: 500, whiteSpace: 'nowrap', borderWidth: 1, borderStyle: 'solid', borderColor: {default: campaign.lightMuted, ':hover': campaign.lightInk}, borderRadius: 24, backgroundColor: {default: '#fff', ':hover': '#f7f7f8'}, cursor: 'pointer', outline: {default: 'none', ':focus-visible': '2px solid #262629'}, outlineOffset: 2},
+  details: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10, minWidth: 220, maxWidth: '100%', minHeight: 48, padding: '0 22px', color: $.ink, fontWeight: 500, whiteSpace: 'nowrap', borderWidth: 0, borderRadius: 24, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}, cursor: 'pointer', outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink, outlineOffset: 2},
   icon: {flexShrink: 0, color: 'inherit'},
 });

@@ -1,5 +1,15 @@
 # App dock icons
 
+## Current Day & Night artwork — 2 November 2026
+
+The standard phone dock has five labelled destinations (Home, Cars, Shop, Services, Menu), using transparent silver 3D raster icons at 28px. Its existing 328px maximum width, 56px surface height and 48px link height remain. The alternate journey retains the original four-icon layout. The four original Phosphor glyphs below remain available as vector fallbacks.
+
+Shop uses `public/navigation/dock/shop-v1.webp` in both the dock and Menu. Generated with the built-in image-generation tool, then trimmed and resized without altering its generated alpha: 128×128px, 5,466 bytes. Original output: `C:/Users/radev/.codex/generated_images/01a195f9-4bcd-7583-afa3-a1b71a6ba081/exec-676251c5-5534-4536-8598-4d18a6b7da86.png`. No existing asset was overwritten.
+
+Generation prompt: single silver metallic shopping-bag navigation icon for Day & Night; realistic polished 3D object matching the house, car and chrome-wrench family; graphite/silver monochrome, bevelled body, rounded arch handle and dark handle opening, subtly visible side, bold readable silhouette at 28px, upper-left studio light, transparent background and handle opening, centred square composition, no text, logo, backdrop, platform or extra objects.
+
+## Original vector fallback provenance
+
 The four mobile dock glyphs use Phosphor Icons regular and fill variants, rendered as inline SVG paths in `components/dock-icons.ts`. Regular glyphs identify unselected destinations; fill glyphs identify the selected destination. Both App journeys use the same renderer, 24px SVG frames and existing 44px links.
 
 Source repository: https://github.com/phosphor-icons/core

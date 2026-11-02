@@ -20,5 +20,5 @@ export const landingContent = stylex.create({
 });
 
 const s = stylex.create({
-  backdrop: {maxWidth: $.content, marginInline: 'auto', backgroundColor: {[media.desktop]: $.surface, [media.mobile]: $.rail, default: '#202023'}},
+  backdrop: {maxWidth: $.content, marginInline: 'auto', backgroundColor: {[media.desktop]: $.surface, [media.mobile]: $.surface, default: '#202023'}},
 });

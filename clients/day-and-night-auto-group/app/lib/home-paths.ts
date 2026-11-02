@@ -1,6 +1,6 @@
 import {withoutLocale, withoutMount} from './paths';
 
-const routes = new Set(['/', '/cars', '/saved', '/more', '/search', '/sell', '/sell/details', '/finance', '/service', '/service/details', '/services', '/stores', '/shop']);
+const routes = new Set(['/', '/cars', '/saved', '/more', '/search', '/sell', '/sell/details', '/finance', '/import', '/service', '/service/details', '/services', '/stores', '/shop']);
 
 export function isHomeAlternative(pathname: string) {
   return pathname === '/2' || pathname.startsWith('/2/');
@@ -10,10 +10,10 @@ export function primaryHomePath(pathname: string) {
   return isHomeAlternative(pathname) ? pathname.slice(2) || '/' : pathname;
 }
 
-/** The Services dock owns the hub and all three journeys, including nested screens. */
+/** The Services dock owns the hub and each journey, including nested screens. */
 export function isServicesRoute(pathname: string) {
   const path = primaryHomePath(pathname);
-  return ['/services', '/sell', '/finance', '/service'].some(route => path === route || path.startsWith(route + '/'));
+  return ['/services', '/sell', '/finance', '/import', '/service'].some(route => path === route || path.startsWith(route + '/'));
 }
 
 /** Keep the comparison journey on its aliases; detail and enquiry routes stay shared. */

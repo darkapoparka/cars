@@ -154,9 +154,9 @@
 >
   <form onsubmit={apply}>
     <header>
-      <h2 id={id + "-title"} class="desktop-type-panel"
-        >{locale.t("ui.desktop-shop-filter-dialog.product-filters")}</h2
-      >
+      <h2 id={id + "-title"} class="desktop-type-panel">
+        {locale.t("ui.desktop-shop-filter-dialog.product-filters")}
+      </h2>
       <button
         type="button"
         class="dialog-close"
@@ -283,8 +283,10 @@
         {#if priceError}<p
             class="price-error desktop-type-meta"
             id={id + "-price-error"}
-            role="status">{priceError}</p
-          >{/if}
+            role="status"
+          >
+            {priceError}
+          </p>{/if}
       </fieldset>
     </div>
     <footer>
@@ -356,8 +358,8 @@
   .dialog-close {
     display: grid;
     place-items: center;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     padding: 0;
     border: 1px solid var(--bs-neutral-200);
     border-radius: 999px;
@@ -539,6 +541,25 @@
     cursor: default;
   }
 
+  @media (max-width: 767.98px) {
+    dialog.shop-filter-dialog {
+      width: 100%;
+      max-width: none;
+      border-radius: 0;
+    }
+    header,
+    .dialog-body,
+    footer {
+      padding: 16px;
+    }
+    input,
+    select {
+      font-size: 16px;
+    }
+    .category-options {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   @media (min-width: 992px) {
     dialog.shop-filter-dialog {
       border-radius: var(--karento-desktop-card-radius) 0 0

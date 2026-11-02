@@ -4,11 +4,13 @@
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   const locale = useLocale();
   import { page } from "$app/state";
-  import { MediaQuery } from "svelte/reactivity";
   import { selectedReferenceProduct } from "#lib/data/shop-mobile.ts";
-  const phone = new MediaQuery("(max-width: 767.98px)");
-  const desktop = new MediaQuery("(min-width: 992px)");
   const selected = $derived(selectedReferenceProduct(page.url.searchParams));
+  const backHref = $derived.by(() => {
+    const parameters = new URLSearchParams(page.url.searchParams.toString());
+    parameters.delete("product");
+    return locale.href(`/shop${parameters.size ? "?" + parameters : ""}`);
+  });
 </script>
 
 <section
@@ -45,9 +47,7 @@
         </span>
       </li>
       <li>
-        <a
-          href={locale.href("/shop")}
-          aria-label={locale.t("ui.product-breadcrumb.shop")}
+        <a href={backHref} aria-label={locale.t("ui.product-breadcrumb.shop")}
           >{locale.t("ui.product-breadcrumb.shop")}</a
         >
         <span class="arrow-right">
@@ -70,13 +70,10 @@
           </svg>
         </span>
       </li>
-      <li
-        ><span class="text-breadcrumb" aria-current="page"
-          >{phone.current || desktop.current
-            ? selected.title
-            : "Mobil Delvac 1300 Super Heavy Duty Synthetic Blend"}</span
-        ></li
-      >
+      <li>
+        <span class="text-breadcrumb" aria-current="page">{selected.title}</span
+        >
+      </li>
     </ul>
   </div>
 </section>

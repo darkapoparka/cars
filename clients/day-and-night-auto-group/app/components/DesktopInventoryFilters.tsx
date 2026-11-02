@@ -1,8 +1,10 @@
 'use client';
-import {displayMake, displayModelSelection} from '@/lib/inventory-labels';
+import IconButton from '@/components/IconButton';
+import {displayMake, displayModelSelection, vehicleCardModel} from '@/lib/inventory-labels';
 
 import {useLayoutEffect, useRef, useState, type RefObject} from 'react';
 import {createPortal} from 'react-dom';
+import {actionButton} from './action-button.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {ChevronDown, Search, SlidersHorizontal, X} from 'lucide-react';
 import NativeFilterPane from '@/components/NativeFilterPane';
@@ -115,9 +117,9 @@ export default function DesktopInventoryFilters({filters, update, count, countMa
       </div>
     </div>
     {active ? createPortal(<div ref={panel} id="desktop-quick-filter-panel" data-desktop-filter-popover role="dialog" aria-label={tx(title(active))} style={position} {...stylex.props(s.panel)}>
-      <header {...stylex.props(s.heading)}><h2 {...stylex.props(s.title)}>{tx(title(active))}</h2><button type="button" aria-label={tx('Close filters')} onClick={() => close()} {...stylex.props(s.close)}><X size={18} aria-hidden="true"/></button></header>
+      <header {...stylex.props(s.heading)}><h2 {...stylex.props(s.title)}>{tx(title(active))}</h2><IconButton icon={X} label={tx('Close filters')} onClick={() => close()}/></header>
       <div {...stylex.props(s.pane)}><NativeFilterPane key={`${active}:${paneRevision}`} active={active} filters={filters} update={update} countMatches={countMatches} modelMakes={selectedMakes(filters)} wide/></div>
-      <footer {...stylex.props(s.footer)}><button type="button" onClick={() => {setPaneRevision(revision => revision + 1); update(clearDesktopFilter(filters, active));}} {...stylex.props(s.clear)}>{tx('Clear')}</button><button type="button" onClick={() => {const invalid = panel.current?.querySelector<HTMLInputElement>('input[aria-invalid="true"]'); if (invalid) {invalid.focus({preventScroll: true}); return;} close();}} {...stylex.props(s.show)}>{tx('Show')} {count} {tx(count === 1 ? 'car' : 'cars')}</button></footer>
+      <footer {...stylex.props(s.footer)}><button type="button" onClick={() => {setPaneRevision(revision => revision + 1); update(clearDesktopFilter(filters, active));}} {...stylex.props(s.clear, actionButton.secondary)}>{tx('Clear')}</button><button type="button" onClick={() => {const invalid = panel.current?.querySelector<HTMLInputElement>('input[aria-invalid="true"]'); if (invalid) {invalid.focus({preventScroll: true}); return;} close();}} {...stylex.props(s.show)}>{tx('Show')} {count} {tx(count === 1 ? 'car' : 'cars')}</button></footer>
     </div>, document.body) : null}
   </>;
 }
@@ -134,7 +136,7 @@ export function DesktopQuickFilters({filters, quickFilter, onOpen, railRef}: Pic
 }
 
 /** Actual chosen values are removable without reopening their category. */
-export function DesktopAppliedFilters({filters, update, query, setQuery, mobile = false, compact = false, emiMax, setEmiMax}: Pick<Props, 'filters' | 'update'> & {query: string; setQuery: (value: string) => void; mobile?: boolean; compact?: boolean; emiMax?: number; setEmiMax?: (value: number | undefined) => void}) {
+export function DesktopAppliedFilters({filters, update, query, setQuery, mobile = false, compact = false, muted = false, emiMax, setEmiMax}: Pick<Props, 'filters' | 'update'> & {query: string; setQuery: (value: string) => void; mobile?: boolean; compact?: boolean; muted?: boolean; emiMax?: number; setEmiMax?: (value: number | undefined) => void}) {
   const tx = useCopy();
   const locale = useLocale();
   const numberLocale = locale === 'bg' ? 'bg-BG' : 'en-GB';
@@ -162,10 +164,13 @@ export function DesktopAppliedFilters({filters, update, query, setQuery, mobile 
   if (filters.cylinderMinimum !== defaults.cylinderMinimum || filters.cylinderMaximum !== defaults.cylinderMaximum) chips.push({key: 'cylinders', label: `${tx('Number Of Cylinders')}: ${filters.cylinderMinimum}–${filters.cylinderMaximum}`, remove: () => update({...filters, cylinderMinimum: defaults.cylinderMinimum, cylinderMaximum: defaults.cylinderMaximum})});
   function removeMobileChip(button: HTMLButtonElement, remove: () => void) {
     const rail = button.closest('nav');
+    const controls = button.closest('[data-inventory-controls]') ?? rail;
     const next = button.nextElementSibling instanceof HTMLButtonElement ? button.nextElementSibling : null;
     remove();
     requestAnimationFrame(() => {
-      const target = next?.isConnected && next.getClientRects().length > 0 ? next : [...(rail?.querySelectorAll<HTMLButtonElement>('button') ?? [])].find(control => control.getClientRects().length > 0);
+      const filterAction = controls?.querySelector<HTMLButtonElement>('[data-inventory-filter-action]');
+      const fallback = filterAction?.getClientRects().length ? filterAction : [...(rail?.querySelectorAll<HTMLButtonElement>('button') ?? [])].find(control => control.getClientRects().length > 0);
+      const target = next?.isConnected && next.getClientRects().length > 0 ? next : fallback;
       target?.focus({preventScroll: true});
     });
   }
@@ -176,8 +181,10 @@ export function DesktopAppliedFilters({filters, update, query, setQuery, mobile 
     requestAnimationFrame(() => (sibling instanceof HTMLButtonElement && sibling.isConnected ? sibling : closeButton)?.focus({preventScroll: true}));
   }
   return chips.length ? <div data-desktop-applied-filters={mobile ? undefined : true} data-mobile-applied-filters={mobile || undefined} aria-label={tx('Applied')} {...stylex.props(s.applied, mobile && s.mobileApplied)}>{chips.map(chip => {
-    const content = <><span {...stylex.props(s.chipLabel)}>{chip.label}</span><X size={14} aria-hidden="true"/></>;
-    return <button type="button" key={chip.key} title={chip.label} aria-label={`${tx('Clear')}: ${chip.label}`} onClick={mobile ? event => removeMobileChip(event.currentTarget, chip.remove) : compact ? event => removeCompactChip(event.currentTarget, chip.remove) : chip.remove} {...stylex.props(pill.control, mobile && pill.selectedControl, !mobile && s.desktopChip)}><span {...stylex.props(pill.surface, pill.soft, mobile && pill.selected, !mobile && s.chipSurface, !mobile && compact && pill.selected, !mobile && compact && s.compactChipSurface)}>{content}</span></button>;
+    const [make = '', model = ''] = chip.key.slice('models:'.length).split('::');
+    const visibleLabel = mobile&&muted&&chip.key.startsWith('models:')&&model ? `${tx(displayMake(make))} ${vehicleCardModel(make, model)}` : chip.label;
+    const content = <><span {...stylex.props(s.chipLabel)}>{visibleLabel}</span><X size={mobile&&muted?12:14} aria-hidden="true"/></>;
+    return <button type="button" key={chip.key} title={chip.label} aria-label={`${tx('Clear')}: ${chip.label}`} onClick={mobile ? event => removeMobileChip(event.currentTarget, chip.remove) : compact ? event => removeCompactChip(event.currentTarget, chip.remove) : chip.remove} {...stylex.props(pill.control, mobile && !muted && pill.selectedControl, !mobile && s.desktopChip, mobile && muted && s.mutedMobileChip)}><span {...stylex.props(pill.surface, pill.soft, mobile && !muted && pill.selected, !mobile && s.chipSurface, !mobile && compact && pill.selected, !mobile && compact && s.compactChipSurface, mobile && muted && s.mutedMobileSurface)}>{content}</span></button>;
   })}</div> : null;
 }
 
@@ -200,15 +207,16 @@ const s = stylex.create({
   panel: {position: 'fixed', zIndex: 130, display: 'flex', flexDirection: 'column', width: 380, color: $.ink, fontFamily: $.fontSans, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: 18, backgroundColor: '#fff', boxShadow: $.shadowStrong, overflow: 'hidden'},
   heading: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexShrink: 0, padding: '12px 18px', borderBottomWidth: 1, borderBottomStyle: 'solid', borderBottomColor: $.line},
   title: {fontSize: 17, fontWeight: 500},
-  close: {display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: 999, backgroundColor: $.surfaceAlt, cursor: 'pointer'},
   pane: {minHeight: 0, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: '14px 18px 18px'},
   footer: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexShrink: 0, padding: '10px 18px', borderTopWidth: 1, borderTopStyle: 'solid', borderTopColor: $.line},
-  clear: {minHeight: 44, paddingInline: 14, color: $.ink, fontSize: $.desktopTextSize, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: 999, backgroundColor: $.surface, cursor: 'pointer'},
+  clear: {minHeight: 44, paddingInline: 14, fontSize: $.desktopTextSize, borderWidth: 1, borderStyle: 'solid', borderRadius: 999, cursor: 'pointer'},
   show: {minHeight: 44, paddingInline: 16, color: '#fff', fontSize: $.desktopTextSize, borderWidth: 0, borderRadius: 999, backgroundColor: $.ink, opacity: {default: 1, ':disabled': .45}, cursor: {default: 'pointer', ':disabled': 'default'}},
   applied: {display: 'flex', flexGrow: 1, minWidth: 0, flexWrap: 'nowrap', alignItems: 'center', gap: 6, overflowX: 'auto', overscrollBehaviorX: 'contain', scrollbarWidth: 'none'},
   desktopChip: {fontSize: $.desktopSupportSize, fontWeight: $.desktopTextWeight, lineHeight: $.desktopSupportLineHeight, outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: -2},
   chipSurface: {paddingInline: 12, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
   compactChipSurface: {minHeight: 28, paddingInline: 10, fontSize: $.desktopSupportSize, lineHeight: $.desktopSupportLineHeight, gap: 4},
   mobileApplied: {display: {[media.mobile]: 'contents', default: 'none'}},
+  mutedMobileChip: {color: $.muted, fontSize: 12, fontWeight: 400, lineHeight: '18px', outline: {default: 'none', ':focus-visible': '2px solid #202024'}, outlineOffset: -3},
+  mutedMobileSurface: {minHeight: 28, paddingInline: 10, gap: 6, color: $.muted, fontSize: 12, lineHeight: '18px', backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
   chipLabel: {maxWidth: 180, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
 });

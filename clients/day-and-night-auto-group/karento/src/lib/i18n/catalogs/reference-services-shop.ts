@@ -1,5 +1,9 @@
 /** Semantic labels for reference Services/Shop and locale-aware calendar controls. */
 export const referenceServicesShopEn = {
+  "reference.shop.feature.checkCompatibility":
+    "Check compatibility with your vehicle before ordering",
+  "reference.shop.feature.confirmSpecification":
+    "Confirm the specification with the team",
   "reference.bodyTypes.intro": "Find the perfect ride for any occasion",
   "reference.bodyTypes.browse": "Browse",
   "reference.services.planning.dates.title": "Choose your dates",
@@ -75,6 +79,10 @@ export const referenceServicesShopEn = {
   "calendar.next.decade": "Next decade",
 } as const;
 export const referenceServicesShopBg = {
+  "reference.shop.feature.checkCompatibility":
+    "Проверете съвместимостта с автомобила преди поръчка",
+  "reference.shop.feature.confirmSpecification":
+    "Уточнете спецификацията с екипа",
   "reference.bodyTypes.intro": "Изберете подходящ автомобил за всеки повод",
   "reference.bodyTypes.browse": "Разгледайте",
   "reference.services.planning.dates.title": "Изберете датите",

@@ -1,20 +1,21 @@
 <script lang="ts">
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import { usePreview } from "#lib/preview.svelte.ts";
+  import { page } from "$app/state";
   import BottomNavigationIcon from "#lib/components/mobile/BottomNavigationIcon.svelte";
 
   const locale = useLocale();
   const preview = usePreview();
   const links = $derived([
     {
-      href: "/",
-      label: locale.t("navigation.home"),
-      icon: "home" as const,
+      href: "/vehicles",
+      label: locale.t("navigation.buy"),
+      icon: "vehicles" as const,
     },
     {
-      href: "/vehicles",
-      label: locale.t("navigation.mobileVehicles"),
-      icon: "vehicles" as const,
+      href: "/rent",
+      label: locale.t("navigation.rent"),
+      icon: "rent" as const,
     },
     {
       href: "/services",
@@ -38,12 +39,12 @@
   {#each links as link (link.href)}
     <a
       href={locale.href(link.href)}
-      aria-current={link.href === "/" ? "page" : undefined}
+      aria-current={page.url.pathname === link.href ? "page" : undefined}
     >
       <BottomNavigationIcon
         name={link.icon}
         appearance="graphite"
-        active={link.href === "/"}
+        active={page.url.pathname === link.href}
       /><span>{link.label}</span>
     </a>
   {/each}

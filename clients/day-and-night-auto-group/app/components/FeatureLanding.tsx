@@ -13,7 +13,6 @@ import ServiceSearchField, {useServiceSearch, type ServiceSearchState} from '@/c
 import FeatureContent from '@/components/FeatureContent';
 import FinanceCalculatorLauncher, {type FinanceView} from '@/components/FinanceCalculatorLauncher';
 import FinanceQuoteHero from '@/components/FinanceQuoteHero';
-import ImportCountryPicker, {ImportCountryFilters} from '@/components/ImportCountryPicker';
 import {ServiceHeroControls} from '@/components/ServiceCatalogue';
 import DealerEnquirySheet from '@/components/DealerEnquirySheet';
 import SellEnquirySheet, {type SellCarDetails, type SellIntent} from '@/components/SellEnquirySheet';
@@ -25,7 +24,7 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
   sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', mobileCopy: 'Sell or part-exchange.'},
-  finance: {mobileTitle: 'Finance calculator', title: 'Car finance.', mobileCopy: 'Monthly payment'},
+  finance: {mobileTitle: 'Leasing', title: 'Car finance.', mobileCopy: 'Explore your monthly payment.'},
   service: {mobileTitle: 'Car services.', title: 'Care for your car.', mobileCopy: 'Servicing and diagnostics.'},
 } as const;
 
@@ -47,7 +46,6 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
   const current = config[kind];
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [financeView, setFinanceView] = useState<FinanceView>(null);
-  const [importCountry, setImportCountry] = useState('all');
   const [sellIntent, setSellIntent] = useState<SellIntent | null>(null);
   const [sellCar, setSellCar] = useState<SellCarDetails>({make: '', model: '', year: '', mileage: '', notes: ''});
   function start(intent: SellIntent = 'sale') {
@@ -56,27 +54,30 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
     router.push(`/${kind}/details`);
   }
   const desktopControl = kind === 'finance'
-    ? <><FinanceQuoteHero pickerOpen={financeView !== null} onChooseCar={() => setFinanceView('cars')}/><ImportCountryFilters country={importCountry} onCountryChange={setImportCountry} hero/></>
+    ? <FinanceQuoteHero pickerOpen={financeView !== null} onChooseCar={() => setFinanceView('cars')}/>
     : kind === 'sell'
       ? <SellQuoteHero car={sellCar} onCarChange={setSellCar} onStart={() => start()} expanded={sellIntent !== null}/>
       : serviceSearch ? <><ServiceSearchField state={serviceSearch} onDark desktopHero/><ServiceHeroControls searchState={serviceSearch}/></> : null;
-  return <div {...stylex.props(s.screen)}>
-    {alternative ? <div {...stylex.props(s.alternativeHeader)}><PageHeader compact showBack={kind !== 'service'} title={tx(current.mobileTitle).replace(/\.$/, '')} backHref="/services" backLabel="Back to services" action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/></div> : null}
-    <DealerMobileBanner mobileCard={alternative} controlOnly={alternative} title={current.mobileTitle} description={current.mobileCopy}>
-      {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark plainOnMobile={alternative}/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry plainOnMobile={alternative} expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : alternative ? <SellCarEntry expanded={sellIntent !== null} onClick={() => start()}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
-    </DealerMobileBanner>
+  return <div {...stylex.props(s.screen, !alternative && s.serviceScreen)}>
+    <div {...stylex.props(s.mobileHeader)}><PageHeader compact onRail={!alternative} title={tx(current.mobileTitle).replace(/\.$/, '')} backHref="/services" backLabel="Back to services" action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart} tone={!alternative ? 'rail' : 'neutral'}/>}/></div>
+    <div {...stylex.props(kind !== 'service' && !alternative && s.hideMobile)}><DealerMobileBanner mobileCard={alternative} controlOnly onRail={!alternative} title={current.mobileTitle} description={current.mobileCopy}>
+      {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark plainOnMobile/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry plainOnMobile={alternative} expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : alternative ? <SellCarEntry expanded={sellIntent !== null} onClick={() => start()}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
+    </DealerMobileBanner></div>
     <ShowroomBanner title={current.title} control={desktopControl}/>
-    <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content, alternative && s.alternativeContent)}>
-      {kind === 'finance' ? <><ImportCountryPicker country={importCountry} onCountryChange={setImportCountry}/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView} backNavigation={alternative}/></> : null}
-      <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
+    <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content, alternative && s.alternativeContent, !alternative && s.serviceContent)}>
+      {kind === 'finance' ? <FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView} backNavigation/> : null}
+      <FeatureContent kind={kind} onStart={start} onCalculate={() => setFinanceView('calculator')} serviceSearch={serviceSearch} compactMobile={!alternative}/>
     </main></LandingContentFrame>
-    <DealerEnquirySheet open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
+    <DealerEnquirySheet open={enquiryOpen} onClose={() => setEnquiryOpen(false)} vehicleTitle={kind === 'finance' ? tx('Leasing').toLocaleLowerCase() : undefined}/>
     {kind === 'sell' ? <SellEnquirySheet car={sellCar} onCarChange={setSellCar} intent={sellIntent} onIntentChange={setSellIntent} onClose={() => setSellIntent(null)}/> : null}
   </div>;
 }
 const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 'calc(84px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
-  alternativeHeader: {display: {[media.mobile]: 'contents', default: 'none'}},
+  mobileHeader: {display: {[media.mobile]: 'contents', default: 'none'}},
+  hideMobile: {display: {[media.mobile]: 'none', default: 'contents'}},
+  serviceScreen: {backgroundColor: $.surface},
+  serviceContent: {paddingTop: {[media.mobile]: 0, default: 8}, borderTopLeftRadius: {[media.mobile]: 0, [media.desktop]: 0, default: 32}, borderTopRightRadius: {[media.mobile]: 0, [media.desktop]: 0, default: 32}, backgroundColor: $.surface},
   alternativeContent: {paddingTop: {[media.mobile]: 0, default: 8}, borderTopLeftRadius: {[media.mobile]: 0, default: 32}, borderTopRightRadius: {[media.mobile]: 0, default: 32}},
   // Keep the first row's margin inside every mobile landing panel.
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: {[media.mobile]: 0, default: 8}, display: {[media.mobile]: 'flow-root', default: 'block'}},

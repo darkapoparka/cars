@@ -322,4 +322,18 @@
       border-radius: var(--karento-desktop-pill-radius);
     }
   }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .desktop-catalog-toolbar {
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+    }
+    .catalog-selected-filters {
+      grid-column: 1/-1;
+      grid-row: 2;
+    }
+    .catalog-actions {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
 </style>

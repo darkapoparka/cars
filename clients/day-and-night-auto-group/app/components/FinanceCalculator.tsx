@@ -1,6 +1,7 @@
 'use client';
 
 import {useId, useState} from 'react';
+import {formControl} from './form-control.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {currency} from '@/lib/currency';
 import {formatPrice} from '@/lib/data';
@@ -22,7 +23,7 @@ function AmountInput({id, value, onChange, min, max, step = 1}: {id: string; val
   return <input id={id} data-focus-owner="field" type="number" inputMode={step < 1 ? 'decimal' : 'numeric'} min={min} max={max} step={step} value={editing ? draft : value}
     onFocus={() => {setDraft(String(value)); setEditing(true);}} onChange={event => update(event.target.value)}
     onBlur={() => {onChange(Math.max(min, Math.min(max, Number(draft) || min))); setEditing(false);}}
-    onKeyDown={event => {if (event.key === 'Enter') event.currentTarget.blur();}} {...stylex.props(s.number, t.input)}/>;
+    onKeyDown={event => {if (event.key === 'Enter') event.currentTarget.blur();}} {...stylex.props(s.number, formControl.surface, formControl.focus, formControl.embedded, t.input)}/>;
 }
 
 export default function FinanceCalculator({initialPrice = 25000, presentation = 'card'}: {initialPrice?: number; presentation?: 'card' | 'dialog'}) {
@@ -44,7 +45,7 @@ export default function FinanceCalculator({initialPrice = 25000, presentation = 
       <label htmlFor={id + '-price'} {...stylex.props(s.field, t.caption)}><NumberField label={<>{tx('Vehicle price')}<span {...stylex.props(s.outsideUnit)}> ({currency.symbol})</span></>} prefix={currency.symbol}><AmountInput id={id + '-price'} min={1} max={10000000} value={price} onChange={setPrice}/></NumberField></label>
       <div {...stylex.props(s.pairedFields)}>
       <label htmlFor={id + '-rate'} {...stylex.props(s.field, t.caption)}><NumberField label={<span><span {...stylex.props(s.desktopCopy)}>{tx('Annual interest')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Annual rate')}</span><span {...stylex.props(s.outsideUnit)}> (%)</span></span>} suffix="%"><AmountInput id={id + '-rate'} min={0} max={50} step={0.1} value={rate} onChange={setRate}/></NumberField></label>
-      <label htmlFor={id + '-term'} {...stylex.props(s.field, t.caption)}><NumberField label={<span><span {...stylex.props(s.desktopCopy)}>{tx('Repayment term')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Term')}</span></span>}><select id={id + '-term'} data-focus-owner="field" value={years} onChange={event => setYears(Number(event.target.value))} {...stylex.props(s.number, t.input)}>{[1, 2, 3, 4, 5, 6, 7].map(term => <option key={term} value={term}>{term} {tx(term === 1 ? 'year' : 'years')}</option>)}</select></NumberField></label>
+      <label htmlFor={id + '-term'} {...stylex.props(s.field, t.caption)}><NumberField label={<span><span {...stylex.props(s.desktopCopy)}>{tx('Repayment term')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Term')}</span></span>}><select id={id + '-term'} data-focus-owner="field" value={years} onChange={event => setYears(Number(event.target.value))} {...stylex.props(s.number, formControl.surface, formControl.focus, formControl.embedded, t.input)}>{[1, 2, 3, 4, 5, 6, 7].map(term => <option key={term} value={term}>{term} {tx(term === 1 ? 'year' : 'years')}</option>)}</select></NumberField></label>
       </div>
     </div>
     <div {...stylex.props(s.row, t.caption)}><label htmlFor={id + '-deposit'}><span {...stylex.props(s.desktopCopy)}>{tx('Deposit')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Down payment')}</span></label><output>{currency.symbol} {formatPrice(Math.round(deposit))} · {depositPercent}%</output></div>
@@ -53,13 +54,13 @@ export default function FinanceCalculator({initialPrice = 25000, presentation = 
   </section>;
 }
 const s = stylex.create({
-  card: {marginTop: 24, padding: {[media.mobile]: 18, default: 26}, color: $.ink, borderColor: '#e4e4e7', borderStyle: 'solid', borderWidth: 1, borderRadius: 20, backgroundColor: '#fff'},
+  card: {marginTop: 24, padding: {[media.mobile]: 18, default: 26}, color: $.ink, borderColor: 'transparent', borderStyle: 'solid', borderWidth: 1, borderRadius: 20, backgroundColor: '#fff'},
   dialog: {marginTop: 0, padding: 0, borderWidth: 0, borderRadius: 0},
   note: {marginTop: 8, color: $.muted},
   fields: {display: 'grid', gap: 12, marginTop: {[media.desktop]: 16, default: 18}},
   pairedFields: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12},
   field: {display: 'grid', minWidth: 0, alignContent: 'start', gap: {[media.desktop]: 6, default: 8}},
-  number: {width: '100%', minWidth: 0, minHeight: 44, padding: '8px 10px', borderColor: {[media.desktop]: '#d5d5da', default: $.controlBorder}, borderStyle: 'solid', borderWidth: 1, borderRadius: 9, backgroundColor: '#fff', color: $.ink},
+  number: {width: '100%', minWidth: 0, minHeight: 44, padding: '8px 10px', borderStyle: 'solid', borderWidth: 1, borderRadius: 9, color: $.ink},
   row: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8, marginTop: {[media.desktop]: 16, default: 20}},
   summary: {display: 'grid', gap: 6, marginTop: 14, paddingBottom: 18, color: $.muted,},
   dialogSummary: {gridTemplateColumns: {[media.desktop]: 'minmax(0,1fr) minmax(0,1fr)', default: 'none'}, alignItems: {[media.desktop]: 'center', default: 'stretch'}, gap: {[media.desktop]: '8px 12px', default: 6}, marginTop: {[media.desktop]: 12, default: 14}, padding: {[media.desktop]: 16, default: 18}, color: $.muted, borderWidth: 0, borderRadius: {[media.desktop]: 12, default: 16}, backgroundColor: campaign.lightSurface},

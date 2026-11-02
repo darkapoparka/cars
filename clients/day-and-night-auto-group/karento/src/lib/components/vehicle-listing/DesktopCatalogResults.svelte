@@ -18,7 +18,7 @@
   import ListingPagination from "./ListingPagination.svelte";
   import { MediaQuery } from "svelte/reactivity";
   import DesktopCatalogFilters from "./DesktopCatalogFilters.svelte";
-  const desktop = new MediaQuery("(min-width: 992px)");
+  const desktop = new MediaQuery("(min-width: 768px)");
   let { cards }: { cards: readonly ListingVehicle[] } = $props();
   const inventory = $derived(
     cards.map((card) => resolveInventoryVehicle(card, dealer.inventory)),
@@ -44,12 +44,12 @@
     <ListingVehicleGrid cards={filtered} columns={4} />
   {:else}
     <div class="catalog-empty">
-      <h3 class="desktop-type-panel"
-        >{locale.t("ui.desktop-catalog-results.no-matching-vehicles")}</h3
-      >
-      <p class="desktop-type-body"
-        >{locale.t("ui.desktop-catalog-results.try-adjusting-your-filters")}</p
-      >
+      <h3 class="desktop-type-panel">
+        {locale.t("ui.desktop-catalog-results.no-matching-vehicles")}
+      </h3>
+      <p class="desktop-type-body">
+        {locale.t("ui.desktop-catalog-results.try-adjusting-your-filters")}
+      </p>
       <a
         class="btn btn-brand-2 desktop-type-control"
         href={locale.href(clearHref)}
@@ -59,11 +59,11 @@
   {/if}
 {:else if active.length}
   <div class="catalog-summary">
-    <p role="status" aria-live="polite" class="desktop-type-body"
-      >{locale.t("reference.controls.found", {
+    <p role="status" aria-live="polite" class="desktop-type-body">
+      {locale.t("reference.controls.found", {
         results: locale.count(filtered.length),
-      })}</p
-    >
+      })}
+    </p>
     <a href={locale.href(clearHref)}
       >{locale.t("ui.desktop-catalog-results.clear-filters")}</a
     >
@@ -84,19 +84,21 @@
       cards={filtered}
       columns={4}
     />{:else}
-    <div class="catalog-empty"
-      ><h3 class="desktop-type-panel"
-        >{locale.t("ui.desktop-catalog-results.no-matching-vehicles")}</h3
-      ><p class="desktop-type-body"
-        >{locale.t(
+    <div class="catalog-empty">
+      <h3 class="desktop-type-panel">
+        {locale.t("ui.desktop-catalog-results.no-matching-vehicles")}
+      </h3>
+      <p class="desktop-type-body">
+        {locale.t(
           "ui.desktop-catalog-results.try-a-different-type-make-model-or-budget",
-        )}</p
-      ><a
+        )}
+      </p>
+      <a
         class="btn btn-brand-2 desktop-type-control"
         href={locale.href(clearHref)}
         >{locale.t("ui.desktop-catalog-results.browse-all-vehicles")}</a
-      ></div
-    >
+      >
+    </div>
   {/if}
 {:else}
   <ListingToolbar flushSortToggle />

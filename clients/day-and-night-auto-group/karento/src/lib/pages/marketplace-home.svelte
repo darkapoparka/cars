@@ -4,7 +4,6 @@
   import { MediaQuery } from "svelte/reactivity";
   import { useLocale } from "#lib/i18n/context.svelte.ts";
   import PageMetadata from "#lib/components/PageMetadata.svelte";
-  import OriginalHome from "#lib/pages/index-3.svelte";
   import DiscoveryHome from "#lib/discovery/DiscoveryHome.svelte";
   import DiscoveryBrowse from "#lib/discovery/DiscoveryBrowse.svelte";
   import DiscoveryDetail from "#lib/discovery/DiscoveryDetail.svelte";
@@ -58,5 +57,6 @@
     <DiscoveryHome />
   {/if}
 {:else}
-  <OriginalHome />
+  <PageMetadata title={discoveryText(locale.locale, "home")} />
+  <DiscoveryHome />
 {/if}

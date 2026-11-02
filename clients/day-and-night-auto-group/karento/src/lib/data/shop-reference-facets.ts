@@ -40,15 +40,15 @@ export type DesktopShopProduct = ListingProduct & ShopProductFacets;
 const referenceFacets: Readonly<Record<string, Required<ShopProductFacets>>> = {
   "/assets/imgs/shop/shop-list/product1.png": {
     category: "oil-fluids",
-    brand: "Mobil",
+    brand: "Shell",
   },
   "/assets/imgs/shop/shop-list/product2.png": {
     category: "electronics",
     brand: "Thinkware",
   },
   "/assets/imgs/shop/shop-list/product3.png": {
-    category: "oil-fluids",
-    brand: "Mobil",
+    category: "wheels-tires",
+    brand: "",
   },
   "/assets/imgs/shop/shop-list/product4.png": {
     category: "lighting",
@@ -72,7 +72,7 @@ const referenceFacets: Readonly<Record<string, Required<ShopProductFacets>>> = {
   },
   "/assets/imgs/shop/shop-list/product9.png": {
     category: "oil-fluids",
-    brand: "Shell",
+    brand: "Mobil",
   },
   "/assets/imgs/shop/shop-list/product10.png": {
     category: "brakes",
@@ -84,7 +84,7 @@ const referenceFacets: Readonly<Record<string, Required<ShopProductFacets>>> = {
   },
   "/assets/imgs/shop/shop-list/product12.png": {
     category: "oil-fluids",
-    brand: "Mobil",
+    brand: "Pennzoil",
   },
 };
 

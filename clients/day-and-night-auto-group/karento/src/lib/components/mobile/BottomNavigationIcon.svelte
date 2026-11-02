@@ -12,6 +12,7 @@
       "M7 14h.01M17 14h.01",
       "M5 18v2M19 18v2",
     ],
+    rent: ["M21 2l-2 2m-7.4 7.4a6 6 0 1 1-8.5 8.5 6 6 0 0 1 8.5-8.5Zm0 0L17 6l3 3 3-3-3-3"],
     services: [
       "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z",
     ],
@@ -42,9 +43,11 @@
 
 {#if appearance === "graphite"}
   <img
-    class="bottom-navigation-icon bottom-navigation-icon-graphite"
-    class:bottom-navigation-icon-active={active}
-    src={asset(`assets/icons/signature-graphite-refined/${name}.png`)}
+    class={[
+      "bottom-navigation-icon bottom-navigation-icon-graphite",
+      { "bottom-navigation-icon-active": active },
+    ]}
+    src={asset(`assets/icons/signature-graphite-refined/${name === "rent" ? "vehicles" : name}.png`)}
     width="96"
     height="96"
     alt=""

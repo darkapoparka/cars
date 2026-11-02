@@ -19,7 +19,7 @@
     discoveryPanels,
     discoveryYears,
     discoveryText,
-    discoveryDestination,
+    buySearchDestination,
     discoveryYearLabel,
     emptyDiscoveryFilters,
     searchCars,
@@ -40,7 +40,11 @@
   const id = $props.id();
   let open = $state(false);
   let purpose = $state<"buy" | "rent">("buy");
+  let homeQuery = $state("");
   let rental: RentalSearch;
+  let rentalPickup = $state("");
+  let rentalReturn = $state("");
+  let rentalPreference = $state("");
   let panel = $state<"search" | DiscoveryPanel>("search");
   let draftQuery = $state("");
   let draft = $state<DiscoveryFilters>({ ...emptyDiscoveryFilters });
@@ -157,7 +161,7 @@
       return;
     }
     purpose = "buy";
-    draftQuery = query;
+    draftQuery = tabsAbove ? homeQuery : query;
     draft = { ...filters };
     panel = nextPanel;
     showBudgetError = false;
@@ -202,11 +206,9 @@
 
   function destination(text: string, selection: DiscoveryFilters) {
     return locale.href(
-      discoveryDestination(
+      buySearchDestination(
         text,
         selection,
-        page.url.searchParams,
-        page.url.hash,
       ),
     );
   }
@@ -228,33 +230,100 @@
 </script>
 
 <div class={["discovery-search", { "tabs-above": tabsAbove }]}>
-  <SearchPurpose bind:value={purpose} standalone={tabsAbove} />
-  <button
-    type="button"
-    class="discovery-search-trigger"
-    aria-label={purpose === "rent"
-      ? locale.locale === "bg"
-        ? "Автомобил под наем"
-        : "Rent a car"
-      : discoveryText(locale.locale, "search") +
-        (appliedSummary ? ": " + appliedSummary : "")}
-    aria-haspopup="dialog"
-    aria-expanded={purpose === "buy" ? open : undefined}
-    onclick={() => openSearch()}
-  >
-    <span class="search-label"
-      >{purpose === "rent"
+  {#if tabsAbove}
+    <div class="home-mode-row">
+      <SearchPurpose bind:value={purpose} expanded />
+      {#if purpose === "buy"}
+        <button
+          class="home-query-filters"
+          type="button"
+          aria-label={locale.locale === "bg"
+            ? "Филтри за автомобили"
+            : "Vehicle filters"}
+          aria-haspopup="dialog"
+          aria-expanded={open}
+          onclick={() => openSearch()}
+          ><MobileIcon name="filters" size={18} /><span
+            >{locale.locale === "bg" ? "Филтри" : "Filters"}</span
+          ></button
+        >
+      {/if}
+    </div>
+  {/if}
+  {#if tabsAbove && purpose === "buy"}
+    <form
+      class="home-query-form"
+      role="search"
+      aria-label={discoveryText(locale.locale, "search")}
+      onsubmit={(event) => {
+        event.preventDefault();
+        void goto(destination(homeQuery.trim(), filters));
+      }}
+    >
+      <label class="visually-hidden" for={id + "-home-query"}>
+        {locale.locale === "bg" ? "Марка или модел" : "Make or model"}
+      </label>
+      <input
+        id={id + "-home-query"}
+        type="search"
+        name="q"
+        maxlength="120"
+        autocomplete="off"
+        enterkeyhint="search"
+        placeholder={locale.locale === "bg"
+          ? "Марка или модел"
+          : "Make or model"}
+        bind:value={homeQuery}
+      />
+      <button
+        class="home-query-submit"
+        type="submit"
+        aria-label={discoveryText(locale.locale, "search")}
+        ><MobileIcon name="search" size={18} /></button
+      >
+    </form>
+  {:else}
+    <button
+      type="button"
+      class="discovery-search-trigger"
+      aria-label={purpose === "rent"
         ? locale.locale === "bg"
-          ? "Под наем"
+          ? "Автомобил под наем"
           : "Rent a car"
-        : query.trim() || discoveryText(locale.locale, "search")}</span
+        : discoveryText(locale.locale, "search") +
+          (appliedSummary ? ": " + appliedSummary : "")}
+      aria-haspopup="dialog"
+      aria-expanded={purpose === "buy" ? open : undefined}
+      onclick={() => openSearch()}
     >
-    <span class="search-symbol" aria-hidden="true"
-      ><MobileIcon name="search" size={18} /></span
-    >
-  </button>
+      <span class="search-label"
+        >{purpose === "rent"
+          ? locale.locale === "bg"
+            ? rentalPickup && rentalReturn
+              ? `${locale.date(rentalPickup)} – ${locale.date(rentalReturn)}`
+              : "Избери дати"
+            : rentalPickup && rentalReturn
+              ? `${locale.date(rentalPickup)} – ${locale.date(rentalReturn)}`
+              : "Choose dates"
+          : query.trim() ||
+            (tabsAbove
+              ? locale.locale === "bg"
+                ? "Търси"
+                : "Search"
+              : discoveryText(locale.locale, "search"))}</span
+      >
+      <span class="search-symbol" aria-hidden="true"
+        ><MobileIcon name="search" size={18} /></span
+      >
+    </button>
+  {/if}
 </div>
-<RentalSearch bind:this={rental} />
+<RentalSearch
+  bind:this={rental}
+  bind:pickup={rentalPickup}
+  bind:returning={rentalReturn}
+  bind:preference={rentalPreference}
+/>
 
 {#snippet headerBack()}
   <button
@@ -564,28 +633,127 @@
     cursor: pointer;
   }
   .discovery-search.tabs-above {
-    --search-purpose-foreground: var(--bs-neutral-1000);
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--karento-space-2);
-    padding: var(--karento-space-2) var(--karento-space-2) 2px;
-    border: 1px solid var(--bs-neutral-200);
-    border-radius: var(--karento-radius-card, 16px);
-    background: var(--bs-neutral-0);
-    box-shadow: 0 var(--karento-space-1) var(--karento-space-3) rgb(0 0 0 / 5%);
-  }
-  .tabs-above :global(.search-purpose) {
-    margin-inline-start: var(--karento-space-2);
-  }
-  .tabs-above .discovery-search-trigger {
-    min-height: var(--karento-touch-target);
-    padding: 0 var(--karento-space-2);
+    grid-template-columns: var(--home-search-columns, minmax(0, 1fr));
+    gap: var(--home-search-gap, var(--karento-space-4));
+    padding: 0;
     border: 0;
-    border-top: 1px solid var(--bs-neutral-200);
     border-radius: 0;
     background: transparent;
+    box-shadow: none;
+  }
+  .tabs-above :global(.search-purpose) {
+    margin-inline: auto;
+  }
+  .home-mode-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+    min-height: 44px;
+  }
+  .home-mode-row :global(.search-purpose) {
+    margin: 0;
+  }
+  .home-query-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--bs-neutral-600);
+    font: inherit;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .tabs-above .discovery-search-trigger {
+    min-height: var(--home-search-trigger-height, 56px);
+    padding: 0 12px 0 16px;
+    border: var(--home-search-field-border, 1px solid var(--bs-neutral-200));
+    border-radius: var(
+      --home-search-field-radius,
+      var(--karento-radius-card, 16px)
+    );
+    background: var(--bs-neutral-0);
+    color: var(--bs-neutral-1000);
     text-align: left;
     box-shadow: none;
+  }
+  .home-query-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+    height: 50px;
+    padding: 2px;
+    border: 1px solid var(--bs-neutral-200);
+    border-radius: 10px;
+    background: var(--bs-neutral-0);
+    color: var(--bs-neutral-1000);
+  }
+  .home-query-form input {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 0 6px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 16px;
+    box-shadow: none;
+  }
+  .home-query-form input::placeholder {
+    color: var(--bs-neutral-600);
+    opacity: 1;
+  }
+  .home-query-form button {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    align-self: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    line-height: 1;
+  }
+  .home-query-form .home-query-submit {
+    color: var(--bs-neutral-0);
+  }
+  .home-query-submit::before {
+    position: absolute;
+    inset: 6px;
+    z-index: -1;
+    border-radius: 50%;
+    background: var(--bs-neutral-1000);
+    content: "";
+  }
+  .home-query-form button :global(svg),
+  .home-query-filters :global(svg) {
+    display: block;
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+  }
+  .home-query-form input:focus-visible,
+  .home-query-form button:focus-visible,
+  .home-query-filters:focus-visible {
+    outline: 2px solid var(--karento-accent);
+    outline-offset: 1px;
   }
   .search-label {
     min-width: 0;

@@ -16,7 +16,6 @@
   import { listingProducts } from "#lib/data/vehicle-listing.ts";
   import { isUnavailableDesktopProduct } from "#lib/data/desktop-shop.ts";
 
-  const desktop = new MediaQuery("(min-width: 992px)");
   const phone = new MediaQuery("(max-width: 767.98px)");
   let dockHeight = $state(0);
   const measureDock: Attachment<HTMLElement> = (node) => {
@@ -40,8 +39,7 @@
     return locale.href(`/shop${query ? "?" + query : ""}`);
   });
   const missing = $derived(
-    desktop.current &&
-      isUnavailableDesktopProduct(page.url.searchParams, listingProducts),
+    isUnavailableDesktopProduct(page.url.searchParams, listingProducts),
   );
 </script>
 
@@ -57,7 +55,8 @@
   style:--karento-shop-purchase-height={dockHeight
     ? `${dockHeight}px`
     : undefined}
-  >{#if phone.current}
+>
+  {#if phone.current && !missing}
     <nav
       class="mobile-shop-product-topbar"
       aria-label={locale.t("ui.product-breadcrumb.breadcrumb")}
@@ -89,15 +88,15 @@
   {:else if missing}
     <section class="box-section background-body shop-product-unavailable">
       <div class="container">
-        <h1 class="neutral-1000 desktop-type-page"
-          >{locale.t("reference.shop.product.missingTitle")}</h1
-        >
-        <p class="neutral-500 mt-20 desktop-type-body"
-          >{locale.t("reference.shop.product.missingBody")}</p
-        >
+        <h1 class="neutral-1000 desktop-type-page">
+          {locale.t("reference.shop.product.missingTitle")}
+        </h1>
+        <p class="neutral-500 mt-20 desktop-type-body">
+          {locale.t("reference.shop.product.missingBody")}
+        </p>
         <a
           class="btn btn-gray mt-20 desktop-type-pill desktop-card-action"
-          href={locale.href("/shop")}
+          href={backHref}
           >{locale.t("ui.product-purchase-banner.back-to-shop")}</a
         >
       </div>
@@ -107,8 +106,8 @@
     <ProductPurchaseBanner />
     <ProductDetail />
   {/if}
-  {#if !phone.current}<Footer />{/if}</main
->
+  {#if !phone.current}<Footer />{/if}
+</main>
 
 <style>
   @media (max-width: 767.98px) {

@@ -12,6 +12,7 @@
 
   let {
     open = $bindable(false),
+    closeOnNavigate = true,
     title,
     label = title,
     description,
@@ -21,6 +22,7 @@
     class: className = "",
   }: {
     open?: boolean;
+    closeOnNavigate?: boolean;
     title: string;
     label?: string;
     description?: string;
@@ -131,7 +133,9 @@
       close();
   }
 
-  afterNavigate(close);
+  afterNavigate(() => {
+    if (closeOnNavigate) close();
+  });
 </script>
 
 <dialog
@@ -145,11 +149,10 @@
 >
   <header class={headerLeading ? "mobile-sheet-header-leading" : undefined}>
     {#if headerLeading}{@render headerLeading()}{/if}
-    <div class="mobile-sheet-heading"
-      ><h2>{title}</h2>{#if description}<p id={`${id}-description`}
-          >{description}</p
-        >{/if}</div
-    >
+    <div class="mobile-sheet-heading">
+      <h2>{title}</h2>
+      {#if description}<p id={`${id}-description`}>{description}</p>{/if}
+    </div>
     <MobileCloseButton
       label={locale.t("action.closeNamed", {
         name: label.toLocaleLowerCase(),

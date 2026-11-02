@@ -2,6 +2,7 @@
 import {displayMake} from '@/lib/inventory-labels';
 
 import {useEffect, useId, useRef, useState} from 'react';
+import {formControl} from './form-control.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {ChevronDown, X} from 'lucide-react';
 import {BrandEmblem} from '@/components/ReferenceUI';
@@ -56,7 +57,7 @@ function MakeGroup({group, filters, update, query, wide, browse, onRemove}: {gro
       <h4 {...stylex.props(s.makeHeadingTitle)}><button type="button" aria-label={tx(`Show ${group.make} models`)} aria-expanded={isExpanded} aria-controls={modelsId} onClick={toggle} {...stylex.props(s.expandMake)}>
         <span {...stylex.props(s.emblem)}><BrandEmblem make={group.make}/></span>
         <span {...stylex.props(s.makeName)}>{tx(displayMake(group.make))} <span aria-label={`${group.count} ${tx(group.count === 1 ? 'car' : 'cars')}`} {...stylex.props(s.makeCount)}>({group.count})</span></span>
-        <span {...stylex.props(s.expandIcon)}><ChevronDown size={20} strokeWidth={1.8} aria-hidden="true" {...stylex.props(isExpanded && s.expandIconOpen)}/></span>
+        <span {...stylex.props(s.expandIcon, formControl.surface)}><ChevronDown size={20} strokeWidth={1.8} aria-hidden="true" {...stylex.props(isExpanded && s.expandIconOpen)}/></span>
       </button></h4>
       {selected ? <button type="button" aria-label={`${tx('Clear')}: ${tx(displayMake(group.make))}`} title={`${tx('Clear')}: ${tx(displayMake(group.make))}`} onClick={onRemove} {...stylex.props(s.removeMake)}><X size={18} aria-hidden="true"/></button> : null}
     </div>
@@ -101,7 +102,7 @@ const s = stylex.create({
   makeHeading: {display: 'flex', alignItems: 'center', gap: 10, minHeight: 44},
   makeHeadingTitle: {flexGrow: 1, minWidth: 0, margin: 0, fontSize: $.desktopTextSize, fontWeight: $.desktopTextWeight, lineHeight: $.desktopTextLineHeight},
   expandMake: {display: 'flex', alignItems: 'center', gap: 10, width: '100%', minHeight: 44, paddingBlock: 0, paddingInline: 10, color: $.ink, fontFamily: $.fontSans, textAlign: 'left', borderWidth: 0, borderRadius: 8, backgroundColor: {default: 'transparent', ':hover': $.line}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 2, cursor: 'pointer'},
-  expandIcon: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 32, height: 32, marginLeft: 'auto', color: $.ink, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: 8, backgroundColor: $.surface},
+  expandIcon: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 32, height: 32, marginLeft: 'auto', color: $.ink, borderWidth: 1, borderStyle: 'solid', borderRadius: 8},
   expandIconOpen: {transform: 'rotate(180deg)'},
   makeContent: {paddingTop: 10},
   emblem: {width: 30, height: 30, flexShrink: 0},

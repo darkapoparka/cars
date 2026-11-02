@@ -5,6 +5,7 @@ import Image from '@/components/AppImage';
 import {useState} from 'react';
 import {currency} from '@/lib/currency';
 import LoanSliderFrame from '@/components/LoanSliderFrame';
+import {actionButton} from './action-button.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {BadgeCheck, House, TrendingDown} from 'lucide-react';
 import {calculateReferenceLoan} from '@/lib/loan-estimate';
@@ -29,7 +30,7 @@ export default function VehicleFinanceSection({vehicle, onLogin}: {vehicle: Vehi
         <div {...stylex.props(s.row)}><label htmlFor="inline-downpayment">{tx("Select your Downpayment")}</label><output {...stylex.props(s.depositValue)}>{tx(currency.code)} {tx(formatPrice(deposit))}</output></div>
         <LoanSliderFrame><input id="inline-downpayment" type="range" aria-label={tx("Inline downpayment amount")} min={0} max={Math.floor(vehicle.price / 2)} value={deposit} onChange={event => setDeposit(Number(event.target.value))} style={{'--range-progress': `${deposit / (vehicle.price / 2) * 100}%`} as React.CSSProperties} className="cars24-emi-range" /></LoanSliderFrame>
         <div {...stylex.props(s.limits)}><span>{tx(currency.code)} {tx(" 0")}</span><span>{tx(currency.code)} {tx(formatPrice(Math.floor(vehicle.price / 2)))}</span></div>
-        <fieldset {...stylex.props(s.tenure)}><legend>{tx("I can repay the loan in (years)*")}</legend><div {...stylex.props(s.years)}>{[1,2,3,4,5].map(value => <button key={value} type="button" aria-label={tx(`Inline ${value} year tenure`)} aria-pressed={value === years} onClick={() => setYears(value)} {...stylex.props(s.year, value === years && s.selected)}>{tx(value)}</button>)}</div></fieldset>
+        <fieldset {...stylex.props(s.tenure)}><legend>{tx("I can repay the loan in (years)*")}</legend><div {...stylex.props(s.years)}>{[1,2,3,4,5].map(value => <button key={value} type="button" aria-label={tx(`Inline ${value} year tenure`)} aria-pressed={value === years} onClick={() => setYears(value)} {...stylex.props(s.year, value !== years && actionButton.secondary, value === years && s.selected)}>{tx(value)}</button>)}</div></fieldset>
         <div {...stylex.props(s.interest)}><p>{tx("Interest rate*")}<br/><small>{tx("Calculated @ ")}{tx(interest.toFixed(2))}{tx("%")}</small></p><p>{tx("Loan Amount")}<br/><small>{tx(currency.code)} {tx(formatPrice(loan))}</small></p></div>
         <p {...stylex.props(s.terms)}>{tx("*Special interest rate at 1.99% per year for ENBD customers.")}<br />{tx("1.99% interest rate is for the first year and 2.99% for the next 4 years, averaging 2.79% over 5 years.")}</p>
         <p {...stylex.props(s.terms)}>{tx("Loan approval, repayment schedule, interest rates, and other terms are decided solely by the partner banks after reviewing the customer’s credit history and other factors. Loan tenure can range from 12 to 60 months.")}</p>
@@ -53,7 +54,7 @@ const s = stylex.create({
   limits: {display:'flex',justifyContent:'space-between',marginTop:0,color:'#535353',fontSize:12,lineHeight:'18px'},
   tenure: {marginTop:26,padding:0,borderWidth:0,fontSize:14,fontWeight:500,lineHeight:'22px'},
   years: {display:'flex',gap:11,marginTop:18},
-  year: {width:49,height:36,padding:0,color:'#202024',fontSize:16,fontWeight:600,borderColor:'#e7e7e7',borderStyle:'solid',borderWidth:1,borderRadius:5,backgroundColor:'#fff',cursor:'pointer'},
+  year: {width:49, height:36, padding:0, fontSize:16, fontWeight:600, borderStyle:'solid', borderWidth:1, borderRadius:5, cursor:'pointer'},
   selected: {color:'#fff',borderColor:'#202024',backgroundColor:'#202024'},
   interest: {display:'flex',justifyContent:'space-between',gap:15,marginTop:26,color:'#202024',fontSize:13,lineHeight:'21px'},
   terms: {marginTop:24,color:'#535353',fontSize:11,lineHeight:'18px'},

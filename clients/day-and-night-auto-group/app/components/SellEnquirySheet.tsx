@@ -1,7 +1,10 @@
 'use client';
+import IconButton from '@/components/IconButton';
 
 import {useState} from 'react';
 import {ArrowRight, X} from 'lucide-react';
+import {formControl} from './form-control.stylex';
+import {actionButton} from './action-button.stylex';
 import * as stylex from '@stylexjs/stylex';
 import {useCopy} from '@/lib/locale';
 import {dealer} from '@/lib/dealer-config';
@@ -31,18 +34,18 @@ export default function SellEnquirySheet({car, onCarChange, intent, onIntentChan
   return intent ? <>
     <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && close()}>
       <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="sell-enquiry-title" {...stylex.props(s.sheet)}>
-        <header {...stylex.props(s.header)}><div {...stylex.props(s.heading)}><p {...stylex.props(s.eyebrow, t.caption)}>{dealer.name}</p><h2 id="sell-enquiry-title" {...stylex.props(t.heading, s.title)}>{tx('Your car')}</h2></div><button type="button" aria-label={tx('Close car details')} onClick={close} {...stylex.props(s.close)}><X size={22} aria-hidden="true"/></button></header>
+        <header {...stylex.props(s.header)}><div {...stylex.props(s.heading)}><p {...stylex.props(s.eyebrow, t.caption)}>{dealer.name}</p><h2 id="sell-enquiry-title" {...stylex.props(t.heading, s.title)}>{tx('Your car')}</h2></div><IconButton icon={X} label={tx('Close car details')} onClick={close} layout={s.close}/></header>
         <div role="group" aria-label={tx('Selling options')} {...stylex.props(s.intent)}>
-          {(['sale', 'exchange'] as const).map(option => <button key={option} type="button" aria-pressed={intent === option} onClick={() => onIntentChange(option)} {...stylex.props(s.choice, t.control, intent === option && s.selected)}>{tx(option === 'sale' ? 'Sell' : 'Exchange')}</button>)}
+          {(['sale', 'exchange'] as const).map(option => <button key={option} type="button" aria-pressed={intent === option} onClick={() => onIntentChange(option)} {...stylex.props(s.choice, intent !== option && actionButton.secondary, t.control, intent === option && s.selected)}>{tx(option === 'sale' ? 'Sell' : 'Exchange')}</button>)}
         </div>
         <form onSubmit={event => {event.preventDefault(); prepare();}} {...stylex.props(s.form)}>
           <div {...stylex.props(s.fields)}>
-            <label {...stylex.props(s.label, t.caption)}>{tx('Make')}<input required maxLength={80} value={car.make} onChange={event => update('make', event.target.value)} autoComplete="off" placeholder={tx('e.g. Toyota')} {...stylex.props(s.input, t.input)}/></label>
-            <label {...stylex.props(s.label, t.caption)}>{tx('Model')}<input required maxLength={100} value={car.model} onChange={event => update('model', event.target.value)} autoComplete="off" placeholder={tx('e.g. Corolla')} {...stylex.props(s.input, t.input)}/></label>
-            <label {...stylex.props(s.label, t.caption)}>{tx('Year')}<input type="number" inputMode="numeric" min={1900} max={new Date().getFullYear() + 1} value={car.year} onChange={event => update('year', event.target.value)} placeholder="2019" {...stylex.props(s.input, t.input)}/></label>
-            <label {...stylex.props(s.label, t.caption)}>{tx('Mileage (km)')}<input type="number" inputMode="numeric" min={0} max={9999999} value={car.mileage} onChange={event => update('mileage', event.target.value)} placeholder="85000" {...stylex.props(s.input, t.input)}/></label>
+            <label {...stylex.props(s.label, t.caption)}>{tx('Make')}<input required maxLength={80} value={car.make} onChange={event => update('make', event.target.value)} autoComplete="off" placeholder={tx('e.g. Toyota')} {...stylex.props(s.input, formControl.surface, formControl.focus, t.input)}/></label>
+            <label {...stylex.props(s.label, t.caption)}>{tx('Model')}<input required maxLength={100} value={car.model} onChange={event => update('model', event.target.value)} autoComplete="off" placeholder={tx('e.g. Corolla')} {...stylex.props(s.input, formControl.surface, formControl.focus, t.input)}/></label>
+            <label {...stylex.props(s.label, t.caption)}>{tx('Year')}<input type="number" inputMode="numeric" min={1900} max={new Date().getFullYear() + 1} value={car.year} onChange={event => update('year', event.target.value)} placeholder="2019" {...stylex.props(s.input, formControl.surface, formControl.focus, t.input)}/></label>
+            <label {...stylex.props(s.label, t.caption)}>{tx('Mileage (km)')}<input type="number" inputMode="numeric" min={0} max={9999999} value={car.mileage} onChange={event => update('mileage', event.target.value)} placeholder="85000" {...stylex.props(s.input, formControl.surface, formControl.focus, t.input)}/></label>
           </div>
-          <label {...stylex.props(s.label, t.caption)}>{tx('Anything else? (optional)')}<textarea rows={2} maxLength={2000} value={car.notes} onChange={event => update('notes', event.target.value)} placeholder={tx('Condition, service history or your next car')} {...stylex.props(s.input, s.notes, t.input)}/></label>
+          <label {...stylex.props(s.label, t.caption)}>{tx('Anything else? (optional)')}<textarea rows={2} maxLength={2000} value={car.notes} onChange={event => update('notes', event.target.value)} placeholder={tx('Condition, service history or your next car')} {...stylex.props(s.input, formControl.surface, formControl.focus, s.notes, t.input)}/></label>
           <p {...stylex.props(s.note, t.caption)}>{tx('The dealer confirms the valuation after reviewing your car.')}</p>
           <button type="submit" {...stylex.props(s.action, t.control)}>{tx('Prepare enquiry')}<ArrowRight size={18} aria-hidden="true"/></button>
         </form>
@@ -56,17 +59,17 @@ const s = stylex.create({
   backdrop: {position: 'fixed', inset: 0, zIndex: 240, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.48)'},
   sheet: {width: '100%', maxWidth: 560, maxHeight: '92dvh', overflowY: 'auto', padding: {[media.mobile]: '20px 20px calc(24px + env(safe-area-inset-bottom))', default: 28}, color: $.ink, backgroundColor: '#fff', borderRadius: 24, outlineStyle: 'none'},
   header: {display: {[media.mobile]: 'grid', default: 'flex'}, gridTemplateColumns: '44px minmax(0,1fr) 44px', alignItems: 'center', justifyContent: 'space-between', gap: {[media.mobile]: 8, default: 12}},
-  heading: {minWidth: 0, gridColumn: {[media.mobile]: 2, default: 'auto'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
+  heading: {minWidth: 0, gridColumn: {[media.mobile]: "2", default: 'auto'}, textAlign: {[media.mobile]: 'center', default: 'left'}},
   title: {whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflow: {[media.mobile]: 'hidden', default: 'visible'}, textOverflow: {[media.mobile]: 'ellipsis', default: 'clip'}},
   eyebrow: {display: {[media.mobile]: 'none', default: 'block'}, marginBottom: 4, color: $.muted},
-  close: {display: 'grid', placeItems: 'center', gridColumn: {[media.mobile]: 3, default: 'auto'}, flexShrink: 0, width: 44, height: 44, padding: 0, borderWidth: 0, borderRadius: '50%', color: $.ink, backgroundColor: '#f4f4f5', cursor: 'pointer'},
+  close: {gridColumn: {[media.mobile]: "3", default: 'auto'}},
   intent: {display: 'flex', gap: 8, marginTop: 20},
-  choice: {flex: '1 1 0', minWidth: 0, minHeight: 44, padding: '10px 12px', borderWidth: 0, borderRadius: 30, color: $.ink, backgroundColor: '#f4f4f5', cursor: 'pointer'},
+  choice: {flex: '1 1 0', minWidth: 0, minHeight: 44, padding: '10px 12px', borderWidth: 0, borderRadius: 30, cursor: 'pointer'},
   selected: {color: '#fff', backgroundColor: '#262629'},
   form: {display: 'grid', gap: 18, marginTop: 22},
   fields: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: '16px 12px'},
   label: {display: 'grid', gap: 7, minWidth: 0},
-  input: {display: 'block', width: '100%', minWidth: 0, minHeight: 48, padding: '11px 12px', color: $.ink, borderWidth: 1, borderStyle: 'solid', borderColor: $.controlBorder, borderRadius: 12, backgroundColor: '#fff'},
+  input: {display: 'block', width: '100%', minWidth: 0, minHeight: 48, padding: '11px 12px', color: $.ink, borderWidth: 1, borderStyle: 'solid', borderRadius: 12},
   notes: {resize: 'vertical'},
   note: {color: $.muted},
   action: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, minHeight: 50, padding: '12px 16px', color: '#fff', borderWidth: 0, borderRadius: 14, backgroundColor: '#262629', cursor: 'pointer'},

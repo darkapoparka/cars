@@ -25,6 +25,7 @@
     type CatalogPanel,
   } from "#lib/data/mobile-catalog.ts";
   import ListingVehicleGrid from "./ListingVehicleGrid.svelte";
+  import CatalogToolbar from "./CatalogToolbar.svelte";
   import ListingProductGrid from "./ListingProductGrid.svelte";
   import CatalogFilterSheet from "./CatalogFilterSheet.svelte";
 
@@ -77,9 +78,11 @@
       ...catalogFilterKeys
         .filter((key) => applied[key])
         .map((key) =>
-          key === "q"
-            ? locale.t("catalog.searchQuery", { query: applied.q })
-            : `${key === "make" ? locale.t("ui.mobile-catalog.make") : key === "model" ? locale.t("ui.mobile-catalog.model") : locale.t("ui.mobile-catalog.budget")}: ${filterLabel(key)}`,
+          key === "yearFrom" || key === "yearTo"
+            ? filterLabel(key)
+            : key === "q"
+              ? locale.t("catalog.searchQuery", { query: applied.q })
+              : `${key === "make" ? locale.t("ui.mobile-catalog.make") : key === "model" ? locale.t("ui.mobile-catalog.model") : locale.t("ui.mobile-catalog.budget")}: ${filterLabel(key)}`,
         ),
       ...(applied.sort ? [sortLabel] : []),
     ].join(" · "),
@@ -95,7 +98,9 @@
           (productMode || dealer.businessPreview
             ? ""
             : "/" + locale.t("unit.day"))
-      : applied[key];
+      : key === "yearFrom" || key === "yearTo"
+        ? locale.t(`catalog.${key}`) + ": " + applied[key]
+        : applied[key];
   }
 
   function openFilters(nextPanel: CatalogPanel = "filters") {
@@ -133,10 +138,15 @@
     key?: (typeof catalogFilterKeys)[number],
   ) {
     const className =
-      key && key !== "q" ? `.mobile-${key}-trigger` : ".mobile-filter-trigger";
-    return control
-      .closest("section")
-      ?.querySelector<HTMLButtonElement>(className);
+      key && !["q", "yearFrom", "yearTo"].includes(key)
+        ? `.mobile-${key}-trigger`
+        : ".mobile-filter-trigger";
+    return (
+      control.closest("section")?.querySelector<HTMLButtonElement>(className) ??
+      control
+        .closest("section")
+        ?.querySelector<HTMLButtonElement>(".mobile-filter-trigger")
+    );
   }
 
   function removeFilter(
@@ -171,76 +181,94 @@
   });
 </script>
 
-<MobilePillRail
-  class="mobile-catalog-tools"
-  label={productMode
-    ? locale.t("ui.mobile-catalog.product-filters")
-    : locale.t("catalog.tools")}
->
-  <MobilePill
-    class="mobile-filter-trigger"
-    label={locale.t("ui.mobile-catalog.filters")}
-    leadingIcon="filters"
-    count={activeCount}
-    selected={activeCount > 0}
-    onclick={() => openFilters()}
-    ariaLabel={locale.t(
-      productMode ? "catalog.productFilterTitle" : "catalog.vehicleFilters",
-    )}
-    popup="dialog"
-    expanded={open && panel === "filters"}
-  />
-  <MobilePill
-    class="mobile-sort-trigger"
-    label={locale.t("ui.mobile-catalog.sort-by")}
-    leadingIcon="sort"
-    selected={!!applied.sort}
-    ariaLabel={locale.t("catalog.sortLabel", {
-      entity: noun,
-      order: sortLabel,
-    })}
-    popup="dialog"
-    expanded={open && panel === "sort"}
-    onclick={() => openFilters("sort")}
-  />
-  {#if !productMode}<MobilePill
-      class="mobile-make-trigger"
-      label={applied.make || locale.t("ui.mobile-catalog.make")}
-      trailingIcon="chevron-down"
-      selected={!!applied.make}
-      onclick={() => openFilters("make")}
+{#if !productMode}<CatalogToolbar
+    prefix="mobile"
+    {countLabel}
+    filterCount={activeCount}
+    sort={applied.sort}
+    entity={noun}
+    filterOpen={open && panel === "filters"}
+    sortOpen={open && panel === "sort"}
+    onfilter={() => openFilters()}
+    onsort={() => openFilters("sort")}
+  />{:else}<MobilePillRail
+    class="mobile-catalog-tools"
+    label={productMode
+      ? locale.t("ui.mobile-catalog.product-filters")
+      : locale.t("catalog.tools")}
+  >
+    <MobilePill
+      class="mobile-filter-trigger"
+      label={locale.t("ui.mobile-catalog.filters")}
+      leadingIcon="filters"
+      count={activeCount}
+      selected={activeCount > 0}
+      onclick={() => openFilters()}
+      ariaLabel={locale.t(
+        productMode ? "catalog.productFilterTitle" : "catalog.vehicleFilters",
+      )}
       popup="dialog"
-      expanded={open && panel === "make"}
+      expanded={open && panel === "filters"}
     />
     <MobilePill
-      class="mobile-model-trigger"
-      label={applied.model || locale.t("ui.mobile-catalog.model")}
-      trailingIcon="chevron-down"
-      selected={!!applied.model}
-      onclick={() => openFilters("model")}
+      class="mobile-sort-trigger"
+      label={locale.t("ui.mobile-catalog.sort-by")}
+      leadingIcon="sort"
+      selected={!!applied.sort}
+      ariaLabel={locale.t("catalog.sortLabel", {
+        entity: noun,
+        order: sortLabel,
+      })}
       popup="dialog"
-      expanded={open && panel === "model"}
-    />{/if}
-  <MobilePill
-    class="mobile-budget-trigger"
-    label={applied.budget
-      ? filterLabel("budget")
-      : locale.t("ui.mobile-catalog.budget")}
-    trailingIcon="chevron-down"
-    selected={!!applied.budget}
-    onclick={() => openFilters("budget")}
-    popup="dialog"
-    expanded={open && panel === "budget"}
-  />
-</MobilePillRail>
+      expanded={open && panel === "sort"}
+      onclick={() => openFilters("sort")}
+    />
+    {#if !productMode}<MobilePill
+        class="mobile-make-trigger"
+        label={applied.make || locale.t("ui.mobile-catalog.make")}
+        trailingIcon="chevron-down"
+        selected={!!applied.make}
+        onclick={() => openFilters("make")}
+        popup="dialog"
+        expanded={open && panel === "make"}
+      />
+      <MobilePill
+        class="mobile-model-trigger"
+        label={applied.model || locale.t("ui.mobile-catalog.model")}
+        trailingIcon="chevron-down"
+        selected={!!applied.model}
+        onclick={() => openFilters("model")}
+        popup="dialog"
+        expanded={open && panel === "model"}
+      />{/if}
+    <MobilePill
+      class="mobile-budget-trigger"
+      label={applied.budget
+        ? filterLabel("budget")
+        : locale.t("ui.mobile-catalog.budget")}
+      trailingIcon="chevron-down"
+      selected={!!applied.budget}
+      onclick={() => openFilters("budget")}
+      popup="dialog"
+      expanded={open && panel === "budget"}
+    />
+  </MobilePillRail>
+{/if}
 
-<div class="mobile-catalog-results">
+<div
+  class={[
+    "mobile-catalog-results",
+    { "buy-no-tags": !productMode && !activeCount },
+  ]}
+>
   <p
-    class={activeCount ? "visually-hidden" : "mobile-result-count"}
+    class={!productMode || activeCount
+      ? "visually-hidden"
+      : "mobile-result-count"}
     data-catalog-count
-    role="status"
+    role={productMode ? "status" : undefined}
     aria-label={resultLabel}
-    aria-live="polite"
+    aria-live={productMode ? "polite" : undefined}
     aria-atomic="true"
     title={resultLabel}
   >
@@ -283,15 +311,15 @@
       products={visibleProducts}
     />{:else}<ListingVehicleGrid cards={visible} {columns} mobileTiles />{/if}
 {:else}
-  <div class="mobile-empty-results"
-    ><h3>{locale.t("ui.mobile-catalog.no-matching")} {noun}</h3><p
-      >{locale.t("ui.mobile-catalog.try-another-search-or-a-wider-budget")}</p
-    ><MobilePill
+  <div class="mobile-empty-results">
+    <h3>{locale.t("ui.mobile-catalog.no-matching")} {noun}</h3>
+    <p>{locale.t("ui.mobile-catalog.try-another-search-or-a-wider-budget")}</p>
+    <MobilePill
       label={locale.t("ui.mobile-catalog.clear-filters")}
       variant="secondary"
       onclick={(event) => clearFilters(event.currentTarget)}
-    /></div
-  >
+    />
+  </div>
 {/if}
 
 <CatalogFilterSheet
@@ -316,5 +344,9 @@
   .mobile-catalog-results .mobile-result-count {
     margin: 0;
     white-space: nowrap;
+  }
+
+  .mobile-catalog-results.buy-no-tags {
+    display: none;
   }
 </style>
